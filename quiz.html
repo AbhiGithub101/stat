@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Data Types Quiz — Nominal / Ordinal / Discrete / Continuous</title>
+  <style>
+    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial;line-height:1.5;margin:24px;background:#f7f8fb;color:#111}
+    h1{font-size:24px;margin-bottom:8px}
+    p.lead{margin-top:0;color:#333}
+    .card{background:#fff;border:1px solid #e1e4ea;padding:16px;border-radius:8px;margin-bottom:12px;box-shadow:0 1px 0 rgba(16,24,40,0.02)}
+    .q-title{font-weight:600;margin-bottom:6px}
+    .options{display:flex;gap:12px;flex-wrap:wrap}
+    label.option{display:inline-flex;align-items:center;gap:8px;padding:8px 10px;border-radius:6px;border:1px solid #e9edf3;cursor:pointer}
+    input[type=radio]{accent-color:#2563eb}
+    .controls{margin-top:10px;display:flex;gap:8px;flex-wrap:wrap}
+    button{padding:8px 12px;border-radius:6px;border:0;background:#2563eb;color:#fff;cursor:pointer}
+    button.secondary{background:#6b7280}
+    .feedback{margin-top:10px;padding:10px;border-radius:6px}
+    .correct{background:#ecfdf5;border:1px solid #a7f3d0;color:#065f46}
+    .wrong{background:#ffeff0;border:1px solid #ffb4c2;color:#8b1d2b}
+    .explain{margin-top:8px;color:#333}
+    .small{font-size:13px;color:#555}
+    .score{font-weight:700}
+    footer{margin-top:18px;font-size:13px;color:#555}
+    @media (max-width:600px){.options{flex-direction:column}}
+  </style>
+</head>
+<body>
+  <h1>Data Types Quiz</h1>
+  <p class="lead">Select the correct data type for each item: <strong>Nominal, Ordinal, Discrete, or Continuous</strong>. Click "Check" to see if you're right and why.</p>
+
+  <div id="quiz"></div>
+
+  <div class="card">
+    <div class="controls">
+      <button id="checkAll">Check All</button>
+      <button id="resetAll" class="secondary">Reset All</button>
+      <div style="margin-left:auto" class="small">Correct: <span id="correctCount">0</span> / <span id="totalCount">0</span></div>
+    </div>
+  </div>
+
+  <footer>Copy this HTML file into your GitBook as a static HTML page or embed where supported.</footer>
+
+  <script>
+    // Questions data: text, correct ('Nominal'|'Ordinal'|'Discrete'|'Continuous'), explanation
+    const QUESTIONS = [
+      {q: 'Weather is', a: 'Nominal', exp: 'Weather categories (sunny, rainy, cloudy, etc.) are names/labels without inherent order — Nominal.'},
+      {q: 'Number of cars in a parking lot', a: 'Discrete', exp: 'This is a count of cars (0,1,2...). It is whole numbers only — Discrete.'},
+      {q: 'Height of a student', a: 'Continuous', exp: 'Height can take any value within a range and include decimals — Continuous.'},
+      {q: 'Education level (Primary, Secondary, Graduate, Postgraduate)', a: 'Ordinal', exp: 'These categories have a natural order, but the gaps are not numerically measurable — Ordinal.'},
+      {q: 'Blood group', a: 'Nominal', exp: 'Blood groups (A, B, AB, O) are labels with no order — Nominal.'},
+      {q: 'Time taken to run a race', a: 'Continuous', exp: 'Time is measurable and can include fractions of seconds — Continuous.'},
+      {q: 'Customer satisfaction (Low, Medium, High)', a: 'Ordinal', exp: 'Satisfaction levels are ordered categories (Low < Medium < High) — Ordinal.'},
+      {q: 'Type of cuisine (Italian, Chinese, Indian)', a: 'Nominal', exp: 'Cuisine types are labels with no order — Nominal.'},
+      {q: 'Number of books on a shelf', a: 'Discrete', exp: 'Count of books is a whole number — Discrete.'},
+      {q: 'Temperature of a city', a: 'Continuous', exp: 'Temperature is measurable and can be fractional — Continuous.'},
+      {q: 'Mobile brand (Apple, Samsung, OnePlus)', a: 'Nominal', exp: 'Brands are categorical labels with no order — Nominal.'},
+      {q: 'Age of a person', a: 'Continuous', exp: 'Age can be measured precisely (years, months, days, decimals) — Continuous. (Sometimes recorded as whole years, but conceptually continuous.)'},
+      {q: 'Rating of a product (1 to 5 stars)', a: 'Ordinal', exp: 'Star ratings have an order (1 < 2 < 3 < 4 < 5). Differences are not guaranteed equal — Ordinal.'},
+      {q: 'Distance traveled by a car', a: 'Continuous', exp: 'Distance can take fractional values (e.g., 12.35 km) — Continuous.'},
+      {q: 'Shirt size (S, M, L, XL)', a: 'Ordinal', exp: 'Sizes imply order (S < M < L < XL) though intervals aren\'t exact — Ordinal.'},
+      {q: 'Number of visitors on a website per day', a: 'Discrete', exp: 'Visitors are counted in whole numbers per day — Discrete.'},
+      {q: 'Type of transport (Bus, Train, Flight)', a: 'Nominal', exp: 'Transport types are category labels with no inherent order — Nominal.'},
+      {q: 'Marks obtained in a test (out of 100)', a: 'Continuous', exp: 'Marks are measured and can be treated as continuous (can have decimals in some systems) — Continuous.'},
+      {q: 'Favorite color', a: 'Nominal', exp: 'Colors are labels with no order — Nominal.'},
+      {q: 'Salary of employees', a: 'Continuous', exp: 'Salary is a measurable quantity that can take any monetary value including decimals — Continuous.'}
+    ];
+
+    const TYPES = ['Nominal','Ordinal','Discrete','Continuous'];
+
+    const quizDiv = document.getElementById('quiz');
+    const totalCountSpan = document.getElementById('totalCount');
+    const correctCountSpan = document.getElementById('correctCount');
+
+    function createQuestionBlock(i, item){
+      const card = document.createElement('div');
+      card.className = 'card';
+      card.id = 'q-'+i;
+
+      const title = document.createElement('div');
+      title.className = 'q-title';
+      title.textContent = (i+1)+'. '+item.q;
+      card.appendChild(title);
+
+      const opts = document.createElement('div');
+      opts.className = 'options';
+
+      TYPES.forEach(t => {
+        const id = `q${i}_${t}`;
+        const label = document.createElement('label');
+        label.className = 'option';
+        label.htmlFor = id;
+
+        const radio = document.createElement('input');
+        radio.type = 'radio';
+        radio.name = 'q'+i;
+        radio.id = id;
+        radio.value = t;
+
+        label.appendChild(radio);
+        const span = document.createElement('span');
+        span.textContent = t;
+        label.appendChild(span);
+        opts.appendChild(label);
+      });
+
+      card.appendChild(opts);
+
+      const controls = document.createElement('div');
+      controls.className = 'controls';
+
+      const checkBtn = document.createElement('button');
+      checkBtn.textContent = 'Check';
+      checkBtn.addEventListener('click', ()=>checkQuestion(i));
+
+      const showAns = document.createElement('button');
+      showAns.className = 'secondary';
+      showAns.textContent = 'Show Answer';
+      showAns.addEventListener('click', ()=>showAnswer(i));
+
+      const feedback = document.createElement('div');
+      feedback.className = 'feedback';
+      feedback.id = 'feedback-'+i;
+
+      controls.appendChild(checkBtn);
+      controls.appendChild(showAns);
+      controls.appendChild(feedback);
+
+      card.appendChild(controls);
+
+      // hidden data on correct answer & explanation
+      card.dataset.correct = item.a;
+      card.dataset.explain = item.exp;
+
+      return card;
+    }
+
+    function renderQuiz(){
+      quizDiv.innerHTML = '';
+      QUESTIONS.forEach((q,i)=>{
+        const block = createQuestionBlock(i,q);
+        quizDiv.appendChild(block);
+      });
+      totalCountSpan.textContent = QUESTIONS.length;
+      correctCountSpan.textContent = '0';
+    }
+
+    function checkQuestion(index){
+      const card = document.getElementById('q-'+index);
+      const selected = card.querySelector('input[name="q'+index+'"]:checked');
+      const feedback = document.getElementById('feedback-'+index);
+      feedback.innerHTML = '';
+      if(!selected){
+        feedback.className = 'feedback wrong';
+        feedback.innerHTML = '<div class="small">Please select an option first.</div>';
+        updateScore();
+        return;
+      }
+      const chosen = selected.value;
+      const correct = card.dataset.correct;
+      const explain = card.dataset.explain;
+      if(chosen === correct){
+        feedback.className = 'feedback correct';
+        feedback.innerHTML = `<div><strong>Correct.</strong></div><div class="explain">${explain}</div>`;
+      } else {
+        feedback.className = 'feedback wrong';
+        feedback.innerHTML = `<div><strong>Incorrect.</strong> You chose <em>${chosen}</em>.</div><div class="explain">Correct answer: <strong>${correct}</strong>. ${explain}</div>`;
+      }
+      updateScore();
+    }
+
+    function showAnswer(index){
+      const card = document.getElementById('q-'+index);
+      const correct = card.dataset.correct;
+      const explain = card.dataset.explain;
+      const feedback = document.getElementById('feedback-'+index);
+      feedback.className = 'feedback correct';
+      feedback.innerHTML = `<div><strong>Answer:</strong> ${correct}</div><div class="explain">${explain}</div>`;
+      updateScore();
+    }
+
+    function updateScore(){
+      let correct = 0;
+      QUESTIONS.forEach((_,i)=>{
+        const card = document.getElementById('q-'+i);
+        const feedback = document.getElementById('feedback-'+i);
+        if(feedback && feedback.classList.contains('correct')){
+          // we consider 'correct' class as correct only when user selected correct OR showed answer
+          // But to be strict, ensure user selection matches
+          const sel = card.querySelector('input[name="q'+i+'"]:checked');
+          if(sel && sel.value === card.dataset.correct) correct++;
+        }
+      });
+      correctCountSpan.textContent = correct;
+    }
+
+    document.getElementById('checkAll').addEventListener('click', ()=>{
+      QUESTIONS.forEach((_,i)=>checkQuestion(i));
+    });
+
+    document.getElementById('resetAll').addEventListener('click', ()=>{
+      QUESTIONS.forEach((_,i)=>{
+        const card = document.getElementById('q-'+i);
+        const checked = card.querySelector('input:checked');
+        if(checked) checked.checked = false;
+        const feedback = document.getElementById('feedback-'+i);
+        feedback.innerHTML = '';
+        feedback.className = 'feedback';
+      });
+      correctCountSpan.textContent = '0';
+    });
+
+    renderQuiz();
+  </script>
+</body>
+</html>
