@@ -33,3 +33,4 @@
     * [3. Population and Sample](python-for-data-analytics/statistics/3.-population-and-sample.md)
     * [4. Example of Population and Sample](python-for-data-analytics/statistics/4.-example-of-population-and-sample.md)
     * [5. Categorical Data and Numerical Data](python-for-data-analytics/statistics/5.-categorical-data-and-numerical-data.md)
+    * [A Tricky Categorical Data - Ordinal Data](python-for-data-analytics/statistics/a-tricky-categorical-data-ordinal-data.md)
