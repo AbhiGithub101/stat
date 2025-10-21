@@ -31,3 +31,4 @@
     * [1. Introduction To Statistics](python-for-data-analytics/statistics/1.-introduction-to-statistics.md)
     * [2. Types of Statistics](python-for-data-analytics/statistics/2.-types-of-statistics.md)
     * [3. Population and Sample](python-for-data-analytics/statistics/3.-population-and-sample.md)
+    * [4. Example of Population and Sample](python-for-data-analytics/statistics/4.-example-of-population-and-sample.md)
