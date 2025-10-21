@@ -29,4 +29,3 @@
     * [2.Loading Excel and CSV Data](python-for-data-analytics/data-analytics/2.loading-excel-and-csv-data.md)
   * [Statistics](python-for-data-analytics/statistics/README.md)
     * [1. Introduction To Statistics](python-for-data-analytics/statistics/1.-introduction-to-statistics.md)
-    * [2. Understanding Variables](python-for-data-analytics/statistics/2.-understanding-variables.md)
