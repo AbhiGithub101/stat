@@ -37,3 +37,5 @@
     * [4. Example of Population and Sample](python-for-data-analytics/statistics/4.-example-of-population-and-sample.md)
     * [5. Categorical Data and Numerical Data](python-for-data-analytics/statistics/5.-categorical-data-and-numerical-data.md)
     * [A Tricky Categorical Data - Ordinal Data](python-for-data-analytics/statistics/a-tricky-categorical-data-ordinal-data.md)
+  * [SQL Server](python-for-data-analytics/sql-server/README.md)
+    * [1. Introduction to SQL Server](python-for-data-analytics/sql-server/1.-introduction-to-sql-server.md)
