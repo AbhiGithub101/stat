@@ -28,6 +28,7 @@
     * [1.Introduction to pandas](python-for-data-analytics/data-analytics/1.introduction-to-pandas.md)
     * [2.Loading Excel and CSV Data](python-for-data-analytics/data-analytics/2.loading-excel-and-csv-data.md)
     * [3.DataFrame and Series](python-for-data-analytics/data-analytics/3.dataframe-and-series.md)
+    * [4. Series Operations In Pandas](python-for-data-analytics/data-analytics/4.-series-operations-in-pandas.md)
   * [Statistics](python-for-data-analytics/statistics/README.md)
     * [1. Introduction To Statistics](python-for-data-analytics/statistics/1.-introduction-to-statistics.md)
     * [2. Types of Statistics](python-for-data-analytics/statistics/2.-types-of-statistics.md)
