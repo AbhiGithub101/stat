@@ -5,7 +5,7 @@
     * [Python Documents](python-for-data-analytics/python/python-documents/README.md)
       * [1. Programming](python-for-data-analytics/python/python-documents/1.-programming.md)
       * [2. Data Types](python-for-data-analytics/python/python-documents/2.-data-types.md)
-      * [2. Variables](python-for-data-analytics/python/python-documents/2.-variables.md)
+      * [3. Variables](python-for-data-analytics/python/python-documents/3.-variables.md)
       * [3. Operators](python-for-data-analytics/python/python-documents/3.-operators.md)
       * [4. User Input](python-for-data-analytics/python/python-documents/4.-user-input.md)
       * [5. Typecasting](python-for-data-analytics/python/python-documents/5.-typecasting.md)
