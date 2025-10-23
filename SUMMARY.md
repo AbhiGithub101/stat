@@ -26,6 +26,7 @@
   * [Data Analytics](python-for-data-analytics/data-analytics/README.md)
     * [1 Introduction To Numpy](python-for-data-analytics/data-analytics/1-introduction-to-numpy.md)
     * [2. Numpy operations](python-for-data-analytics/data-analytics/2.-numpy-operations.md)
+    * [3. Multidimensional Array in Numpy](python-for-data-analytics/data-analytics/3.-multidimensional-array-in-numpy.md)
     * [3.Introduction to pandas](python-for-data-analytics/data-analytics/3.introduction-to-pandas.md)
     * [2.Loading Excel and CSV Data](python-for-data-analytics/data-analytics/2.loading-excel-and-csv-data.md)
     * [3.DataFrame and Series](python-for-data-analytics/data-analytics/3.dataframe-and-series.md)
