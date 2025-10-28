@@ -54,6 +54,8 @@
       * [Atm-functionalities(nested if)](python-for-data-analytics/1.-python/3.-python-projects/atm-functionalities-nested-if.md)
       * [Distribution of Cards(List & Nested for)](python-for-data-analytics/1.-python/3.-python-projects/distribution-of-cards-list-and-nested-for.md)
       * [Guess the Number Game](python-for-data-analytics/1.-python/3.-python-projects/guess-the-number-game.md)
+    * [4.Python + SQL Projects](python-for-data-analytics/1.-python/4.python-+-sql-projects/README.md)
+      * [Bookstore Management System](python-for-data-analytics/1.-python/4.python-+-sql-projects/bookstore-management-system.md)
   * [Data Analytics](python-for-data-analytics/data-analytics/README.md)
     * [1 Introduction To Numpy](python-for-data-analytics/data-analytics/1-introduction-to-numpy.md)
     * [2. Numpy operations](python-for-data-analytics/data-analytics/2.-numpy-operations.md)
