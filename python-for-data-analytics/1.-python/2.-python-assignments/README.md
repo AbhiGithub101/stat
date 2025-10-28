@@ -10,7 +10,7 @@
 
 <details>
 
-<summary>Operators Assignment</summary>
+<summary><a href="operators-assignment.md">Operators Assignment</a></summary>
 
 
 
@@ -18,7 +18,7 @@
 
 <details>
 
-<summary>User Input &#x26; Type Casting</summary>
+<summary><a href="user-input-and-type-casting.md">User Input &#x26; Type Casting</a></summary>
 
 
 
@@ -26,7 +26,7 @@
 
 <details>
 
-<summary>Function - Basic Assignment</summary>
+<summary><a href="functions-basic-assignments.md">Function - Basic Assignment</a></summary>
 
 
 
@@ -34,7 +34,7 @@
 
 <details>
 
-<summary>String Assignment</summary>
+<summary><a href="string-assignments.md">String Assignment</a></summary>
 
 
 
@@ -42,7 +42,7 @@
 
 <details>
 
-<summary>Conditional Statement Assignment</summary>
+<summary><a href="conditional-statements-assignments.md">Conditional Statement Assignment</a></summary>
 
 
 
@@ -50,7 +50,7 @@
 
 <details>
 
-<summary>Loop Assignment</summary>
+<summary><a href="loops-assignments.md">Loop Assignment</a></summary>
 
 
 
@@ -58,7 +58,7 @@
 
 <details>
 
-<summary>List Assignment</summary>
+<summary><a href="list-assignments.md">List Assignment</a></summary>
 
 
 
@@ -66,7 +66,7 @@
 
 <details>
 
-<summary>Set Assignment</summary>
+<summary><a href="set-assignments.md">Set Assignment</a></summary>
 
 
 
@@ -74,7 +74,7 @@
 
 <details>
 
-<summary>Dictionary Assignment</summary>
+<summary><a href="dictionary-assignments.md">Dictionary Assignment</a></summary>
 
 
 
@@ -82,7 +82,7 @@
 
 <details>
 
-<summary>Function - Advance Assignment</summary>
+<summary><a href="function-advance-assignments.md">Function - Advance Assignment</a></summary>
 
 
 
