@@ -2,7 +2,7 @@
 
 <details>
 
-<summary>Bookstore Management System</summary>
+<summary><a href="bookstore-management-system.md">Bookstore Management System</a></summary>
 
 
 
