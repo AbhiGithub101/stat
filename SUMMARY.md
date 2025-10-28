@@ -23,6 +23,7 @@
       * [19. OS Module](python-for-data-analytics/1.-python/1.-python-documents/16.-os-module.md)
     * [2. Python Assignments](python-for-data-analytics/1.-python/2.-python-assignments/README.md)
       * [Data Type & Variables](python-for-data-analytics/1.-python/2.-python-assignments/data-type-and-variables.md)
+      * [Operators Assignment](python-for-data-analytics/1.-python/2.-python-assignments/operators-assignment.md)
     * [3. Python Projects](python-for-data-analytics/1.-python/3.-python-projects.md)
   * [Data Analytics](python-for-data-analytics/data-analytics/README.md)
     * [1 Introduction To Numpy](python-for-data-analytics/data-analytics/1-introduction-to-numpy.md)
