@@ -33,6 +33,7 @@
     * [4. Series Operations In Pandas](python-for-data-analytics/data-analytics/4.-series-operations-in-pandas.md)
     * [5. Filtering](python-for-data-analytics/data-analytics/5.-filtering.md)
     * [Required Files](python-for-data-analytics/data-analytics/required-files.md)
+    * [Sorting Value in Pandas](python-for-data-analytics/data-analytics/sorting-value-in-pandas.md)
   * [Statistics](python-for-data-analytics/statistics/README.md)
     * [1. Introduction To Statistics](python-for-data-analytics/statistics/1.-introduction-to-statistics.md)
     * [2. Types of Statistics](python-for-data-analytics/statistics/2.-types-of-statistics.md)

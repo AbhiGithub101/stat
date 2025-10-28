@@ -1,0 +1,305 @@
+# Sorting Value in Pandas
+
+Sorting Value in Pandas
+
+### Sorting Values in Pandas
+
+Sorting in pandas means arranging data in ascending or descending order. We use the sort\_values() function to sort data.
+
+### sort\_values()
+
+To sort values in pandas, use sort\_values(). It has parameters:
+
+* ascending — Default value is True. If you want data in descending order, set ascending=False.
+
+Example setup:
+
+```python
+import pandas as pd
+
+df = pd.read_excel('students.xlsx')
+df
+```
+
+|    | id  | name          | class | section | score |
+| -- | --- | ------------- | ----- | ------- | ----- |
+| 0  | 101 | Aarav Sharma  | 10    | A       | 88    |
+| 1  | 102 | Meera Patel   | 10    | B       | 92    |
+| 2  | 103 | Rohan Singh   | 9     | A       | 75    |
+| 3  | 104 | Ananya Das    | 9     | B       | 81    |
+| 4  | 105 | Ishaan Verma  | 10    | A       | 95    |
+| 5  | 106 | Priya Nair    | 8     | C       | 67    |
+| 6  | 107 | Dev Mehta     | 8     | B       | 73    |
+| 7  | 108 | Nisha Rao     | 9     | C       | 84    |
+| 8  | 109 | Arjun Gupta   | 10    | B       | 90    |
+| 9  | 110 | Tanya Malik   | 9     | A       | 77    |
+| 10 | 111 | Karan Yadav   | 8     | A       | 71    |
+| 11 | 112 | Sneha Kapoor  | 10    | C       | 89    |
+| 12 | 113 | Rahul Menon   | 9     | B       | 82    |
+| 13 | 114 | Diya Joshi    | 8     | A       | 79    |
+| 14 | 115 | Mohit Jain    | 10    | C       | 85    |
+| 15 | 116 | Kritika Singh | 9     | B       | 91    |
+| 16 | 117 | Varun Bhat    | 8     | C       | 63    |
+| 17 | 118 | Riya Sharma   | 9     | A       | 87    |
+| 18 | 119 | Aman Thakur   | 10    | A       | 93    |
+| 19 | 120 | Kavya Pillai  | 8     | B       | 76    |
+
+{% stepper %}
+{% step %}
+### Sort Student Records in Ascending Order By Class
+
+```python
+cdf = df.sort_values('class')
+cdf
+```
+
+|    | id  | name          | class | section | score |
+| -- | --- | ------------- | ----- | ------- | ----- |
+| 6  | 107 | Dev Mehta     | 8     | B       | 73    |
+| 5  | 106 | Priya Nair    | 8     | C       | 67    |
+| 13 | 114 | Diya Joshi    | 8     | A       | 79    |
+| 10 | 111 | Karan Yadav   | 8     | A       | 71    |
+| 19 | 120 | Kavya Pillai  | 8     | B       | 76    |
+| 16 | 117 | Varun Bhat    | 8     | C       | 63    |
+| 7  | 108 | Nisha Rao     | 9     | C       | 84    |
+| 12 | 113 | Rahul Menon   | 9     | B       | 82    |
+| 15 | 116 | Kritika Singh | 9     | B       | 91    |
+| 9  | 110 | Tanya Malik   | 9     | A       | 77    |
+| 3  | 104 | Ananya Das    | 9     | B       | 81    |
+| 2  | 103 | Rohan Singh   | 9     | A       | 75    |
+| 17 | 118 | Riya Sharma   | 9     | A       | 87    |
+| 4  | 105 | Ishaan Verma  | 10    | A       | 95    |
+| 1  | 102 | Meera Patel   | 10    | B       | 92    |
+| 0  | 101 | Aarav Sharma  | 10    | A       | 88    |
+| 14 | 115 | Mohit Jain    | 10    | C       | 85    |
+| 11 | 112 | Sneha Kapoor  | 10    | C       | 89    |
+| 8  | 109 | Arjun Gupta   | 10    | B       | 90    |
+| 18 | 119 | Aman Thakur   | 10    | A       | 93    |
+{% endstep %}
+
+{% step %}
+### Sort Student Records in Ascending Order By Class and Section
+
+```python
+fdf = df.sort_values(['class','section'])
+fdf
+```
+
+|    | id  | name          | class | section | score |
+| -- | --- | ------------- | ----- | ------- | ----- |
+| 10 | 111 | Karan Yadav   | 8     | A       | 71    |
+| 13 | 114 | Diya Joshi    | 8     | A       | 79    |
+| 6  | 107 | Dev Mehta     | 8     | B       | 73    |
+| 19 | 120 | Kavya Pillai  | 8     | B       | 76    |
+| 5  | 106 | Priya Nair    | 8     | C       | 67    |
+| 16 | 117 | Varun Bhat    | 8     | C       | 63    |
+| 2  | 103 | Rohan Singh   | 9     | A       | 75    |
+| 9  | 110 | Tanya Malik   | 9     | A       | 77    |
+| 17 | 118 | Riya Sharma   | 9     | A       | 87    |
+| 3  | 104 | Ananya Das    | 9     | B       | 81    |
+| 12 | 113 | Rahul Menon   | 9     | B       | 82    |
+| 15 | 116 | Kritika Singh | 9     | B       | 91    |
+| 7  | 108 | Nisha Rao     | 9     | C       | 84    |
+| 0  | 101 | Aarav Sharma  | 10    | A       | 88    |
+| 4  | 105 | Ishaan Verma  | 10    | A       | 95    |
+| 18 | 119 | Aman Thakur   | 10    | A       | 93    |
+| 1  | 102 | Meera Patel   | 10    | B       | 92    |
+| 8  | 109 | Arjun Gupta   | 10    | B       | 90    |
+| 11 | 112 | Sneha Kapoor  | 10    | C       | 89    |
+| 14 | 115 | Mohit Jain    | 10    | C       | 85    |
+{% endstep %}
+
+{% step %}
+### Sort Student Records in Ascending Order By Class, Section and Score
+
+```python
+mdf = df.sort_values(['class','section','score'])
+mdf
+```
+
+|    | id  | name          | class | section | score |
+| -- | --- | ------------- | ----- | ------- | ----- |
+| 10 | 111 | Karan Yadav   | 8     | A       | 71    |
+| 13 | 114 | Diya Joshi    | 8     | A       | 79    |
+| 6  | 107 | Dev Mehta     | 8     | B       | 73    |
+| 19 | 120 | Kavya Pillai  | 8     | B       | 76    |
+| 16 | 117 | Varun Bhat    | 8     | C       | 63    |
+| 5  | 106 | Priya Nair    | 8     | C       | 67    |
+| 2  | 103 | Rohan Singh   | 9     | A       | 75    |
+| 9  | 110 | Tanya Malik   | 9     | A       | 77    |
+| 17 | 118 | Riya Sharma   | 9     | A       | 87    |
+| 3  | 104 | Ananya Das    | 9     | B       | 81    |
+| 12 | 113 | Rahul Menon   | 9     | B       | 82    |
+| 15 | 116 | Kritika Singh | 9     | B       | 91    |
+| 7  | 108 | Nisha Rao     | 9     | C       | 84    |
+| 0  | 101 | Aarav Sharma  | 10    | A       | 88    |
+| 18 | 119 | Aman Thakur   | 10    | A       | 93    |
+| 4  | 105 | Ishaan Verma  | 10    | A       | 95    |
+| 8  | 109 | Arjun Gupta   | 10    | B       | 90    |
+| 1  | 102 | Meera Patel   | 10    | B       | 92    |
+| 14 | 115 | Mohit Jain    | 10    | C       | 85    |
+| 11 | 112 | Sneha Kapoor  | 10    | C       | 89    |
+{% endstep %}
+
+{% step %}
+### Sort Student Records in Descending Order By Class
+
+```python
+ddf = df.sort_values('class', ascending=False)
+ddf
+```
+
+|    | id  | name          | class | section | score |
+| -- | --- | ------------- | ----- | ------- | ----- |
+| 0  | 101 | Aarav Sharma  | 10    | A       | 88    |
+| 1  | 102 | Meera Patel   | 10    | B       | 92    |
+| 8  | 109 | Arjun Gupta   | 10    | B       | 90    |
+| 4  | 105 | Ishaan Verma  | 10    | A       | 95    |
+| 18 | 119 | Aman Thakur   | 10    | A       | 93    |
+| 14 | 115 | Mohit Jain    | 10    | C       | 85    |
+| 11 | 112 | Sneha Kapoor  | 10    | C       | 89    |
+| 2  | 103 | Rohan Singh   | 9     | A       | 75    |
+| 3  | 104 | Ananya Das    | 9     | B       | 81    |
+| 15 | 116 | Kritika Singh | 9     | B       | 91    |
+| 9  | 110 | Tanya Malik   | 9     | A       | 77    |
+| 7  | 108 | Nisha Rao     | 9     | C       | 84    |
+| 17 | 118 | Riya Sharma   | 9     | A       | 87    |
+| 12 | 113 | Rahul Menon   | 9     | B       | 82    |
+| 5  | 106 | Priya Nair    | 8     | C       | 67    |
+| 6  | 107 | Dev Mehta     | 8     | B       | 73    |
+| 10 | 111 | Karan Yadav   | 8     | A       | 71    |
+| 13 | 114 | Diya Joshi    | 8     | A       | 79    |
+| 16 | 117 | Varun Bhat    | 8     | C       | 63    |
+| 19 | 120 | Kavya Pillai  | 8     | B       | 76    |
+{% endstep %}
+
+{% step %}
+### Sort Student Records in Descending Order By Class and Section
+
+```python
+ddf = df.sort_values(['class','section'], ascending=False)
+ddf
+```
+
+|    | id  | name          | class | section | score |
+| -- | --- | ------------- | ----- | ------- | ----- |
+| 11 | 112 | Sneha Kapoor  | 10    | C       | 89    |
+| 14 | 115 | Mohit Jain    | 10    | C       | 85    |
+| 1  | 102 | Meera Patel   | 10    | B       | 92    |
+| 8  | 109 | Arjun Gupta   | 10    | B       | 90    |
+| 0  | 101 | Aarav Sharma  | 10    | A       | 88    |
+| 4  | 105 | Ishaan Verma  | 10    | A       | 95    |
+| 18 | 119 | Aman Thakur   | 10    | A       | 93    |
+| 7  | 108 | Nisha Rao     | 9     | C       | 84    |
+| 3  | 104 | Ananya Das    | 9     | B       | 81    |
+| 12 | 113 | Rahul Menon   | 9     | B       | 82    |
+| 15 | 116 | Kritika Singh | 9     | B       | 91    |
+| 2  | 103 | Rohan Singh   | 9     | A       | 75    |
+| 9  | 110 | Tanya Malik   | 9     | A       | 77    |
+| 17 | 118 | Riya Sharma   | 9     | A       | 87    |
+| 5  | 106 | Priya Nair    | 8     | C       | 67    |
+| 16 | 117 | Varun Bhat    | 8     | C       | 63    |
+| 6  | 107 | Dev Mehta     | 8     | B       | 73    |
+| 19 | 120 | Kavya Pillai  | 8     | B       | 76    |
+| 10 | 111 | Karan Yadav   | 8     | A       | 71    |
+| 13 | 114 | Diya Joshi    | 8     | A       | 79    |
+{% endstep %}
+
+{% step %}
+### Sort Student Records in Descending Order By Class, Section and Score
+
+```python
+ddf = df.sort_values(['class','section','score'], ascending=False)
+ddf
+```
+
+|    | id  | name          | class | section | score |
+| -- | --- | ------------- | ----- | ------- | ----- |
+| 11 | 112 | Sneha Kapoor  | 10    | C       | 89    |
+| 14 | 115 | Mohit Jain    | 10    | C       | 85    |
+| 1  | 102 | Meera Patel   | 10    | B       | 92    |
+| 8  | 109 | Arjun Gupta   | 10    | B       | 90    |
+| 4  | 105 | Ishaan Verma  | 10    | A       | 95    |
+| 18 | 119 | Aman Thakur   | 10    | A       | 93    |
+| 0  | 101 | Aarav Sharma  | 10    | A       | 88    |
+| 7  | 108 | Nisha Rao     | 9     | C       | 84    |
+| 15 | 116 | Kritika Singh | 9     | B       | 91    |
+| 12 | 113 | Rahul Menon   | 9     | B       | 82    |
+| 3  | 104 | Ananya Das    | 9     | B       | 81    |
+| 17 | 118 | Riya Sharma   | 9     | A       | 87    |
+| 9  | 110 | Tanya Malik   | 9     | A       | 77    |
+| 2  | 103 | Rohan Singh   | 9     | A       | 75    |
+| 5  | 106 | Priya Nair    | 8     | C       | 67    |
+| 16 | 117 | Varun Bhat    | 8     | C       | 63    |
+| 19 | 120 | Kavya Pillai  | 8     | B       | 76    |
+| 6  | 107 | Dev Mehta     | 8     | B       | 73    |
+| 13 | 114 | Diya Joshi    | 8     | A       | 79    |
+| 10 | 111 | Karan Yadav   | 8     | A       | 71    |
+{% endstep %}
+
+{% step %}
+### Sort Student Records in Ascending Order By Class and Section, Descending Order By Score
+
+```python
+ddf = df.sort_values(['class','section','score'], ascending=[True, True, False])
+ddf
+```
+
+|    | id  | name          | class | section | score |
+| -- | --- | ------------- | ----- | ------- | ----- |
+| 13 | 114 | Diya Joshi    | 8     | A       | 79    |
+| 10 | 111 | Karan Yadav   | 8     | A       | 71    |
+| 19 | 120 | Kavya Pillai  | 8     | B       | 76    |
+| 6  | 107 | Dev Mehta     | 8     | B       | 73    |
+| 5  | 106 | Priya Nair    | 8     | C       | 67    |
+| 16 | 117 | Varun Bhat    | 8     | C       | 63    |
+| 17 | 118 | Riya Sharma   | 9     | A       | 87    |
+| 9  | 110 | Tanya Malik   | 9     | A       | 77    |
+| 2  | 103 | Rohan Singh   | 9     | A       | 75    |
+| 15 | 116 | Kritika Singh | 9     | B       | 91    |
+| 12 | 113 | Rahul Menon   | 9     | B       | 82    |
+| 3  | 104 | Ananya Das    | 9     | B       | 81    |
+| 7  | 108 | Nisha Rao     | 9     | C       | 84    |
+| 4  | 105 | Ishaan Verma  | 10    | A       | 95    |
+| 18 | 119 | Aman Thakur   | 10    | A       | 93    |
+| 0  | 101 | Aarav Sharma  | 10    | A       | 88    |
+| 1  | 102 | Meera Patel   | 10    | B       | 92    |
+| 8  | 109 | Arjun Gupta   | 10    | B       | 90    |
+| 11 | 112 | Sneha Kapoor  | 10    | C       | 89    |
+| 14 | 115 | Mohit Jain    | 10    | C       | 85    |
+{% endstep %}
+{% endstepper %}
+
+### Assignments:
+
+#### 20 + Sorting Assignments
+
+#### **Single-column Sorting**
+
+1. Sort the dataset by `Units Sold` in ascending order.
+2. Sort the dataset by `Units Sold` in descending order.
+3. Sort the dataset by `Price per Unit` (lowest to highest).
+4. Sort the dataset by `Price per Unit` (highest to lowest).
+5. Sort all records by `Invoice Date` in ascending (chronological) order.
+6. Sort all records by `Invoice Date` in descending (latest first) order.
+7. Sort by `Product` alphabetically (A–Z).
+8. Sort by `Product` in reverse alphabetical order (Z–A).
+9. Sort by `Sales Method` alphabetically.
+10. Sort by `City` and observe if all rows belong to the same city.
+
+#### **Multi-column Sorting**
+
+11. Sort by `Product` ascending, then by `Units Sold` descending.
+12. Sort by `Region`, then by `State`, both ascending.
+13. Sort by `Sales Method`, then `Price per Unit` descending.
+14. Sort by `Retailer` ascending and `Invoice Date` descending.
+15. Sort by `City`, `Product`, and `Units Sold`.
+16. Sort by `State` ascending and `Price per Unit` descending.
+17. Sort by `Region`, `Product`, and `Sales Method`.
+18. Sort by `Product`, then within each product by highest `Units Sold`.
+19. Sort by `Product`, then `Price per Unit`, then `Invoice Date`.
+20. Calculate a new column `Total Sale = Price per Unit * Units Sold` and sort descending.
+21. Filter rows where `Sales Method == 'In-store'` and sort by `Units Sold`.
+22. Filter rows where `Sales Method == 'Outlet'` and sort by `Price per Unit`.
+23. Sort only rows where `Units Sold` > 1000 by `Product`.
+
