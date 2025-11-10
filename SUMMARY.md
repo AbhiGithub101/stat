@@ -67,6 +67,7 @@
     * [5. Filtering](python-for-data-analytics/2.-data-analytics/5.-filtering.md)
     * [6. Sorting Value in Pandas](python-for-data-analytics/2.-data-analytics/6.-sorting-value-in-pandas.md)
     * [Required Files](python-for-data-analytics/2.-data-analytics/required-files.md)
+    * [Aggregate Functions in Pandas](python-for-data-analytics/2.-data-analytics/aggregate-functions-in-pandas.md)
   * [3. Statistics](python-for-data-analytics/3.-statistics/README.md)
     * [1. Introduction To Statistics](python-for-data-analytics/3.-statistics/1.-introduction-to-statistics.md)
     * [2. Types of Statistics](python-for-data-analytics/3.-statistics/2.-types-of-statistics.md)
