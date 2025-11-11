@@ -11,3 +11,5 @@
 {% file src="../../.gitbook/assets/usa_software_engineer.csv" %}
 
 {% file src="../../.gitbook/assets/india_software_engineer.csv" %}
+
+{% file src="../../.gitbook/assets/store sales.csv" %}
