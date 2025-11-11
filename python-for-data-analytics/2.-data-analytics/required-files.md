@@ -13,3 +13,5 @@
 {% file src="../../.gitbook/assets/india_software_engineer.csv" %}
 
 {% file src="../../.gitbook/assets/store sales.csv" %}
+
+{% file src="../../.gitbook/assets/air_quality_index.csv" %}
