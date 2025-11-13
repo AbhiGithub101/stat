@@ -1,0 +1,284 @@
+# Practice - air quality usa vs india
+
+## Comparative Analytics
+
+Comparative Analytics is used to compare between two or more data. Suppose you work for Government and you are asked to compare AQI Between USA and India. You are Given Dataset of USA and INDIA states.
+
+## USA air quality Data
+
+Dataset load (pandas):
+
+```python
+udf = pd.read_csv('usa air quality.csv')
+udf
+```
+
+USA data (excerpt):
+
+|    | City                 | AQI | Country |
+| -: | -------------------- | --: | ------- |
+|  0 | Alabama              |  46 | USA     |
+|  1 | Alaska               |  44 | USA     |
+|  2 | Arizona              |  65 | USA     |
+|  3 | Arkansas             |  81 | USA     |
+|  4 | California           |  50 | USA     |
+|  5 | Colorado             |  34 | USA     |
+|  6 | Connecticut          |  36 | USA     |
+|  7 | Delaware             |  34 | USA     |
+|  8 | District of Columbia |  23 | USA     |
+|  9 | Florida              |  38 | USA     |
+| 10 | Georgia              |  52 | USA     |
+| 11 | Hawaii               |  25 | USA     |
+| 12 | Idaho                |  54 | USA     |
+| 13 | Illinois             |  36 | USA     |
+| 14 | Indiana              |  30 | USA     |
+| 15 | Iowa                 |  46 | USA     |
+| 16 | Kansas               |  64 | USA     |
+| 17 | Kentucky             |  40 | USA     |
+| 18 | Louisiana            |  39 | USA     |
+| 19 | Maine                |  33 | USA     |
+| 20 | Maryland             |  32 | USA     |
+| 21 | Massachusetts        |  35 | USA     |
+| 22 | Michigan             |  23 | USA     |
+| 23 | Minnesota            |  26 | USA     |
+| 24 | Mississippi          |  44 | USA     |
+| 25 | Missouri             |  69 | USA     |
+| 26 | Montana              |  38 | USA     |
+| 27 | Nebraska             |  57 | USA     |
+| 28 | Nevada               |  58 | USA     |
+| 29 | New Hampshire        |  29 | USA     |
+| 30 | New Jersey           |  39 | USA     |
+| 31 | New Mexico           |  43 | USA     |
+| 32 | New York             |  34 | USA     |
+| 33 | North Carolina       |  46 | USA     |
+| 34 | North Dakota         |  18 | USA     |
+| 35 | Ohio                 |  27 | USA     |
+| 36 | Oklahoma             |  44 | USA     |
+| 37 | Oregon               |  63 | USA     |
+| 38 | Pennsylvania         |  29 | USA     |
+| 39 | Rhode Island         |  49 | USA     |
+| 40 | South Carolina       |  54 | USA     |
+| 41 | South Dakota         |  41 | USA     |
+| 42 | Tennessee            |  54 | USA     |
+| 43 | Texas                |  43 | USA     |
+| 44 | Utah                 |  31 | USA     |
+| 45 | Vermont              |  32 | USA     |
+| 46 | Virginia             |  30 | USA     |
+| 47 | Washington           |  58 | USA     |
+| 48 | West Virginia        |  34 | USA     |
+| 49 | Wisconsin            |  20 | USA     |
+| 50 | Wyoming              |  30 | USA     |
+
+## India Air Quality Data
+
+Dataset load (pandas):
+
+```python
+idf = pd.read_csv('india air quality.csv')
+idf
+```
+
+India data (excerpt):
+
+|    | State                                    | AQI | Country |
+| -: | ---------------------------------------- | --: | ------- |
+|  0 | Andhra Pradesh                           | 131 | India   |
+|  1 | Arunachal Pradesh                        |  38 | India   |
+|  2 | Assam                                    | 119 | India   |
+|  3 | Bihar                                    | 132 | India   |
+|  4 | Chandigarh                               |  92 | India   |
+|  5 | Chhattisgarh                             | 121 | India   |
+|  6 | Dadra And Nagar Haveli                   | 173 | India   |
+|  7 | Dadra And Nagar Haveli And Daman And Diu | 107 | India   |
+|  8 | Daman And Diu                            |  95 | India   |
+|  9 | Delhi                                    | 389 | India   |
+| 10 | Goa                                      |  85 | India   |
+| 11 | Gujarat                                  |  98 | India   |
+| 12 | Haryana                                  | 360 | India   |
+| 13 | Himachal Pradesh                         |  62 | India   |
+| 14 | Jammu And Kashmir                        | 111 | India   |
+| 15 | Jharkhand                                | 181 | India   |
+| 16 | Karnataka                                |  77 | India   |
+| 17 | Kerala                                   |  89 | India   |
+| 18 | Madhya Pradesh                           | 152 | India   |
+| 19 | Maharashtra                              | 162 | India   |
+| 20 | Manipur                                  |  22 | India   |
+| 21 | Meghalaya                                |  20 | India   |
+| 22 | Mizoram                                  |  35 | India   |
+| 23 | Nagaland                                 |  10 | India   |
+| 24 | Odisha                                   | 140 | India   |
+| 25 | Puducherry                               |  95 | India   |
+| 26 | Punjab                                   | 231 | India   |
+| 27 | Rajasthan                                | 200 | India   |
+| 28 | Sikkim                                   |  12 | India   |
+| 29 | Tamil Nadu                               | 127 | India   |
+| 30 | Telangana                                |  92 | India   |
+| 31 | Tripura                                  |  54 | India   |
+| 32 | Uttar Pradesh                            | 303 | India   |
+| 33 | Uttarakhand                              |  57 | India   |
+| 34 | West Bengal                              | 221 | India   |
+
+## Comparative Analysis — Steps
+
+{% stepper %}
+{% step %}
+### Compare with Mean
+
+Commands:
+
+```python
+india_avg_aqi = idf['AQI'].mean()
+usa_avg_aqi = udf['AQI'].mean()
+india_avg_aqi, usa_avg_aqi
+```
+
+Output:
+
+(125.51428571428572, 41.1764705882353)
+
+Insight: India has an average AQI ≈ 125.5, which is much higher than the USA average ≈ 41.2.
+{% endstep %}
+
+{% step %}
+### Compare with Median
+
+Commands:
+
+```python
+india_median_aqi = idf['AQI'].median()
+usa_median_aqi = udf['AQI'].median()
+india_median_aqi, usa_median_aqi
+```
+
+Output:
+
+(107.0, 39.0)
+
+Insight: 50% of Indian states have AQI below/above 107, while 50% of US states are below/above 39 — indicating a consistent disparity.
+{% endstep %}
+
+{% step %}
+### Compare with Mode
+
+Commands:
+
+```python
+most_frequent_india_aqi = idf['AQI'].mode()
+most_frequent_usa_aqi = udf['AQI'].mode()
+most_frequent_india_aqi, most_frequent_usa_aqi
+```
+
+Output:
+
+India mode: 92 and 95 USA mode: 34
+
+Insight: India's most frequent AQI values (92, 95) are substantially higher than the USA's (34).
+{% endstep %}
+
+{% step %}
+### Compare with Max and Min
+
+Commands and outputs:
+
+```python
+max_india_aqi = idf['AQI'].max()
+max_usa_aqi = udf['AQI'].max()
+max_india_aqi, max_usa_aqi
+```
+
+Output: (389, 81)
+
+India max row:
+
+```python
+idf.loc[idf['AQI'] == idf['AQI'].max()]
+```
+
+Result: Delhi — 389
+
+USA max row:
+
+```python
+udf.loc[udf['AQI'] == udf['AQI'].max()]
+```
+
+Result: Arkansas — 81
+
+Minimums:
+
+```python
+min_india_aqi = idf['AQI'].min()
+min_usa_aqi = udf['AQI'].min()
+min_india_aqi, min_usa_aqi
+```
+
+Output: (10, 18)
+
+India min row: Nagaland — 10 USA min row: North Dakota — 18
+
+Insight: India's worst (Delhi: 389) far exceeds USA's worst (Arkansas: 81). India's cleanest (Nagaland: 10) is slightly better than USA's cleanest (North Dakota: 18).
+{% endstep %}
+
+{% step %}
+### Top 5 Most Concerning — India and USA
+
+Commands:
+
+```python
+top_idf = idf.sort_values('AQI', ascending=False).head()
+top_udf = udf.sort_values('AQI', ascending=False).head()
+top_idf, top_udf
+```
+
+Top 5 — India:
+
+| State         | AQI |
+| ------------- | --: |
+| Delhi         | 389 |
+| Haryana       | 360 |
+| Uttar Pradesh | 303 |
+| Punjab        | 231 |
+| West Bengal   | 221 |
+
+Top 5 — USA:
+
+| City (State) | AQI |
+| ------------ | --: |
+| Arkansas     |  81 |
+| Missouri     |  69 |
+| Arizona      |  65 |
+| Kansas       |  64 |
+| Oregon       |  63 |
+
+Insight: India's 5th worst (West Bengal: 221) has 2.7x higher AQI than the USA's worst (Arkansas: 81).
+{% endstep %}
+
+{% step %}
+### Conclusion: Comparative Summary
+
+## Comparative Analysis: Air Quality (India vs USA)
+
+### Key Findings
+
+**Central Tendency Comparison:**
+
+* **Average AQI:** India (125.5) is approximately **3x higher** than USA (41.2)
+* **Median AQI:** India (107) versus USA (39) - indicating consistent disparity across both countries
+* **Most Frequent AQI:** India's most common values (92, 95) are nearly **3x higher** than USA's (34)
+
+**Extremes Analysis:**
+
+* **Maximum AQI:** India's worst performer (Delhi: 389) is **4.8x higher** than USA's worst (Arkansas: 81)
+* **Minimum AQI:** India's cleanest state (Nagaland: 10) is slightly better than USA's cleanest (North Dakota: 18)
+
+**Top Polluted Regions:**
+
+* **India's Top 5 Worst:** Delhi (389), Haryana (360), Uttar Pradesh (303), Punjab (231), West Bengal (221)
+* **USA's Top 5 Worst:** Arkansas (81), Missouri (69), Arizona (65), Kansas (64), Oregon (63)
+* India's 5th worst state (West Bengal: 221) has **2.7x higher** AQI than USA's worst state (Arkansas: 81)
+
+### Conclusion
+
+India faces significantly more severe air quality challenges compared to the USA across all statistical measures. While both countries have regions with relatively clean air (minimum AQI values are comparable), India's overall pollution levels are substantially higher, with average, median, and maximum AQI values being 3-5 times worse than the USA. The concentration of extremely high AQI values in India's northern states (Delhi, Haryana, Uttar Pradesh, Punjab) represents a critical public health concern that far exceeds any air quality issues observed in US states.
+{% endstep %}
+{% endstepper %}
