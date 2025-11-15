@@ -15,3 +15,5 @@
 {% file src="../../.gitbook/assets/store sales.csv" %}
 
 {% file src="../../.gitbook/assets/air_quality_index.csv" %}
+
+{% file src="../../.gitbook/assets/bmw.csv" %}
