@@ -69,6 +69,7 @@
     * [7. Aggregate Functions](python-for-data-analytics/2.-data-analytics/7.-aggregate-functions.md)
     * [8. Practice - air quality usa vs india](python-for-data-analytics/2.-data-analytics/8.-practice-air-quality-usa-vs-india.md)
     * [9. value\_counts() and groupby()](python-for-data-analytics/2.-data-analytics/9.-value_counts-and-groupby.md)
+    * [ecommerce](python-for-data-analytics/2.-data-analytics/ecommerce.md)
     * [Required Files](python-for-data-analytics/2.-data-analytics/required-files.md)
   * [3. Statistics](python-for-data-analytics/3.-statistics/README.md)
     * [1. Introduction To Statistics](python-for-data-analytics/3.-statistics/1.-introduction-to-statistics.md)
