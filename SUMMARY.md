@@ -71,6 +71,7 @@
     * [9. value\_counts() and groupby()](python-for-data-analytics/2.-data-analytics/9.-value_counts-and-groupby.md)
     * [ecommerce](python-for-data-analytics/2.-data-analytics/ecommerce.md)
     * [Required Files](python-for-data-analytics/2.-data-analytics/required-files.md)
+    * [datetime in pandas](python-for-data-analytics/2.-data-analytics/datetime-in-pandas.md)
   * [3. Statistics](python-for-data-analytics/3.-statistics/README.md)
     * [1. Introduction To Statistics](python-for-data-analytics/3.-statistics/1.-introduction-to-statistics.md)
     * [2. Types of Statistics](python-for-data-analytics/3.-statistics/2.-types-of-statistics.md)

@@ -1,0 +1,557 @@
+# datetime in pandas
+
+## Datetime in Pandas
+
+Datetime is one of the most important topics in pandas. First thing that you need to do is convert the Date column into datetime to perform operations.
+
+```python
+import pandas as pd
+```
+
+```python
+df = pd.read_csv('expense.csv')
+df
+```
+
+|    | date       | amount | category      |
+| -: | ---------- | -----: | ------------- |
+|  0 | 03/01/2024 |    520 | Groceries     |
+|  1 | 07/01/2024 |    150 | Transport     |
+|  2 | 15/01/2024 |    980 | Electronics   |
+|  3 | 28/01/2024 |    220 | Dining        |
+|  4 | 05/02/2024 |    430 | Rent          |
+|  5 | 11/02/2024 |     85 | Groceries     |
+|  6 | 19/02/2024 |     60 | Snacks        |
+|  7 | 03/03/2024 |    255 | Medical       |
+|  8 | 18/03/2024 |    145 | Transport     |
+|  9 | 25/03/2024 |    600 | Groceries     |
+| 10 | 04/04/2024 |    210 | Utilities     |
+| 11 | 22/04/2024 |    140 | Snacks        |
+| 12 | 01/05/2024 |    700 | Rent          |
+| 13 | 13/05/2024 |    475 | Groceries     |
+| 14 | 29/05/2024 |    310 | Dining        |
+| 15 | 08/06/2024 |    260 | Transport     |
+| 16 | 21/06/2024 |    120 | Snacks        |
+| 17 | 30/06/2024 |    150 | Entertainment |
+| 18 | 07/07/2024 |    510 | Groceries     |
+| 19 | 19/07/2024 |    210 | Utilities     |
+| 20 | 04/08/2024 |    130 | Transport     |
+| 21 | 26/08/2024 |    880 | Electronics   |
+| 22 | 06/09/2024 |    900 | Rent          |
+| 23 | 14/09/2024 |    345 | Groceries     |
+| 24 | 25/09/2024 |     90 | Snacks        |
+| 25 | 03/10/2024 |    240 | Medical       |
+| 26 | 17/10/2024 |    190 | Transport     |
+| 27 | 29/10/2024 |    160 | Dining        |
+| 28 | 05/11/2024 |    520 | Groceries     |
+| 29 | 22/11/2024 |    210 | Utilities     |
+| 30 | 08/12/2024 |    150 | Snacks        |
+| 31 | 20/12/2024 |    105 | Transport     |
+| 32 | 04/01/2025 |    540 | Groceries     |
+| 33 | 15/01/2025 |    985 | Electronics   |
+| 34 | 28/01/2025 |    260 | Dining        |
+| 35 | 10/02/2025 |    900 | Rent          |
+| 36 | 19/02/2025 |    180 | Transport     |
+| 37 | 27/02/2025 |    115 | Snacks        |
+| 38 | 09/03/2025 |    620 | Groceries     |
+| 39 | 22/03/2025 |    145 | Transport     |
+| 40 | 02/04/2025 |    210 | Utilities     |
+| 41 | 26/04/2025 |    345 | Medical       |
+| 42 | 03/05/2025 |    705 | Rent          |
+| 43 | 19/05/2025 |    320 | Groceries     |
+| 44 | 01/06/2025 |    155 | Snacks        |
+| 45 | 18/06/2025 |    245 | Transport     |
+| 46 | 05/07/2025 |    520 | Groceries     |
+| 47 | 23/07/2025 |    210 | Utilities     |
+| 48 | 09/08/2025 |    130 | Entertainment |
+| 49 | 27/08/2025 |    890 | Electronics   |
+| 50 | 07/09/2025 |    950 | Rent          |
+| 51 | 18/09/2025 |    310 | Groceries     |
+| 52 | 29/09/2025 |     95 | Snacks        |
+| 53 | 04/10/2025 |    235 | Medical       |
+| 54 | 21/10/2025 |    190 | Transport     |
+| 55 | 01/11/2025 |    540 | Groceries     |
+| 56 | 19/11/2025 |    210 | Dining        |
+| 57 | 08/12/2025 |    160 | Snacks        |
+| 58 | 22/12/2025 |    110 | Transport     |
+
+{% hint style="warning" %}
+If you check dtypes, the date column will be object. If Date column is object, you will not be able to perform datetime operations.
+{% endhint %}
+
+```python
+df.info()
+```
+
+date   object
+
+amount int&#x20;
+
+category object
+
+
+
+### pd.to\_datetime() - For Date Conversion
+
+We need to tell pandas that it is a date column, so we need to convert the date column into a datetime datatype.
+
+To convert Date column into datetime datatype, we will use pd.to\_datetime().
+
+You can also find date format codes: https://docs.python.org/3/library/datetime.html#format-codes
+
+```python
+df['date'] = pd.to_datetime(df['date'], format='%d/%m/%Y')
+df.head()
+```
+
+|    | date       | amount | category    |
+| -: | ---------- | -----: | ----------- |
+|  0 | 2024-01-03 |    520 | Groceries   |
+|  1 | 2024-01-07 |    150 | Transport   |
+|  2 | 2024-01-15 |    980 | Electronics |
+|  3 | 2024-01-28 |    220 | Dining      |
+|  4 | 2024-02-05 |    430 | Rent        |
+
+```python
+df.info()
+
+date  datetime
+amount int
+category object
+```
+
+> Note: Now the date column has converted into datetime. No matter what was the format before conversion, after conversion the format will be: year-month-day.
+
+### Find maximum / latest date in dataset
+
+```python
+df['date'].max()
+```
+
+Out: Timestamp('2025-12-22 00:00:00')
+
+### Find minimum / oldest date in dataset
+
+```python
+df['date'].min()
+```
+
+Out: Timestamp('2024-01-03 00:00:00')
+
+### Filter in Date
+
+```python
+df.loc[df['date'] == '2024-01-28']
+```
+
+|    | date       | amount | category |
+| -: | ---------- | -----: | -------- |
+|  3 | 2024-01-28 |    220 | Dining   |
+
+```python
+df.loc[df['date'] > '2024-01-28']
+```
+
+
+
+```python
+df.loc[(df['date'] >= '2024-01-28') & (df['date'] <= '2024-02-28')]
+```
+
+|    | date       | amount | category  |
+| -: | ---------- | -----: | --------- |
+|  3 | 2024-01-28 |    220 | Dining    |
+|  4 | 2024-02-05 |    430 | Rent      |
+|  5 | 2024-02-11 |     85 | Groceries |
+|  6 | 2024-02-19 |     60 | Snacks    |
+
+```python
+df.loc[df['date'].between('2024-01-28','2024-02-28')]
+```
+
+(Same output as above)
+
+### Filter one year date — 2024
+
+```python
+df2024 = df.loc[df['date'].between('2024-01-01','2024-12-31')]
+df2024
+```
+
+Shows rows for 2024
+
+### Sort according to date
+
+```python
+sorted_df = df.sort_values('date')
+sorted_df
+```
+
+(Sorted table — omitted for brevity)
+
+### Finding More About Dates with dt function
+
+Use the .dt accessor to extract components like day, day\_name, month, month\_name, year, quarter, etc.
+
+#### day — day from the date column
+
+```python
+df['day'] = df['date'].dt.day
+df.head()
+```
+
+|    | date       | amount | category    | day |
+| -: | ---------- | -----: | ----------- | --: |
+|  0 | 2024-01-03 |    520 | Groceries   |   3 |
+|  1 | 2024-01-07 |    150 | Transport   |   7 |
+|  2 | 2024-01-15 |    980 | Electronics |  15 |
+|  3 | 2024-01-28 |    220 | Dining      |  28 |
+|  4 | 2024-02-05 |    430 | Rent        |   5 |
+
+#### day\_name() — day name from the date column
+
+```python
+df['dn'] = df['date'].dt.day_name()
+df.head()
+```
+
+|    | date       | amount | category    | day | dn        |
+| -: | ---------- | -----: | ----------- | --: | --------- |
+|  0 | 2024-01-03 |    520 | Groceries   |   3 | Wednesday |
+|  1 | 2024-01-07 |    150 | Transport   |   7 | Sunday    |
+|  2 | 2024-01-15 |    980 | Electronics |  15 | Monday    |
+
+#### month — month from the date column
+
+```python
+df['month'] = df['date'].dt.month
+df.head()
+```
+
+#### month\_name() — month name from the date column
+
+```python
+df['mn'] = df['date'].dt.month_name()
+df.head()
+```
+
+#### year — year from the date column
+
+```python
+df['year'] = df['date'].dt.year
+df.head()
+```
+
+#### quarter — quarter from the date column
+
+{% stepper %}
+{% step %}
+### Quarter mapping
+
+Jan–Mar is first quarter
+{% endstep %}
+
+{% step %}
+Apr–Jun is second quarter
+{% endstep %}
+
+{% step %}
+Jul–Sep is third quarter
+{% endstep %}
+
+{% step %}
+Oct–Dec is fourth quarter
+{% endstep %}
+{% endstepper %}
+
+```python
+df['q'] = df['date'].dt.quarter
+df.head()
+```
+
+### Datetime with Time Component
+
+Suppose you have a date with time. For this exercise, download this dataset:
+
+```python
+df = pd.read_csv('expense_datetime.csv')
+df.head()
+```
+
+|    | date                | amount | category    |
+| -: | ------------------- | -----: | ----------- |
+|  0 | 2024/01/03 10:24:15 |    520 | Groceries   |
+|  1 | 2024/01/07 08:12:44 |    150 | Transport   |
+|  2 | 2024/01/15 19:48:03 |    980 | Electronics |
+
+#### Conversion to datetime
+
+```python
+df['date'] = pd.to_datetime(df['date'], format='%Y/%m/%d %H:%M:%S')
+df.head()
+```
+
+#### date — To get only date
+
+```python
+df['onlydate'] = df['date'].dt.date
+df.head()
+```
+
+#### time — To get only time
+
+```python
+df['time'] = df['date'].dt.time
+df.head()
+```
+
+#### hour — To get hour
+
+```python
+df['hour'] = df['date'].dt.hour
+df.head()
+```
+
+#### minute — To get minute
+
+```python
+df['minute'] = df['date'].dt.minute
+df.head()
+```
+
+#### second — To get seconds
+
+```python
+df['second'] = df['date'].dt.second
+df.head()
+```
+
+### strftime — string-format time
+
+strftime converts a datetime object into a formatted string. It doesn’t change the date/time itself — it only controls how it is displayed.
+
+You can refer to format codes: https://docs.python.org/3/library/datetime.html#format-codes
+
+Example — display as day/month/year H:M:S:
+
+```python
+df['display_date'] = df['date'].dt.strftime('%d/%m/%Y %H:%M:%S')
+df.head()
+```
+
+Or with full month name:
+
+```python
+df['display_date'] = df['date'].dt.strftime('%d/%B/%Y %H:%M:%S')
+df.head()
+```
+
+### Multiple Date Operations
+
+```python
+df = pd.read_csv('order_delivery.csv')
+df.head()
+```
+
+|    | order\_date | delivery\_date | amount | category    |
+| -: | ----------- | -------------- | -----: | ----------- |
+|  0 | 3/1/2025    | 06/02/2025     |    520 | Groceries   |
+|  1 | 7/1/2025    | 10/01/2025     |    150 | Transport   |
+|  2 | 12/1/2025   | 14/01/2025     |    980 | Electronics |
+|  3 | 18/1/2025   | 20/01/2025     |    220 | Dining      |
+|  4 | 02/2/2025   | 05/02/2026     |    430 | Rent        |
+
+```python
+df['order_date'] = pd.to_datetime(df['order_date'], format='%d/%m/%Y')
+df['delivery_date'] = pd.to_datetime(df['delivery_date'], format='%d/%m/%Y')
+```
+
+#### Difference in two dates
+
+```python
+df['diff'] = df['delivery_date'] - df['order_date']
+df.head()
+```
+
+|    | order\_date | delivery\_date | amount | category    | diff    |
+| -: | ----------- | -------------- | -----: | ----------- | ------- |
+|  0 | 2025-01-03  | 2025-02-06     |    520 | Groceries   | 34 days |
+|  1 | 2025-01-07  | 2025-01-10     |    150 | Transport   | 3 days  |
+|  2 | 2025-01-12  | 2025-01-14     |    980 | Electronics | 2 days  |
+
+Note: You can remove "days" from the diff column by using the .dt.days accessor. Do remember days (a property of a timedelta) is different from day (a datetime component).
+
+{% hint style="warning" %}
+Use .dt.days to extract the number of days from a timedelta. "days" is different from the datetime "day" component.
+{% endhint %}
+
+```python
+df['diff'] = df['diff'].dt.days
+df.head()
+```
+
+#### To get number of years, months, weeks etc
+
+```python
+df['no_y'] = df['diff'] / 365
+df['no_m'] = df['diff'] / 30
+df['no_w'] = df['diff'] / 7
+df.head()
+```
+
+### Difference in Two Datetime Columns
+
+```python
+df = pd.read_csv('fast_delivery.csv')
+df.head()
+```
+
+|    | promised\_delivery\_time | actual\_delivery\_time |
+| -: | ------------------------ | ---------------------- |
+|  0 | 2024-07-17 08:52:01      | 2024-07-17 08:47:01    |
+|  1 | 2024-05-28 13:25:29      | 2024-05-28 13:27:29    |
+|  2 | 2024-09-23 13:25:12      | 2024-09-23 13:29:12    |
+|  3 | 2023-11-24 16:34:56      | 2023-11-24 16:33:56    |
+|  4 | 2023-11-20 05:17:39      | 2023-11-20 05:18:39    |
+
+```python
+df['promised_delivery_time'] = pd.to_datetime(df['promised_delivery_time'], format='%Y-%m-%d %H:%M:%S')
+df['actual_delivery_time'] = pd.to_datetime(df['actual_delivery_time'], format='%Y-%m-%d %H:%M:%S')
+df['delivery_time'] = df['promised_delivery_time'] - df['actual_delivery_time']
+df.head()
+```
+
+|    | promised\_delivery\_time | actual\_delivery\_time | delivery\_time    |
+| -: | ------------------------ | ---------------------- | ----------------- |
+|  0 | 2024-07-17 08:52:01      | 2024-07-17 08:47:01    | 0 days 00:05:00   |
+|  1 | 2024-05-28 13:25:29      | 2024-05-28 13:27:29    | -1 days +23:58:00 |
+|  2 | 2024-09-23 13:25:12      | 2024-09-23 13:29:12    | -1 days +23:56:00 |
+
+{% hint style="warning" %}
+When subtracting two datetime columns in Pandas, the result is a timedelta and pandas represents it including days, hours, minutes, and seconds, even when you're only interested in minutes.
+{% endhint %}
+
+### dt.total\_seconds() — To Convert Difference into seconds
+
+```python
+df['delivery_time'] = df['delivery_time'].dt.total_seconds()
+df.head()
+```
+
+|    | promised\_delivery\_time | actual\_delivery\_time | delivery\_time |
+| -: | ------------------------ | ---------------------- | -------------: |
+|  0 | 2024-07-17 08:52:01      | 2024-07-17 08:47:01    |          300.0 |
+|  1 | 2024-05-28 13:25:29      | 2024-05-28 13:27:29    |         -120.0 |
+|  2 | 2024-09-23 13:25:12      | 2024-09-23 13:29:12    |         -240.0 |
+
+Now you can convert it into minutes easily:
+
+```python
+df['delivery_time'] = df['delivery_time'] / 60
+df.head()
+```
+
+|    | promised\_delivery\_time | actual\_delivery\_time | delivery\_time |
+| -: | ------------------------ | ---------------------- | -------------: |
+|  0 | 2024-07-17 08:52:01      | 2024-07-17 08:47:01    |            5.0 |
+|  1 | 2024-05-28 13:25:29      | 2024-05-28 13:27:29    |           -2.0 |
+|  2 | 2024-09-23 13:25:12      | 2024-09-23 13:29:12    |           -4.0 |
+
+Understanding UNIX timestamps and time difference (teaching note)
+
+In many datasets, date and time are stored as UNIX timestamps — integers representing seconds since 1 January 1970. This is compact and fast to process.
+
+Example:
+
+```
+order_time = 1732003200
+delivery_time = 1732005000
+```
+
+#### Why timestamps are useful
+
+* They take less storage space.
+* They are faster for computers to compare and calculate.
+* They can be converted into any time zone when needed.
+
+```python
+df = pd.read_csv('timestamp.csv')
+df
+```
+
+|    | order\_id | order\_time | delivery\_time |
+| -: | --------- | ----------: | -------------: |
+|  0 | 101       |  1732003200 |     1732005000 |
+|  1 | 102       |  1732100000 |     1732103600 |
+|  2 | 103       |  1732150000 |     1732150900 |
+
+```python
+df['order_time'] = pd.to_datetime(df['order_time'], unit='s')
+df['delivery_time'] = pd.to_datetime(df['delivery_time'], unit='s')
+df.head()
+```
+
+|    | order\_id | order\_time         | delivery\_time      |
+| -: | --------- | ------------------- | ------------------- |
+|  0 | 101       | 2024-11-19 08:00:00 | 2024-11-19 08:30:00 |
+|  1 | 102       | 2024-11-20 10:53:20 | 2024-11-20 11:53:20 |
+|  2 | 103       | 2024-11-21 00:46:40 | 2024-11-21 01:01:40 |
+
+### Some Use Cases
+
+```python
+df = pd.read_csv('expense.csv')
+df.head()
+```
+
+#### Most Expensive Year
+
+```python
+df['date'] = pd.to_datetime(df['date'], format='%d/%m/%Y')
+df['year'] = df['date'].dt.year
+df.head()
+```
+
+```python
+mdf = df.groupby('year').agg(
+    total_expense=('amount', 'sum'),
+    avg_expense=('amount', 'mean'),
+    median_expense=('amount', 'median'),
+    max_expense=('amount', 'max'),
+    min_expense=('amount', 'min'),
+)
+mdf
+```
+
+| year | total\_expense | avg\_expense | median\_expense | max\_expense | min\_expense |
+| ---: | -------------: | -----------: | --------------: | -----------: | -----------: |
+| 2024 |          10450 |     326.5625 |           215.0 |          980 |           60 |
+| 2025 |          10275 |     380.5556 |           245.0 |          985 |           95 |
+
+### Most Expensive Day
+
+```python
+df['day_name'] = df['date'].dt.day_name()
+df.head()
+```
+
+```python
+mdf = df.groupby('day_name').agg(
+    total_expense=('amount', 'sum'),
+    avg_expense=('amount', 'mean'),
+)
+mdf = mdf.sort_values('total_expense', ascending=False)
+mdf
+```
+
+| day\_name | total\_expense | avg\_expense |
+| --------- | -------------: | -----------: |
+| Monday    |           5295 |   407.307692 |
+| Wednesday |           4550 |   413.636364 |
+| Saturday  |           3765 |        376.5 |
+| Sunday    |           3375 |   306.818182 |
+| Friday    |           1545 |        309.0 |
+| Tuesday   |           1130 |        282.5 |
+| Thursday  |           1065 |        213.0 |
+
+(End of notebook)
