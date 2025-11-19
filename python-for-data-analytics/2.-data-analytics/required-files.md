@@ -17,3 +17,11 @@
 {% file src="../../.gitbook/assets/air_quality_index.csv" %}
 
 {% file src="../../.gitbook/assets/bmw.csv" %}
+
+{% file src="../../.gitbook/assets/expense.csv" %}
+
+{% file src="../../.gitbook/assets/expense_datetime.csv" %}
+
+{% file src="../../.gitbook/assets/fast_delivery.csv" %}
+
+{% file src="../../.gitbook/assets/order_delivery.csv" %}
