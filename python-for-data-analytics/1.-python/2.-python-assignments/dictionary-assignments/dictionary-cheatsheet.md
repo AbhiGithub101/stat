@@ -27,8 +27,7 @@ ex: `my_dict = {'name': 'John', 'age': 25, 'city': 'New York'}`
    `my_dict.pop('age') # {'name': 'John', 'city': 'New York'}`\\
 8. **.popitem():** Removes the last key value pair from the dictionary.\
    \
-   `my_dict.popitem() # {'name': 'John', 'age': 25}`\
-
+   `my_dict.popitem() # {'name': 'John', 'age': 25}`<br>
 9. **.upate():** Updates a dictionary by adding the items from another dictionary.\
    \
    `new_dict={'country':'USA','mob_num':12345}`\
