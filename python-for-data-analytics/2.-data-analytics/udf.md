@@ -73,10 +73,12 @@ Question: In which quarter did we have the most expenses?
 
 In India quarter mapping used here:
 
-* Apr - Jun = 1
-* Jul - Sep = 2
-* Oct - Dec = 3
-* Jan - Mar = 4
+&#x20;     us                     india
+
+* 2   Apr - Jun = 1
+* 3   Jul - Sep = 2
+* 4   Oct - Dec = 3
+* 1   Jan - Mar = 4
 
 Load expense data and convert dates:
 
