@@ -1,0 +1,11 @@
+Customer_Age,Vehicle_Age,Claim_History (yrs),Location_Risk,Accidents_Last_3Y
+22,3,0,High,1
+35,6,2,Medium,0
+45,12,7,Low,2
+28,4,0,High,0
+51,9,3,Medium,1
+19,11,6,High,3
+33,2,0,Low,0
+42,13,10,Medium,2
+24,7,1,Low,0
+38,5,6,High,1
