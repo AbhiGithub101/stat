@@ -1,7 +1,16 @@
 # UDF
 
-UDF (user-defined function) is a function written by the user to apply custom logic on your data.\
+UDF (user-defined function) is a function written by user to apply custom logic on your data.
+
 It is used when there is no built-in function and you need to create a function.
+
+We often use it to create :
+
+1. Custom Logic
+2. Complex Business Rules&#x20;
+3. Applying Modules
+
+Example — load data and compute a total column:
 
 ```python
 import pandas as pd
@@ -11,7 +20,7 @@ df['total'] = df.iloc[:, 1:6].sum(axis=1)
 df.head()
 ```
 
-Output:
+Sample output:
 
 |    | Name    | Math | Science | English | History | Art | total |
 | -: | ------- | ---: | ------: | ------: | ------: | --: | ----: |
@@ -21,15 +30,17 @@ Output:
 |  3 | David   |   65 |      70 |      60 |      55 |  72 |   322 |
 |  4 | Eva     |   88 |      90 |      78 |      82 |  85 |   423 |
 
-## Create a column Grade
+***
 
-Grading logic:
+## Create a Grade column
 
-* A : if mark is greater than 450
-* B : if mark is greater than 350
+Rules:
+
+* A : if mark is greater than or equal to 450
+* B : if mark is greater than or equal to 350
 * C : if mark is less than 350
 
-### Create a function for this column
+Create a function and apply it to the total column:
 
 ```python
 def myf(v):
@@ -39,18 +50,12 @@ def myf(v):
         return 'B'
     else:
         return 'C'
-```
 
-
-
-### Applying this function on total Column
-
-```python
 df['Grade'] = df['total'].apply(myf)
 df.head()
 ```
 
-Output:
+Sample output:
 
 |    | Name    | Math | Science | English | History | Art | total | Grade |
 | -: | ------- | ---: | ------: | ------: | ------: | --: | ----: | :---: |
@@ -59,73 +64,45 @@ Output:
 |  2 | Charlie |   92 |      95 |      85 |      89 |  93 |   454 |   A   |
 |  3 | David   |   65 |      70 |      60 |      55 |  72 |   322 |   C   |
 |  4 | Eva     |   88 |      90 |      78 |      82 |  85 |   423 |   B   |
-|    |         |      |         |         |         |     |       |       |
 
-### Use Case 1 : India Quarter
+***
 
-In Which Quarter did we have the most expense ?
+## Use case 1 — Indian Quarter
 
-In india, quarter are defined as :&#x20;
+Question: In which quarter did we have the most expenses?
 
-```
+In India quarter mapping used here:
 
-US            IN
-2- Apr - Jun = 1
-3- Jul - Sep = 2
-4- Oct - Dec = 3
-1- Jan - Mar = 4
-```
+* Apr - Jun = 1
+* Jul - Sep = 2
+* Oct - Dec = 3
+* Jan - Mar = 4
+
+Load expense data and convert dates:
 
 ```python
 df = pd.read_csv('expense.csv')
-df.head()
-```
-
-Output:
-
-|    | date       | amount | category    |
-| -: | ---------- | -----: | ----------- |
-|  0 | 03/01/2024 |    520 | Groceries   |
-|  1 | 07/01/2024 |    150 | Transport   |
-|  2 | 15/01/2024 |    980 | Electronics |
-|  3 | 28/01/2024 |    220 | Dining      |
-|  4 | 05/02/2024 |    430 | Rent        |
-
-Convert to datetime and get pandas quarter:
-
-```python
 df['date'] = pd.to_datetime(df['date'], format='%d/%m/%Y')
 df.head()
 ```
 
-Output:
+Sample input:
 
-|    | date       | amount | category    |
-| -: | ---------- | -----: | ----------- |
-|  0 | 2024-01-03 |    520 | Groceries   |
-|  1 | 2024-01-07 |    150 | Transport   |
-|  2 | 2024-01-15 |    980 | Electronics |
-|  3 | 2024-01-28 |    220 | Dining      |
-|  4 | 2024-02-05 |    430 | Rent        |
+|    | date       | amount |    category |
+| -: | ---------- | -----: | ----------: |
+|  0 | 03/01/2024 |    520 |   Groceries |
+|  1 | 07/01/2024 |    150 |   Transport |
+|  2 | 15/01/2024 |    980 | Electronics |
+|  3 | 28/01/2024 |    220 |      Dining |
+|  4 | 05/02/2024 |    430 |        Rent |
 
-Get pandas quarter:
+Get pandas quarter and then map to Indian quarter:
 
 ```python
 df['uq'] = df['date'].dt.quarter
-df.head()
 ```
 
-Output:
-
-|    | date       | amount | category    | uq |
-| -: | ---------- | -----: | ----------- | -: |
-|  0 | 2024-01-03 |    520 | Groceries   |  1 |
-|  1 | 2024-01-07 |    150 | Transport   |  1 |
-|  2 | 2024-01-15 |    980 | Electronics |  1 |
-|  3 | 2024-01-28 |    220 | Dining      |  1 |
-|  4 | 2024-02-05 |    430 | Rent        |  1 |
-
-Create function to convert pandas quarter to Indian quarter:
+Convert to Indian quarter:
 
 ```python
 def iq(v):
@@ -137,26 +114,11 @@ def iq(v):
         return 2
     else:
         return 3
-```
 
-Apply it:
-
-```python
 df['india_q'] = df['uq'].apply(iq)
-df.head()
 ```
 
-Output:
-
-|    | date       | amount | category    | uq | india\_q |
-| -: | ---------- | -----: | ----------- | -: | -------: |
-|  0 | 2024-01-03 |    520 | Groceries   |  1 |        4 |
-|  1 | 2024-01-07 |    150 | Transport   |  1 |        4 |
-|  2 | 2024-01-15 |    980 | Electronics |  1 |        4 |
-|  3 | 2024-01-28 |    220 | Dining      |  1 |        4 |
-|  4 | 2024-02-05 |    430 | Rent        |  1 |        4 |
-
-Aggregate totals by Indian quarter and sort descending:
+Aggregate and sort to find the quarter with most expenses:
 
 ```python
 mdf = df.groupby('india_q').agg(total=('amount', 'sum'))
@@ -164,7 +126,7 @@ mdf = mdf.sort_values('total', ascending=False)
 mdf
 ```
 
-Output:
+Sample aggregated output:
 
 | india\_q | total |
 | -------: | ----: |
@@ -175,18 +137,18 @@ Output:
 
 ***
 
-## Use Case 2: Age Group
+## Use case 2 — Age Group
 
-Q: Which age group purchases from us the most?
+Question: Which age group purchases from us the most?
 
-Load retail dataset:
+Load retail sales data:
 
 ```python
 df = pd.read_csv('retail_sales_dataset.csv')
 df.head()
 ```
 
-Output:
+Sample input:
 
 |    | Customer ID | Gender | Age | Product Category | Quantity | Price per Unit |
 | -: | ----------- | ------ | --: | ---------------- | -------: | -------------: |
@@ -196,7 +158,7 @@ Output:
 |  3 | CUST004     | Male   |  37 | Clothing         |        1 |            500 |
 |  4 | CUST005     | Male   |  30 | Beauty           |        2 |             50 |
 
-Create function that returns age group:
+Create a function to map ages to age groups and apply:
 
 ```python
 def myf(v):
@@ -218,16 +180,12 @@ def myf(v):
         return '70-80'
     else:
         return '80+'
-```
 
-Apply it:
-
-```python
 df['age group'] = df['Age'].apply(myf)
 df.head()
 ```
 
-Output:
+Sample output:
 
 |    | Customer ID | Gender | Age | Product Category | Quantity | Price per Unit | age group |
 | -: | ----------- | ------ | --: | ---------------- | -------: | -------------: | :-------: |
@@ -243,9 +201,9 @@ Count age groups:
 df['age group'].value_counts()
 ```
 
-Output:
+Sample counts:
 
-age group counts:
+age group
 
 * 40-50 222
 * 50-60 221
@@ -256,30 +214,34 @@ age group counts:
 
 ***
 
-## Review - Language Conversion
+## Applying External Modules with UDF
 
-Sometimes we need an external module to be applied on a whole column. In that scenario, we can use a function to apply that module to the whole column.
+### 1. Review - Language Conversion
 
-Example using deep\_translator (install with pip install deep\_translator).
+Sometimes we need an external module applied to a whole column. In that scenario , we can use function to apply that module on whole column values.
 
-Load reviews:
+For an example , we have a library **deep\_translator** that can translate any language.
+
+Install: **pip install deep\_translator**
+
+Load review data:
 
 ```python
 df = pd.read_csv('review in language.csv')
 df
 ```
 
-Output:
+Sample input:
 
 |    | id | review                                     | rating |
-| -: | -- | ------------------------------------------ | -----: |
-|  0 | 1  | This product is very good and useful       |      5 |
-|  1 | 2  | यह प्रोडक्ट बहुत बढ़िया है और किफायती भी।  |      4 |
-|  2 | 3  | I am not satisfied with the quality        |      2 |
-|  3 | 4  | C'est un excellent produit j'adore         |      5 |
-|  4 | 5  | इसकी पैकिंग खराब थी लेकिन प्रोडक्ट ठीक था। |      3 |
+| -: | -: | ------------------------------------------ | -----: |
+|  0 |  1 | This product is very good and useful       |      5 |
+|  1 |  2 | यह प्रोडक्ट बहुत बढ़िया है और किफायती भी।  |      4 |
+|  2 |  3 | I am not satisfied with the quality        |      2 |
+|  3 |  4 | C'est un excellent produit j'adore         |      5 |
+|  4 |  5 | इसकी पैकिंग खराब थी लेकिन प्रोडक्ट ठीक था। |      3 |
 
-Simple example of conversion with GoogleTranslator:
+### Simple example of conversion with GoogleTranslator:
 
 ```python
 from deep_translator import GoogleTranslator
@@ -287,11 +249,10 @@ from deep_translator import GoogleTranslator
 review = "this is good product."
 translation = GoogleTranslator(source='auto', target='hi').translate(review)
 print(translation)
+# Output: यह अच्छा उत्पाद है.
 ```
 
-Output: यह अच्छा उत्पाद है.
-
-Applying this translator to the review column:
+### Apply translation to the review column:
 
 ```python
 from deep_translator import GoogleTranslator
@@ -306,12 +267,364 @@ df['eng_review'] = df['review'].apply(trans)
 df
 ```
 
-Output:
+Sample output:
 
 |    | id | review                                     | rating | eng\_review                                   |
-| -: | -- | ------------------------------------------ | -----: | --------------------------------------------- |
-|  0 | 1  | This product is very good and useful       |      5 | This product is very good and useful          |
-|  1 | 2  | यह प्रोडक्ट बहुत बढ़िया है और किफायती भी।  |      4 | This product is great and affordable too.     |
-|  2 | 3  | I am not satisfied with the quality        |      2 | I am not satisfied with the quality           |
-|  3 | 4  | C'est un excellent produit j'adore         |      5 | It's a great product I love it                |
-|  4 | 5  | इसकी पैकिंग खराब थी लेकिन प्रोडक्ट ठीक था। |      3 | Its packing was bad but the product was fine. |
+| -: | -: | ------------------------------------------ | -----: | --------------------------------------------- |
+|  0 |  1 | This product is very good and useful       |      5 | This product is very good and useful          |
+|  1 |  2 | यह प्रोडक्ट बहुत बढ़िया है और किफायती भी।  |      4 | This product is great and affordable too.     |
+|  2 |  3 | I am not satisfied with the quality        |      2 | I am not satisfied with the quality           |
+|  3 |  4 | C'est un excellent produit j'adore         |      5 | It's a great product I love it                |
+|  4 |  5 | इसकी पैकिंग खराब थी लेकिन प्रोडक्ट ठीक था। |      3 | Its packing was bad but the product was fine. |
+
+***
+
+## 2. Review Sentiment
+
+Sometimes, the logic we want to apply on a Pandas column cannot be done using built-in Pandas or NumPy functions. One such case is sentiment analysis, which requires a Natural Language Processing (NLP) model. Pandas does not provide sentiment detection on its own, so we use an external library such as TextBlob, and apply it through a User Defined Function (UDF).
+
+**What is Sentiment Analysis?**
+
+Sentiment analysis is the process of identifying whether a text expresses a positive, negative, or neutral emotion. For example:
+
+1. “Great product! Loved it.” → Positive
+2. “Terrible experience.” → Negative
+3. “It is okay.” → Neutral
+
+First you need to install textblob by `pip install textblob`
+
+For Example :
+
+```python
+from textblob import TextBlob
+
+review = 'this is best product'
+TextBlob(review).sentiment.polarity
+# Output: 1.0
+```
+
+### Apply TextBlob on the translated review column:
+
+```python
+from textblob import TextBlob
+
+def myf(v):
+    return TextBlob(v).sentiment.polarity
+
+df['sentiment'] = df['eng_review'].apply(myf)
+df
+```
+
+Sample output:
+
+|    | id | review                                     | rating |                                   eng\_review | sentiment |
+| -: | -: | ------------------------------------------ | -----: | --------------------------------------------: | --------: |
+|  0 |  1 | This product is very good and useful       |      5 |          This product is very good and useful |  0.605000 |
+|  1 |  2 | यह प्रोडक्ट बहुत बढ़िया है और किफायती भी।  |      4 |     This product is great and affordable too. |  0.800000 |
+|  2 |  3 | I am not satisfied with the quality        |      2 |           I am not satisfied with the quality | -0.250000 |
+|  3 |  4 | C'est un excellent produit j'adore         |      5 |                It's a great product I love it |  0.650000 |
+|  4 |  5 | इसकी पैकिंग खराब थी लेकिन प्रोडक्ट ठीक था। |      3 | Its packing was bad but the product was fine. | -0.141667 |
+
+***
+
+## Complex Business Logic Using UDF
+
+We also use UDF to apply complex business logic as well. Suppose you have a data of car insurance claim and you want to categorize it for claim settlement.
+
+**Category Rules**
+
+1. "stolen", "theft" → Category: Theft
+2. "hail", "storm", "rain", "flood" → Category: Natural Damage
+3. "engine", "overheating", "mechanical" → Category: Mechanical Issue
+4. "collision", "rear-ended", "crash", "accident" → Category: Collision
+5. Otherwise → Other
+
+### Load claims Data:
+
+```python
+df = pd.read_csv('claim.csv')
+```
+
+| Policy\_ID | Claim\_Description                            |
+| ---------- | --------------------------------------------- |
+| P001       | Car was rear-ended on highway - bumper broken |
+| P002       | Windshield cracked due to hail storm          |
+| P003       | Vehicle stolen last night                     |
+| P004       | Engine failure while driving- overheating     |
+| P005       | Skid accident due to rain- dent on left side  |
+| P006       | Front airbags deployed after collision        |
+| P007       | Minor scratch while parking                   |
+| P008       | Car stolen from office parking                |
+| P009       | Damage due to flash flood                     |
+| P010       | Engine overheating and mechanical breakdown   |
+
+### Creating Business Logic With UDF
+
+```python
+def categorize_claim(description):
+
+    desc = description.lower()
+
+    if "stolen" in desc or "theft" in desc:
+        return "Theft"
+
+    elif ("hail" in desc or
+          "storm" in desc or
+          "rain" in desc or
+          "flood" in desc):
+        return "Natural Damage"
+
+    elif ("engine" in desc or
+          "overheat" in desc or
+          "mechanical" in desc):
+        return "Mechanical Issue"
+
+    elif ("collision" in desc or
+          "rear-ended" in desc or
+          "crash" in desc or
+          "accident" in desc):
+        return "Collision"
+
+    else:
+
+          return "Other"
+```
+
+### Applying Business Logic With UDF
+
+```python
+df['category'] = df['Claim_Description'].apply(categorize_claim)
+df.head()
+```
+
+| Policy\_ID | Claim\_Description                            | category         |
+| ---------- | --------------------------------------------- | ---------------- |
+| P001       | Car was rear-ended on highway - bumper broken | Collision        |
+| P002       | Windshield cracked due to hail storm          | Natural Damage   |
+| P003       | Vehicle stolen last night                     | Theft            |
+| P004       | Engine failure while driving- overheating     | Mechanical Issue |
+| P005       | Skid accident due to rain- dent on left side  | Natural Damage   |
+
+## Passing the Whole Row to a UDF
+
+When applying User Defined Functions (UDFs) in Pandas, you can choose to pass:
+
+1. A single column value (df\['col'].apply(func))
+2. entire row (df.apply(func, axis=1))
+
+Passing the whole row is extremely useful when your logic requires multiple columns at the same time, such as business rules, scoring systems, or complex calculations.
+
+**Risk Score Calculation - Row Example**
+
+In Data Analysis , sometimes we need to come up with a composite score.
+
+**What is Composite Risk Score?**
+
+A **Composite Risk Score** is a **single numeric value** that combines multiple attributes or factors into one score. Instead of analyzing many separate columns, a composite score gives a **quick and meaningful assessment** of overall:
+
+* Severity
+* Priority
+* Risk
+* Financial impact
+* Operational alertness
+
+This score helps organizations **rank, classify, or prioritize cases** efficiently.
+
+#### Examples from Different Industries
+
+* **Insurance** – Claim severity score
+* **Healthcare** – Patient emergency score
+* **Banking** – Credit risk score
+* **E-commerce** – Fraud probability score
+* **Marketing** – Customer lead score
+
+Composite scoring is widely used because it turns complex data into a **simple actionable number** that supports decision-making, reporting, and automation.
+
+**Risk Score Calculation - Row Example**
+
+In Data Analysis , sometimes we need to come up with a composite score.
+
+**What is Composite Risk Score?**
+
+A **Composite Risk Score** is a **single numeric value** that combines multiple attributes or factors into one score. Instead of analyzing many separate columns, a composite score gives a **quick and meaningful assessment** of overall:
+
+* Severity
+* Priority
+* Risk
+* Financial impact
+* Operational alertness
+
+This score helps organizations **rank, classify, or prioritize cases** efficiently.
+
+#### Examples from Different Industries
+
+* **Insurance** – Claim severity score
+* **Healthcare** – Patient emergency score
+* **Banking** – Credit risk score
+* **E-commerce** – Fraud probability score
+* **Marketing** – Customer lead score
+
+Composite scoring is widely used because it turns complex data into a **simple actionable number** that supports decision-making, reporting, and automation.
+
+### Risk Score Calculation – Business Rules
+
+The **`calculate_risk()`** function assigns a Risk Score to each policy based on multiple factors in the dataset. Below are the rules used for scoring each component.
+
+***
+
+#### 1️⃣ Driver Age Risk
+
+Risk points based on the customer’s age:
+
+| Customer Age       | Points |
+| ------------------ | ------ |
+| Less than 25 years | +30    |
+| 25 to 40 years     | +20    |
+| Above 40 years     | +10    |
+
+***
+
+#### 2️⃣ Vehicle Age Risk
+
+Older vehicles are considered riskier:
+
+| Vehicle Age        | Points |
+| ------------------ | ------ |
+| More than 10 years | +25    |
+| 5 to 10 years      | +15    |
+| Less than 5 years  | +5     |
+
+***
+
+#### 3️⃣ Claim History (Years Since Last Claim)
+
+| Claim History (yrs)   | Points              |
+| --------------------- | ------------------- |
+| More than 5 years     | +25                 |
+| Between 1 and 5 years | +15                 |
+| No claim history      | 0 additional points |
+
+***
+
+#### 4️⃣ Location-Based Risk
+
+Certain areas may have higher theft or accident rates:
+
+| Location Risk | Points |
+| ------------- | ------ |
+| High          | +30    |
+| Medium        | +15    |
+| Low           | +5     |
+
+***
+
+#### 5️⃣ Accidents in Last 3 Years
+
+Each accident adds additional risk:
+
+```
+Points added = Number of accidents × 10
+```
+
+Example: 3 accidents → 30 points added.
+
+***
+
+### Final Output
+
+The **Risk Score** is calculated by summing points from:
+
+* Driver Age
+* Vehicle Age
+* Claim History
+* Location Risk
+* Recent Accidents
+
+A higher score indicates a **higher insurance risk**, helping in:
+
+* Premium calculation
+* Claim prioritization
+* Customer segmentation
+* Risk forecasting
+
+Load insurance data:
+
+```python
+df = pd.read_csv("insurance.csv")
+df
+```
+
+Sample input:
+
+|    | Customer\_Age | Vehicle\_Age | Claim\_History (yrs) | Location\_Risk | Accidents\_Last\_3Y |
+| -: | ------------: | -----------: | -------------------: | -------------- | ------------------: |
+|  0 |            22 |            3 |                    0 | High           |                   1 |
+|  1 |            35 |            6 |                    2 | Medium         |                   0 |
+|  2 |            45 |           12 |                    7 | Low            |                   2 |
+|  3 |            28 |            4 |                    0 | High           |                   0 |
+|  4 |            51 |            9 |                    3 | Medium         |                   1 |
+|  5 |            19 |           11 |                    6 | High           |                   3 |
+|  6 |            33 |            2 |                    0 | Low            |                   0 |
+|  7 |            42 |           13 |                   10 | Medium         |                   2 |
+|  8 |            24 |            7 |                    1 | Low            |                   0 |
+|  9 |            38 |            5 |                    6 | High           |                   1 |
+
+Define scoring function and apply row-wise:
+
+```python
+def calculate_risk(row):
+    score = 0
+    # Driver Age Risk
+    if row['Customer_Age'] < 25:
+        score += 30
+    elif row['Customer_Age'] <= 40:
+        score += 20
+    else:
+        score += 10
+
+    # Vehicle Age Risk
+    if row['Vehicle_Age'] > 10:
+        score += 25
+    elif row['Vehicle_Age'] >= 5:
+        score += 15
+    else:
+        score += 5
+
+    # Claim History Risk
+    if row['Claim_History (yrs)'] > 5:
+        score += 25
+    elif row['Claim_History (yrs)'] > 0:
+        score += 15
+
+    # Location Risk
+    if row['Location_Risk'] == 'High':
+        score += 30
+    elif row['Location_Risk'] == 'Medium':
+        score += 15
+    else:
+        score += 5
+
+    # Accidents in last 3 years
+    score += row['Accidents_Last_3Y'] * 10
+
+    return score
+
+df['risk score'] = df.apply(calculate_risk, axis=1)
+df
+```
+
+Sample output:
+
+| Customer\_Age | Vehicle\_Age | Claim\_History (yrs) | Location\_Risk | Accidents\_Last\_3Y | risk score |
+| ------------: | -----------: | -------------------: | -------------- | ------------------: | ---------: |
+|            22 |            3 |                    0 | High           |                   1 |         75 |
+|            35 |            6 |                    2 | Medium         |                   0 |         65 |
+|            45 |           12 |                    7 | Low            |                   2 |         85 |
+|            28 |            4 |                    0 | High           |                   0 |         55 |
+|            51 |            9 |                    3 | Medium         |                   1 |         65 |
+|            19 |           11 |                    6 | High           |                   3 |        140 |
+|            33 |            2 |                    0 | Low            |                   0 |         30 |
+|            42 |           13 |                   10 | Medium         |                   2 |         95 |
+|            24 |            7 |                    1 | Low            |                   0 |         65 |
+|            38 |            5 |                    6 | High           |                   1 |        100 |
+
