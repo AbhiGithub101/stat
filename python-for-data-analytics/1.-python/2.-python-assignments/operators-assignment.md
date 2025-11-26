@@ -160,7 +160,7 @@ Answer: **a**
 
 </details>
 
-11. Which will give an error?
+11. Which of the following code is correct in Python?
 
 a. A++\
 b. ++a\
