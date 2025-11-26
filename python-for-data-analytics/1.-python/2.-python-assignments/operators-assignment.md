@@ -171,7 +171,7 @@ d. Both A and B
 
 <summary>Solution</summary>
 
-Answer: **d**
+Answer: c
 
 </details>
 
