@@ -1,5 +1,9 @@
 # String Function In Pandas
 
+{% file src="../../.gitbook/assets/string dataset.csv" %}
+
+
+
 If you are working on a dataset, there are scenarios where you need to perform string operations / manipulation.
 
 ## String Function In Pandas
@@ -254,4 +258,120 @@ Output includes `unique code` column, e.g. `RaH-101-ihled`.
 
 ***
 
-End of examples.
+### Assignments
+
+## **STRING FUNCTION ASSIGNMENTS**&#x20;
+
+***
+
+### **⭐ Basic Cleaning**
+
+#### **1. Whitespace Cleanup**
+
+* Remove leading/trailing spaces from **FirstName**, **LastName**, **Address**, and **Feedback**.
+
+#### **2. Case Standardization**
+
+* Convert **FirstName** to _proper case_ (first letter capital).
+* Convert **LastName** to _UPPERCASE_.
+* Convert **Address** to _lowercase_.
+* Convert **Feedback** to _swapcase()_.
+
+***
+
+### **⭐ Length & Validation Tasks**
+
+#### **3. Character Count**
+
+* Create a column **NameLength** = length of FirstName + LastName combined.
+* Create a column **PhoneLength** = number of digits in PhoneNumber.
+
+#### **4. Identify Invalid Phone Numbers**
+
+* Return all rows where PhoneNumber length is **not equal to 10**.
+* Return all rows where PhoneNumber contains any **non-numeric** characters.
+
+***
+
+### **⭐ Replace Tasks**
+
+#### **5. Address Cleaning**
+
+* Replace “street” → “st.”
+
+
+
+#### **6. Remove Punctuation**
+
+* Remove all `!`, `?`, `.`, and `,` from Feedback.
+
+#### **7. Mask Phone Number**
+
+* Show only last 4 digits, mask the rest with `*`.   Hint : You can use function in pandas here
+
+***
+
+### **⭐ Split & Extract Tasks**
+
+#### **8. Address Splitting**
+
+Split Address into:
+
+* Area
+* City
+
+Create two new columns.
+
+#### **9. Extract City Initial**
+
+* Create a column **CityCode** = first 3 letters of the city.
+
+***
+
+### **⭐ contains(), startswith(), endswith()**
+
+#### **10. Filter on Feedback**
+
+Return rows where Feedback:
+
+* contains “refund” OR “damaged”
+* contains BOTH words “not” and “satisfied”
+* contains the word “delivered” but **not** “late”
+
+#### **11. Filter on Address**
+
+* Show addresses starting with **‘park’**.
+* Show addresses ending with **‘mumbai’**.
+* Show addresses that contain a number.
+
+***
+
+### **⭐ Concatenation Tasks**
+
+#### **12. Full Name Creation**
+
+Create a column:
+
+* `FullName = FirstName + " " + LastName`
+
+#### **13. Create a Customer Code**
+
+Format:
+
+```
+<First 2 letters of FirstName>-<last 2 digits of CustomerID>-<reverse City>
+```
+
+***
+
+### **⭐ Indexing & Slicing**
+
+#### **14. Extract Codes**
+
+* Create **AreaCode** = first character of Address.
+* Create **ShortName** = first 3 characters of FirstName.
+
+#### **15. Reverse Manipulations**
+
+* Reverse LastName.
+* Reverse full Address string.
