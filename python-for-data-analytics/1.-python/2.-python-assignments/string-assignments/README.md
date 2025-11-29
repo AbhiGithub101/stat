@@ -135,7 +135,7 @@ For Example
 
 `check_number : False`
 
-`ten_character : False`
+`ten_character : True`   &#x20;
 {% endtab %}
 {% endtabs %}
 
