@@ -290,15 +290,15 @@ else:
 
 <mark style="color:green;">**`marks = int(input('Enter the marks : '))`**</mark>
 
-<mark style="color:green;">**`if(marks>90):`**</mark>
+<mark style="color:green;">**`if(marks>=90):`**</mark>
 
 <mark style="color:green;">**`print('A')`**</mark>
 
-<mark style="color:green;">**`elif(marks>80 and marks<=90):`**</mark>
+<mark style="color:green;">**`elif(marks>=80 and marks<90):`**</mark>
 
 <mark style="color:green;">**`print('B')`**</mark>
 
-<mark style="color:green;">**`elif(marks>60 and marks<=80):`**</mark>
+<mark style="color:green;">**`elif(marks>=60 and marks<80):`**</mark>
 
 <mark style="color:green;">**`print('C')`**</mark>
 
