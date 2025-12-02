@@ -71,6 +71,7 @@
     * [9. value\_counts() and groupby()](python-for-data-analytics/2.-data-analytics/9.-value_counts-and-groupby.md)
     * [10. datetime in pandas](python-for-data-analytics/2.-data-analytics/10.-datetime-in-pandas.md)
     * [11. UDF](python-for-data-analytics/2.-data-analytics/11.-udf.md)
+    * [12. validation in pandas](python-for-data-analytics/2.-data-analytics/12.-validation-in-pandas.md)
     * [ecommerce](python-for-data-analytics/2.-data-analytics/ecommerce.md)
     * [Required Files](python-for-data-analytics/2.-data-analytics/required-files.md)
     * [String Function In Pandas](python-for-data-analytics/2.-data-analytics/string-function-in-pandas.md)
