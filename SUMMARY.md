@@ -75,7 +75,6 @@
     * [ecommerce](python-for-data-analytics/2.-data-analytics/ecommerce.md)
     * [Required Files](python-for-data-analytics/2.-data-analytics/required-files.md)
     * [String Function In Pandas](python-for-data-analytics/2.-data-analytics/string-function-in-pandas.md)
-    * [validation in pandas](python-for-data-analytics/2.-data-analytics/validation-in-pandas.md)
   * [4. SQL Server](python-for-data-analytics/4.-sql-server/README.md)
     * [1. Introduction to SQL Server](python-for-data-analytics/4.-sql-server/1.-introduction-to-sql-server.md)
   * [Statistics](python-for-data-analytics/statistics.md)
