@@ -1,0 +1,16 @@
+CustomerID,CustomerName,Email,Phone,City,SignupDate
+C001,Abhishek Mishra,abhishek@gmail.com,9876543210,Kanpur,2024-01-05
+C002,Riya Sharma,riya.sharma@gmail.com,9123456780,Delhi,2024-01-07
+C003,Arjun Verma,arjun.verma@gmail.com,9988776655,Mumbai,2024-01-10
+C004,Neha Agarwal,neha.agrawal@gmail.com,9090909090,Pune,2024-01-11
+C005,Sunil Mehra,sunil.mehra@gmail.com,9876501234,Kanpur,2024-01-12
+C001,Abhishek Mishra,abhishek@gmail.com,9876543210,Kanpur,2024-01-05
+C001,Abhishek Mishra,abhishek@gmail.com,9876543210,Kanpur,2024-01-05
+C002,Riya Sharma,riya.sharma@gmail.com,9123456780,Delhi,2024-01-07
+C003,Arjun Verma,arjun.verma@gmail.com,9988776600,Mumbai,2024-01-10
+C004,Neha Agarwal,neha.a@gmail.com,9090909090,Pune,2024-01-11
+C006,Sunil Kumar,sunil.mehra@gmail.com,9876511111,Kanpur,2024-01-12
+C007,Meera Singh,meera.singh@gmail.com,9876543210,Delhi,2024-01-15
+C008,Rohan Singh,rohan@gmail.com,9876501234,Kanpur,2024-01-20
+C009,Sunita Sharma,sunil.mehra@gmail.com,9999999999,Mumbai,2024-01-21
+C010,Amit Tandon,amit@gmail.com,9123456780,Pune,2024-01-22
