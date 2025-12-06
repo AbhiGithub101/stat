@@ -1,0 +1,12 @@
+CustomerID,Name,Age,City,Email,PurchaseAmount
+c001,Rahul Sharma,28,Delhi,rahul@example.com,1200
+c002,Priya Singh,,Mumbai,priya@example.com,1500
+,,,,,
+c003,Amit Verma,35,,amit@example.com,
+c004,,42,Pune,,2000
+c005,Neha Rao,30,Bangalore,neha@example.com,1800
+,,,,,
+c006,Ravi Kumar,,Chennai,ravi@example.com,
+c007,,25,,,
+c008,Sonia Mehra,29,Delhi,sonia@example.com,1600
+,,,,,
