@@ -1,8 +1,4 @@
-# Page 1
-
-
-
-## Matplotlib For Data Visualization <a href="#matplotlib-for-data-visualization" id="matplotlib-for-data-visualization"></a>
+# Matplotlib For Data Visualization
 
 Matplotib is a library that we use for data visualization. We are going to cover following visualization in Matplotlib :
 
