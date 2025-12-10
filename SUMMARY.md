@@ -76,6 +76,8 @@
     * [14. Data Cleaning in Pandas](python-for-data-analytics/2.-data-analytics/14.-data-cleaning-in-pandas.md)
     * [ecommerce](python-for-data-analytics/2.-data-analytics/ecommerce.md)
     * [Required Files](python-for-data-analytics/2.-data-analytics/required-files.md)
+    * [Outlier in pandas](python-for-data-analytics/2.-data-analytics/outlier-in-pandas.md)
+    * [Outlier in pandas](python-for-data-analytics/2.-data-analytics/outlier-in-pandas-1.md)
   * [4. SQL Server](python-for-data-analytics/4.-sql-server/README.md)
     * [1. Introduction to SQL Server](python-for-data-analytics/4.-sql-server/1.-introduction-to-sql-server.md)
   * [Statistics](python-for-data-analytics/statistics.md)
