@@ -78,6 +78,7 @@
     * [16. Matplotlib For Data Visualization](python-for-data-analytics/2.-data-analytics/16.-matplotlib-for-data-visualization.md)
     * [ecommerce](python-for-data-analytics/2.-data-analytics/ecommerce.md)
     * [Required Files](python-for-data-analytics/2.-data-analytics/required-files.md)
+    * [17. Seaborn](python-for-data-analytics/2.-data-analytics/17.-seaborn.md)
   * [4. SQL Server](python-for-data-analytics/4.-sql-server/README.md)
     * [1. Introduction to SQL Server](python-for-data-analytics/4.-sql-server/1.-introduction-to-sql-server.md)
   * [Statistics](python-for-data-analytics/statistics.md)
