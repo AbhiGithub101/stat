@@ -160,3 +160,127 @@ False
 True
 True
 ```
+
+#### 3.   Smaller than ( < ) -----> Returns True if Left value is Less than Right value
+
+```python
+x=5
+print(x<10) # True
+print(x<5)  # False
+```
+
+```
+True
+False
+```
+
+#### 4.   Smaller than Equals to ( <= ) -----> Returns True if the Left value is Less than or Equal to the Right value
+
+```python
+x=5
+print(x<=10) # True
+print(x<=5)  # True
+print(x<=2)  #False
+```
+
+```
+True
+True
+False
+```
+
+#### 5.   Equals to ( == ) -----> Returns True if two values are equal
+
+```python
+x=5
+print(x==5) #True
+print(x==10) #False
+print(x==-5) #False
+```
+
+```
+True
+False
+False
+```
+
+#### 6.   Not Equals to ( != ) -----> Returns True if Two values are not equals
+
+```python
+x=5
+print(x!=5)  #False
+print(x!=10) #True
+```
+
+```
+False
+True
+```
+
+## Logical Operators <a href="#logical-operators" id="logical-operators"></a>
+
+1. and operator
+2. or operator
+3. not operator
+
+#### 1.   and Operators -----> Returns True if both conditions are True
+
+```python
+# a)
+a = 10
+b = 5
+c = 15
+print(a > b and b < c)  # True, because both conditions are True
+print(a > c and b < a) # False, first condition is False
+
+# b)
+x = True
+y = False
+print(x and y)  # False
+```
+
+```
+True
+False
+False
+```
+
+#### 2.   or Operators -----> Returns True if at least one condition is True
+
+```python
+# a)
+a = 10
+b = 5
+c = 15
+print(a > b or b > c)  # True, because first condition is True
+print(a < b or b > c)  # False, both conditions are False
+
+# b)
+x = True
+y = False
+print(x or y)
+
+# Used to combine multiple conditions and return True or False (and, or)
+```
+
+```
+True
+False
+True
+```
+
+#### 3.   not Operators -----> It returns True if the condition is False, and returns False if the condition is True
+
+```python
+x=True
+print(not x) #False
+print(x) # True
+
+
+# It only works with boolean expressions or values that can be interpreted as True or False.
+```
+
+```
+True
+False
+```
