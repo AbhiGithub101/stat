@@ -223,7 +223,7 @@ True
 2. or operator
 3. not operator
 
-#### 1.   and Operators -----> Returns True if both conditions are True
+#### 1.   and Operator -----> Returns True if both conditions are True
 
 ```python
 # a)
@@ -245,7 +245,7 @@ False
 False
 ```
 
-#### 2.   or Operators -----> Returns True if at least one condition is True
+#### 2.   or Operator -----> Returns True if at least one condition is True
 
 ```python
 # a)
@@ -269,7 +269,7 @@ False
 True
 ```
 
-#### 3.   not Operators -----> It returns True if the condition is False, and returns False if the condition is True
+#### 3.   not Operator -----> It returns True if the condition is False, and returns False if the condition is True
 
 ```python
 x=True
