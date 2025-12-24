@@ -12,7 +12,7 @@
       * [6. User Input](python-for-data-analytics/1.-python/1.-python-documents/4.-user-input.md)
         * [User Input In Python CheatSheet](python-for-data-analytics/1.-python/1.-python-documents/6.-user-input/user-input-in-python-cheatsheet.md)
       * [7. Typecasting](python-for-data-analytics/1.-python/1.-python-documents/7.-typecasting/README.md)
-        * [TypeCasting in Python CheetSheet](python-for-data-analytics/1.-python/1.-python-documents/7.-typecasting/typecasting-in-python-cheetsheet.md)
+        * [TypeCasting in Python CheatSheet](python-for-data-analytics/1.-python/1.-python-documents/7.-typecasting/typecasting-in-python-cheatsheet.md)
       * [8. Functions : Basics](python-for-data-analytics/1.-python/1.-python-documents/6.-functions-basics.md)
       * [9. String](python-for-data-analytics/1.-python/1.-python-documents/7.-string.md)
       * [11. Conditional Statements](python-for-data-analytics/1.-python/1.-python-documents/8.-conditional-statements.md)
