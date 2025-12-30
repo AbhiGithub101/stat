@@ -85,7 +85,7 @@
     * [seab](python-for-data-analytics/2.-data-analytics/seab.md)
     * [Extras](python-for-data-analytics/2.-data-analytics/extras.md)
   * [4. SQL Server](python-for-data-analytics/4.-sql-server/README.md)
-    * [1. SQL Server](python-for-data-analytics/4.-sql-server/1.-sql-server.md)
+    * [1: Introduction to SQL Server](python-for-data-analytics/4.-sql-server/1-introduction-to-sql-server.md)
   * [Statistics](python-for-data-analytics/statistics.md)
   * [Pyspark](python-for-data-analytics/pyspark/README.md)
     * [Untitled](python-for-data-analytics/pyspark/untitled/README.md)

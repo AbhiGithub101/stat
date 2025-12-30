@@ -1,6 +1,4 @@
-# 1. SQL Server
-
-### 1: Introduction to SQL Server
+# 1: Introduction to SQL Server
 
 Microsoft SQL Server is a Relational Database Management System (RDBMS) developed by Microsoft. It is used to store, manage, retrieve, and manipulate large amounts of structured data using SQL (Structured Query Language).
 
