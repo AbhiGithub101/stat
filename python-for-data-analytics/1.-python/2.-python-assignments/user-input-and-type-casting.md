@@ -36,7 +36,7 @@ print('Hello,', name)
 **`The Formula That we use For BMI is :`**
 
 $$
-bmi = weight(kgs)/height(cms)^2\*10000
+bmi = weight(kgs)/height(cms)^2*10000
 $$
 
 **`Take Weight and height from the user and Calculate BMI.​`**
