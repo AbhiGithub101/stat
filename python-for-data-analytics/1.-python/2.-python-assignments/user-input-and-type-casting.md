@@ -64,7 +64,7 @@ _4._ **`Take Principle, Rate, and Time From User and Calculate Simple Interest.`
 **`Formula For Simple Interest is:`**
 
 $$
-Simple Interest = Principle \* Rate \* Time / 100
+Simple Interest = Principle * Rate * Time / 100
 $$
 
 <details>
@@ -346,7 +346,7 @@ print('total surface area of the cone:',total_surface_area)
 
     **A = 100**\
     **B= 30**\
-    **print(A and B)**\\
+    **print(A and B)**
 
     a. True\
     b. False\

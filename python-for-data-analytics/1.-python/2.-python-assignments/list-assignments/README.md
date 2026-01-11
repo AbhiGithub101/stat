@@ -192,7 +192,7 @@ print(list1)
 11. Given a list of strings, write a program to find the longest string in the list.\
     **Example**\
     **input:** `['hello', 'world', 'how', 'are', 'you']`\
-    **Output:** `'world'`
+    **Output:** `'hello'`
 
 <details>
 
@@ -647,7 +647,7 @@ print('List of first letters:', first_letter_list)
     **5. Update Students Details**\
     **6. Delete Student**\
     **7. Exit**\
-    \&#xNAN;_**Program should ask the user to exit.**_
+    &#xNAN;_**Program should ask the user to exit.**_
 
 <details>
 

@@ -2,7 +2,7 @@
 
 ### Dictionary Creations
 
-1.  Creat a dictionary using user input.\\
+1.  Creat a dictionary using user input.
 
     ```
     employee_dict = { 
@@ -335,8 +335,7 @@ print(employee_dict)
 
 </details>
 
-11. Suppose you are working in a retail store and you want to keep track of sales by month. Write a program to create a dictionary `sales_dict` that stores the monthly sales data as follows:\
-    \\
+11. Suppose you are working in a retail store and you want to keep track of sales by month. Write a program to create a dictionary `sales_dict` that stores the monthly sales data as follows:<br>
 
 | Month | Sales |
 | ----- | ----- |

@@ -362,7 +362,7 @@ First Rs.10,0000 0
 
 Next Rs. 10,0000 10
 
-The remaining 20\\
+The remaining 20
 
 17. Write a program to take a digit and print it is In words(_**only 0 - 9**_)\
     **For Example :** enter digit : 5\

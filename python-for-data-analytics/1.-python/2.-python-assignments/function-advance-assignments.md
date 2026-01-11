@@ -229,7 +229,7 @@ print(l)
     **level**\
     **Malayalam**\
     **Rats live on no evil star**\
-    **Murder for a jar of red rum**\\
+    **Murder for a jar of red rum**
 14. Write a program that defines a function **ispalindrome()** which checks whether a given string is a palindrome or not. Ignore spaces and case mismatch while checking for palindrome.
 
 <details>
