@@ -58,7 +58,7 @@
 
 <details>
 
-<summary><a href="list-assignments/">List Assignment</a></summary>
+<summary><a href="list-assignments.md">List Assignment</a></summary>
 
 
 
@@ -66,7 +66,7 @@
 
 <details>
 
-<summary><a href="set-assignments/">Set Assignment</a></summary>
+<summary><a href="set-assignments.md">Set Assignment</a></summary>
 
 
 
@@ -74,7 +74,7 @@
 
 <details>
 
-<summary><a href="dictionary-assignments/">Dictionary Assignment</a></summary>
+<summary><a href="dictionary-assignments.md">Dictionary Assignment</a></summary>
 
 
 
