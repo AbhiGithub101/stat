@@ -564,7 +564,27 @@ else:
 
 Write a program to input the number of **hours** for which a two wheeler is parked. Calculate and print the parking charges to be paid by the customer.
 
+<details>
 
+<summary>Solution</summary>
+
+```py
+# Input the number of hours
+hours = int(input("Enter number of hours parked: "))
+
+# Calculate parking charges
+if hours <= 4:
+    charge = 5
+elif hours <= 9:
+    charge = 5 + (hours - 4) * 3
+else:
+    charge = 5 + (5 * 3) + (hours - 9) * 2
+# Print the result
+print("Parking charges to be paid: Rs.", charge)
+
+```
+
+</details>
 
 22. Monthly Electricity bill is calculated as –
 
@@ -574,8 +594,6 @@ Write a program to input the number of **hours** for which a two wheeler is park
 | For next 200 units       | Rs. 1.00 per unit        |
 | For next 200 units       | Rs. 1.55 per unit        |
 | For more than 500 units  | Rs. 2.10 per unit        |
-
-
 
 Write a program to take the **consumer number, number of units consumed**. _Calculate bill amount_. Print consumer number and total amount to be paid by the consumer. (_Consumer number must be digits of length 5 and print appropriate message for incorrect input of consumer number_).
 
