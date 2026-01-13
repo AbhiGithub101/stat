@@ -276,6 +276,8 @@ else:
 | **`>=60 and <80`** | **`C`** |
 | **`<60`**          | **`D`** |
 
+
+
 {% tabs %}
 {% tab title="Example" %}
 **`Enter the marks : 87`**
@@ -354,19 +356,40 @@ else:
 
 </details>
 
-16. Calculate income tax for the given income by adhering to the below rules
+16. Calculate income tax for the given income by adhering to the below rules :
 
-**Taxable Income Rate (in %)**
+| Taxable Income    | Rate ( in % ) |
+| ----------------- | ------------- |
+| First Rs. 10,0000 | 0             |
+| Next Rs. 10,0000  | 10            |
+| The Remaining     | 20            |
 
-First Rs.10,0000 0
+<details>
 
-Next Rs. 10,0000 10
+<summary>Solution</summary>
 
-The remaining 20
+```py
+income = int(input("Enter your income: "))
+tax = 0
+if income <= 100000:
+    tax = 0
+elif income <= 200000:
+    tax = (income - 100000) * 0.10
+else:
+    tax = (100000 * 0.10) + (income - 200000) * 0.20
+print("Income Tax =", tax)
 
-17. Write a program to take a digit and print it is In words(_**only 0 - 9**_)\
+```
+
+</details>
+
+{% if Solution %}
+
+{% endif %}
+
+17. Write a program to take a digit and print it in words(_**only 0 - 9**_)\
     **For Example :** enter digit : 5\
-    Five
+    Output : Five
 
 <details>
 
@@ -446,10 +469,13 @@ else:
 
 **Total Marks Obtained Streams Offered**
 
-300 and above Science\
-200 and above but less than 300 Commerce\
-Below 200 but not below 75 Arts\
-Otherwise Admission is not granted,\
+| Total Marks Obtained            | Stream Offered |
+| ------------------------------- | -------------- |
+| 300 and above                   | Science        |
+| 200 and above But less than 300 | Commerce       |
+| Below 200 but not below 75      | Arts           |
+
+\
 You have to appear in qualifying examination
 
 Write a program to input total marks obtained in an examination and print the stream allotted on the basis of above criteria.
@@ -479,24 +505,77 @@ print("Stream allotted: ", stream)
 20. Design a Program to input two integers **num1, num2** and a **character(opr)**. The Variable **opr** reads only one of the four `characters(+,-,/,*)`. Your Program should perform the operation on the basis of **`operator on num1, num2`**. _In case of subtraction, subtract smaller number from bigger number and in case of division divide the greater number by smaller numbers._\
     \
     &#xNAN;_&#x50;rint Integers and result._
-21. A Scooter /motor cycle stand charges the following rates for the parking:
 
-**Hours Rate**
+<details>
 
-First 4hours RS.5.00\
-Every next hour upto5 hours RS.3.00 per hour\
-Any further hour above 9 hour RS.2.00 per hour
+<summary>Solution</summary>
+
+{% code overflow="wrap" %}
+```py
+num1 = int(input("Enter first number: "))
+num2 = int(input("Enter second number: "))
+opr = input("Enter operator (+, -, *, /): ")
+
+if opr == '+':
+    result = num1 + num2
+    print("Number 1 =", num1)
+    print("Number 2 =", num2)
+    print("Result =", result)
+
+elif opr == '*':
+    result = num1 * num2
+    print("Number 1 =", num1)
+    print("Number 2 =", num2)
+    print("Result =", result)
+
+elif opr == '-':
+    if num1 > num2:
+        result = num1 - num2
+    else:
+        result = num2 - num1
+    print("Number 1 =", num1)
+    print("Number 2 =", num2)
+    print("Result =", result)
+
+elif opr == '/':
+    if num1 > num2:
+        result = num1 / num2
+    else:
+        result = num2 / num1
+    print("Number 1 =", num1)
+    print("Number 2 =", num2)
+    print("Result =", result)
+
+else:
+    print("Invalid operator")
+
+```
+{% endcode %}
+
+</details>
+
+20. A Scooter /motor cycle stand charges the following rates for the parking:
+
+| Hours                         | Rate     |
+| ----------------------------- | -------- |
+| First 4 Hours                 | Rs. 5.00 |
+| Every next hour upto 5 hours  | Rs. 3.00 |
+| Any further hour above 9 hour | Rs. 2.00 |
 
 Write a program to input the number of **hours** for which a two wheeler is parked. Calculate and print the parking charges to be paid by the customer.
 
+
+
 22. Monthly Electricity bill is calculated as –
 
-**Number of units Consumed Rate Per Unit**
+| Number of units consumed | Rate per Unit            |
+| ------------------------ | ------------------------ |
+| <=100                    | Only meter rent Rs 200/- |
+| For next 200 units       | Rs. 1.00 per unit        |
+| For next 200 units       | Rs. 1.55 per unit        |
+| For more than 500 units  | Rs. 2.10 per unit        |
 
-<=100 only meter rent Rs 200/-\
-For next 200 units Rs. 1.00 per unit\
-For next 200 units Rs 1.55 per unit\
-For more than 500 units Rs 2.10 per unit
+
 
 Write a program to take the **consumer number, number of units consumed**. _Calculate bill amount_. Print consumer number and total amount to be paid by the consumer. (_Consumer number must be digits of length 5 and print appropriate message for incorrect input of consumer number_).
 
@@ -535,12 +614,12 @@ Print the area along with sides.
 
 24. A Bank offers the following rate of interest for fixed deposit:
 
-**Time(Years) Rate(%)**
-
-<1 9.0\
-1 to 2 10.0\
-2 to 3 11.0\
-\>3 12.0
+| TIme (Years) | Rate ( % ) |
+| ------------ | ---------- |
+| <1           | 9.0        |
+| 1 to 2       | 10.0       |
+| 2 to 3       | 11.0       |
+| >3           | 12.0       |
 
 The amount A after n years is calculated by using the formula:\
 **A = P(1 + r / 100)^n**
