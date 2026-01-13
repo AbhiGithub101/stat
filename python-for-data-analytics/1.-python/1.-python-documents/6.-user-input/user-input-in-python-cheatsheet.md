@@ -1,3 +1,7 @@
+---
+description: Complete Python User Input cheatsheet with clear examples for quick revision
+---
+
 # User Input In Python CheatSheet
 
 ## User Input In Python <a href="#user-input-in-python" id="user-input-in-python"></a>
