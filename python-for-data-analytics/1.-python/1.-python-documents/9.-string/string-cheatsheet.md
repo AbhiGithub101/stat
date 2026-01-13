@@ -1,4 +1,5 @@
 ---
+description: Complete Python String Cheatsheet with clear examples for quick revision
 layout:
   width: default
   title:

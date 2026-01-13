@@ -284,3 +284,19 @@ print(x) # True
 True
 False
 ```
+
+## Priority Table of Operators:
+
+| operator                                                              |
+| --------------------------------------------------------------------- |
+|  ( )                                    Parentheses                   |
+| ∗∗                                     Exponent                       |
+| +,-                                    Addition , Subtraction         |
+| <p>==, !=, >, >=, &#x3C;, &#x3C;=        Comparison Operator<br></p> |
+| Logical  NOT                                                          |
+| Logical AND                                                           |
+| Logical OR                                                            |
+
+> <mark style="color:$info;">NOTE:</mark>
+>
+> > <mark style="color:$info;">**if you come up with expression with same priority operators , you will solve it from left to right.**</mark>

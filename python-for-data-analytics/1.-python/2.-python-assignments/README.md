@@ -34,7 +34,7 @@
 
 <details>
 
-<summary><a href="string-assignments/">String Assignment</a></summary>
+<summary><a href="string-assignments.md">String Assignment</a></summary>
 
 
 
