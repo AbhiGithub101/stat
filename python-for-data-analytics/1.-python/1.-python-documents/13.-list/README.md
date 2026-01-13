@@ -1,7 +1,5 @@
 # 13. List
 
-## 9.Lists In Python
-
 ### What is List?
 
 A list can be defined as a collection of **values** or **items** of different Data types.

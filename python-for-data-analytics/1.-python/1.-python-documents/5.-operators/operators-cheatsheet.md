@@ -299,4 +299,4 @@ False
 
 > <mark style="color:$info;">NOTE:</mark>
 >
-> > <mark style="color:$info;">**if you come up with expression with same priority operators , you will solve it from left to right.**</mark>
+> > <mark style="color:$info;">**If there are operators with same priority,then they will be evaluated from left to right.**</mark>
