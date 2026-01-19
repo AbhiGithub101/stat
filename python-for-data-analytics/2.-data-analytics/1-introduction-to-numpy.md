@@ -69,6 +69,8 @@ TypeError: unsupported operand type(s) for -: 'list' and 'int'
 
 List is not made for mathematical operations. Lists are mainly made to store values.
 
+<figure><img src="../../.gitbook/assets/Gemini_Generated_Image_esna04esna04esna.png" alt=""><figcaption></figcaption></figure>
+
 ### List to array Conversion
 
 Because lists are not made for mathematical operations, if you want to do mathematical operations you need to convert the list into a Numpy array.
@@ -240,3 +242,4 @@ Error:
 ```
 ValueError: invalid literal for int() with base 10: 'abhi'
 ```
+
