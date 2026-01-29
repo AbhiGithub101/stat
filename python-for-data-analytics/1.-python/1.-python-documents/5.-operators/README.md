@@ -1,5 +1,7 @@
 # 5. Operators
 
+{% embed url="https://youtu.be/Yu1i41wU2sg" %}
+
 ### **What are Operators?**
 
 Operators are symbols, that are used to perform operations on Operands (**Variables** and **Values.**) There are variety of Operators which are as follows:<br>
@@ -305,7 +307,9 @@ print(out)
 True
 ```
 
-### 4.Logical Operators: $$and$$, $$or$$ , $$not$$
+{% embed url="https://youtu.be/d2vo5-kE7Mw" %}
+
+### 4.Logical Operators:$$and$$, $$or$$ , $$not$$
 
 The concept of logical operators is simple. They allow a program to make a decision based on multiple conditions.They return output in boolean i.e. True or False.
 
