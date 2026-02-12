@@ -1,19 +1,5 @@
 ---
 description: Complete Python String Cheatsheet with clear examples for quick revision
-layout:
-  width: default
-  title:
-    visible: true
-  description:
-    visible: true
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
-  metadata:
-    visible: true
 ---
 
 # String CheatSheet

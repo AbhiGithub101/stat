@@ -1,5 +1,7 @@
 # ecommerce
 
+{% file src="../../.gitbook/assets/new_retail_data.csv" %}
+
 Suppose you are working with an E-Commerce platform and you need to analyze and come up with many metrics and insights.
 
 ```python
