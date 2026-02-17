@@ -1,3 +1,7 @@
+---
+hidden: true
+---
+
 # DBMS and SQL
 
 #### So before we dive into SQL, let us first understand what DBMS are...
