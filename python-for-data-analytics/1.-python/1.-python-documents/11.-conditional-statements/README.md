@@ -1,5 +1,7 @@
 # 11. Conditional Statements
 
+{% embed url="https://youtu.be/mqWciNlX9dI" %}
+
 **What are Conditional Statements?**
 
 We have often used conditional statements in our daily life, such as :
