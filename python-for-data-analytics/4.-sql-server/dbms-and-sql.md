@@ -151,6 +151,10 @@ The main DDL commands are:
 
 **CREATE** :  used to create a new database, table, or other object. For example, creating a new table called Employees with columns for ID, Name, and Salary.
 
+```
+create 
+```
+
 **ALTER** : used to modify an existing table. For example, adding a new column to a table, changing a column's data type, or renaming a column.
 
 **DROP** : used to permanently delete an entire table or database. Once you drop something, it is gone  along with all the data inside it.
