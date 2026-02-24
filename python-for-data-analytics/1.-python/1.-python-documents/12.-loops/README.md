@@ -1,5 +1,7 @@
 # 12. Loops
 
+{% embed url="https://youtu.be/RAKE3AyzLME" %}
+
 ### Iteration with `while` loops
 
 Another powerful feature of programming languages, closely related to branching, is running one or more statements multiple times. This feature is often referred to as _iteration_ on _looping_, and there are two ways to do this in Python: using `while` loops and `for` loops.

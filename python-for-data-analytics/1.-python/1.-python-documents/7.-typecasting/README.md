@@ -1,5 +1,7 @@
 # 7. Typecasting
 
+{% embed url="https://www.youtube.com/watch?v=YB8Nl334ylw" %}
+
 ### What is Type-Casting?
 
 Type Casting is the method to convert the variable data type into a certain data type in order to the operation required to be performed by users.

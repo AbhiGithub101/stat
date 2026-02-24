@@ -1,5 +1,7 @@
 # 8. Functions : Basics
 
+{% embed url="https://youtu.be/07FlHGqAuGg" %}
+
 ### What are Functions? <a href="#what-are-functions" id="what-are-functions"></a>
 
 Function is one of the most important aspects of Python programming. A function is a set of code that does a particular task.
@@ -209,6 +211,8 @@ hello(print)
 ```
 
 ### Types of Functions : <a href="#types-of-functions" id="types-of-functions"></a>
+
+{% embed url="https://youtu.be/6FkwZGustug" %}
 
 There are two types of functions, which are as follows:
 

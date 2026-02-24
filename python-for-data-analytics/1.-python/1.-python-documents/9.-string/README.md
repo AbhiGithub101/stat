@@ -1,5 +1,7 @@
 # 9. String
 
+{% embed url="https://youtu.be/khkDd9nCAU8" %}
+
 ### What is String?
 
 Python string is the collection or sequence of the characters surrounded by single quotes(' '), double quotes(" "), or triple quotes(''' '''),(""" """).
@@ -256,6 +258,8 @@ f'string and expressions': This is how you can merge expressions and string in a
 
 ### Functions used in String :
 
+{% embed url="https://youtu.be/VOkICIZwTHM" %}
+
 **len() function:**
 
 len() function is used to count characters in a string. For Example:In \[19]:
@@ -320,7 +324,7 @@ Out\[25]:
 
 ### String Methods :
 
-To Understand String Methods better , first we will have to know what are methods.
+To Understand String Methods better, first, we will have to know what methods are.
 
 **What are Methods?**
 
@@ -409,6 +413,8 @@ print(var)
 ```
 Python is a general purpose programming language.it is invented by guido van rossum.
 ```
+
+{% embed url="https://youtu.be/P26Tjy1-PLs" %}
 
 ### 6.strip(),lstrip() and rstrip() Method:
 
@@ -819,6 +825,8 @@ print(var)
 ```
 
 ### Methods that returns only Boolean Values(True or False):
+
+{% embed url="https://youtu.be/FJBNSwihj9c" %}
 
 ### 14.islower() method:
 
