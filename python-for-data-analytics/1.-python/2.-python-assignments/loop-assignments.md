@@ -1,8 +1,4 @@
----
-hidden: true
----
-
-# Copy of Loops Assignments
+# Loop Assignments
 
 1. **Try to write your name 10 times with the help of a while loop.**
 
