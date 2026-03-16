@@ -39,6 +39,7 @@
       * [String Assignments](python-for-data-analytics/1.-python/2.-python-assignments/string-assignments.md)
       * [Conditional Statements Assignments](python-for-data-analytics/1.-python/2.-python-assignments/conditional-statements-assignments.md)
       * [Loops Assignments](python-for-data-analytics/1.-python/2.-python-assignments/loops-assignments.md)
+      * [Copy of Loops Assignments](python-for-data-analytics/1.-python/2.-python-assignments/copy-of-loops-assignments.md)
       * [List Assignments](python-for-data-analytics/1.-python/2.-python-assignments/list-assignments.md)
       * [Set Assignments](python-for-data-analytics/1.-python/2.-python-assignments/set-assignments.md)
       * [Dictionary Assignments](python-for-data-analytics/1.-python/2.-python-assignments/dictionary-assignments.md)
