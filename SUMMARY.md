@@ -100,3 +100,8 @@
     * [Untitled](python-for-data-analytics/pyspark/untitled/README.md)
       * [DataFrame](python-for-data-analytics/pyspark/untitled/dataframe.md)
     * [1. DataFrame](python-for-data-analytics/pyspark/1.-dataframe.md)
+  * [Introduction to Microsoft Fabric](python-for-data-analytics/introduction-to-microsoft-fabric/README.md)
+    * [One Platform Solution](python-for-data-analytics/introduction-to-microsoft-fabric/one-platform-solution.md)
+    * [Warehouse VS Lakehouse](python-for-data-analytics/introduction-to-microsoft-fabric/warehouse-vs-lakehouse.md)
+    * [Microsoft Copilot for Fabric](python-for-data-analytics/introduction-to-microsoft-fabric/microsoft-copilot-for-fabric.md)
+    * [Last Page](python-for-data-analytics/introduction-to-microsoft-fabric/last-page.md)
