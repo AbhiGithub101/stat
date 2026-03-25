@@ -181,6 +181,8 @@ In the example above, the statement `result = result * i` inside the loop is ski
 
 ### Iteration with `for` loops
 
+{% embed url="https://youtu.be/w9mQ8fE6mDA" %}
+
 A `for` loop is used for iterating or looping over sequences, i.e., lists, tuples, dictionaries, strings, and _ranges_. For loops have the following syntax:
 
 ```
@@ -361,9 +363,11 @@ for i in range(3, 14, 4):
 11
 ```
 
-**`break`, `continue` and `pass` statements**
+**`break, else` , `continue` and `pass` statements**
 
-Similar to `while` loops, `for` loops also support the `break` and `continue` statements. `break` is used for breaking out of the loop and `continue` is used for skipping ahead to the next iteration.
+{% embed url="https://youtu.be/NLakNz7tb6Y" %}
+
+Similar to `while` loops, `for` Loops also support the `break` and `continue` statements. `break` is used for breaking out of the loop and `continue` is used for skipping ahead to the next iteration.
 
 In \[58]:
 
