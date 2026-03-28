@@ -96,6 +96,7 @@
     * [Modifying Tables and Filtering Data](python-for-data-analytics/4.-sql-server/modifying-tables-and-filtering-data.md)
     * [Datatypes](python-for-data-analytics/4.-sql-server/datatypes.md)
     * [Database Creation](python-for-data-analytics/4.-sql-server/database-creation.md)
+    * [DML Commands](python-for-data-analytics/4.-sql-server/dml-commands.md)
   * [Required Files](python-for-data-analytics/required-files.md)
   * [Statistics](python-for-data-analytics/statistics.md)
   * [Pyspark](python-for-data-analytics/pyspark/README.md)
