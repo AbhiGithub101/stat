@@ -95,6 +95,7 @@
     * [Data Types & Creating Your First Database](python-for-data-analytics/4.-sql-server/data-types-and-creating-your-first-database.md)
     * [Modifying Tables and Filtering Data](python-for-data-analytics/4.-sql-server/modifying-tables-and-filtering-data.md)
     * [Datatypes](python-for-data-analytics/4.-sql-server/datatypes.md)
+    * [Database Creation](python-for-data-analytics/4.-sql-server/database-creation.md)
   * [Required Files](python-for-data-analytics/required-files.md)
   * [Statistics](python-for-data-analytics/statistics.md)
   * [Pyspark](python-for-data-analytics/pyspark/README.md)
