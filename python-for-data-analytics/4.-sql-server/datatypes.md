@@ -17,6 +17,7 @@ graph TD
   Character/String --> Non-Unicode
   Character/String --> Unicode
   Datatype-->Datetime
+  
    
   
 ```
@@ -200,13 +201,23 @@ IsActive       BIT  → 1   (means Yes / True)
 IsDelivered    BIT  → 0   (means No / False)
 ```
 
-### 5.Special Data Types - UUID & GUID
+## Additional / Special Data Types
+
+### 1. UUID & GUID
 
 #### A. UUID&#x20;
 
 **UUID** stands for **Universally Unique Identifier.** It is a **very long, auto-generated code** that is guaranteed to be unique across the entire world ,no two systems will ever generate the same UUID.
 
 **Real-life example:** When you sign up on an app, instead of giving you Roll No. 1, 2, 3... the system gives you a unique ID like the one above so that even if millions of users sign up across different servers, no two users will ever get the same ID.
+
+It looks like this:
+
+```
+550e8400-e29b-41d4-a716-446655440000
+```
+
+It has 32 characters + 4 hyphens split into 5 groups.
 
 ### B. GUID
 
@@ -216,3 +227,151 @@ IsDelivered    BIT  → 0   (means No / False)
 >
 >
 
+### UNIQUEIDENTIFIER — The Data Type in SQL Server
+
+In SQL Server, the data type used to store a UUID / GUID is called `UNIQUEIDENTIFIER`:
+
+```sql
+-- Creating a column with UNIQUEIDENTIFIER
+CREATE TABLE Employee (
+    ID        UNIQUEIDENTIFIER PRIMARY KEY,
+    FullName  VARCHAR(100)
+);
+```
+
+You can auto-generate a GUID in SQL Server using `NEWID()`:
+
+```sql
+INSERT INTO Employee VALUES (NEWID(), 'Rahul Sharma');
+INSERT INTO Employee VALUES (NEWID(), 'Priya Verma');
+```
+
+**What the table looks like:**
+
+| ID                                   | FullName     |
+| ------------------------------------ | ------------ |
+| 7D9F2A1B-3C4E-4F8A-B123-9E0D6C7A8B5F | Rahul Sharma |
+| A1B2C3D4-E5F6-7890-ABCD-EF1234567890 | Priya Verma  |
+
+> Every time `NEWID()` runs it generates a completely new and unique value — no two will ever be the same.
+
+#### UUID vs GUID — One Line Difference
+
+| Term | Used By                                                     |
+| ---- | ----------------------------------------------------------- |
+| UUID | Universal standard — MySQL, PostgreSQL, general programming |
+| GUID | Microsoft's name for the same thing — SQL Server            |
+
+> &#x20;Same concept, different names depending on which database you are using.
+
+#### INT vs UNIQUEIDENTIFIER — Which one to use?
+
+|                        | INT                          | UNIQUEIDENTIFIER                |
+| ---------------------- | ---------------------------- | ------------------------------- |
+| Looks like             | 1, 2, 3, 4...                | 7D9F2A1B-3C4E-4F8A-...          |
+| Easy to read?          | Yes                          |  Not really                     |
+| Unique across servers? |  No                          |  Yes                            |
+| Use when               | Single database, simple apps | Large systems, multiple servers |
+
+### 2.  XML Data Type
+
+#### What is XML?
+
+**XML** stands for **Extensible Markup Language.** It is a way of storing data in a **tag-based format,**&#x73;imilar to how HTML looks.
+
+It looks like this:
+
+```xml
+<Employee>
+    <Name>Rahul Sharma</Name>
+    <Department>IT</Department>
+    <Salary>50000</Salary>
+</Employee>
+```
+
+#### XML in SQL Server
+
+SQL Server has a built-in `XML` data type that lets you store XML data directly inside a column:
+
+| Data Type | What it stores     | Max Size   | Real-life Example                               |
+| --------- | ------------------ | ---------- | ----------------------------------------------- |
+| `XML`     | XML formatted data | Up to 2 GB | Config settings, product details, API responses |
+
+```sql
+CREATE TABLE EmployeeDetails (
+    ID       INT PRIMARY KEY,
+    FullName VARCHAR(100),
+    ExtraInfo XML
+);
+```
+
+```sql
+INSERT INTO EmployeeDetails VALUES (
+    1,
+    'Rahul Sharma',
+    '<Info><Skill>SQL</Skill><Skill>Python</Skill><City>Kanpur</City></Info>'
+);
+```
+
+**What the table looks like:**
+
+**What the table looks like:**
+
+| ID | FullName     | ExtraInfo                                                                 |
+| -- | ------------ | ------------------------------------------------------------------------- |
+| 1  | Rahul Sharma | `<Info><Skill>SQL</Skill><Skill>Python</Skill><City>Kanpur</City></Info>` |
+
+**Real-life example:** When a company receives data from an outside system or API in XML format , they can store it directly in an XML column without breaking it apart.
+
+> XML is useful when the data does not fit neatly into fixed columns , like a product that has different attributes depending on its category.
+
+### 3.  Binary Data Types
+
+#### What is Binary Data?
+
+Binary data means **files and raw data**  like images, PDFs, audio files, Word documents, fingerprints, etc. These are not text or numbers , they are stored as **raw bytes (0s and 1s).**
+
+SQL Server has these binary data types:
+
+| Data Type        | What it stores              | Max Size    | Real-life Example                    |
+| ---------------- | --------------------------- | ----------- | ------------------------------------ |
+| `BINARY(n)`      | Fixed-length binary data    | 8,000 bytes | Fixed size raw data, encryption keys |
+| `VARBINARY(n)`   | Variable-length binary data | 8,000 bytes | Small images, small files            |
+| `VARBINARY(MAX)` | Very large binary data      | Up to 2 GB  | Profile photos, PDFs, documents      |
+
+#### BINARY vs VARBINARY - Same as CHAR vs VARCHAR
+
+Just like we saw earlier:
+
+* `BINARY(n)` — always takes fixed space, even if data is smaller
+* `VARBINARY(n)` — takes only as much space as the data needs
+
+#### Simple Example
+
+```sql
+CREATE TABLE EmployeeFiles (
+    ID            INT PRIMARY KEY,
+    FullName      VARCHAR(100),
+    ProfilePhoto  VARBINARY(MAX),
+    Fingerprint   BINARY(64)
+);
+```
+
+**Real-life examples of binary data in databases:**
+
+| Scenario                         | Data Type to use |
+| -------------------------------- | ---------------- |
+| Storing a profile photo          | `VARBINARY(MAX)` |
+| Storing a scanned document / PDF | `VARBINARY(MAX)` |
+| Storing a fingerprint scan       | `BINARY(64)`     |
+| Storing an encryption key        | `BINARY(32)`     |
+
+> &#x20;In most real projects, instead of storing the actual file in the database, developers store the **file path** (like `'images/rahul.jpg'`) as a VARCHAR — and keep the actual file on the server. But when security is important — like fingerprints or encrypted data — binary is stored directly in the database.
+
+| Data Type          | Use When                                     |
+| ------------------ | -------------------------------------------- |
+| `UNIQUEIDENTIFIER` | You need a globally unique ID across systems |
+| `XML`              | You need to store tag-based structured data  |
+| `BINARY(n)`        | Fixed-size raw data like encryption keys     |
+| `VARBINARY(n)`     | Variable-size raw data like small files      |
+| `VARBINARY(MAX)`   | Large files like photos, PDFs, documents     |

@@ -92,7 +92,6 @@
   * [4. SQL Server](python-for-data-analytics/4.-sql-server/README.md)
     * [1: Introduction to SQL Server](python-for-data-analytics/4.-sql-server/1.-sql-server.md)
     * [DBMS and SQL](python-for-data-analytics/4.-sql-server/dbms-and-sql.md)
-    * [Data Types & Creating Your First Database](python-for-data-analytics/4.-sql-server/data-types-and-creating-your-first-database.md)
     * [Modifying Tables and Filtering Data](python-for-data-analytics/4.-sql-server/modifying-tables-and-filtering-data.md)
     * [Datatypes](python-for-data-analytics/4.-sql-server/datatypes.md)
     * [Database Creation](python-for-data-analytics/4.-sql-server/database-creation.md)
