@@ -67,7 +67,7 @@ These store numbers **exactly as they are** ,no rounding, no approximation. we u
 >
 > * `1234.56` (4 digits before decimal → exceeds limit)
 
-<img src="../../.gitbook/assets/file.excalidraw.svg" alt="" class="gitbook-drawing">
+<img src="../../.gitbook/assets/file.excalidraw (1).svg" alt="" class="gitbook-drawing">
 
 **Simple Example:**
 
