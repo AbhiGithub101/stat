@@ -1,12 +1,14 @@
 # 15. Tuple
 
-#### What is Tuples? <a href="#what-is-tuples" id="what-is-tuples"></a>
+{% embed url="https://youtu.be/fHxHwqjCBA0" %}
+
+#### What are Tuples? <a href="#what-is-tuples" id="what-is-tuples"></a>
 
 Tuples are used to store multiple items in a single variable. It is also an iterable.
 
-In more simpler terms, Tuple is a collection of items enclosed between Parantheses ().
+In simpler terms, a tuple is a collection of items enclosed between Parantheses ().
 
-Properties : Ordered , immutable(unchangeable) , Allow Duplicate Values.
+Properties: Ordered, immutable(unchangeable), Allow Duplicate Values.
 
 For Example:
 
@@ -50,9 +52,9 @@ name[0:2]
 
 #### Properties of a Tuple: <a href="#properties-of-a-tuple" id="properties-of-a-tuple"></a>
 
-**1.Tuples are Ordered:**
+1. **Tuples are Ordered:**
 
-When You define a Tuple , its items are stored and assigned to specific index number. It means Tuple items are ordered . To Explain it better, Here is an Example:
+When you define a Tuple, its items are stored and assigned to a specific index number. It means Tuple items are ordered. To explain it better, here is an Example:
 
 In \[7]:
 
@@ -65,9 +67,9 @@ print(vartuple)
 ('console', 'flare', 'python', 'data')
 ```
 
-**1.Tuples are Immutable/UnChangeable:**
+2. **Tuples are Immutable/UnChangeable:**
 
-We cannot change the items in Tuple once defined.
+We cannot change the items in a tuple once defined.
 
 In \[8]:
 
@@ -86,9 +88,9 @@ TypeError                                 Traceback (most recent call last)
 TypeError: 'tuple' object does not support item assignment
 ```
 
-**3.Tuples allow duplicate values:**
+3. **Tuples allow duplicate values:**
 
-Tuple allows duplicate values, it can have as many duplicate values. For Example:
+A tuple allows duplicate values; it can have as many duplicate values. For Example:
 
 In \[9]:
 
@@ -132,7 +134,7 @@ vartuple = [23,45,12,76,83]
 min(vartuple)
 ```
 
-**max() and min() function does not work in mixed Tuples with different category of data types , Just like Lists.**
+**max() and min() functions do not work on mixed Tuples with different data types, just like Lists.**
 
 ### Tuple Operations: <a href="#tuple-operations" id="tuple-operations"></a>
 
@@ -175,7 +177,7 @@ True
 
 ### iteration in tuples:
 
-for loop is used to iterate over the Tuple items. For example:
+For loop is used to iterate over the Tuple items. For example:
 
 ```
 var_tuple = (1,2,3,4,5,6,7,8,9)
@@ -198,7 +200,7 @@ for i in var_tuple:
 
 ### Empty Tuple:
 
-We can create an empty tuple with the help of parantheses ().
+We can create an empty tuple with the help of parentheses().
 
 ```
 empty_tuple = ()
@@ -209,9 +211,9 @@ print(empty_tuple)
 ()
 ```
 
-### To create a tuple with Single item:
+### To create a tuple with a single item:
 
-In tuple , You can not simply create a tuple with single item. For example:
+In a tuple, you can not simply create a tuple with a single item. For example:
 
 ```
 var = (5)
@@ -222,7 +224,7 @@ type(var)
 int
 ```
 
-Now , here var is not a tuple , it is an integer because python treats parantheses here as Operator. So What is the Solution?
+Now, here var is not a tuple, it is an integer because Python treats parentheses here as an operator. So What is the Solution?
 
 ```
 var = (5,)
@@ -233,15 +235,15 @@ type(var)
 tuple
 ```
 
-So , We can create a tuple with single item by using comma like above.
+So, we can create a tuple with a single item by using a comma like above.
 
 ### Tuple Methods:
 
-Since We cannot change values in Tuple once we have defined tuple. So there are only two methods in Tuple.
+Since we cannot change values in a tuple once we have defined it. So there are only two methods in Tuple.
 
 ### 1.count() :
 
-count method is used to count occurence of elements in Tuples.
+Count method is used to count occurence of elements in Tuples.
 
 ```
 var = (1,2,3,4,4,4,4,4)
@@ -255,7 +257,7 @@ print(x)
 
 ### 2.index() :
 
-index method is used to find position of element in tuple.
+The index method is used to find the position of an element in a tuple.
 
 ```
 var = ("console","flare","python","data")
@@ -269,7 +271,7 @@ print(position)
 
 ### tuple() Constructor :
 
-tuple constructor is used to convert an iterable to tuple. We can also use to create an empty tuple with it.
+A tuple constructor is used to convert an iterable to a tuple. We can also use it to create an empty tuple.
 
 ```
 varlist = [1,2,3,4]

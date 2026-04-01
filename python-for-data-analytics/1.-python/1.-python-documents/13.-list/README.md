@@ -1,5 +1,7 @@
 # 13. List
 
+{% embed url="https://youtu.be/zjCus11uu7s" %}
+
 ### What is List?
 
 A list can be defined as a collection of **values** or **items** of different Data types.
@@ -349,13 +351,15 @@ print(list)
 [1, 89, 78, 4, 5, 6]
 ```
 
+{% embed url="https://youtu.be/rDPa9kewu4s" %}
+
 #### List Methods:
 
 Functions that are specific to list are known as list methods. We will go through each method one by one.
 
-#### 1.Adding elements to the list:
+#### 1. Adding elements to the list:
 
-append() Python provides append() function which is used to add an element to the list. However, the append() function can only add value to the end of the list.
+append() Python provides the append() function, which is used to add an element to the list. However, the append() function can only add value to the end of the list.
 
 It does not return any value.
 
@@ -371,7 +375,7 @@ print(var_list)
 [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 ```
 
-If we append iterables(string, list,tuple,set,dictionary) in list. It will add iterables as whole at the end of the list. For Example:
+If we append iterables(string, list, tuple, set, dictionary) in list. It will add iterables as a whole at the end of the list. For Example:
 
 ```
 var_list = [1,2,3,4,5,6,7,8,9]
