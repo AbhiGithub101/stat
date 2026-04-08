@@ -105,3 +105,5 @@
     * [Warehouse VS Lakehouse](python-for-data-analytics/introduction-to-microsoft-fabric/warehouse-vs-lakehouse.md)
     * [Microsoft Copilot for Fabric](python-for-data-analytics/introduction-to-microsoft-fabric/microsoft-copilot-for-fabric.md)
     * [Last Page](python-for-data-analytics/introduction-to-microsoft-fabric/last-page.md)
+* [pandas\_value\_counts](pandas_value_counts.md)
+* [pandas\_value\_counts](pandas_value_counts-1.md)
