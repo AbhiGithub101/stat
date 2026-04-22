@@ -408,32 +408,7 @@ else:
 
 </details>
 
-15. Write a program to check whether the given string is palindrome or not.\
-    Example : MADAM, MOM
-
-<details>
-
-<summary>Solution</summary>
-
-```python
-st = input('Enter the string : ')
-revst = ''
-
-i = 0
-while(i < len(st)):
-    revst += st[len(st)- i - 1]
-    i += 1
-
-if revst == st:
-    print(st, 'is palindrome')
-else:
-    print(st, 'is not palindrome')
-
-```
-
-</details>
-
-16. Write a program to check whether the given number is palindrome or not.\
+15. Write a program to check whether the given number is palindrome or not.\
     Example : 343, 121, 111, etc.
 
 <details>
@@ -460,7 +435,7 @@ else:
 
 </details>
 
-17. Create Rock, Paper, Scissor game using while loop\
+16. Create Rock, Paper, Scissor game using while loop\
     (Hint- use random module and random.choice(\['rock', 'paper', 'scissor']) function to get random value selected by computer)\
     Your Program will contain one you and second the computer who will be generating the values from its side using random module.\
     \
@@ -542,7 +517,7 @@ print('Thankyou For Playing')
 
 </details>
 
-18. Write a Python program that iterates the integers from 1 to 50. For multiples of three print "Fizz" instead of the number and for multiples of five print "Buzz". For numbers that are multiples of three and five, print "FizzBuzz".\
+17. Write a Python program that iterates the integers from 1 to 50. For multiples of three print "Fizz" instead of the number and for multiples of five print "Buzz". For numbers that are multiples of three and five, print "FizzBuzz".\
     \&#xNAN;_**Sample Output**_\*\* :\*\*\
     1\
     2\
@@ -571,7 +546,7 @@ while(i <= 50):
 
 </details>
 
-19. Take a string input from user and count the number of vowels and consonants using while loop and for loop both.
+18. Take a string input from user and count the number of vowels and consonants using while loop and for loop both.
 
 <details>
 
@@ -621,7 +596,7 @@ print(f"Consonant's count : {cons_count}")
 
 </details>
 
-20. Write a program to reverse the String using while loop.
+19. Write a program to reverse the String using while loop.
 
 <details>
 
@@ -641,7 +616,7 @@ print(f'Reversed string : {revst}')
 
 </details>
 
-21. Write a Python program to check the validity of passwords input by users.\
+20. Write a Python program to check the validity of passwords input by users.\
     Validation :
 
 * At least 1 letter between \[a-z] and 1 letter between \[A-Z].
