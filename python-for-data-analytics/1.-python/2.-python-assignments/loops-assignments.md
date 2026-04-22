@@ -6,7 +6,7 @@ hidden: true
 
 #### **Beginner Level**
 
-1. Try to Write your name 10 times with the help of while loop.
+1. Try to Write your name 10 times with the help of **while loop**.
 
 <details>
 
@@ -22,7 +22,7 @@ while(i <= 10):
 
 </details>
 
-2. Print a simple multiplication table of number given by user input.
+2. Print a simple multiplication table of the number given by user input.
 
 {% tabs %}
 {% tab title="Example" %}
@@ -58,7 +58,7 @@ Enter the number : 10
 
 </details>
 
-3\. Do you know Factorial ? It is the product of an integer and all the integers below it; e.g. factorial four ( _4!_ ) is equal to 24. Take a number from user and calculate factorial of a number.
+3\. Do you know **Factorial** ? It is the product of an integer and all the integers below it; e.g. factorial four ( _4!_ ) is equal to 24. Take a number from user and calculate factorial of a number.
 
 {% tabs %}
 {% tab title="Example" %}
@@ -88,7 +88,7 @@ Enter the number : 10
 
 </details>
 
-4. Take 10 values from user and find out the sum and multiplication and average of the numbers.
+4. Take 10 values from user and find out the **sum** and **multiplication** and **average** of the numbers.
 
 <details>
 
@@ -118,7 +118,7 @@ Enter the number : 10
 
 </details>
 
-5. Find all even numbers between 1 to 2000.
+5. Find all **even numbers** between 1 to 2000.
 
 <details>
 
@@ -134,7 +134,7 @@ while i<=2000:
 
 </details>
 
-6. Find all prime numbers between 1 to 2000.
+6. Find all **prime numbers** between 1 to 2000.
 
 <details>
 
@@ -152,7 +152,7 @@ for num in range(1,2001):
 
 </details>
 
-7. Take a number from user and return sum of all digits of the number.
+7. Take a number from user and return the **sum** of all digits of the number.
 
 {% tabs %}
 {% tab title="Example" %}
@@ -192,7 +192,7 @@ for i in st:
 
 </details>
 
-9. Write a python program to check whether a number given by user is a special number or not. _A special number is the number if the sum of the factorial of its digit is same as the original number_. Example : 145
+9. Write a python program to check whether a number given by user is a **special number** or not. _A special number is the number if the sum of the factorial of its digit is same as the original number_. Example : 145
 
 <details>
 
@@ -326,7 +326,7 @@ else:
 
 </details>
 
-12. Write a program to reverse a number taken by the user without using strings.
+12. Write a program to **reverse a number** taken by the user without using strings.
 
 <details>
 
@@ -382,7 +382,7 @@ print(f'Digits Count : {digit_count}')
 
 </details>
 
-14. Write a program to check whether the number given by the user is an Armstrong number or not.(An Armstrong number is the number whose digits cubes sum is equal to the original number. Such as 153 as 1^3 + 5^3+3^3 = 1 + 125 + 27 = 153)
+14. Write a program to check whether the number given by the user is an **Armstrong number** or not.(An Armstrong number is the number whose digits cubes sum is equal to the original number. Such as 153 as 1^3 + 5^3+3^3 = 1 + 125 + 27 = 153)
 
 <details>
 
@@ -412,7 +412,7 @@ else:
 
 </details>
 
-15. Write a program to check whether the given number is palindrome or not.\
+15. Write a program to check whether the given number is **palindrome** or not.\
     Example : 343, 121, 111, etc.
 
 <details>
@@ -441,7 +441,7 @@ else:
 
 #### Intermediate Level
 
-16. Create Rock, Paper, Scissor game using while loop\
+16. Create **Rock**, **Paper**, **Scissor game** using while loop\
     (Hint- use random module and random.choice(\['rock', 'paper', 'scissor']) function to get random value selected by computer)\
     Your Program will contain one you and second the computer who will be generating the values from its side using random module.\
     \
@@ -552,7 +552,7 @@ while(i <= 50):
 
 </details>
 
-18. Take a string input from user and count the number of vowels and consonants using while loop and for loop both.
+18. Take a string input from user and count the number of **vowels** and **consonants** using while loop and for loop both.
 
 <details>
 
