@@ -355,31 +355,6 @@ print('Most popular menu items:', most_popular_items)
 
 </details>
 
-19. You are the manager of a retail store and you want to identify which products are selling well and which products are not. You have a list of all products sold in the past month. How can you use sets to identify the top selling products and the least selling products?
-
-<details>
-
-<summary>Solution</summary>
-
-```python
-# Products sold in the past month
-past_month_products = {'shirt', 'pants', 'jacket', 'hat', 'shoes', 'sunglasses', 'purse', 'socks'}
-
-# All products
-all_products = {'shirt', 'pants', 'jacket', 'hat', 'shoes', 'sunglasses', 'purse', 'socks', 'gloves', 'scarf', 'belt', 'watch'}
-
-# Top selling products
-top_selling_products = {'shirt', 'pants', 'jacket', 'shoes'}
-
-# Least selling products
-least_selling_products = all_products - past_month_products
-
-print('Top selling products:', top_selling_products)
-print('Least selling products:', least_selling_products)
-```
-
-</details>
-
 20. You are a data analyst and you want to identify the most common words used in a text document. You have a list of all words used in the document. How can you use sets to identify the most common words?
 
 <details>

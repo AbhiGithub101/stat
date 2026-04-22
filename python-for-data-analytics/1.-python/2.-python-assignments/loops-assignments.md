@@ -4,7 +4,7 @@ hidden: true
 
 # Loops Assignments
 
-**1.Try to Write your name 10 times with the help of while loop.**
+1. Try to Write your name 10 times with the help of while loop.
 
 <details>
 
@@ -20,7 +20,7 @@ while(i <= 10):
 
 </details>
 
-**2.Print a simple multiplication table of number given by user input.**
+2. Print a simple multiplication table of number given by user input.
 
 {% tabs %}
 {% tab title="Example" %}
@@ -56,7 +56,7 @@ Enter the number : 10
 
 </details>
 
-**3. Do you know Factorial ? It is the product of an integer and all the integers below it; e.g. factorial four (&#x20;**_**4!**_**&#x20;) is equal to 24. Take a number from user and calculate factorial of a number.**
+3\. Do you know Factorial ? It is the product of an integer and all the integers below it; e.g. factorial four ( _4!_ ) is equal to 24. Take a number from user and calculate factorial of a number.
 
 {% tabs %}
 {% tab title="Example" %}
@@ -86,7 +86,7 @@ Enter the number : 10
 
 </details>
 
-**4.Take 10 values from user and find out the sum and multiplication and average of the numbers.**
+4. Take 10 values from user and find out the sum and multiplication and average of the numbers.
 
 <details>
 
@@ -116,7 +116,7 @@ Enter the number : 10
 
 </details>
 
-5. **Find all even numbers between 1 to 2000.**
+5. Find all even numbers between 1 to 2000.
 
 <details>
 
@@ -132,7 +132,7 @@ while i<=2000:
 
 </details>
 
-**6.Find all prime numbers between 1 to 2000.**
+6. Find all prime numbers between 1 to 2000.
 
 <details>
 
@@ -150,7 +150,7 @@ for num in range(1,2001):
 
 </details>
 
-**7.Take a number from user and return sum of all digits of the number.**
+7. Take a number from user and return sum of all digits of the number.
 
 {% tabs %}
 {% tab title="Example" %}
@@ -176,76 +176,7 @@ print('Sum of Digits :', s)
 
 </details>
 
-**8.Take integer inputs from user until he/she presses q ( Ask to press q to quit after every integer input ). Print average and product of all numbers.**
-
-{% tabs %}
-{% tab title="Example" %}
-**`Enter the number : 5`**
-
-**`do you want to quit ? no`**
-
-**`Enter the number : 10`**
-
-**`do you want to quit ? no`**
-
-**`Enter the number : 25`**
-
-**`do you want to quit ? yes`**
-
-**`Sum is 40`**
-
-**`Product is 1250`**
-{% endtab %}
-{% endtabs %}
-
-<details>
-
-<summary><mark style="color:purple;">Solution</mark></summary>
-
-<mark style="color:green;">**`s = 0`**</mark>
-
-<mark style="color:green;">**`p = 1`**</mark>
-
-<mark style="color:green;">**`while(True):`**</mark>
-
-<mark style="color:green;">**`number = int(input('Enter the number : '))`**</mark>
-
-<mark style="color:green;">**`s = s + number`**</mark>
-
-<mark style="color:green;">**`p = p * number`**</mark>
-
-<mark style="color:green;">**`q = input('do you want to quit ? ').lower()`**</mark>
-
-<mark style="color:green;">**`if(q=='yes'):`**</mark>
-
-<mark style="color:green;">**`break`**</mark>
-
-<mark style="color:green;">**`print(f'Sum is {s}')`**</mark>
-
-<mark style="color:green;">**`print(f'Product is {p}')`**</mark>
-
-</details>
-
-9. Write a Python program that asks the user to enter a sentence and then prints the number of vowels in the sentence.
-
-<details>
-
-<summary>Solution</summary>
-
-```python
-2.	sentence = input("Enter a sentence: ")
-3.	vowels = "aeiouAEIOU"
-4.	count = 0
-5.	for char in sentence:
-6.	    if char in vowels:
-7.	        count += 1
-8.	print("Number of vowels:", count)
-
-```
-
-</details>
-
-10. A simple iteration through a string to access all elements of it.
+8. A simple iteration through a string to access all elements of it.
 
 <details>
 
@@ -259,36 +190,7 @@ for i in st:
 
 </details>
 
-11. Write a program that prints the Fibonacci sequence up to a given number using a while loop.\
-    **Example :**\
-    **Enter a number : 5**\
-    **0 1 1 2 3 5**\
-    **Enter a number : 10**\
-    0 1 1 2 3 5 8
-
-<details>
-
-<summary>Solution</summary>
-
-```python
-# Ask user to input a number
-num = int(input("Enter a number: "))
-
-# Initialize variables to store the first two numbers in the sequence
-n1, n2 = 0, 1
-
-# Print the Fibonacci sequence up to the given number
-while n1 <= num:
-    print(n1, end=' ')
-    n3 = n1 + n2
-    n1 = n2
-    n2 = n3
-
-```
-
-</details>
-
-12. Write a python program to check whether a number given by user is a special number or not. _A special number is the number if the sum of the factorial of its digit is same as the original number_. Example : 145
+9. Write a python program to check whether a number given by user is a special number or not. _A special number is the number if the sum of the factorial of its digit is same as the original number_. Example : 145
 
 <details>
 
@@ -322,40 +224,7 @@ else:
 
 </details>
 
-13. Write a program to print the even and odd numbers in the range from 1 to n where n is given by the user and also print the sum of all even numbers and odd numbers separately.(use while loop)
-
-<details>
-
-<summary>Solution</summary>
-
-```python
-# Ask user to input a number
-n = int(input("Enter a number: "))
-
-# Initialize variables
-even_sum = 0
-odd_sum = 0
-i = 1
-
-# Print the even and odd numbers in the range from 1 to n
-while i <= n:
-    if i % 2 == 0:
-        print(i, "is even")
-        even_sum += i
-    else:
-        print(i, "is odd")
-        odd_sum += i
-    i += 1
-
-# Print the sum of all even and odd numbers separately
-print("The sum of all even numbers is", even_sum)
-print("The sum of all odd numbers is", odd_sum)
-
-```
-
-</details>
-
-14. Create a **simple calculator** using **loops** (The program should be menu driven which runs till user exits itself. Means the program must ask the user every time to whether he want to continue or exit). Print Appropriate Message for this.(_**use while() loop**_)
+10. Create a **simple calculator** using **loops** (The program should be menu driven which runs till user exits itself. Means the program must ask the user every time to whether he want to continue or exit). Print the appropriate message for this.(_**use while() loop**_)
 
 <details>
 
@@ -410,7 +279,7 @@ while True:
 
 </details>
 
-15. Write a program to check whether the number is **`automorphic number`** or not.(_**A number is said to be automorphic number if the original number is present on the right of the square of that number**_.)
+11. Write a program to check whether the number is **`automorphic number`** or not.(_**A number is said to be automorphic number if the original number is present on the right of the square of that number**_.)
 
 **`For example :`**
 
@@ -453,7 +322,7 @@ else:
 
 </details>
 
-16. Write a program to reverse a number taken by the user without using strings.
+12. Write a program to reverse a number taken by the user without using strings.
 
 <details>
 
@@ -476,7 +345,7 @@ print('Reversed Number :', rev)
 
 </details>
 
-17. Write a program to count the number of alphabets and no of digits in a string using loops.
+13. Write a program to count the number of alphabets and no of digits in a string using loops.
 
 <details>
 
@@ -509,7 +378,7 @@ print(f'Digits Count : {digit_count}')
 
 </details>
 
-18. Write a program to check whether the number given by the user is an Armstrong number or not.(An Armstrong number is the number whose digits cubes sum is equal to the original number. Such as 153 as 1^3 + 5^3+3^3 = 1 + 125 + 27 = 153)
+14. Write a program to check whether the number given by the user is an Armstrong number or not.(An Armstrong number is the number whose digits cubes sum is equal to the original number. Such as 153 as 1^3 + 5^3+3^3 = 1 + 125 + 27 = 153)
 
 <details>
 
@@ -539,7 +408,7 @@ else:
 
 </details>
 
-19. Write a program to check whether the given string is palindrome or not.\
+15. Write a program to check whether the given string is palindrome or not.\
     Example : MADAM, MOM
 
 <details>
@@ -564,7 +433,7 @@ else:
 
 </details>
 
-20. Write a program to check whether the given number is palindrome or not.\
+16. Write a program to check whether the given number is palindrome or not.\
     Example : 343, 121, 111, etc.
 
 <details>
@@ -591,7 +460,7 @@ else:
 
 </details>
 
-21. Create Rock, Paper, Scissor game using while loop\
+17. Create Rock, Paper, Scissor game using while loop\
     (Hint- use random module and random.choice(\['rock', 'paper', 'scissor']) function to get random value selected by computer)\
     Your Program will contain one you and second the computer who will be generating the values from its side using random module.\
     \
@@ -673,7 +542,7 @@ print('Thankyou For Playing')
 
 </details>
 
-22. Write a Python program that iterates the integers from 1 to 50. For multiples of three print "Fizz" instead of the number and for multiples of five print "Buzz". For numbers that are multiples of three and five, print "FizzBuzz".\
+18. Write a Python program that iterates the integers from 1 to 50. For multiples of three print "Fizz" instead of the number and for multiples of five print "Buzz". For numbers that are multiples of three and five, print "FizzBuzz".\
     \&#xNAN;_**Sample Output**_\*\* :\*\*\
     1\
     2\
@@ -702,7 +571,7 @@ while(i <= 50):
 
 </details>
 
-23. Take a string input from user and count the number of vowels and consonants using while loop and for loop both.
+19. Take a string input from user and count the number of vowels and consonants using while loop and for loop both.
 
 <details>
 
@@ -752,7 +621,7 @@ print(f"Consonant's count : {cons_count}")
 
 </details>
 
-24. Write a program to reverse the String using while loop.
+20. Write a program to reverse the String using while loop.
 
 <details>
 
@@ -772,7 +641,7 @@ print(f'Reversed string : {revst}')
 
 </details>
 
-25. Write a Python program to check the validity of passwords input by users.\
+21. Write a Python program to check the validity of passwords input by users.\
     Validation :
 
 * At least 1 letter between \[a-z] and 1 letter between \[A-Z].
