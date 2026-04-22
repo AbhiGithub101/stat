@@ -287,9 +287,9 @@ while True:
 
 **`For example :`**
 
-1\. 5 is an automorphic number as its square is 25 and 5 is at its right side.
+&#x20;  5 is an automorphic number as its square is 25 and 5 is at its right side.
 
-2\. Similarly 25 - square 625 and 25 is at its right side.
+&#x20;  Similarly 25 - square 625 and 25 is at its right side.
 
 <details>
 

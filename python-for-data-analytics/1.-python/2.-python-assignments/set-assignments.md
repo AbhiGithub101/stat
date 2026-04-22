@@ -334,28 +334,7 @@ print('Customers who have not purchased in the past month:', not_purchased_last_
 
 </details>
 
-18. You are the owner of a restaurant and you want to identify the most popular menu items among your customers. You have a list of all menu items that have been ordered in the past month. How can you use sets to identify the most popular menu items?
-
-<details>
-
-<summary>Solution</summary>
-
-```python
-# Menu items ordered in the past month
-past_month_menu_items = {'burger', 'fries', 'pizza', 'pasta', 'sandwich', 'salad', 'soup', 'steak'}
-
-# All menu items
-all_menu_items = {'burger', 'fries', 'pizza', 'pasta', 'sandwich', 'salad', 'soup', 'steak', 'chicken', 'fish', 'tacos', 'sushi'}
-
-# Most popular menu items
-most_popular_items = past_month_menu_items.intersection(all_menu_items)
-
-print('Most popular menu items:', most_popular_items)
-```
-
-</details>
-
-20. You are a data analyst and you want to identify the most common words used in a text document. You have a list of all words used in the document. How can you use sets to identify the most common words?
+18. You are a data analyst and you want to identify the most common words used in a text document. You have a list of all words used in the document. How can you use sets to identify the most common words?
 
 <details>
 
@@ -387,7 +366,7 @@ print('The count of the most common word is:', most_common_count)
 
 </details>
 
-21. You have a list of orders and their respective statuses (e.g. "pending", "shipped", "delivered"), and you want to count the number of orders in each status. How can you use sets to accomplish this task?
+19. You have a list of orders and their respective statuses (e.g. "pending", "shipped", "delivered"), and you want to count the number of orders in each status. How can you use sets to accomplish this task?
 
 <details>
 

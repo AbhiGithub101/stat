@@ -779,37 +779,7 @@ else:
 
 </details>
 
-28. Take three sides (number) from the user and tell whether the triangle is isosceles, scalene and equilateral triangle.
-
-<details>
-
-<summary>Solution</summary>
-
-```python
-# take input from user
-a = float(input("Enter the length of side a: "))
-b = float(input("Enter the length of side b: "))
-c = float(input("Enter the length of side c: "))
-
-# check if it forms a triangle
-if a + b > c and a + c > b and b + c > a:
-    # check for equilateral triangle
-    if a == b == c:
-        print("The triangle is an equilateral triangle.")
-    # check for isosceles triangle
-    elif a == b or b == c or a == c:
-        print("The triangle is an isosceles triangle.")
-    # otherwise, it must be a scalene triangle
-    else:
-        print("The triangle is a scalene triangle.")
-else:
-    print("These sides do not form a triangle.")
-
-```
-
-</details>
-
-29. Alice, Bob and Charlie are bidding on an artifact at an auction.
+28. Alice, Bob and Charlie are bidding on an artifact at an auction.
 
 Alice bids A rupees, Bob bids B rupees and Charlie bids C rupees (where A, B and C are distinct).
 
