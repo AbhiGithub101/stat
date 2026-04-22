@@ -4,6 +4,8 @@ hidden: true
 
 # Loops Assignments
 
+#### **Beginner Level**
+
 1. Try to Write your name 10 times with the help of while loop.
 
 <details>
@@ -224,6 +226,8 @@ else:
 
 </details>
 
+#### **Moderate Level**
+
 10. Create a **simple calculator** using **loops** (The program should be menu driven which runs till user exits itself. Means the program must ask the user every time to whether he want to continue or exit). Print the appropriate message for this.(_**use while() loop**_)
 
 <details>
@@ -434,6 +438,8 @@ else:
 ```
 
 </details>
+
+#### Intermediate Level
 
 16. Create Rock, Paper, Scissor game using while loop\
     (Hint- use random module and random.choice(\['rock', 'paper', 'scissor']) function to get random value selected by computer)\
