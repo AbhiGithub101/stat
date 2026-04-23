@@ -119,7 +119,7 @@ $$
 
 **`7.Take Temperature in Fahrenheit and convert it into Celsius.`**
 
-\*\*`Formula:` \*\*_**C = 5/9 \* ( F - 32 )**_
+**`Formula:`**    _**C = 5/9 \* ( F - 32 )**_
 
 <details>
 
