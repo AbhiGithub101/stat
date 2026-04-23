@@ -1,7 +1,8 @@
 # Functions- Basic Assignments
 
 1. Create a non-return type function that takes the user's name and displays the message\
-   &#x20;                          **"Hello user! Welcome to Python Functions"**
+   &#x20;                         \
+   &#x20;                               **"Hello user! Welcome to Python Functions"**
 
 <details>
 
@@ -17,8 +18,9 @@ greeting(name)
 
 </details>
 
-2. Create a **non-return type** function that takes the details of user like **name**, **age**, **city**, **company**, and **profile** and display the message-\
-   &#x20;               **"Hello Python, I am name. I am age years old. I am a profile in company."**
+2. Create a **non-return type** function that takes the details of a user, like **name**, **age**, **city**, **company**, and **profile,** and display the message-\
+   &#x20;               \
+   &#x20;               **"Hello Python, I am name. I am age years old. I am a profile in the company."**
 
 <details>
 
