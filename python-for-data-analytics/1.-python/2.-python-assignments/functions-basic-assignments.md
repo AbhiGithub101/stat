@@ -1,7 +1,7 @@
 # Functions- Basic Assignments
 
-1. Create a non-return type function that takes the user's name and display the message\
-   "Hello user! Welcome to Python Functions"
+1. Create a non-return type function that takes the user's name and displays the message\
+   &#x20;                          **"Hello user! Welcome to Python Functions"**
 
 <details>
 
@@ -17,8 +17,8 @@ greeting(name)
 
 </details>
 
-2. Create a non-return type function that takes the details of user like name,age, city, company, and profile and display the message-\
-   "Hello Python, I am name. I am age years old. I am a profile in company"
+2. Create a **non-return type** function that takes the details of user like **name**, **age**, **city**, **company**, and **profile** and display the message-\
+   &#x20;               **"Hello Python, I am name. I am age years old. I am a profile in company."**
 
 <details>
 
@@ -39,7 +39,7 @@ introduction(name,age,profile,company)
 
 </details>
 
-3. Create a return type function that takes the length and breadth of a rectangle and calculate area of the rectangle.
+3. Create a return type function that takes the **length** and **breadth** of a rectangle and calculates the area of the rectangle.
 
 <details>
 
@@ -58,8 +58,8 @@ print('Area of the rectangle is ',area_of_rectangle(length,breadth))
 
 </details>
 
-4. Create a return type function that takes weight and height of a user and return the bmi of the user.\
-   Depending upon the bmi show the category that the custimer belongs to.
+4. Create a **return type** function that takes the **weight** and **height** of a user and returns the **BMI** of the user.\
+   Depending upon the bmi show the category that the customer belongs to.
 
 <figure><img src="https://2715416193-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FqrOwR7E0344TGTnSFHoL%2Fuploads%2F9pQ2QH9oIUxU3kt2Yl90%2Fimage.png?alt=media&#x26;token=bb89e37e-e495-4761-a90d-4dd33558c61d" alt=""><figcaption></figcaption></figure>
 
@@ -88,7 +88,7 @@ print('Obese:',bmi>=30)
 
 </details>
 
-5. Create a return type function that takes principle, rate, and time from the user and then return simple interest after calculation.Afterwards Calculate amount that the user has to repay.
+5. Create a **return type** function that takes **principal**, **rate**, and **time** from the user and then returns simple interest after calculation. Afterwards Calculate amount that the user has to repay.
 
 <details>
 
@@ -113,8 +113,9 @@ print('Amount you will repay is',amount,'Rs')
 
 </details>
 
-6. Create a return function that takes the radius and height of a cylinder and return the total surface area.\
-   TSA = 2πr\*(r + h).
+6. Create a **return function** that takes the **radius** and **height** of a cylinder and return the total surface area.\
+   &#x20;                                          \
+   &#x20;                                                       **TSA = 2πr\*(r + h)**
 
 <details>
 
@@ -133,8 +134,9 @@ print('the total surface area of the cylinder is',total_surface_area_cylinder(ra
 
 </details>
 
-7. Create a function that takes the radius and height of a cone and return the volume.\
-   V=1/3hπr²
+7. Create a function that takes the **radius** and **height** of a cone and return the volume.\
+   &#x20;                          \
+   &#x20;                                                           **V=1/3hπr²**
 
 <details>
 
@@ -156,7 +158,7 @@ print('Volumeof the cone',v)
 
 </details>
 
-8. Create a function that returns the quotient and remainder after dividing two numbers.
+8. Create a function that returns the **quotient** and **remainder** after dividing two numbers.
 
 <details>
 
@@ -180,7 +182,7 @@ print('remainder:',rem)
 
 </details>
 
-9. Create a return type function that takes marks of 5 subjects from a student and calculates the percentage of the student.
+9. Create a **return type** function that takes marks of 5 subjects from a student and calculates the percentage of the student.
 
 <details>
 
@@ -205,7 +207,7 @@ print('Your percentage is:',per,'%')
 
 </details>
 
-10. Create a function called create\_bill that takes product name,price, and qty and return the bill.
+10. Create a function called **create\_bill** that takes product **name**, **price**, and **quantity,** and return the bill.
 
 <details>
 
