@@ -172,8 +172,9 @@ print('Remaining balance :', balance)
 
 </details>
 
-10. Take the base and height of a triangle from the user and calculate the area of the triangle.\
-    area=(base \* height)\*1/2
+10. Take the **base** and **height** of a triangle from the user and calculate the area of the triangle.\
+    &#x20;                                              \
+    &#x20;                                                 **area=(base \* height)\*1/2**
 
 <figure><img src="https://2715416193-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FqrOwR7E0344TGTnSFHoL%2Fuploads%2FjyeJAf2mTgiWI9BdVpLv%2FRight%20angled%20triangle.png?alt=media&#x26;token=663a1a4f-5b62-4b55-8cea-6865b6fb9ded" alt=""><figcaption></figcaption></figure>
 
@@ -192,7 +193,7 @@ print('Area of the triangle is',area)
 
 11. **Take 5 numbers from the user and calculate average of those numbers.**
 
-**(average=sum of data/number of data)**
+&#x20;                                         **(average=sum of data/number of data)**
 
 <details>
 
@@ -212,7 +213,8 @@ print('Average of the numbers',average)
 </details>
 
 12. Take the sides of a triangle and check whether it follows Pythagoras' theorem.\
-    sq. of base + sq. of height=sq. of hypotenuse
+    \
+    &#x20;                                   **sq. of base + sq. of height=sq. of hypotenuse**
 
 <figure><img src="https://2715416193-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FqrOwR7E0344TGTnSFHoL%2Fuploads%2FBQcxYboEKT0avIjEMtZ6%2FRight%20angled%20triangle.png?alt=media&#x26;token=2dd83fa6-bbd2-4e09-a110-bf427d3ede7e" alt=""><figcaption></figcaption></figure>
 
