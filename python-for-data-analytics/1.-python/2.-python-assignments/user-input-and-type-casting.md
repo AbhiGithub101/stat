@@ -192,7 +192,7 @@ print('Area of the triangle is',area)
 
 </details>
 
-11. **Take 5 numbers from the user and calculate average of those numbers.**
+11. Take 5 numbers from the user and calculate the average of those numbers.
 
 &#x20;                                         **(average=sum of data/number of data)**
 
