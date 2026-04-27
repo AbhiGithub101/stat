@@ -174,14 +174,14 @@ GROUP BY city;
 > Every column you write in SELECT **must either be in GROUP BY or inside an aggregate function.** You cannot SELECT a column that is not grouped.
 
 ```sql
--- ✅ Correct
+--  Correct
 SELECT city, COUNT(*) FROM matches GROUP BY city;
 
 -- ❌ Wrong — winner is not in GROUP BY or aggregate function
 SELECT city, winner, COUNT(*) FROM matches GROUP BY city;
 ```
 
-### 3. Aggregate Functions
+## Aggregate Functions
 
 Aggregate functions perform a **calculation on a group of rows** and return a single result. They are always used with GROUP BY or alone when you want the result for the whole table.
 
@@ -345,3 +345,125 @@ GROUP BY winner;
 | `AVG(column)` | Calculates average   | Average win margin       |
 | `MIN(column)` | Finds smallest value | Lowest win margin        |
 | `MAX(column)` | Finds largest value  | Highest win margin       |
+
+## HAVING Clause
+
+We already know WHERE filters rows. But WHERE **cannot work with aggregate functions** like COUNT, SUM, AVG, MIN, MAX.
+
+This is where HAVING comes in,HAVING is used to **filter groups** after GROUP BY has already grouped the data.
+
+Think of it like this:
+
+* **WHERE** → filters individual students before results are calculated
+* **HAVING** → filters after results are calculated like showing only students who scored more than 80% average
+
+**Simple example to show the difference:**
+
+```sql
+-- WHERE -- filters rows before grouping
+SELECT winner, COUNT(*) AS MatchesWon
+FROM matches
+WHERE season = 2017
+GROUP BY winner;
+
+-- HAVING -- filters groups after grouping
+SELECT winner, COUNT(*) AS MatchesWon
+FROM matches
+GROUP BY winner
+HAVING COUNT(*) > 2;
+```
+
+#### Syntax
+
+```sql
+SELECT column, aggregate_function
+FROM table
+GROUP BY column
+HAVING aggregate_function condition;
+```
+
+> HAVING always comes **after GROUP BY** — never before it.
+
+**Example 1 :** **Teams that won more than 2 matches**
+
+**Without HAVING shows all teams:**
+
+```sql
+SELECT winner, COUNT(*) AS MatchesWon
+FROM matches
+GROUP BY winner;
+```
+
+**With HAVING shows only teams that won more than 2 matches:**
+
+```sql
+SELECT winner, COUNT(*) AS MatchesWon
+FROM matches
+GROUP BY winner
+HAVING COUNT(*) > 2;
+```
+
+**Example 2 :Cities that hosted more than 2 matches**
+
+```sql
+SELECT city, COUNT(*) AS TotalMatches
+FROM matches
+GROUP BY city
+HAVING COUNT(*) > 2;
+```
+
+**Example 3 : Teams whose average win by runs is more than 10**
+
+```sql
+SELECT winner, AVG(win_by_runs) AS AvgWinByRuns
+FROM matches
+GROUP BY winner
+HAVING AVG(win_by_runs) > 10;
+```
+
+**Example 4 :Teams whose maximum win by runs is more than 30**
+
+```sql
+SELECT winner, MAX(win_by_runs) AS MaxWinByRuns
+FROM matches
+GROUP BY winner
+HAVING MAX(win_by_runs) > 30;
+```
+
+**Example 5 :** **Combining WHERE and HAVING together**
+
+You can use both WHERE and HAVING in the same query ,WHERE filters rows first, then GROUP BY groups them, then HAVING filters the groups.
+
+**Teams that won more than 1 match when toss decision was 'field':**
+
+```sql
+SELECT winner, COUNT(*) AS MatchesWon
+FROM matches
+WHERE toss_decision = 'field'
+GROUP BY winner
+HAVING COUNT(*) > 1;
+```
+
+#### Order of Clauses in a Query
+
+This is important, SQL clauses must always be written in this order:
+
+```sql
+SELECT   →  what columns to show
+FROM     →  which table
+WHERE    →  filter rows
+GROUP BY →  group the rows
+HAVING   →  filter the groups
+ORDER BY →  sort the result
+```
+
+**Full example using all clauses together:**
+
+```sql
+SELECT winner, COUNT(*) AS MatchesWon
+FROM matches
+WHERE toss_decision = 'field'
+GROUP BY winner
+HAVING COUNT(*) > 1
+ORDER BY MatchesWon DESC;
+```
