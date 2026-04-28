@@ -101,6 +101,7 @@
     * [String Functions](python-for-data-analytics/4.-sql-server/string-functions.md)
     * [Date and Time Functions](python-for-data-analytics/4.-sql-server/date-and-time-functions.md)
     * [Truncate and Numeric Functions](python-for-data-analytics/4.-sql-server/truncate-and-numeric-functions.md)
+    * [Joins](python-for-data-analytics/4.-sql-server/joins.md)
   * [Agentic AI](python-for-data-analytics/agentic-ai/README.md)
     * [1. Introduction To Agentic AI](python-for-data-analytics/agentic-ai/1.-introduction-to-agentic-ai.md)
   * [Required Files](python-for-data-analytics/required-files.md)
