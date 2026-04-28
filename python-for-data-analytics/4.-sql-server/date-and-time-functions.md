@@ -396,3 +396,7 @@ SELECT CONVERT(VARCHAR, GETDATE(), 106) AS LongFormat;
 ```
 
 **Real-life use:** Displaying dates in reports the way users expect ,Indian format DD/MM/YYYY is style 103, American format MM/DD/YYYY is style 101.
+
+
+
+**Coming Up Next:** Ever wondered how to wipe an entire table in one shot (faster than DELETE) ? Or how to round off numbers, find absolute values and do math directly in SQL? That is exactly what we cover next!
