@@ -99,6 +99,7 @@
     * [Operators, Distinct & Sorting](python-for-data-analytics/4.-sql-server/operators-distinct-and-sorting.md)
     * [Group By ,Aggregate Functions & Having Clause](python-for-data-analytics/4.-sql-server/group-by-aggregate-functions-and-having-clause.md)
     * [String Functions](python-for-data-analytics/4.-sql-server/string-functions.md)
+    * [Date and Time Functions](python-for-data-analytics/4.-sql-server/date-and-time-functions.md)
   * [Agentic AI](python-for-data-analytics/agentic-ai/README.md)
     * [1. Introduction To Agentic AI](python-for-data-analytics/agentic-ai/1.-introduction-to-agentic-ai.md)
   * [Required Files](python-for-data-analytics/required-files.md)
