@@ -103,6 +103,7 @@
     * [Truncate and Numeric Functions](python-for-data-analytics/4.-sql/truncate-and-numeric-functions.md)
     * [Joins](python-for-data-analytics/4.-sql/joins.md)
     * [Set Operations](python-for-data-analytics/4.-sql/set-operations.md)
+    * [Variables & Table Variables](python-for-data-analytics/4.-sql/variables-and-table-variables.md)
   * [Agentic AI](python-for-data-analytics/agentic-ai/README.md)
     * [1. Introduction To Agentic AI](python-for-data-analytics/agentic-ai/1.-introduction-to-agentic-ai.md)
   * [Required Files](python-for-data-analytics/required-files.md)
