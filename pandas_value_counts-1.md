@@ -1,3 +1,7 @@
+---
+hidden: true
+---
+
 # pandas\_value\_counts
 
 See exactly how it counts unique values — step by step
