@@ -84,7 +84,7 @@ ALTER COLUMN FullName VARCHAR(200);
 | 4  | Sneha Patil                    | IT         | 2023-01-10    | F      | [sneha.patil@email.com](mailto:sneha.patil@email.com)   |
 | 5  | Ravi Shankar                   | HR         | 2019-08-05    | M      | [ravi.shankar@email.com](mailto:ravi.shankar@email.com) |
 
-> The **data did not change** - only the column size increased from 100 to 200. Think of it as making the box bigger.
+> The **data did not change** ,only the column size increased from 100 to 200. Think of it as making the box bigger.
 
 ## 2. Adding a New Column
 
@@ -117,7 +117,7 @@ ADD Salary DECIMAL(10,2);
 | 4  | Sneha Patil  | IT         | 2023-01-10    | F      | [sneha.patil@email.com](mailto:sneha.patil@email.com)   | **NULL**   |
 | 5  | Ravi Shankar | HR         | 2019-08-05    | M      | [ravi.shankar@email.com](mailto:ravi.shankar@email.com) | **NULL**   |
 
-> The new Salary column is added but all values are **NULL** — meaning empty — because we have not entered any salary yet. NULL just means "no value entered yet."
+> The new Salary column is added but all values are **NULL** meaning empty because we have not entered any salary yet. NULL just means "no value entered yet."
 
 ## 3. Deleting an Existing Column
 
@@ -164,7 +164,7 @@ sql
 DROP TABLE Employee_Backup;
 ```
 
-> This deletes everything — every column, every row, all data. The table completely disappears from the database.
+> This deletes everything ,every column, every row, all data. The table completely disappears from the database.
 
 **Before DROP:**
 
@@ -192,7 +192,7 @@ SET ColumnName = NewValue
 WHERE condition;
 ```
 
-### Example 1 — Updating One Column
+### Example 1 -> Updating One Column
 
 Before we learn the right way, let us first see what happens when you forget the WHERE clause , so you never make this mistake.
 
@@ -257,7 +257,7 @@ WHERE ID = 1;
 
 > Only Rahul's row changed. Everyone else stayed exactly the same.
 
-### Example 2 — Updating Multiple Columns at Once
+### Example 2 -> Updating Multiple Columns at Once
 
 **Scenario:** Priya Verma got married, her name changed and her email also changed. Update both at the same time.
 
@@ -343,9 +343,9 @@ CREATE TABLE Employee (
 );
 ```
 
-> `IDENTITY(1,1)` means — start from **1** and increase by **1** every time.
+> `IDENTITY(1,1)` means start from **1** and increase by **1** every time.
 
-### Inserting Data — No Need to Type ID Anymore
+### Inserting Data -> No Need to Type ID Anymore
 
 Notice we are **not writing ID** in the INSERT statement at all:
 
@@ -380,7 +380,7 @@ VALUES ('Ravi Shankar',  'HR',      '2019-08-05', 'M', 'ravi.shankar@email.com')
 
 ### Playing with start and step
 
-#### IDENTITY(1, 1) — Default, most common
+#### IDENTITY(1, 1) :  Default, most common
 
 ```sql
 ID INT IDENTITY(1,1)
@@ -393,7 +393,7 @@ ID INT IDENTITY(1,1)
 | 2  | Priya Verma  |
 | 3  | Amit Gupta   |
 
-#### IDENTITY(1001, 1) — Start from 1001
+#### IDENTITY(1001, 1) :  Start from 1001
 
 ```sql
 ID INT IDENTITY(1001,1)
@@ -408,7 +408,7 @@ ID INT IDENTITY(1001,1)
 
 > **Real-life example:** Many companies start employee IDs from 1001 so it looks more professional and does not start from 1.
 
-#### IDENTITY(100, 10) — Increase by 10 each time
+#### IDENTITY(100, 10) : Increase by 10 each time
 
 ```sql
 ID INT IDENTITY(100,10)
@@ -435,4 +435,4 @@ Once a number is used by IDENTITY, **it never repeats** even if you delete that 
 | 5     | Ravi Shankar | HR         |
 | **6** | Neha Singh   | Finance    |
 
-> ID 3 is gone forever. SQL does not reuse it. This is by design — to make sure every ID is always unique.
+> ID 3 is gone forever. SQL does not reuse it. This is by design to make sure every ID is always unique.

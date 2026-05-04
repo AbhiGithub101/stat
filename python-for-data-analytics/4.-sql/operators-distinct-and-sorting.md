@@ -170,8 +170,6 @@ It uses two special symbols:
 
 **Find all players whose name starts with 'S':**
 
-sql
-
 ```sql
 SELECT * FROM matches
 WHERE player_of_match LIKE 'S%';
@@ -205,7 +203,7 @@ WHERE venue LIKE '%Stadium%';
 
 ### 8. NOT LIKE
 
-Opposite of LIKE — gives you all rows that **do NOT match** the pattern.
+Opposite of LIKE gives you all rows that **do NOT match** the pattern.
 
 ```sql
 SELECT * FROM matches
@@ -221,7 +219,7 @@ WHERE city NOT LIKE 'H%';
 | 4   | Indore | Kings XI Punjab        |
 | ... | ...    | ...                    |
 
-### Quick Recap — All Operators
+### Quick Recap of All Operators
 
 | Operator     | Meaning                | Example                     |
 | ------------ | ---------------------- | --------------------------- |
@@ -233,12 +231,6 @@ WHERE city NOT LIKE 'H%';
 | `<=`         | Less than or equal     | `win_by_wickets <= 4`       |
 | `LIKE`       | Matches a pattern      | `player_of_match LIKE 'S%'` |
 | `NOT LIKE`   | Does not match pattern | `city NOT LIKE 'H%'`        |
-
-
-
-
-
-
 
 ## DISTINCT Clause
 

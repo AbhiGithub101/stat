@@ -6,7 +6,7 @@ hidden: true
 
 ## What is a Data Type?
 
-When you create a table in SQL, every column needs a **data type** - it tells SQL _what kind of data_ will go in that column.
+When you create a table in SQL, every column needs a **data type** , it tells SQL _what kind of data_ will go in that column.
 
 ```mermaid
 graph TD

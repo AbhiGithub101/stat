@@ -107,11 +107,11 @@ A primary key is a column (or combination of columns) that uniquely identifies e
 >
 > #### **Rules of a Primary Key:**
 >
-> &#x20;**1. Must be unique — no two rows can share the same primary key value**
+> &#x20;**1. Must be unique :** **no two rows can share the same primary key value**
 >
-> &#x20; **2. Cannot be NULL — every row must have a value in the primary key column**
+> &#x20; **2. Cannot be NULL :** **every row must have a value in the primary key column**
 >
-> &#x20; **3. Should never change — once assigned, the primary key value should stay the same for that row**
+> &#x20; **3. Should never change :** **once assigned, the primary key value should stay the same for that row**
 
 ### Using SELECT to Retrieve Data
 

@@ -24,9 +24,9 @@ Think of it like this:
 
 > **You → DBMS → Database**
 
-You ask for data, the DBMS finds it, gives it to you, updates it, or deletes it — all on your behalf.
+You ask for data, the DBMS finds it, gives it to you, updates it, or deletes it ,all on your behalf.
 
-**Simple analogy:** Imagine a large library. The library is the database — it holds all the books (data). The librarian is the DBMS — they know where everything is, who can access what, and they make sure books are returned properly. You don't go searching every shelf yourself. You ask the librarian.
+**Simple analogy:** Imagine a large library. The library is the database ,it holds all the books (data). The librarian is the DBMS, they know where everything is, who can access what, and they make sure books are returned properly. You don't go searching every shelf yourself. You ask the librarian.
 
 ### Why Do We Need a DBMS?
 
@@ -141,7 +141,7 @@ SQL has a lot of commands, but every single one of them belongs to one of these 
 
 There are five main categories. Let's go through each one.
 
-### 1. DDL — Data Definition Language
+### 1. DDL -> Data Definition Language
 
 **DDL commands are used to define and manage the structure of a database.** They deal with creating, modifying, and deleting the objects that hold data , like databases, tables, and columns. DDL is about building and changing the skeleton of your database.
 
@@ -161,7 +161,7 @@ create
 
 **TRUNCATE** :  used to remove all the rows from a table at once, but keeps the table structure itself intact. The table still exists, it is just emptied out completely.
 
-### 2. DML - Data Manipulation Language
+### 2. DML -> Data Manipulation Language
 
 **DML commands are used to work with the actual data inside the tables.** Once your tables are created using DDL, you use DML to put data in, change it, and remove it. DML is about manipulating the content, not the structure.
 
@@ -175,7 +175,7 @@ The main DML commands are:
 
 **DELETE** : used to remove specific rows from a table. For example, deleting an order that was cancelled by the customer.
 
-### 3. DQL - Data Query Language
+### 3. DQL -> Data Query Language
 
 **DQL is used to retrieve and read data from the database.** It does not change anything ,it simply fetches the data you ask for and displays it to you.
 
@@ -187,7 +187,7 @@ There is essentially one core DQL command:
 
 SELECT is by far the most commonly used SQL command. It is the foundation of reporting, dashboards, data analysis, and anything that involves reading data from a database.
 
-### 4. DCL — Data Control Language
+### 4. DCL -> Data Control Language
 
 **DCL commands are used to control who can access the database and what they are allowed to do.** This is all about security and permissions ,making sure the right people have the right level of access, and everyone else is kept out.
 
@@ -199,7 +199,7 @@ The main DCL commands are:
 
 **REVOKE** : takes away a permission that was previously granted. For example, removing someone's ability to delete records after a security concern.
 
-### 5. TCL - Transaction Control Language
+### 5. TCL -> Transaction Control Language
 
 **TCL commands are used to manage transactions in a database.** A transaction is a group of SQL operations that are treated as one single unit of work , either all of them succeed together, or none of them go through.
 

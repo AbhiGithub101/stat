@@ -2,7 +2,7 @@
 hidden: true
 ---
 
-# Group By and Aggregate Functions
+# Group By ,Aggregate Functions & Having Clause
 
 > Our Reference Table -> **matches**
 
@@ -22,8 +22,6 @@ ORDER BY city DESC;
 ```sql
 SELECT * FROM matches
 ORDER BY 3 DESC;
-
-
 ```
 
 > Both queries give **exactly the same result.** In the second one, `3` means the 3rd column in the matches table  which is `city`.
@@ -101,7 +99,7 @@ SELECT id, city, winner, win_by_runs FROM matches
 ORDER BY 2 ASC;
 ```
 
-> This sorts by position 2 which is `city` — alphabetically A to Z.
+> This sorts by position 2 which is `city`  alphabetically A to Z.
 
 | id  | city      | winner                      | win\_by\_runs |
 | --- | --------- | --------------------------- | ------------- |
@@ -221,7 +219,7 @@ GROUP BY winner;
 | Mumbai Indians       | 77         |
 | ...                  | ...        |
 
-#### B) SUM — Add up values
+#### B) SUM -> Add up values
 
 SUM adds up all the values in a numeric column.
 
@@ -247,7 +245,7 @@ FROM matches;
 | Kings XI Punjab     | 862            |
 | ...                 | ...            |
 
-#### C) AVG — Average of values
+#### C) AVG Average of values
 
 AVG calculates the **average** of a numeric column.
 
@@ -382,7 +380,7 @@ GROUP BY column
 HAVING aggregate_function condition;
 ```
 
-> HAVING always comes **after GROUP BY** — never before it.
+> HAVING always comes **after GROUP BY** ,never before it.
 
 **Example 1 :** **Teams that won more than 2 matches**
 
