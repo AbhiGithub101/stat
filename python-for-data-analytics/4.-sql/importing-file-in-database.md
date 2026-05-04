@@ -1,7 +1,3 @@
----
-hidden: true
----
-
 # Importing file in Database
 
 ### What is Data Import?

@@ -1,7 +1,3 @@
----
-hidden: true
----
-
 # Transactions and Exception Handling
 
 ## What is a Transaction?

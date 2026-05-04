@@ -1,7 +1,3 @@
----
-hidden: true
----
-
 # Group By ,Aggregate Functions & Having Clause
 
 > Our Reference Table -> **matches**

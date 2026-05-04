@@ -1,7 +1,3 @@
----
-hidden: true
----
-
 # Datatypes
 
 ## What is a Data Type?

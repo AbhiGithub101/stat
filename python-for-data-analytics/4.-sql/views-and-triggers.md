@@ -1,7 +1,3 @@
----
-hidden: true
----
-
 # Views and Triggers
 
 ## What is a View?

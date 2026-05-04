@@ -1,7 +1,3 @@
----
-hidden: true
----
-
 # DML Commands
 
 > **Note:** We have already covered the **INSERT** command in our previous notes - how to add data into a table. Make sure you have gone through that before continuing.

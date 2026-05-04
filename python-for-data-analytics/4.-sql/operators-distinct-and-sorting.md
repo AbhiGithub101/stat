@@ -1,7 +1,3 @@
----
-hidden: true
----
-
 # Operators, Distinct & Sorting
 
 > Our Reference Table -> **matches**

@@ -1,7 +1,3 @@
----
-hidden: true
----
-
 # String Functions
 
 > Our Reference Table : deliveries

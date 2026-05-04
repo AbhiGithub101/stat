@@ -1,7 +1,3 @@
----
-hidden: true
----
-
 # Truncate and Numeric Functions
 
 ## What is TRUNCATE?

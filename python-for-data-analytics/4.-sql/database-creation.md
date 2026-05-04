@@ -1,6 +1,5 @@
 ---
 description: we will create our first database and insert data inside our database
-hidden: true
 ---
 
 # Database Creation

@@ -1,7 +1,3 @@
----
-hidden: true
----
-
 # Date and Time Functions
 
 #### What are Date & Time Functions?

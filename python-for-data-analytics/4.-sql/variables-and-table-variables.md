@@ -1,7 +1,3 @@
----
-hidden: true
----
-
 # Variables & Table Variables
 
 ## What is a Variable?
