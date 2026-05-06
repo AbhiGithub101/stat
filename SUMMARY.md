@@ -105,6 +105,7 @@
     * [Variables & Table Variables](python-for-data-analytics/3.-sql/variables-and-table-variables.md)
     * [Views and Triggers](python-for-data-analytics/3.-sql/views-and-triggers.md)
     * [Transactions and Exception Handling](python-for-data-analytics/3.-sql/transactions-and-exception-handling.md)
+    * [SubQueries](python-for-data-analytics/3.-sql/subqueries.md)
   * [Agentic AI](python-for-data-analytics/agentic-ai/README.md)
     * [1. Introduction To Agentic AI](python-for-data-analytics/agentic-ai/1.-introduction-to-agentic-ai.md)
   * [Required Files](python-for-data-analytics/required-files.md)

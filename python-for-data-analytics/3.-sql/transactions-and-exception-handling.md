@@ -341,5 +341,5 @@ Failed to add employee! No changes were made.
 
 
 
-> **Up Next:** Next module we cover **Subqueries and Scalar Functions** ,how to write a query inside another query and how to create your own custom functions that return a single value.
+> **Up Next:** Next module we will cover **Subqueries** (a query inside another query).
 
