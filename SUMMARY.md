@@ -107,6 +107,7 @@
     * [Transactions and Exception Handling](python-for-data-analytics/3.-sql/transactions-and-exception-handling.md)
     * [SubQueries](python-for-data-analytics/3.-sql/subqueries.md)
     * [Scalar & Table Valued Functions](python-for-data-analytics/3.-sql/scalar-and-table-valued-functions.md)
+    * [Constraints](python-for-data-analytics/3.-sql/constraints.md)
   * [Agentic AI](python-for-data-analytics/agentic-ai/README.md)
     * [1. Introduction To Agentic AI](python-for-data-analytics/agentic-ai/1.-introduction-to-agentic-ai.md)
   * [Required Files](python-for-data-analytics/required-files.md)
