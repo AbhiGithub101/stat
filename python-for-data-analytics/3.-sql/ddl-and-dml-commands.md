@@ -1,4 +1,4 @@
-# DML Commands
+# DDL & DML Commands
 
 > **Note:** We have already covered the **INSERT** command in our previous notes - how to add data into a table. Make sure you have gone through that before continuing.
 
@@ -37,7 +37,7 @@ After Inserting - Table Looks Like This:
 
 as we have inserted data in our table,now we can perform other dml operations,let's study them one by one
 
-## ALTER Command
+## ALTER Command (DDL)
 
 The ALTER command is used to **change the structure of an existing table** , not the data inside it, but the table itself.
 
@@ -82,7 +82,7 @@ ALTER COLUMN FullName VARCHAR(200);
 
 > The **data did not change** ,only the column size increased from 100 to 200. Think of it as making the box bigger.
 
-## 2. Adding a New Column
+### 2. Adding a New Column
 
 Used when you want to **add a brand new column** to an existing table.
 
@@ -115,7 +115,7 @@ ADD Salary DECIMAL(10,2);
 
 > The new Salary column is added but all values are **NULL** meaning empty because we have not entered any salary yet. NULL just means "no value entered yet."
 
-## 3. Deleting an Existing Column
+### 3. Deleting an Existing Column
 
 Used when you want to **remove a column** you no longer need.
 
@@ -148,13 +148,11 @@ DROP COLUMN Gender;
 
 > The Gender column is completely gone — along with all the M and F values that were in it.  This cannot be undone.
 
-### 4. DROP TABLE : Deleting the Entire Table
+## DROP TABLE : Deleting the Entire Table
 
 Used when you want to **completely delete the entire table** - the structure and all the data inside it.
 
 **Real-life scenario:** You created a practice table called `Employee_Backup` for testing. Now you want to remove it completely.
-
-sql
 
 ```sql
 DROP TABLE Employee_Backup;

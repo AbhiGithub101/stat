@@ -93,7 +93,7 @@
     * [DBMS and SQL](python-for-data-analytics/3.-sql/dbms-and-sql.md)
     * [Datatypes](python-for-data-analytics/3.-sql/datatypes.md)
     * [Database Creation](python-for-data-analytics/3.-sql/database-creation.md)
-    * [DML Commands](python-for-data-analytics/3.-sql/dml-commands.md)
+    * [DDL & DML Commands](python-for-data-analytics/3.-sql/ddl-and-dml-commands.md)
     * [Importing file in Database](python-for-data-analytics/3.-sql/importing-file-in-database.md)
     * [Operators, Distinct & Sorting](python-for-data-analytics/3.-sql/operators-distinct-and-sorting.md)
     * [Group By ,Aggregate Functions & Having Clause](python-for-data-analytics/3.-sql/group-by-aggregate-functions-and-having-clause.md)
