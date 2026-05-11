@@ -115,7 +115,7 @@ ADD Salary DECIMAL(10,2);
 
 > The new Salary column is added but all values are **NULL** meaning empty because we have not entered any salary yet. NULL just means "no value entered yet."
 
-### 3. Deleting an Existing Column
+### 3. Deleting an Existing Column  (DDL)
 
 Used when you want to **remove a column** you no longer need.
 
