@@ -1,5 +1,10 @@
 # DDL & DML Commands
 
+| Type | Full Form                  | Commands                      | What it does               |
+| ---- | -------------------------- | ----------------------------- | -------------------------- |
+| DDL  | Data Definition Language   | CREATE, ALTER, DROP, TRUNCATE | Changes structure of table |
+| DML  | Data Manipulation Language | INSERT, UPDATE, DELETE        | Changes data inside table  |
+
 > **Note:** We have already covered the **INSERT** command in our previous notes - how to add data into a table. Make sure you have gone through that before continuing.
 
 > We will be using this **Employee Table** as our reference throughout all examples:
@@ -283,6 +288,106 @@ WHERE ID = 2;
 | 5     | Ravi Shankar     | HR         | 2019-08-05    | M      | [ravi.shankar@email.com](mailto:ravi.shankar@email.com)     |
 
 > Both FullName and EmailID changed for Priya only. Everyone else was untouched.
+
+## DELETE command:
+
+The DELETE command is used to **remove one or more rows** from a table.
+
+Think of it like an **attendance register** ,a student left the school so you cross out their entry. The register still exists, other students are still there,only that one entry is removed.
+
+```sql
+DELETE FROM TableName
+WHERE condition;
+```
+
+#### What Happens Without WHERE
+
+Just like UPDATE ,if you forget WHERE in DELETE, it affects every single row.
+
+**Scenario:** You want to delete only Ravi Shankar but forget to write WHERE
+
+```sql
+DELETE FROM Employee;
+```
+
+**Before:**
+
+| ID | FullName     | Department | DateOfJoining | Gender | EmailID                                                 |
+| -- | ------------ | ---------- | ------------- | ------ | ------------------------------------------------------- |
+| 1  | Rahul Sharma | IT         | 2021-06-01    | M      | [rahul.sharma@email.com](mailto:rahul.sharma@email.com) |
+| 2  | Priya Verma  | HR         | 2022-03-15    | F      | [priya.verma@email.com](mailto:priya.verma@email.com)   |
+| 3  | Amit Gupta   | Finance    | 2020-11-20    | M      | [amit.gupta@email.com](mailto:amit.gupta@email.com)     |
+| 4  | Sneha Patil  | IT         | 2023-01-10    | F      | [sneha.patil@email.com](mailto:sneha.patil@email.com)   |
+| 5  | Ravi Shankar | HR         | 2019-08-05    | M      | [ravi.shankar@email.com](mailto:ravi.shankar@email.com) |
+
+**After:**
+
+| ID                       | FullName | Department | DateOfJoining | Gender | EmailID |
+| ------------------------ | -------- | ---------- | ------------- | ------ | ------- |
+| _(empty ,all rows gone)_ |          |            |               |        |         |
+
+> Every single row is deleted and the table is now completely empty. But the table structure still exists ,just no data inside it.
+
+#### Always Use WHERE:
+
+### **Example 1 -> Delete One Specific Row**
+
+**Scenario:** Ravi Shankar has left the company. Remove only his record.
+
+```sql
+DELETE FROM Employee
+WHERE ID = 5;
+```
+
+**Before:**
+
+| ID    | FullName         | Department | DateOfJoining  | Gender | EmailID                                                     |
+| ----- | ---------------- | ---------- | -------------- | ------ | ----------------------------------------------------------- |
+| 1     | Rahul Sharma     | IT         | 2021-06-01     | M      | [rahul.sharma@email.com](mailto:rahul.sharma@email.com)     |
+| 2     | Priya Verma      | HR         | 2022-03-15     | F      | [priya.verma@email.com](mailto:priya.verma@email.com)       |
+| 3     | Amit Gupta       | Finance    | 2020-11-20     | M      | [amit.gupta@email.com](mailto:amit.gupta@email.com)         |
+| 4     | Sneha Patil      | IT         | 2023-01-10     | F      | [sneha.patil@email.com](mailto:sneha.patil@email.com)       |
+| **5** | **Ravi Shankar** | **HR**     | **2019-08-05** | **M**  | [**ravi.shankar@email.com**](mailto:ravi.shankar@email.com) |
+
+**After:**
+
+| ID | FullName     | Department | DateOfJoining | Gender | EmailID                                                 |
+| -- | ------------ | ---------- | ------------- | ------ | ------------------------------------------------------- |
+| 1  | Rahul Sharma | IT         | 2021-06-01    | M      | [rahul.sharma@email.com](mailto:rahul.sharma@email.com) |
+| 2  | Priya Verma  | HR         | 2022-03-15    | F      | [priya.verma@email.com](mailto:priya.verma@email.com)   |
+| 3  | Amit Gupta   | Finance    | 2020-11-20    | M      | [amit.gupta@email.com](mailto:amit.gupta@email.com)     |
+| 4  | Sneha Patil  | IT         | 2023-01-10    | F      | [sneha.patil@email.com](mailto:sneha.patil@email.com)   |
+
+> Only Ravi Shankar's row is gone. Everyone else is untouched.
+
+### **Example 2 -> Delete Multiple Rows Based on a Condition**
+
+**Scenario:** The company shut down its HR department. Remove all HR employees.
+
+```sql
+DELETE FROM Employee
+WHERE Department = 'HR';
+```
+
+**Before:**
+
+| ID    | FullName         | Department | DateOfJoining  | Gender | EmailID                                                     |
+| ----- | ---------------- | ---------- | -------------- | ------ | ----------------------------------------------------------- |
+| 1     | Rahul Sharma     | IT         | 2021-06-01     | M      | [rahul.sharma@email.com](mailto:rahul.sharma@email.com)     |
+| **2** | **Priya Verma**  | **HR**     | **2022-03-15** | **F**  | [**priya.verma@email.com**](mailto:priya.verma@email.com)   |
+| 3     | Amit Gupta       | Finance    | 2020-11-20     | M      | [amit.gupta@email.com](mailto:amit.gupta@email.com)         |
+| 4     | Sneha Patil      | IT         | 2023-01-10     | F      | [sneha.patil@email.com](mailto:sneha.patil@email.com)       |
+| **5** | **Ravi Shankar** | **HR**     | **2019-08-05** | **M**  | [**ravi.shankar@email.com**](mailto:ravi.shankar@email.com) |
+
+**After:**
+
+| ID | FullName     | Department | DateOfJoining | Gender | EmailID                                                 |
+| -- | ------------ | ---------- | ------------- | ------ | ------------------------------------------------------- |
+| 1  | Rahul Sharma | IT         | 2021-06-01    | M      | [rahul.sharma@email.com](mailto:rahul.sharma@email.com) |
+| 3  | Amit Gupta   | Finance    | 2020-11-20    | M      | [amit.gupta@email.com](mailto:amit.gupta@email.com)     |
+| 4  | Sneha Patil  | IT         | 2023-01-10    | F      | [sneha.patil@email.com](mailto:sneha.patil@email.com)   |
+
+> Both Priya Verma and Ravi Shankar are removed because both were in HR. IT and Finance employees are safe.
 
 ## IDENTITY / Auto Increment
 
