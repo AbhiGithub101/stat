@@ -1,5 +1,9 @@
 # 16. Dictionary
 
+## &#x20;<a href="#what-is-dictionary" id="what-is-dictionary"></a>
+
+{% embed url="https://youtu.be/k18dMB3judQ" %}
+
 ## What is Dictionary? <a href="#what-is-dictionary" id="what-is-dictionary"></a>
 
 Python Dictionary is used to store the data in a key-value pair format. The dictionary is the data type in Python, which can simulate the real-life data arrangement where some specific value exists for some particular key. It is the mutable data-structure. The dictionary is defined into element Keys and values.

@@ -1,5 +1,9 @@
 # 14. Set
 
+### &#x20;<a href="#what-are-sets" id="what-are-sets"></a>
+
+{% embed url="https://youtu.be/02uXLtXO_HA" %}
+
 ### What are sets? <a href="#what-are-sets" id="what-are-sets"></a>
 
 A Python set is the collection of the unordered items. Each element in the set must be unique, immutable, and the sets remove the duplicate elements. Sets are mutable which means we can modify it after its creation.
