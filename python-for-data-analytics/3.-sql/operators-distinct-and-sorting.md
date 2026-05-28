@@ -34,8 +34,6 @@ WHERE city = 'Hyderabad';
 
 Think of it like a **search filter** on Swiggy or Amazon instead of seeing all products, you filter by city, price, or category. WHERE does exactly that for your table.
 
-<img src="../../.gitbook/assets/file.excalidraw (7).svg" alt="" class="gitbook-drawing">
-
 ## Operators Used with WHERE
 
 ### 1. = (Equal To)
