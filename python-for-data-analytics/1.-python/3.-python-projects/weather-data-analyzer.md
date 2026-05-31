@@ -1,3 +1,7 @@
+---
+hidden: true
+---
+
 # Weather Data Analyzer
 
 > **Level:** Beginner–Intermediate\
