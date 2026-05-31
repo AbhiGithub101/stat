@@ -1,4 +1,0 @@
-# Weather Data Analyzer
-
->
-
