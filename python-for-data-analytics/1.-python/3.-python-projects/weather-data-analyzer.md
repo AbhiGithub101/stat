@@ -42,7 +42,9 @@ You give an order (request) → Waiter goes to kitchen → Brings back food (dat
 3. After login, your **API Key** will be visible on the dashboard
 4. Copy it — you'll paste it in your code
 
-> ⚠️ **Never share your API Key publicly.** It's like a password.
+{% hint style="warning" %}
+Never share your API Key publicly. It's like a password.
+{% endhint %}
 
 ***
 
@@ -72,7 +74,7 @@ import urllib.request
 
 {% stepper %}
 {% step %}
-## Configuration (Variables)
+### Configuration (Variables)
 
 ```python
 API_KEY = "YOUR_API_KEY"   # Paste your key here
@@ -83,7 +85,7 @@ API_KEY = "YOUR_API_KEY"   # Paste your key here
 {% endstep %}
 
 {% step %}
-## Get City from User (User Input)
+### Get City from User (User Input)
 
 ```python
 def get_city():
@@ -99,7 +101,7 @@ def get_city():
 {% endstep %}
 
 {% step %}
-## Fetch Data from API (API Call)
+### Fetch Data from API (API Call)
 
 ```python
 def fetch_weather(city):
@@ -135,7 +137,7 @@ def fetch_weather(city):
 {% endstep %}
 
 {% step %}
-## Save Raw Data to JSON File (File Handling)
+### Save Raw Data to JSON File (File Handling)
 
 ```python
 def save_raw_data(current_data, forecast_data):
@@ -153,7 +155,7 @@ def save_raw_data(current_data, forecast_data):
 {% endstep %}
 
 {% step %}
-## Show Current Weather (Variables + Typecasting + Strings)
+### Show Current Weather (Variables + Typecasting + Strings)
 
 ```python
 def show_current_weather(data):
@@ -194,7 +196,7 @@ def show_current_weather(data):
 {% endstep %}
 
 {% step %}
-## Show 3-Day Forecast (List + Set + Loop + Dictionary)
+### Show 3-Day Forecast (List + Set + Loop + Dictionary)
 
 ```python
 def show_forecast(forecast_data):
@@ -240,7 +242,7 @@ def show_forecast(forecast_data):
 {% endstep %}
 
 {% step %}
-## Calculate Stats (Operators + Tuple)
+### Calculate Stats (Operators + Tuple)
 
 ```python
 def show_stats(temps, conditions):
@@ -260,7 +262,7 @@ def show_stats(temps, conditions):
 {% endstep %}
 
 {% step %}
-## Filter by Condition (User Input + Loop + Conditionals)
+### Filter by Condition (User Input + Loop + Conditionals)
 
 ```python
 def filter_by_condition(forecast_data):
@@ -284,7 +286,7 @@ def filter_by_condition(forecast_data):
 {% endstep %}
 
 {% step %}
-## Save Report to .txt File (File Handling)
+### Save Report to .txt File (File Handling)
 
 ```python
 def save_report(city, current_data, avg, temp_range, conditions):
@@ -312,7 +314,7 @@ def save_report(city, current_data, avg, temp_range, conditions):
 {% endstep %}
 
 {% step %}
-## Main Function (Putting It All Together)
+### Main Function (Putting It All Together)
 
 ```python
 def main():
@@ -510,7 +512,7 @@ main()
 ## 🔍 Sample Output
 
 ```
-🌍 Enter city name: Delhi
+🌍 Enter city name: Kanpur
 
 📡 Fetching data from API...
 ✅ Data fetched successfully!
@@ -518,7 +520,7 @@ main()
 💾 Raw data saved → weather_data.json
 
 ========================================
-📍 DELHI, India
+📍 KANPUR, India
 ========================================
 🌡️  Temperature  : 38.5°C  (Feels like 41.2°C)
 💧 Humidity     : 45%
@@ -560,7 +562,7 @@ main()
 
 ***
 
-## &#x20;Challenge Tasks (Try on Your Own)
+## 🚀 Challenge Tasks (Try on Your Own)
 
 1. **Easy:** Also print the local time of the city from the API response
 2. **Medium:** Show which day in the forecast has the highest chance of rain
