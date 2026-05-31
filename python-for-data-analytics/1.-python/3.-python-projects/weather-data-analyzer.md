@@ -6,11 +6,11 @@
 
 ***
 
-## 📌 What Will You Build?
+## &#x20;What Will You Build?
 
 A Python program that:
 
-* Asks user to enter a **city name**
+* Asks the user to enter a **city name**
 * Fetches **live weather data** from the internet using an API
 * Shows **current weather** + **3-day forecast**
 * Gives **weather alerts** based on temperature
@@ -19,7 +19,7 @@ A Python program that:
 
 ***
 
-## 🧠 What is an API?
+## &#x20;What is an API?
 
 **API = Application Programming Interface**
 
@@ -29,24 +29,24 @@ Think of it like a **waiter in a restaurant**:
 * API = Waiter
 * Weather Server = Kitchen
 
-You give an order (request) → Waiter goes to kitchen → Brings back food (data).
+You give an order (request) → Waiter goes to the kitchen → Brings back food (data).
 
-**In simple terms:** An API gives you data from another website/server, without you visiting it manually.
+**In simple terms,** an API gives you data from another website/server, without you visiting it manually.
 
 ***
 
-## 🔑 Step 0: Get Your Free API Key
+## Step 0: Get Your Free API Key
 
 1. Go to [https://www.weatherapi.com](https://www.weatherapi.com/)
 2. Click **Sign Up** → Create a free account
 3. After login, your **API Key** will be visible on the dashboard
-4. Copy it — you'll paste it in your code
+4. Copy it - you'll paste it in your code
 
 > ⚠️ **Never share your API Key publicly.** It's like a password.
 
 ***
 
-## 📁 Project Structure
+## &#x20;Project Structure
 
 ```
 weather_project/
@@ -57,9 +57,9 @@ weather_project/
 
 ***
 
-## 🔧 No Extra Libraries Needed
+## &#x20;No Extra Libraries Needed
 
-We use Python's built-in `urllib.request` and `json` — **no pip install required**.
+We use Python's built-in `urllib.request` and `json` - **No pip install required**.
 
 ```python
 import json
@@ -68,7 +68,7 @@ import urllib.request
 
 ***
 
-## 🧱 Full Code — Step by Step
+## &#x20; Full Code - Step by Step
 
 {% stepper %}
 {% step %}
@@ -87,7 +87,7 @@ API_KEY = "YOUR_API_KEY"   # Paste your key here
 
 ```python
 def get_city():
-    city = input("🌍 Enter city name: ").strip()
+    city = input(" Enter city name: ").strip()
     if not city:
         print("City name cannot be blank!")
         return get_city()   # Ask again if blank
@@ -95,7 +95,7 @@ def get_city():
 ```
 
 **Topic:** User Input, String methods (`.strip()`), Functions, Conditionals\
-**Real-world use:** Every weather app asks you to type a city — this is how it works.
+**Real-world use:** Every weather app asks you to type a city - this is how it works.
 {% endstep %}
 
 {% step %}
@@ -115,7 +115,7 @@ def fetch_weather(city):
         with urllib.request.urlopen(forecast_url) as response:
             forecast_data = json.loads(response.read().decode())
 
-        print("✅ Data fetched successfully!\n")
+        print(" Data fetched successfully!\n")
         return current_data, forecast_data
 
     except Exception as e:
@@ -126,7 +126,7 @@ def fetch_weather(city):
 **Topic:** Functions, Strings (f-string), Dictionary (API returns JSON = dict)\
 **What is JSON?** JSON is just a **dictionary format** that APIs use to send data. Python reads it as a `dict`.
 
-> 💡 **URL Breakdown:**
+> &#x20; **URL Breakdown:**
 >
 > * `http://api.weatherapi.com/v1/current.json` → API address
 > * `?key=YOUR_KEY` → Your identity
@@ -236,7 +236,7 @@ def show_forecast(forecast_data):
 ```
 
 **Topic:** List, Set, Loop, Dictionary, Conditionals, Typecasting\
-**Why Set?** If all 3 days are "Sunny", set stores it only once — no duplicates.
+**Why Set?** If all 3 days are "Sunny", set stores it only once - no duplicates.
 {% endstep %}
 
 {% step %}
@@ -256,7 +256,7 @@ def show_stats(temps, conditions):
 ```
 
 **Topic:** Operators (`/`, `sum`, `round`), Tuple\
-**Why Tuple?** `temp_range` stores `(min, max)` — two values that belong together and shouldn't change.
+**Why Tuple?** `temp_range` stores `(min, max)` - two values that belong together and shouldn't change.
 {% endstep %}
 
 {% step %}
@@ -308,7 +308,7 @@ def save_report(city, current_data, avg, temp_range, conditions):
 ```
 
 **Topic:** File Handling (`open`, `write`), String formatting\
-**Real-world use:** Analysts generate automated reports — this is your first automated report!
+**Real-world use:** Analysts generate automated reports - this is your first automated report!
 {% endstep %}
 
 {% step %}
@@ -337,7 +337,7 @@ main()
 
 ***
 
-## 📋 Complete Code (Copy-Ready)
+## &#x20;Complete Code&#x20;
 
 ```python
 import json
@@ -486,70 +486,70 @@ main()
 
 ***
 
-## 🗺️ Topic Map — Where Each Topic is Used
+## &#x20;Topic Map - Where Each Topic is Used
 
 | Topic         | Used In                                        |
 | ------------- | ---------------------------------------------- |
-| Variables     | Step 5 — storing city, temp, humidity          |
-| Data Types    | Throughout — int, float, str, bool             |
-| Typecasting   | Step 5, 6 — `float()`, `int()` on API values   |
-| Operators     | Step 7 — avg calculation                       |
-| String        | Steps 2, 5 — f-strings, `.upper()`, `.strip()` |
+| Variables     | Step 5 - storing city, temp, humidity          |
+| Data Types    | Throughout - int, float, str, bool             |
+| Typecasting   | Step 5, 6 - `float()`, `int()` on API values   |
+| Operators     | Step 7 - avg calculation                       |
+| String        | Steps 2, 5 - f-strings, `.upper()`, `.strip()` |
 | Functions     | Every step is a separate function              |
 | User Input    | Step 2 (city), Step 8 (filter)                 |
-| Conditionals  | Step 5, 6 — alerts logic                       |
-| Loops         | Step 6 — looping over forecast days            |
-| List          | Step 6 — collecting all max temps              |
-| Set           | Step 6 — unique weather conditions             |
-| Tuple         | Step 7 — `(min_temp, max_temp)` range          |
-| Dictionary    | Steps 3–8 — reading API JSON response          |
+| Conditionals  | Step 5, 6 - alerts logic                       |
+| Loops         | Step 6 - looping over forecast days            |
+| List          | Step 6 - collecting all max temps              |
+| Set           | Step 6 - unique weather conditions             |
+| Tuple         | Step 7 - `(min_temp, max_temp)` range          |
+| Dictionary    | Steps 3-8 - reading API JSON response          |
 | File Handling | Step 4 (JSON), Step 9 (TXT report)             |
 
 ***
 
-## 🔍 Sample Output
+## &#x20;Sample Output
 
 ```
-🌍 Enter city name: Kanpur
+ Enter city name: Kanpur
 
-📡 Fetching data from API...
-✅ Data fetched successfully!
+ Fetching data from API...
+ Data fetched successfully!
 
-💾 Raw data saved → weather_data.json
+ Raw data saved → weather_data.json
 
 ========================================
-📍 KANPUR, India
+ KANPUR, India
 ========================================
-🌡️  Temperature  : 38.5°C  (Feels like 41.2°C)
-💧 Humidity     : 45%
-💨 Wind Speed   : 18.7 kph
-☁️  Condition    : Sunny
-☀️  UV Index     : 9
-⚠️  UV Alert: Apply sunscreen!
+ Temperature  : 38.5°C  (Feels like 41.2°C)
+ Humidity     : 45%
+ Wind Speed   : 18.7 kph
+ Condition    : Sunny
+ UV Index     : 9
+ UV Alert: Apply sunscreen!
 
-📅 3-Day Forecast:
+ 3-Day Forecast:
 ----------------------------------------
-  📆 2025-05-01
+  2025-05-01
      Max: 39.0°C | Min: 28.0°C | Avg: 33.5°C
      Condition: Sunny | Rain Chance: 5%
-     Alert: 🟡 Hot Day
+     Alert:  Hot Day
   ...
 
-📊 Forecast Summary:
+ Forecast Summary:
    Avg Max Temp : 37.5°C
    Temp Range   : 35.0°C – 40.2°C
    Conditions   : {'Sunny', 'Partly Cloudy'}
 
-🔍 Filter days by condition (Sunny / Rainy / Cloudy): sunny
-📋 Days with 'Sunny' condition:
-  2025-05-01 → 39.0°C | Sunny
+ Filter days by condition (Sunny / Rainy / Cloudy): sunny
+ Days with 'Sunny' condition:
+ 2025-05-01 → 39.0°C | Sunny
 
-✅ Report saved → report.txt
+ Report saved → report.txt
 ```
 
 ***
 
-## ❓ Common Errors & Fixes
+## &#x20;Common Errors & Fixes
 
 | Error               | Reason               | Fix                                           |
 | ------------------- | -------------------- | --------------------------------------------- |
@@ -560,11 +560,11 @@ main()
 
 ***
 
-## 🚀 Challenge Tasks (Try on Your Own)
+## &#x20;Challenge Tasks (Try on Your Own)
 
 1. **Easy:** Also print the local time of the city from the API response
 2. **Medium:** Show which day in the forecast has the highest chance of rain
-3. **Hard:** Ask user for 2 cities and compare their current temperatures side by side
+3. **Hard:** Ask the user for 2 cities and compare their current temperatures side by side
 
 ***
 
