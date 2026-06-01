@@ -1,5 +1,7 @@
 # Datatypes
 
+{% embed url="https://youtu.be/hw0CajJ3m-c?si=zTbMi44Eo6ToWMrE" %}
+
 ## What is a Data Type?
 
 When you create a table in SQL, every column needs a **data type** , it tells SQL _what kind of data_ will go in that column.

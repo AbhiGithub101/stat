@@ -4,6 +4,8 @@ description: we will create our first database and insert data inside our databa
 
 # Database Creation
 
+{% embed url="https://youtu.be/0nHQeqFaYL4?si=TRyYPq91v0e9dk5t" %}
+
 ## Creating Your First Database and Table
 
 Now that we understand data types, let's put it all into practice. We are going to create a database called console\_db, and inside it, we'll create a table called Employee.

@@ -1,5 +1,7 @@
 # Importing file in Database
 
+{% embed url="https://youtu.be/Ew6Uy1F28jc?si=BSzxDD-kIfT2z7Yd" %}
+
 ### What is Data Import?
 
 When you have data sitting in an Excel or CSV file outside the database, it is not useful to SQL yet. Importing means **bringing that outside data into SQL Server** so you can query, analyze and work with it.

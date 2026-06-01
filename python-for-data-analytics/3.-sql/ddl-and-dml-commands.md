@@ -1,9 +1,13 @@
 # DDL & DML Commands
 
+{% embed url="https://youtu.be/GaFROUcPS-E?si=-WAcuktEZ1crhOHZ" %}
+
 | Type | Full Form                  | Commands                      | What it does               |
 | ---- | -------------------------- | ----------------------------- | -------------------------- |
 | DDL  | Data Definition Language   | CREATE, ALTER, DROP, TRUNCATE | Changes structure of table |
 | DML  | Data Manipulation Language | INSERT, UPDATE, DELETE        | Changes data inside table  |
+
+
 
 > **Note:** We have already covered the **INSERT** command in our previous notes - how to add data into a table. Make sure you have gone through that before continuing.
 
