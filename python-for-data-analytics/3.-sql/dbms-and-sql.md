@@ -1,5 +1,7 @@
 # DBMS and SQL
 
+{% embed url="https://youtu.be/NFQp_X_tpNw?si=j9d59UzCjBk94UwS" %}
+
 #### So before we dive into SQL, let us first understand what DBMS are...
 
 ## What is a Database?
