@@ -1,3 +1,7 @@
+---
+hidden: true
+---
+
 # seab
 
 ## Seaborn [¶](seab.md#Seaborn)
