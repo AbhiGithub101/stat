@@ -90,6 +90,7 @@
     * [seab](python-for-data-analytics/2.-data-analytics/seab.md)
     * [Extras](python-for-data-analytics/2.-data-analytics/extras.md)
     * [Introduction to English](python-for-data-analytics/2.-data-analytics/introduction-to-english.md)
+    * [Retail Sales Analysis](python-for-data-analytics/2.-data-analytics/retail-sales-analysis.md)
   * [3. SQL](python-for-data-analytics/3.-sql/README.md)
     * [DBMS and SQL](python-for-data-analytics/3.-sql/dbms-and-sql.md)
     * [Datatypes](python-for-data-analytics/3.-sql/datatypes.md)
