@@ -1,4 +1,4 @@
-# Retail Sales Analysis
+# 19. Retail Sales Analysis
 
 ### <mark style="color:blue;">Project:</mark>
 
@@ -22,7 +22,7 @@ Once we have cleaned up our data a bit, we move to the data exploration section.
 
 Once you have downloaded the dataset, extract and save it somewhere.
 
-{% file src="../../.gitbook/assets/SalesData.zip" %}
+{% file src="../../../.gitbook/assets/SalesData.zip" %}
 
 ### <mark style="color:green;">Import Necessary Libraries</mark>
 
@@ -286,7 +286,7 @@ plt.ylabel('Sales')
 plt.show()
 ```
 
-<figure><img src="../../.gitbook/assets/image (3) (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (3) (2).png" alt=""><figcaption></figcaption></figure>
 
 December is a festive month, the biggest thing is that December is Christmas, so people spend money, and maybe that is the reason for december is the best month for sales.
 
@@ -337,7 +337,7 @@ plt.xticks(keys, rotation='vertical', size=8)
 plt.show()
 ```
 
-<figure><img src="../../.gitbook/assets/image (2) (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (2) (2).png" alt=""><figcaption></figcaption></figure>
 
 #### <mark style="color:green;">**What time should we display advertisements to maximize the likelihood of customers buying the product?**</mark>
 
@@ -395,7 +395,7 @@ plt.grid()
 plt.show()
 ```
 
-<figure><img src="../../.gitbook/assets/image (1) (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (1) (2).png" alt=""><figcaption></figcaption></figure>
 
 #### <mark style="color:green;">What Products are most often sold together?</mark>
 
@@ -464,4 +464,4 @@ This is pretty simple; we will group all products and calculate the quantity ord
 all_data.groupby('Product')['Quantity Ordered'].sum().sort_values().plot(kind='bar')
 ```
 
-<figure><img src="../../.gitbook/assets/image (69).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (69).png" alt=""><figcaption></figcaption></figure>
