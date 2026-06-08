@@ -120,5 +120,8 @@
     * [Warehouse VS Lakehouse](python-for-data-analytics/introduction-to-microsoft-fabric/warehouse-vs-lakehouse.md)
     * [Microsoft Copilot for Fabric](python-for-data-analytics/introduction-to-microsoft-fabric/microsoft-copilot-for-fabric.md)
     * [Last Page](python-for-data-analytics/introduction-to-microsoft-fabric/last-page.md)
+  * [Power BI](python-for-data-analytics/power-bi/README.md)
+    * [Introduction to PowerBI](python-for-data-analytics/power-bi/introduction-to-powerbi.md)
+    * [Loading the Data](python-for-data-analytics/power-bi/loading-the-data.md)
 * [pandas\_value\_counts](pandas_value_counts.md)
 * [pandas\_value\_counts](pandas_value_counts-1.md)
