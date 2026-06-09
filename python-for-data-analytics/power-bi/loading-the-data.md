@@ -6,7 +6,7 @@ description: How to load different types of files in PowerBi
 
 **Loading data** means bringing data from a source (Excel, CSV, SQL Database, etc.) into Power BI so that you can analyze and visualize it.
 
-#### Steps to Load Data
+### Steps to Load Data
 
 * **Open Power BI Desktop**
   * Start the Power BI application, and click on the **Blank Report** option
@@ -92,4 +92,16 @@ Data Type Detection is the feature in Power BI that automatically identifies the
 It shows the data type preview based on the data of the top 200 rows. We can also change the type and select the entire datasheet (but it takes some time to load, affecting data processing speed).
 
 
+
+### Types of Reports
+
+There are 3 types of reports in Power BI :
+
+1. Report View
+2. Table View
+3. Model View
+
+
+
+## 1. Report View
 
