@@ -125,7 +125,7 @@
   * [Power BI](python-for-data-analytics/power-bi/README.md)
     * [Introduction to Power BI](python-for-data-analytics/power-bi/introduction-to-power-bi.md)
     * [Loading the Data](python-for-data-analytics/power-bi/loading-the-data.md)
-    * [Page 8](python-for-data-analytics/power-bi/page-8.md)
+    * [Power Query Editor](python-for-data-analytics/power-bi/power-query-editor.md)
     * [Page 7](python-for-data-analytics/power-bi/page-7.md)
     * [Page 6](python-for-data-analytics/power-bi/page-6.md)
     * [Page 5](python-for-data-analytics/power-bi/page-5.md)

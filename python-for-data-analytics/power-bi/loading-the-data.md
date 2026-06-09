@@ -58,7 +58,7 @@ description: How to load different types of files in PowerBi
 * **Data is Loaded**
   * The tables appear in the Fields pane and are ready for reporting and visualization.
 
-<figure><img src="../../.gitbook/assets/power query (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/power query (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 
 
