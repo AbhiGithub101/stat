@@ -19,11 +19,13 @@ description: How to load different types of files in PowerBi
 
 
 
-*   **Click "Get Data"**
+* **Click "Get Data"**
+  * This option is available on the Home tab.      &#x20;
 
-    * This option is available on the Home tab.      &#x20;
+<figure><img src="../../.gitbook/assets/Get Data (1).png" alt=""><figcaption></figcaption></figure>
 
-    &#x20; &#x20;
+
+
 * **Choose Data Source**
   *   Select where your data is stored:
 
