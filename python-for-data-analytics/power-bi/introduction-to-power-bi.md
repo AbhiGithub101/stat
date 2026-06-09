@@ -10,6 +10,8 @@ description: >-
 
 Power BI is a business analytics and data visualization tool from Microsoft. It helps organizations turn raw data into interactive reports and dashboards for better decision-making. It is also known as **Interactive Reporting Platform**.
 
+<figure><img src="../../.gitbook/assets/Screenshot 2026-06-09 120850.png" alt=""><figcaption></figcaption></figure>
+
 ## Why choose Power-BI
 
 * For learning purpose **Free** platform available.
@@ -19,6 +21,8 @@ Power BI is a business analytics and data visualization tool from Microsoft. It 
 * Supports both self-service analytics and enterprise reporting.
 * Very simple to use and more interactive and intuitive than excel files.
 * No coding required.
+
+
 
 ## What Power BI Can Do
 
@@ -30,3 +34,4 @@ Power BI is a business analytics and data visualization tool from Microsoft. It 
 * **Share insights**: Publish reports to the Power BI Service and collaborate with others.
 * **Real-time monitoring**: Track live business data through dashboards.
 
+<figure><img src="../../.gitbook/assets/Data Sources.png" alt=""><figcaption></figcaption></figure>
