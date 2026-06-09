@@ -11,7 +11,9 @@ description: How to load different types of files in PowerBi
 * **Open Power BI Desktop**
   * Start the Power BI application, and click on the **Blank Report** option
 
-<figure><img src="../../.gitbook/assets/Open Page (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Open Page (3).png" alt=""><figcaption></figcaption></figure>
+
+
 
 * **Click "Get Data"**
   * This option is available on the Home tab.      &#x20;
@@ -42,6 +44,8 @@ description: How to load different types of files in PowerBi
 
 <figure><img src="../../.gitbook/assets/Load the data (1).png" alt=""><figcaption></figcaption></figure>
 
+
+
 *   **Load or Transform**
 
     * **Load**: Directly import the data into Power BI (if file required, no cleaning).&#x20;
@@ -49,9 +53,43 @@ description: How to load different types of files in PowerBi
 
     **Note**: To understand each and every data type of rows and columns, we always transform the data first. In the Power Query Editor, we transform the data and its data type.
 
-<figure><img src="../../.gitbook/assets/power query.png" alt=""><figcaption></figcaption></figure>
-
 
 
 * **Data is Loaded**
   * The tables appear in the Fields pane and are ready for reporting and visualization.
+
+<figure><img src="../../.gitbook/assets/power query (1).png" alt=""><figcaption></figcaption></figure>
+
+
+
+* ### Check File for Column Names, Delimiters, Data Type Detection&#x20;
+
+**1. Column Name**
+
+**Column Name** is the heading or title of a column that describes the data stored in that column. If the column name heading line is not the 1st line, it can't be shown as a heading.     &#x20;
+
+<figure><img src="../../.gitbook/assets/first row.png" alt=""><figcaption></figcaption></figure>
+
+Convert the first row into a header because without a header, we can't identify data and their data type.\
+<br>
+
+**2. Delimiter**\
+\
+A **delimiter** is a special character used to separate data values into different columns.&#x20;
+
+<figure><img src="../../.gitbook/assets/Delimeters.png" alt=""><figcaption></figcaption></figure>
+
+**Note:** The Delimiter can be any character, like a comma, semicolon, equal sign, space, or tab. Any other character can also be added with the help of **the Custom** option (click on the Custom option and add the character by which the file is separated).
+
+
+
+**3. Data Type Detection**\
+\
+Data Type Detection is the feature in Power BI that automatically identifies the correct data type of a column, such as Text, Number, or Date, when data is loaded.
+
+<figure><img src="../../.gitbook/assets/Data type detection.png" alt=""><figcaption></figcaption></figure>
+
+It shows the data type preview based on the data of the top 200 rows. We can also change the type and select the entire datasheet (but it takes some time to load, affecting data processing speed).
+
+
+
