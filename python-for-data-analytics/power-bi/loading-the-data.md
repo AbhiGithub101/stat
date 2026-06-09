@@ -98,10 +98,32 @@ It shows the data type preview based on the data of the top 200 rows. We can als
 There are 3 types of reports in Power BI :
 
 1. Report View
-2. Table View
+2. Data View or Table View
 3. Model View
 
 
 
 ## 1. Report View
+
+**Report View** is the area where we create and design reports using charts, tables, maps, and other visualizations. It is the workspace where we create dashboards and reports to analyze data visually, like : Bar chart, Line chart, Pie chart, and KPI cards etc.
+
+<figure><img src="../../.gitbook/assets/Dashboard (1).png" alt=""><figcaption></figcaption></figure>
+
+
+
+## 2. Data View
+
+**Data View** (also called Table View) is the area where we can see the actual data stored in tables. It is used to view, inspect, and understand the data row by row and column by column.
+
+<figure><img src="../../.gitbook/assets/Table view.png" alt=""><figcaption></figcaption></figure>
+
+**Note**: You can check data, create calculated columns, and verify values here (re-shape the data).
+
+
+
+## 3. Model View
+
+**Model View** is the area where relationships between different tables are created and managed. It is used to connect tables and show how they are related to each other.
+
+<figure><img src="../../.gitbook/assets/Screenshot 2026-06-09 171238.png" alt=""><figcaption></figcaption></figure>
 
