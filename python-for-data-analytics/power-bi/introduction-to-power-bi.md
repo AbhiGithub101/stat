@@ -20,3 +20,11 @@ Power BI is a business analytics and data visualization tool from Microsoft. It 
 * Very simple to use and more interactive and intuitive than excel files.
 * No coding required.
 
+## What Power BI Can Do
+
+* **Connect to data sources**: Excel, SQL Server, Oracle, SharePoint, Salesforce, Azure, and many others.
+* **Transform data**: Clean, combine, and shape data according to user requirement using Power Query.
+* **Create visualizations**: Charts, graphs, maps, KPIs, and dashboards.
+* **Analyze data**: Use DAX (Data Analysis Expressions) for calculations and business metrics.
+* **Share insights**: Publish reports to the Power BI Service and collaborate with others.
+* **Real-time monitoring**: Track live business data through dashboards.
