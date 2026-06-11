@@ -37,7 +37,7 @@ Clearing data means removing unnecessary rows, columns, or errors from the datas
 
 2. To remove the rows, select Remove Top Rows from the Home menu.
 
-Home Menu  ----->  Remove Rows -----> Remove Top Rows -----> Enter Number of Rows -----> OK
+**Home Menu  ----->  Remove Rows -----> Remove Top Rows -----> Enter Number of Rows -----> OK**
 
 
 
@@ -49,7 +49,7 @@ Home Menu  ----->  Remove Rows -----> Remove Top Rows -----> Enter Number of Row
 
 3. Create First Line as Header" means converting the first row of data into column names so that Power BI can identify each column correctly.
 
-<p align="center">Home Menu -----> Use First Row as Header</p>
+<p align="center"><strong>Home Menu -----> Use First Row as Header</strong></p>
 
 <figure><img src="../../.gitbook/assets/First row as header.png" alt=""><figcaption></figcaption></figure>
 
@@ -57,7 +57,7 @@ Home Menu  ----->  Remove Rows -----> Remove Top Rows -----> Enter Number of Row
 
 4. In Power Query Editor, we first clean the data by removing blanks, spaces, and invalid values, then change the data type from Text (String) to Whole Number (Integer) to ensure accurate calculations and analysis.
 
-Select the Column -----> Right-click on the selected Column -----> Replace Values ----->Enter the character to change -----> Change with Blank Space
+**Select the Column -----> Right-click on the selected Column -----> Replace Values ----->Enter the character to change -----> Change with Blank Space**
 
 <figure><img src="../../.gitbook/assets/Replace Values.png" alt=""><figcaption></figcaption></figure>
 
@@ -67,13 +67,13 @@ Select the Column -----> Right-click on the selected Column -----> Replace Value
 
 <figure><img src="../../.gitbook/assets/Replace - value.png" alt=""><figcaption></figcaption></figure>
 
-<p align="center">Select Column -----> Select Decimal Numbers</p>
+<p align="center"><strong>Select Column -----> Select Decimal Numbers</strong></p>
 
 <figure><img src="../../.gitbook/assets/Change data type.png" alt=""><figcaption></figcaption></figure>
 
 
 
-* Data type changed from Text (String) to Decimal Numbers (Integer).
+* **Data type changed from Text (String) to Decimal Numbers (Integer).**
 
 <figure><img src="../../.gitbook/assets/intger Data type.png" alt=""><figcaption></figcaption></figure>
 
@@ -108,7 +108,7 @@ Select the Column -----> Right-click on the selected Column -----> Replace Value
 
 
 
-<p align="center">Click on the Close &#x26; Apply option -------> Load the Data in Power BI</p>
+<p align="center"><strong>Click on the Close &#x26; Apply option -------> Load the Data in Power BI</strong></p>
 
 <figure><img src="../../.gitbook/assets/Load data in BI.png" alt=""><figcaption></figcaption></figure>
 
