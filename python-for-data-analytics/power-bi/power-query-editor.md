@@ -14,7 +14,7 @@ Power Query Editor is a tool in Power BI used to clean, transform, and prepare d
 * Replace values
 * Handle missing data
 
-<figure><img src="../../.gitbook/assets/P_qwery.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/P_Query_Ed.png" alt=""><figcaption></figcaption></figure>
 
 ### Change Data Type and Data Clearing & Filtration&#x20;
 
