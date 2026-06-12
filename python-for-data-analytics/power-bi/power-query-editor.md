@@ -79,21 +79,69 @@ Clearing data means removing unnecessary rows, columns, or errors from the datas
 
 
 
+*   Sometimes the date and time format in the source data or in Power BI differs from the date and time format of the computer system (regional settings). In such cases, we change the date and time format in Power BI to match the system's date and time format, ensuring the data is displayed and interpreted correctly.\
+    \
+    **Example:**-
+
+    **System Date Format:** DD/MM/YYYY
+
+    * Example: 12/06/2026
 
 
 
+    **Power BI Date Format:** MM/DD/YYYY
+
+    * Example: 06/12/2026
+
+    To avoid confusion and incorrect date interpretation, we change the Power BI date format to match the system format.
+
+<figure><img src="../../.gitbook/assets/Type of data.png" alt=""><figcaption></figcaption></figure>
+
+We can't change the Date type directly; it shows an error.
+
+<figure><img src="../../.gitbook/assets/Screenshot 2026-06-12 134442.png" alt=""><figcaption></figcaption></figure>
+
+When a date column is not recognized correctly because of a different date format (for example, Power BI reads 06/12/2026 as June 12 instead of 6 December), we can create a new column and convert the values into the correct date format. This helps Power BI interpret and analyze the data accurately.
+
+<figure><img src="../../.gitbook/assets/Custom Column.png" alt=""><figcaption></figcaption></figure>
+
+#### There are two ways to add a Date :
+
+1. In Power Query Editor, a Custom Column can be used to combine Day, Month, and Year columns into a single date field. The Number.ToText() function converts numeric values into text, and the **&** operator concatenates them with separators such as **"-"**. This creates a complete date string, which can then be converted into a Date data type for accurate reporting and analysis in Power BI.
 
 
 
+* **Number.ToText()** = Converts a numeric value into text.
 
 
 
+* **&** = The concatenation operator in Power Query. Only used to join text values together.
 
 
 
+**Note:** The **&** operator can only join text values. Since Day Number, Month Number, and Year are numeric columns, they must first be converted to text.
+
+<figure><img src="../../.gitbook/assets/Screenshot 2026-06-12 140605.png" alt=""><figcaption></figcaption></figure>
 
 
 
+2. In Power Query Editor, the "Date.FromText()" function is used to convert text-based date values into a valid Date data type. The format parameter specifies how the text should be interpreted, ensuring that dates are correctly recognized regardless of system or regional settings. This helps Power BI perform accurate date calculations, filtering, sorting, and time-based analysis.
+
+
+
+* **Date.FromText()** = Converts text into a Date value.
+
+
+
+* **\[Date]** = Column name that has to change (select from the file).
+
+
+
+* **\[Format="M/d/yyyy"]** = Tells Power BI how to read the date.
+
+
+
+<figure><img src="../../.gitbook/assets/Screenshot 2026-06-12 142944.png" alt=""><figcaption></figcaption></figure>
 
 
 
@@ -108,7 +156,7 @@ Clearing data means removing unnecessary rows, columns, or errors from the datas
 
 
 
-<p align="center"><strong>Click on the Close &#x26; Apply option -------> Load the Data in Power BI</strong></p>
+<p align="center"><strong>Click on the Close &#x26; Apply option -------> Load the Data in Power BI.</strong></p>
 
 <figure><img src="../../.gitbook/assets/Load data in BI.png" alt=""><figcaption></figcaption></figure>
 
