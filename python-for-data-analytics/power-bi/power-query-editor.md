@@ -79,35 +79,39 @@ Clearing data means removing unnecessary rows, columns, or errors from the datas
 
 
 
-*   Sometimes the date and time format in the source data or in Power BI differs from the date and time format of the computer system (regional settings). In such cases, we change the date and time format in Power BI to match the system's date and time format, ensuring the data is displayed and interpreted correctly.\
-    \
-    **Example:**-
+5. Sometimes the date and time format in the source data or in Power BI differs from the date and time format of the computer system (regional settings). In such cases, we change the date and time format in Power BI to match the system's date and time format, ensuring the data is displayed and interpreted correctly.\
+   \
+   **Example:**-
 
-    **System Date Format:** DD/MM/YYYY
+**System Date Format:** DD/MM/YYYY
 
-    * Example: 12/06/2026
+* Example: 12/06/2026
 
 
 
-    **Power BI Date Format:** MM/DD/YYYY
+**Power BI Date Format:** MM/DD/YYYY
 
-    * Example: 06/12/2026
+* Example: 06/12/2026
 
-    To avoid confusion and incorrect date interpretation, we change the Power BI date format to match the system format.
+To avoid confusion and incorrect date interpretation, we change the Power BI date format to match the system format.
 
 <figure><img src="../../.gitbook/assets/Type of data.png" alt=""><figcaption></figcaption></figure>
 
-We can't change the Date type directly; it shows an error.
+&#x20;  We can't change the Date type directly; it shows an error.
 
 <figure><img src="../../.gitbook/assets/Screenshot 2026-06-12 134442.png" alt=""><figcaption></figcaption></figure>
 
-When a date column is not recognized correctly because of a different date format (for example, Power BI reads 06/12/2026 as June 12 instead of 6 December), we can create a new column and convert the values into the correct date format. This helps Power BI interpret and analyze the data accurately.
+&#x20;       &#x20;
+
+&#x20;         When a date column is not recognised correctly because of a different date format (for example, Power BI reads 06/12/2026 as June 12 instead of 6 December), we can create a new column and convert the values into the correct date format. This helps Power BI interpret and analyse the data accurately.
+
+
 
 <figure><img src="../../.gitbook/assets/Custom Column.png" alt=""><figcaption></figcaption></figure>
 
-#### There are two ways to add a Date :
+#### There are two ways to add a Custom Date Column :
 
-1. In Power Query Editor, a Custom Column can be used to combine Day, Month, and Year columns into a single date field. The Number.ToText() function converts numeric values into text, and the **&** operator concatenates them with separators such as **"-"**. This creates a complete date string, which can then be converted into a Date data type for accurate reporting and analysis in Power BI.
+**A.** In Power Query Editor, a Custom Column can be used to combine Day, Month, and Year columns into a single date field. The Number.ToText() function converts numeric values into text, and the **&** operator concatenates them with separators such as **"-"**. This creates a complete date string, which can then be converted into a Date data type for accurate reporting and analysis in Power BI.
 
 
 
@@ -125,7 +129,7 @@ When a date column is not recognized correctly because of a different date forma
 
 
 
-2. In Power Query Editor, the "Date.FromText()" function is used to convert text-based date values into a valid Date data type. The format parameter specifies how the text should be interpreted, ensuring that dates are correctly recognized regardless of system or regional settings. This helps Power BI perform accurate date calculations, filtering, sorting, and time-based analysis.
+**B.** In Power Query Editor, the "Date.FromText()" function is used to convert text-based date values into a valid Date data type. The format parameter specifies how the text should be interpreted, ensuring that dates are correctly recognized regardless of system or regional settings. This helps Power BI perform accurate date calculations, filtering, sorting, and time-based analysis.
 
 
 
@@ -145,9 +149,21 @@ When a date column is not recognized correctly because of a different date forma
 
 
 
+* Change Column Heading Type of New Custom Date: \
+  \
+  Changing a column type from ABC123 to Date means converting a column that Power BI has identified as a general data type (Any/Text) into a proper Date data type so that Power BI can recognise and work with date values correctly.
+
+<figure><img src="../../.gitbook/assets/Change Type.png" alt=""><figcaption></figcaption></figure>
+
+<p align="center"></p>
+
+<p align="center"><strong>Select the column -----> Click Column Type -----> Select Date</strong></p>
+
+<figure><img src="../../.gitbook/assets/Date Type.png" alt=""><figcaption></figcaption></figure>
 
 
-11. **Close & Apply** is an option in Power Query Editor that saves all the data transformations and loads the transformed data into Power BI for reporting and analysis. Close & Apply is used in the Power Query Editor to save all data transformation steps and load the transformed data into the Power BI data model for further analysis and report creation.
+
+6. **Close & Apply** is an option in Power Query Editor that saves all the data transformations and loads the transformed data into Power BI for reporting and analysis. Close & Apply is used in the Power Query Editor to save all data transformation steps and load the transformed data into the Power BI data model for further analysis and report creation.
 
 #### What Happens When You Click Close & Apply?
 
