@@ -161,6 +161,8 @@ To avoid confusion and incorrect date interpretation, we change the Power BI dat
 
 <figure><img src="../../.gitbook/assets/Date Type.png" alt=""><figcaption></figcaption></figure>
 
+**Note: -** Column Type will never be in ABC123 (Any/Text) type, always change the column type according to the data contained under rows.
+
 
 
 6. **Close & Apply** is an option in Power Query Editor that saves all the data transformations and loads the transformed data into Power BI for reporting and analysis. Close & Apply is used in the Power Query Editor to save all data transformation steps and load the transformed data into the Power BI data model for further analysis and report creation.
