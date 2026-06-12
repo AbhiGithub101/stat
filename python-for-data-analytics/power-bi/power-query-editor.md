@@ -59,7 +59,7 @@ Clearing data means removing unnecessary rows, columns, or errors from the datas
 
 **Select the Column -----> Right-click on the selected Column -----> Replace Values ----->Enter the character to change -----> Change with Blank Space**
 
-<figure><img src="../../.gitbook/assets/Replace Values.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Replace Values (1).png" alt=""><figcaption></figcaption></figure>
 
 
 
@@ -69,7 +69,7 @@ Clearing data means removing unnecessary rows, columns, or errors from the datas
 
 <p align="center"><strong>Select Column -----> Select Decimal Numbers</strong></p>
 
-<figure><img src="../../.gitbook/assets/Change data type.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Change data type1.png" alt=""><figcaption></figcaption></figure>
 
 
 
