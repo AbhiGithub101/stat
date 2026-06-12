@@ -125,7 +125,7 @@ To avoid confusion and incorrect date interpretation, we change the Power BI dat
 
 **Note:** The **&** operator can only join text values. Since Day Number, Month Number, and Year are numeric columns, they must first be converted to text.
 
-<figure><img src="../../.gitbook/assets/Screenshot 2026-06-12 140605.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Screenshot 2026-06-12 153429.png" alt=""><figcaption></figcaption></figure>
 
 
 
@@ -143,9 +143,7 @@ To avoid confusion and incorrect date interpretation, we change the Power BI dat
 
 * **\[Format="M/d/yyyy"]** = Tells Power BI how to read the date.
 
-
-
-<figure><img src="../../.gitbook/assets/Screenshot 2026-06-12 142944.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Screenshot 2026-06-12 153732.png" alt=""><figcaption></figcaption></figure>
 
 
 
