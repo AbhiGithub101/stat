@@ -14,7 +14,7 @@ To understand better way we start from Model view.
 
 
 
-### Model View :
+### **\*** Model View :
 
 **Model View** shows the relationships between different tables in the Power BI data model.
 
@@ -91,9 +91,57 @@ You can drag **Customer\_ID** from the Sales table and drop it onto **Customer\_
 
 **Note:** In the above sheet DimDate will be join with FactSale table with Left Join.
 
+### Types Of Tables:
+
+There are mostly 2 types of tables in Power BI, which are:
+
+1. Fact Table
+2. Dimension Table
 
 
 
+#### 1. Fact Table
+
+\
+A **Fact Table** stores the measurable business data or numerical values that you want to analyze.
+
+**Characteristics:**
+
+* Contains numeric values such as Sales, Profit, Quantity, Cost, etc.
+* Usually has a large number of rows.
+* Contains foreign keys that connect to dimension tables.
+* Represents business transactions or events.
+
+**Example:** Sales Fact Table
+
+| OrderID | ProductID | CustomerID | DateID | SalesAmount | Quantity |
+| ------- | --------- | ---------- | ------ | ----------- | -------- |
+| 101     | P01       | C01        | D01    | 5000        | 2        |
+| 102     | P02       | C02        | D02    | 3000        | 1        |
+
+Here, **SalesAmount** and **Quantity** are facts (measurable values) in Sa.
+
+
+
+
+
+
+
+### **\* Report View**
+
+In Power BI, different chart types are used to visualise data and understand relationships between tables and measures. Charts in Power BI are graphical representations of data that help users analyze, compare, and understand patterns, trends, relationships, and business performance in an easy and interactive way. The most commonly used charts are:
+
+#### Charts Most Used in Data Modelling
+
+For data modelling and analysis, these visuals are used most frequently:
+
+1. **Table Visual** – To verify imported data.
+2. **Matrix Visual** – To analyze relationships between dimensions and facts.
+3. **Bar/Column Chart** – To compare measures across categories.
+4. **Line Chart** – To analyze trends over time.
+5. **Scatter Chart** – To study correlations between variables.
+6. **Treemap** – To analyze hierarchical data.
+7. **Decomposition Tree** – To drill down into measures and dimensions.
 
 
 
