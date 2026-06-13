@@ -102,7 +102,6 @@ There are mostly 2 types of tables in Power BI, which are:
 
 #### 1. Fact Table
 
-\
 A **Fact Table** stores the measurable business data or numerical values that you want to analyze.
 
 **Characteristics:**
@@ -125,7 +124,6 @@ Here, **SalesAmount** and **Quantity** are facts (measurable values) in the Sale
 
 #### 2. Dimension Table
 
-\
 A **Dimension Table** stores descriptive information about the business, such as product details, customer details, dates, or regions.
 
 **Characteristics:**
@@ -148,6 +146,134 @@ A **Dimension Table** stores descriptive information about the business, such as
 | ---------- | --------------- | ------ |
 | C01        | ConsoleFlare\_A | Delhi  |
 | C02        | ConsoleFlare\_B | Mumbai |
+
+### Types Of Relationships Between Tables
+
+In Power BI, there are 4 types of relationships between tables.
+
+| Relationship Type              | Symbol  | Description                                          |
+| ------------------------------ | ------- | ---------------------------------------------------- |
+| **One-to-One (1:1)**           | 1 ↔ 1   | One row in Table A matches only one row in Table B.  |
+| **One-to-Many (1:\*)**         | 1 → \*  | One row in Table A matches multiple rows in Table B. |
+| **Many-to-One (\*:1)**         | \* → 1  | Multiple rows in Table A match one row in Table B.   |
+| **Many-to-Many (**_**:**_**)** | \* ↔ \* | Multiple rows in both tables can match each other.   |
+
+### 1. One-to-One Relationship ( 1 : 1 )
+
+Each record in one table is related to exactly one record in another table.
+
+**Example:**&#x20;
+
+**Employee Table**
+
+| EmployeeID | Name            | City   | Area  |
+| ---------- | --------------- | ------ | ----- |
+| 101        | ConsoleFlare\_1 | Mumbai | Dadar |
+| 102        | ConsoleFlare\_2 | Pune   | Baner |
+
+**Salary Table**
+
+| EmployeeID | Salary | Provident\_Fund | Years\_of\_Experence |
+| ---------- | ------ | --------------- | -------------------- |
+| 101        | 50,000 | 4800            | 5                    |
+| 102        | 60,000 | 5600            | 7                    |
+
+* Employee **101** has only one salary record.
+* Employee **102** has only one salary record.
+
+**Use Case:**    Employee Details ↔ Employee Salary.
+
+
+
+### 2. One-to-Many Relationship ( 1 : \* )
+
+One record in the first table can have multiple matching records in the second table.
+
+**Example:**
+
+**Customer Table**
+
+| CustomerID | CustomerName |
+| ---------- | ------------ |
+| C01        | Rahul        |
+| C02        | Priya        |
+
+**OrdersTable**
+
+| OrderID | CustomerID | Amount |
+| ------- | ---------- | ------ |
+| O101    | C01        | 1000   |
+| O102    | C01        | 1500   |
+| O103    | C02        | 2000   |
+
+* Customer **C01** has multiple orders.
+* Customer **C02** has one order.
+
+**Use Case:**   Customer → Orders.
+
+This is the **most commonly used relationship** in Power BI, especially in **Fact and Dimension tables**.
+
+
+
+### 3. Many-to-One Relationship ( \* : 1 )
+
+Multiple records in the first table relate to a single record in the second table.
+
+**Example:**
+
+**Sales table**
+
+| ProductID | Quantity |
+| --------- | -------- |
+| P01       | 5        |
+| P01       | 8        |
+| P02       | 10       |
+
+**Product Table**
+
+| ProductID | ProductName |
+| --------- | ----------- |
+| P01       | Laptop      |
+| P02       | Mobile      |
+
+* Many sales records belong to one product (ProductID).
+
+**Use Case:**   Sales → Product.
+
+
+
+### 4. Many-to-Many Relationship ( \* _: \*_ )
+
+Multiple records in both tables can be related to each other.
+
+**Example:**
+
+**Student Table**
+
+| StudentID | StudentName |
+| --------- | ----------- |
+| S01       | Rahul       |
+| S02       | Priya       |
+
+**Course Table**
+
+| CourseID | CourseName |
+| -------- | ---------- |
+| C01      | Python     |
+| C02      | SQL        |
+
+**Enrollment Table**
+
+| StudentID | CourseID |
+| --------- | -------- |
+| S01       | C01      |
+| S01       | C02      |
+| S02       | C01      |
+
+* Rahul can enroll in many courses.
+* Python course can have many students.
+
+**Use Case:**   Students ↔ Courses.
 
 
 
