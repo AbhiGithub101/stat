@@ -183,7 +183,9 @@ Each record in one table is related to exactly one record in another table.
 
 **Use Case:**    Employee Details ↔ Employee Salary.
 
+This is the **Rare used relationship** in Power BI, especially in **Fact and Dimension tables**.
 
+<figure><img src="../../.gitbook/assets/r_1.png" alt=""><figcaption></figcaption></figure>
 
 ### 2. One-to-Many Relationship ( 1 : \* )
 
@@ -213,7 +215,7 @@ One record in the first table can have multiple matching records in the second t
 
 This is the **most commonly used relationship** in Power BI, especially in **Fact and Dimension tables**.
 
-
+<figure><img src="../../.gitbook/assets/Screenshot 2026-06-13 170017.png" alt=""><figcaption></figcaption></figure>
 
 ### 3. Many-to-One Relationship ( \* : 1 )
 
@@ -240,7 +242,7 @@ Multiple records in the first table relate to a single record in the second tabl
 
 **Use Case:**   Sales → Product.
 
-
+<figure><img src="../../.gitbook/assets/Screenshot 2026-06-13 170017.png" alt=""><figcaption></figcaption></figure>
 
 ### 4. Many-to-Many Relationship ( \* _: \*_ )
 
@@ -275,7 +277,7 @@ Multiple records in both tables can be related to each other.
 
 **Use Case:**   Students ↔ Courses.
 
-
+<figure><img src="../../.gitbook/assets/Screenshot 2026-06-13 171810.png" alt=""><figcaption></figcaption></figure>
 
 
 
