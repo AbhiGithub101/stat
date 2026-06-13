@@ -75,6 +75,96 @@ You can drag **Customer\_ID** from the Sales table and drop it onto **Customer\_
 * Configure Cross Filter Direction.
 * Manage the data model effectively.
 
+<figure><img src="../../.gitbook/assets/Manage_Rel.png" alt=""><figcaption></figcaption></figure>
+
+
+
+<p align="center"><strong>Click on Manage Relationships ------> Select New Relationships</strong></p>
+
+<figure><img src="../../.gitbook/assets/NR_relation.png" alt=""><figcaption></figcaption></figure>
+
+
+
+&#x20;    This image shows the Edit Relationship window in Power BI where the FactSale table is connected to the DimDate table using the Invoice Date and Date columns. The relationship has a Many-to-One (\*:1) cardinality because many sales transactions can occur on a single date. The Cross Filter Direction is set to Single, allowing filters to flow from the Date table to the Sales table. This relationship enables date-based analysis such as monthly, quarterly, and yearly sales reporting.
+
+<figure><img src="../../.gitbook/assets/Edit_relation.png" alt=""><figcaption></figcaption></figure>
+
+**Note:** In the above sheet DimDate will be join with FactSale table with Left Join.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
