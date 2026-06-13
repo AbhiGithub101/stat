@@ -119,7 +119,51 @@ A **Fact Table** stores the measurable business data or numerical values that yo
 | 101     | P01       | C01        | D01    | 5000        | 2        |
 | 102     | P02       | C02        | D02    | 3000        | 1        |
 
-Here, **SalesAmount** and **Quantity** are facts (measurable values) in Sa.
+Here, **SalesAmount** and **Quantity** are facts (measurable values) in the Sales Fact Table.
+
+
+
+#### 2. Dimension Table
+
+\
+A **Dimension Table** stores descriptive information about the business, such as product details, customer details, dates, or regions.
+
+**Characteristics:**
+
+* Contains text or descriptive columns.
+* Usually has fewer rows than fact tables.
+* Used for filtering, grouping, and slicing data.
+* Connected to fact tables using primary keys.
+
+**Example:** Product Dimension Table
+
+| ProductID | ProductName          | Category    |
+| --------- | -------------------- | ----------- |
+| P01       | ConsoleFlare\_Laptop | Electronics |
+| P02       | ConsoleFlare\_Mobile | Electronics |
+
+**Example:** Customer Dimension Table
+
+| CustomerID | CustomerName    | City   |
+| ---------- | --------------- | ------ |
+| C01        | ConsoleFlare\_A | Delhi  |
+| C02        | ConsoleFlare\_B | Mumbai |
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
