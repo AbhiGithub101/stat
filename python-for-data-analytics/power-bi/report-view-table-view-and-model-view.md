@@ -2,47 +2,75 @@
 
 In **Power BI Desktop**, there are **3 main views**:
 
-* [ ] Report View
-* [ ] Table View or Data View
-* [ ] Model View
+* **Report View**
+* **Table View** or **Data View**
+* **Model View**
 
-Here we understand the Power BI views in a descriptive way, what they are, and how they work....
+Each view has a different job.
 
-To understand better way we start from Model view.
+* **Report View** is used to create charts and dashboards.
+* **Table View** is used to inspect data row by row.
+* **Model View** is used to connect tables.
 
+If you are new to BI, remember this order:
 
+1. Check the data.
+2. Connect the tables.
+3. Build the report.
 
+### Report View
 
+**Report View** is where you build charts and dashboards.
 
-### **\*** Model View :
+You use it to:
+
+* create visuals
+* compare values
+* find trends
+* present business insights clearly
+
+<figure><img src="../../.gitbook/assets/Dashboard (1).png" alt=""><figcaption></figcaption></figure>
+
+### Table View or Data View
+
+**Table View** shows the actual data inside each table.
+
+You use it to:
+
+* inspect rows and columns
+* verify values
+* check data types
+* create calculated columns
+
+This view helps you confirm that the data is correct before building visuals.
+
+<figure><img src="../../.gitbook/assets/Table view.png" alt=""><figcaption></figcaption></figure>
+
+### Model View
 
 **Model View** shows the relationships between different tables in the Power BI data model.
 
-#### Purpose
+#### Why it is important
 
 * Create relationships between tables.
 * Manage star and snowflake schemas.
-* Define cardinality (One-to-Many, Many-to-One).
-* Improve data modeling and report performance.
+* Define cardinality like `1:*` and `*:1`.
+* Improve report logic and performance.
 
 <figure><img src="../../.gitbook/assets/Model_vv.jpg" alt=""><figcaption></figcaption></figure>
 
-&#x20;&#x20;
+After data is loaded, Power BI may create some relationships automatically. You should still check them manually. Make sure the correct columns are connected. You can also delete wrong relationships.
 
-&#x20;      After Data loaded in Power BI, it automatically creates some relations within tables. But we have to check manually whether the weather relations are connected with same type or not. Also we can **DELETE** the relations manually.
+You can also create relationships manually in two ways:
 
-We can also **Create** realation between the tables manually. It can be added by 2 types:
+* Drag and Drop
+* Manage Relationships
 
-* By Drag and Drop
-* Manage Relationships option
+1. **Drag and Drop** creates a relationship by connecting a common column from one table to the matching column in another table.
 
-
-
-1. **Drag and Drop** is a method of creating relationships between tables in **Model View** by dragging a common column from one table and dropping it onto the matching column in another table.
-
-* Quickly create relationships between tables.
-* Connect Fact and Dimension tables.
-* Enable data filtering and analysis across multiple tables.
+* Quickly create relationships.
+* Connect fact and dimension tables.
+* Enable filtering across tables.
 
 <figure><img src="../../.gitbook/assets/Drag and Drop.png" alt=""><figcaption></figcaption></figure>
 
@@ -61,55 +89,46 @@ Suppose you have:
 * Customer\_ID
 * Customer\_Name
 
-You can drag **Customer\_ID** from the Sales table and drop it onto **Customer\_ID** in the Customer table to create a relationship.
+You can drag **Customer\_ID** from the Sales table to **Customer\_ID** in the Customer table. This creates a relationship between both tables.
 
 <figure><img src="../../.gitbook/assets/DD_pb.png" alt=""><figcaption></figcaption></figure>
 
-
-
-2. **Manage Relationships** is a feature in Power BI that allows users to create, edit, delete, and view relationships between tables manually.
+2. **Manage Relationships** lets you create, edit, delete, and view relationships manually.
 
 * Create relationships when Power BI does not detect them automatically.
 * Modify existing relationships.
-* Set Cardinality (One-to-One, One-to-Many, Many-to-One).
-* Configure Cross Filter Direction.
-* Manage the data model effectively.
+* Set cardinality.
+* Configure cross filter direction.
 
 <figure><img src="../../.gitbook/assets/Manage_Rel.png" alt=""><figcaption></figcaption></figure>
-
-
 
 <p align="center"><strong>Click on Manage Relationships ------> Select New Relationships</strong></p>
 
 <figure><img src="../../.gitbook/assets/NR_relation.png" alt=""><figcaption></figcaption></figure>
 
+In this example, **FactSale** is connected to **DimDate** by the date column. This is a **Many-to-One (`*:1`)** relationship. Many sales rows can match one date row.
 
-
-&#x20;    This image shows the Edit Relationship window in Power BI where the FactSale table is connected to the DimDate table using the Invoice Date and Date columns. The relationship has a Many-to-One (\*:1) cardinality because many sales transactions can occur on a single date. The Cross Filter Direction is set to Single, allowing filters to flow from the Date table to the Sales table. This relationship enables date-based analysis such as monthly, quarterly, and yearly sales reporting.
+The cross filter direction is **Single**. This means the Date table can filter the Sales table. This helps with monthly, quarterly, and yearly analysis.
 
 <figure><img src="../../.gitbook/assets/Edit_relation.png" alt=""><figcaption></figcaption></figure>
 
-**Note:** In the above sheet DimDate will be join with FactSale table with Left Join.
+### Types of tables
 
-### Types Of Tables:
-
-There are mostly 2 types of tables in Power BI, which are:
+In Power BI, the two main table types are:
 
 1. Fact Table
 2. Dimension Table
 
-
-
 #### 1. Fact Table
 
-A **Fact Table** stores the measurable business data or numerical values that you want to analyze.
+A **Fact Table** stores measurable business data.
 
-**Characteristics:**
+**Main points:**
 
-* Contains numeric values such as Sales, Profit, Quantity, Cost, etc.
-* Usually has a large number of rows.
-* Contains foreign keys that connect to dimension tables.
-* Represents business transactions or events.
+* It stores numeric values such as Sales, Profit, Quantity, and Cost.
+* It usually has many rows.
+* It contains keys that connect to dimension tables.
+* It represents transactions or business events.
 
 **Example:** Sales Fact Table
 
@@ -118,20 +137,20 @@ A **Fact Table** stores the measurable business data or numerical values that yo
 | 101     | P01       | C01        | D01    | 5000        | 2        |
 | 102     | P02       | C02        | D02    | 3000        | 1        |
 
-Here, **SalesAmount** and **Quantity** are facts (measurable values) in the Sales Fact Table.
-
-
+Here, **SalesAmount** and **Quantity** are the facts.
 
 #### 2. Dimension Table
 
-A **Dimension Table** stores descriptive information about the business, such as product details, customer details, dates, or regions.
+A **Dimension Table** stores descriptive information about the business.
 
-**Characteristics:**
+Examples include product, customer, date, city, and region data.
 
-* Contains text or descriptive columns.
-* Usually has fewer rows than fact tables.
-* Used for filtering, grouping, and slicing data.
-* Connected to fact tables using primary keys.
+**Main points:**
+
+* It contains text or descriptive columns.
+* It usually has fewer rows than a fact table.
+* It is used for filtering, grouping, and slicing.
+* It connects to fact tables.
 
 **Example:** Product Dimension Table
 
@@ -147,22 +166,22 @@ A **Dimension Table** stores descriptive information about the business, such as
 | C01        | ConsoleFlare\_A | Delhi  |
 | C02        | ConsoleFlare\_B | Mumbai |
 
-### Types Of Relationships Between Tables
+### Types of relationships between tables
 
-In Power BI, there are 4 types of relationships between tables.
+In Power BI, there are 4 main relationship types.
 
-| Relationship Type              | Symbol  | Description                                          |
-| ------------------------------ | ------- | ---------------------------------------------------- |
-| **One-to-One (1:1)**           | 1 ↔ 1   | One row in Table A matches only one row in Table B.  |
-| **One-to-Many (1:\*)**         | 1 → \*  | One row in Table A matches multiple rows in Table B. |
-| **Many-to-One (\*:1)**         | \* → 1  | Multiple rows in Table A match one row in Table B.   |
-| **Many-to-Many (**_**:**_**)** | \* ↔ \* | Multiple rows in both tables can match each other.   |
+| Relationship Type | Symbol | Simple meaning                               |
+| ----------------- | ------ | -------------------------------------------- |
+| **One-to-One**    | `1:1`  | One row matches one row.                     |
+| **One-to-Many**   | `1:*`  | One row matches many rows.                   |
+| **Many-to-One**   | `*:1`  | Many rows match one row.                     |
+| **Many-to-Many**  | `*:*`  | Many rows in both tables can match together. |
 
-### 1. One-to-One Relationship ( 1 : 1 )
+### 1. One-to-One Relationship (`1:1`)
 
-Each record in one table is related to exactly one record in another table.
+Each record in one table matches only one record in another table.
 
-**Example:**&#x20;
+**Example:**
 
 **Employee Table**
 
@@ -178,18 +197,18 @@ Each record in one table is related to exactly one record in another table.
 | 101        | 50,000 | 4800            | 5                    |
 | 102        | 60,000 | 5600            | 7                    |
 
-* Employee **101** has only one salary record.
-* Employee **102** has only one salary record.
+* Employee **101** has one salary record.
+* Employee **102** has one salary record.
 
-**Use Case:**    Employee Details ↔ Employee Salary.
+**Use case:** Employee details ↔ Employee salary
 
-This is the **Rare used relationship** in Power BI, especially in **Fact and Dimension tables**.
+This relationship is less common in Power BI.
 
 <figure><img src="../../.gitbook/assets/r_1.png" alt=""><figcaption></figcaption></figure>
 
-### 2. One-to-Many Relationship ( 1 : \* )
+### 2. One-to-Many Relationship (`1:*`)
 
-One record in the first table can have multiple matching records in the second table.
+One record in the first table can match many records in the second table.
 
 **Example:**
 
@@ -200,7 +219,7 @@ One record in the first table can have multiple matching records in the second t
 | C01        | Rahul        |
 | C02        | Priya        |
 
-**OrdersTable**
+**Orders Table**
 
 | OrderID | CustomerID | Amount |
 | ------- | ---------- | ------ |
@@ -211,19 +230,19 @@ One record in the first table can have multiple matching records in the second t
 * Customer **C01** has multiple orders.
 * Customer **C02** has one order.
 
-**Use Case:**   Customer → Orders.
+**Use case:** Customer → Orders
 
-This is the **most commonly used relationship** in Power BI, especially in **Fact and Dimension tables**.
+This is the most common relationship in Power BI.
 
 <figure><img src="../../.gitbook/assets/Screenshot 2026-06-13 170017.png" alt=""><figcaption></figcaption></figure>
 
-### 3. Many-to-One Relationship ( \* : 1 )
+### 3. Many-to-One Relationship (`*:1`)
 
-Multiple records in the first table relate to a single record in the second table.
+Many records in the first table match one record in the second table.
 
 **Example:**
 
-**Sales table**
+**Sales Table**
 
 | ProductID | Quantity |
 | --------- | -------- |
@@ -238,15 +257,15 @@ Multiple records in the first table relate to a single record in the second tabl
 | P01       | Laptop      |
 | P02       | Mobile      |
 
-* Many sales records belong to one product (ProductID).
+* Many sales records belong to one product.
 
-**Use Case:**   Sales → Product.
+**Use case:** Sales → Product
 
 <figure><img src="../../.gitbook/assets/Screenshot 2026-06-13 170017.png" alt=""><figcaption></figcaption></figure>
 
-### 4. Many-to-Many Relationship ( \* _: \*_ )
+### 4. Many-to-Many Relationship (`*:*`)
 
-Multiple records in both tables can be related to each other.
+Many records in both tables can be related to each other.
 
 **Example:**
 
@@ -275,37 +294,15 @@ Multiple records in both tables can be related to each other.
 * Rahul can enroll in many courses.
 * Python course can have many students.
 
-**Use Case:**   Students ↔ Courses.
+**Use case:** Students ↔ Courses
 
 <figure><img src="../../.gitbook/assets/Screenshot 2026-06-13 171810.png" alt=""><figcaption></figcaption></figure>
 
+### Common visuals used in Report View
 
+In Report View, charts help you analyse data visually. They make it easier to compare values, find patterns, and explain results.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### **\* Report View**
-
-In Power BI, different chart types are used to visualise data and understand relationships between tables and measures. Charts in Power BI are graphical representations of data that help users analyze, compare, and understand patterns, trends, relationships, and business performance in an easy and interactive way. The most commonly used charts are:
-
-#### Charts Most Used in Data Modelling
-
-For data modelling and analysis, these visuals are used most frequently:
+The most commonly used visuals are:
 
 1. **Table Visual** – To verify imported data.
 2. **Matrix Visual** – To analyze relationships between dimensions and facts.
@@ -314,88 +311,3 @@ For data modelling and analysis, these visuals are used most frequently:
 5. **Scatter Chart** – To study correlations between variables.
 6. **Treemap** – To analyze hierarchical data.
 7. **Decomposition Tree** – To drill down into measures and dimensions.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
