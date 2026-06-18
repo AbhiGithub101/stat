@@ -298,6 +298,24 @@ Many records in both tables can be related to each other.
 
 <figure><img src="../../.gitbook/assets/Screenshot 2026-06-13 171810.png" alt=""><figcaption></figcaption></figure>
 
+
+
+### Types of Schema in Power BI
+
+In Power BI, a **Schema** is the way tables are organised and connected with each other in the data model. There are mostly 3 types of schema in Power BI:
+
+1. Star Schema
+2. Snowflake Schema
+3. Hybrid Schema
+
+
+
+
+
+
+
+
+
 ### Common visuals used in Report View
 
 In Report View, charts help you analyse data visually. They make it easier to compare values, find patterns, and explain results.
