@@ -349,15 +349,71 @@ A company stores sales transactions in **Fact\_Sales** and product/customer deta
 
 
 
+#### 2. Snowflake Schema  ❄️
 
+A Snowflake Schema is an extension of Star Schema where dimension tables are further divided into additional tables. The structure looks like a snowflake.
 
+<figure><img src="../../.gitbook/assets/Snowflake_Schema.png" alt=""><figcaption></figcaption></figure>
 
+**Example:**
 
+Suppose an e-commerce company stores sales data.
 
+**Fact\_Sales**
 
+| Product\_ID | Customer\_ID | Date\_ID | Sales |
+| ----------- | ------------ | -------- | ----- |
+| P101        | C001         | D001     | 5000  |
+| P102        | C002         | D002     | 3000  |
 
+**Dim\_Product**
 
+| Product\_ID | Category\_ID | Product\_Name |
+| ----------- | ------------ | ------------- |
+| P101        | C01          | Laptop        |
+| P102        | C02          | Mobile        |
 
+**Dim\_Category**
+
+| Category\_ID | Department\_ID | Category\_Name |
+| ------------ | -------------- | -------------- |
+| C01          | D01            | Electronics    |
+| C02          | D02            | Smartphones    |
+
+**Dim\_Department**
+
+| Department\_ID | Department\_Name |
+| -------------- | ---------------- |
+| D01            | IT Products      |
+| D02            | Mobile Devices   |
+
+**Dim\_Customer**
+
+| Customer\_ID | Customer\_Name | City   |
+| ------------ | -------------- | ------ |
+| C001         | Amit           | Delhi  |
+| C002         | Priya          | Mumbai |
+
+**Dim\_Date**
+
+| Date\_ID | Month    | Year |
+| -------- | -------- | ---- |
+| D001     | January  | 2026 |
+| D002     | February | 2026 |
+
+#### Narrative Theory
+
+In this example:
+
+* **Fact\_Sales** stores transactional data such as Sales.
+* **Dim\_Customer** and **Dim\_Date** provide customer and date information.
+* **Dim\_Product** does not store category and department details directly.
+* Instead, product details are split into:
+  * **Dim\_Product**
+  * **Dim\_Category**
+  * **Dim\_Department**
+
+This normalization reduces duplicate data and creates a snowflake-shaped structure.
 
 
 
