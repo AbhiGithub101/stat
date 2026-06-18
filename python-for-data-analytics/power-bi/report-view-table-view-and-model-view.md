@@ -357,7 +357,41 @@ A Snowflake Schema is an extension of Star Schema where dimension tables are fur
 
 **Example:**
 
-Suppose an e-commerce company stores sales data.
+**Fact\_Sales**
+
+| Product\_ID | Sales |
+| ----------- | ----- |
+| P101        | 5000  |
+| P102        | 3000  |
+
+**Dim\_Product**
+
+| Product\_ID | Category\_ID | Product\_Name |
+| ----------- | ------------ | ------------- |
+| P101        | C01          | Laptop        |
+| P102        | C02          | Mobile        |
+
+**Dim\_Category**
+
+| Category\_ID | Category\_Name |
+| ------------ | -------------- |
+| C01          | Electronics    |
+| C02          | Smartphones    |
+
+**Narrative:**\
+Instead of storing category information in the Product table, it is stored separately in **Dim\_Category**. This creates extra relationships and a snowflake-like structure.
+
+
+
+#### 3. Hybrid Schema
+
+A Hybrid Schema is a data model that combines the features of Star Schema and Snowflake Schema to achieve both simplicity and better data organization.
+
+<figure><img src="../../.gitbook/assets/HYbrid _Schema.png" alt=""><figcaption></figcaption></figure>
+
+**Example:**
+
+Suppose a company maintains sales data.
 
 **Fact\_Sales**
 
@@ -366,7 +400,21 @@ Suppose an e-commerce company stores sales data.
 | P101        | C001         | D001     | 5000  |
 | P102        | C002         | D002     | 3000  |
 
-**Dim\_Product**
+**Dim\_Customer (Star Part)**
+
+| Customer\_ID | Customer\_Name | City   |
+| ------------ | -------------- | ------ |
+| C001         | Amit           | Delhi  |
+| C002         | Priya          | Mumbai |
+
+**Dim\_Date (Star Part)**
+
+| Date\_ID | Month | Year |
+| -------- | ----- | ---- |
+| D001     | Jan   | 2026 |
+| D002     | Feb   | 2026 |
+
+**Dim\_Product (Snowflake Part)**
 
 | Product\_ID | Category\_ID | Product\_Name |
 | ----------- | ------------ | ------------- |
@@ -387,43 +435,12 @@ Suppose an e-commerce company stores sales data.
 | D01            | IT Products      |
 | D02            | Mobile Devices   |
 
-**Dim\_Customer**
-
-| Customer\_ID | Customer\_Name | City   |
-| ------------ | -------------- | ------ |
-| C001         | Amit           | Delhi  |
-| C002         | Priya          | Mumbai |
-
-**Dim\_Date**
-
-| Date\_ID | Month    | Year |
-| -------- | -------- | ---- |
-| D001     | January  | 2026 |
-| D002     | February | 2026 |
-
 #### Narrative Theory
 
-In this example:
+In a Hybrid Schema, the **Fact Table** stores transactional or numerical data such as sales, profit, or quantity.
 
-* **Fact\_Sales** stores transactional data such as Sales.
-* **Dim\_Customer** and **Dim\_Date** provide customer and date information.
-* **Dim\_Product** does not store category and department details directly.
-* Instead, product details are split into:
-  * **Dim\_Product**
-  * **Dim\_Category**
-  * **Dim\_Department**
-
-This normalization reduces duplicate data and creates a snowflake-shaped structure.
-
-
-
-
-
-
-
-
-
-
+* Some dimensions, such as **Customer** and **Date**, are kept as single tables and connect directly to the Fact table.
+* Other dimensions, such as **Product**, are normalized into multiple tables like Product → Category → Department.
 
 
 
