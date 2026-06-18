@@ -310,6 +310,89 @@ In Power BI, a **Schema** is the way tables are organised and connected with eac
 
 
 
+#### 1. Star Schema  ⭐
+
+A Star Schema is a data model in which one central Fact Table is connected directly to multiple Dimension Tables. The structure looks like a star, so it is called a Star Schema.
+
+<figure><img src="../../.gitbook/assets/Star Schema.png" alt=""><figcaption></figcaption></figure>
+
+**Structure:**
+
+* One Fact Table (contains numeric values or transactions)
+* Multiple Dimension Tables (contain descriptive information)
+
+**Example:**
+
+**Fact\_Sales**
+
+| Product\_ID | Customer\_ID | Date\_ID | Sales |
+| ----------- | ------------ | -------- | ----- |
+| P101        | C001         | D001     | 5000  |
+| P102        | C002         | D002     | 3000  |
+
+**Dim\_Product**
+
+| Product\_ID | Product\_Name |
+| ----------- | ------------- |
+| P101        | Laptop        |
+| P102        | Mobile        |
+
+**Dim\_Customer**
+
+| Customer\_ID | Customer\_Name |
+| ------------ | -------------- |
+| C001         | Amit           |
+| C002         | Priya          |
+
+**Narrative:**\
+A company stores sales transactions in **Fact\_Sales** and product/customer details in separate dimension tables. The Fact table is directly connected to all dimensions, forming a star shape.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
