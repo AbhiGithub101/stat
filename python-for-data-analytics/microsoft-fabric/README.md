@@ -3,7 +3,7 @@ hidden: true
 icon: microsoft
 ---
 
-# Introduction to Microsoft Fabric
+# Microsoft Fabric
 
 Microsoft Fabric is an end-to-end analytics platform that integrates multiple data tools into a single SaaS platform. It combines services like:
 
@@ -21,7 +21,7 @@ All these services work on one shared storage called OneLake.
 * Earlier we needed multiple tools (Azure Synapse, Data Factory, Power BI).
 * Fabric provides one unified platform.
 
-<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
 
 **OneLake Architecture**
 
