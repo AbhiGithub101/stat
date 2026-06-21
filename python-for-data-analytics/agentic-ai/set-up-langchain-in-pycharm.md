@@ -131,13 +131,41 @@ Create a `.env` file for secret values.
 
 Store your API keys in this file.
 
-Example:
+**Example:**
 
 ```bash
 OPENAI_API_KEY=your_api_key_here
 ```
 
 Do not commit this file to a public repository.
+
+If you want to use a free api like **NVIDIA Model,** you can use this -
+
+```
+NVIDIA_API_KEY = nvapi-your_api_key_here
+```
+
+**Terminal command** -  `uv add langchain-nvidia-ai-endpoints`&#x20;
+
+### **Test Model**
+
+Open the **main**.**py** file, type this command, and run it to check if the **API** is working or not.
+
+```py
+from dotenv import load_dotenv
+from langchain_nvidia_ai_endpoints import ChatNVIDIA
+
+load_dotenv()
+
+llm = ChatNVIDIA(
+    model="nvidia/llama-3.3-nemotron-super-49b-v1"
+)
+
+response = llm.invoke("Hello")
+print(response.content)
+```
+
+<figure><img src="../../.gitbook/assets/image (78).png" alt=""><figcaption></figcaption></figure>
 
 ### Step 8: Verify the setup
 
@@ -146,7 +174,7 @@ Check these points after setup:
 * The repository opens in PyCharm
 * Dependencies appear in `pyproject.toml`
 * The `.venv` folder exists
-* The `.env` file contains your API key
+* The `.env` The file contains your API key
 
 ### Next step
 
