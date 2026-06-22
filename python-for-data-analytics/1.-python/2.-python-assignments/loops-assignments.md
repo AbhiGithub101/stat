@@ -160,9 +160,9 @@ for num in range(1,2001):
 
 Output:&#x20;
 
-9\
+5\
 8\
-5<br>
+9<br>
 {% endtab %}
 {% endtabs %}
 
@@ -192,7 +192,7 @@ print('Sum of Digits :', s)
 
 </details>
 
-8. A simple iteration through a string to access all elements of it.
+9. A simple iteration through a string to access all elements of it.
 
 <details>
 
@@ -206,7 +206,7 @@ for i in st:
 
 </details>
 
-9. Write a python program to check whether a number given by user is a **special number** or not. _A special number is the number if the sum of the factorial of its digit is same as the original number_. Example : 145
+10. Write a python program to check whether a number given by user is a **special number** or not. _A special number is the number if the sum of the factorial of its digit is same as the original number_. Example : 145
 
 <details>
 
@@ -242,7 +242,7 @@ else:
 
 #### **Moderate Level**
 
-10. Create a **simple calculator** using **loops** (The program should be menu driven which runs till user exits itself. Means the program must ask the user every time to whether he want to continue or exit). Print the appropriate message for this.(_**use while() loop**_)
+11. Create a **simple calculator** using **loops** (The program should be menu driven which runs till user exits itself. Means the program must ask the user every time to whether he want to continue or exit). Print the appropriate message for this.(_**use while() loop**_)
 
 <details>
 
@@ -297,7 +297,7 @@ while True:
 
 </details>
 
-11. Write a program to check whether the number is **`automorphic number`** or not.(_**A number is said to be automorphic number if the original number is present on the right of the square of that number**_.)
+12. Write a program to check whether the number is **`automorphic number`** or not.(_**A number is said to be automorphic number if the original number is present on the right of the square of that number**_.)
 
 **`For example :`**
 
@@ -340,7 +340,7 @@ else:
 
 </details>
 
-12. Write a program to **reverse a number** taken by the user without using strings.
+13. Write a program to **reverse a number** taken by the user without using strings.
 
 <details>
 
@@ -363,7 +363,7 @@ print('Reversed Number :', rev)
 
 </details>
 
-13. Write a program to count the number of alphabets and no of digits in a string using loops.
+14. Write a program to count the number of alphabets and no of digits in a string using loops.
 
 <details>
 
@@ -396,7 +396,7 @@ print(f'Digits Count : {digit_count}')
 
 </details>
 
-14. Write a program to check whether the number given by the user is an **Armstrong number** or not.(An Armstrong number is the number whose digits cubes sum is equal to the original number. Such as 153 as 1^3 + 5^3+3^3 = 1 + 125 + 27 = 153)
+15. Write a program to check whether the number given by the user is an **Armstrong number** or not.(An Armstrong number is the number whose digits cubes sum is equal to the original number. Such as 153 as 1^3 + 5^3+3^3 = 1 + 125 + 27 = 153)
 
 <details>
 
@@ -426,7 +426,7 @@ else:
 
 </details>
 
-15. Write a program to check whether the given number is **palindrome** or not.\
+16. Write a program to check whether the given number is **palindrome** or not.\
     Example : 343, 121, 111, etc.
 
 <details>
@@ -455,7 +455,7 @@ else:
 
 #### Intermediate Level
 
-16. Create **Rock**, **Paper**, **Scissor game** using while loop\
+17. Create **Rock**, **Paper**, **Scissor game** using while loop\
     (Hint- use random module and random.choice(\['rock', 'paper', 'scissor']) function to get random value selected by computer)\
     Your Program will contain one you and second the computer who will be generating the values from its side using random module.\
     \
@@ -537,7 +537,7 @@ print('Thankyou For Playing')
 
 </details>
 
-17. Write a Python program that iterates the integers from 1 to 50. For multiples of three print "Fizz" instead of the number and for multiples of five print "Buzz". For numbers that are multiples of three and five, print "FizzBuzz".\
+18. Write a Python program that iterates the integers from 1 to 50. For multiples of three print "Fizz" instead of the number and for multiples of five print "Buzz". For numbers that are multiples of three and five, print "FizzBuzz".\
     \&#xNAN;_**Sample Output**_\*\* :\*\*\
     1\
     2\
@@ -566,7 +566,7 @@ while(i <= 50):
 
 </details>
 
-18. Take a string input from user and count the number of **vowels** and **consonants** using while loop and for loop both.
+19. Take a string input from user and count the number of **vowels** and **consonants** using while loop and for loop both.
 
 <details>
 
