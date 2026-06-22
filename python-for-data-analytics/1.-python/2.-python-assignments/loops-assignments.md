@@ -152,7 +152,21 @@ for num in range(1,2001):
 
 </details>
 
-7. Take a number from user and return the **sum** of all digits of the number.
+7. Write a program to print the digits of a number one by one.
+
+{% tabs %}
+{% tab title="Example" %}
+**`Enter The Number : 589`**
+
+Output:&#x20;
+
+9\
+8\
+5<br>
+{% endtab %}
+{% endtabs %}
+
+8. Take a number from user and return the **sum** of all digits of the number.
 
 {% tabs %}
 {% tab title="Example" %}
