@@ -46,11 +46,80 @@ This view helps you confirm that the data is correct before building visuals.
 
 <figure><img src="../../.gitbook/assets/Table view.png" alt=""><figcaption></figcaption></figure>
 
-### Model View
+## A. Table View or Data View :
+
+**Table View** (also called **Data View**) is the place in Power BI where we can see the data stored inside each table in rows and columns, just like an Excel sheet.
+
+### How Does Table View Work?
+
+When you import data into Power BI:
+
+1. Data is first loaded into the **Power Query Editor**.
+2. In Power Query Editor, you clean and transform the data.
+3. After clicking **Close & Apply**, the transformed data is loaded into the Power BI model.
+4. Then you can see the final data in **Table View**.
+
+#### Working Process :
+
+<p align="center">Excel / CSV / SQL Database<br>  ↓<br>Power Query Editor<br>(Data Cleaning &#x26; Transformation)<br>  ↓<br>Close &#x26; Apply<br>  ↓<br>Table View<br>(View Final Data)<br>  ↓<br>Model View<br>(Create Relationships between the Tables)<br>   ↓<br>Report View<br>(Create Charts &#x26; Reports)</p>
+
+
+
+<br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+## B. Model View :
 
 **Model View** shows the relationships between different tables in the Power BI data model.
 
-#### Why it is important
+#### Why is it important
 
 * Create relationships between tables.
 * Manage star and snowflake schemas.
@@ -440,11 +509,13 @@ Suppose a company maintains sales data.
 In a Hybrid Schema, the **Fact Table** stores transactional or numerical data such as sales, profit, or quantity.
 
 * Some dimensions, such as **Customer** and **Date**, are kept as single tables and connect directly to the Fact table.
-* Other dimensions, such as **Product**, are normalized into multiple tables like Product → Category → Department.
+* Other dimensions, such as **Product**, are normalized into multiple tables like
+
+<p align="center">Product → Category → Department.</p>
 
 
 
-
+## B. Table View
 
 
 
