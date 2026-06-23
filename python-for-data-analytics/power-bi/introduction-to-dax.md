@@ -1,2 +1,29 @@
-# Page 5
+# Introduction to DAX
+
+### What is DAX in Power BI?
+
+**DAX** stands for **Data Analysis Expressions**.
+
+It is a **formula language** used in Power BI to perform calculations and create new information from existing data. It is used to create **calculated columns, measures, and calculated tables** for data analysis.
+
+It works similarly to Excel formulas but is more powerful and is designed for working with large datasets.
+
+<p align="center"><strong>DAX</strong> → Performs calculations after data is loaded.</p>
+
+<p align="center"></p>
+
+### Why is DAX Used?
+
+DAX is used to:
+
+* Calculate **Total Sales**.
+* Find **Average Sales**.
+* Calculate **Profit** and **Profit Percentage**.
+* Compare **Current Year Sales** with **Previous Year Sales**.
+* Create **Year-to-Date (YTD)** and **Month-to-Date (MTD)** calculations.
+* Create **Rankings** of products or customers.
+* Apply conditions such as **IF**, **AND**, and **OR**.
+* Create **Calculated Columns**, **Measures**, and **Calculated Tables**.
+
+
 
