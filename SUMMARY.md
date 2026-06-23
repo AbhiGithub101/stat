@@ -115,6 +115,7 @@
   * [Agentic AI](python-for-data-analytics/agentic-ai/README.md)
     * [1. Introduction To Agentic AI](python-for-data-analytics/agentic-ai/1.-introduction-to-agentic-ai.md)
     * [Set up LangChain in PyCharm](python-for-data-analytics/agentic-ai/set-up-langchain-in-pycharm.md)
+    * [What is LangChain & LangChain Fundamental, Prompt Templets.](python-for-data-analytics/agentic-ai/what-is-langchain-and-langchain-fundamental-prompt-templets..md)
   * [Required Files](python-for-data-analytics/required-files.md)
   * [Statistics](python-for-data-analytics/statistics.md)
   * [Pyspark Notes](python-for-data-analytics/pyspark-notes.md)
