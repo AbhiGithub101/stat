@@ -129,7 +129,7 @@
     * [Loading the Data](python-for-data-analytics/power-bi/loading-the-data.md)
     * [Power Query Editor](python-for-data-analytics/power-bi/power-query-editor.md)
     * [Report View, Table View and Model View](python-for-data-analytics/power-bi/report-view-table-view-and-model-view.md)
-    * [Modeling](python-for-data-analytics/power-bi/modeling.md)
+    * [Report Modeling (Model View)](python-for-data-analytics/power-bi/report-modeling-model-view.md)
     * [Introduction to DAX](python-for-data-analytics/power-bi/introduction-to-dax.md)
     * [Page 4](python-for-data-analytics/power-bi/page-4.md)
     * [Page 3](python-for-data-analytics/power-bi/page-3.md)
