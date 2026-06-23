@@ -61,59 +61,7 @@ When you import data into Power BI:
 
 #### Working Process :
 
-<p align="center">Excel / CSV / SQL Database<br>  ↓<br>Power Query Editor<br>(Data Cleaning &#x26; Transformation)<br>  ↓<br>Close &#x26; Apply<br>  ↓<br>Table View<br>(View Final Data)<br>  ↓<br>Model View<br>(Create Relationships between the Tables)<br>   ↓<br>Report View<br>(Create Charts &#x26; Reports)</p>
-
-
-
-<br>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<p align="center">Excel / CSV / SQL Database<br>  ↓<br>Power Query Editor<br>(Data Cleaning &#x26; Transformation)<br>  ↓<br>Close &#x26; Apply<br>  ↓<br>Table View<br>(View Final Data)<br>  ↓<br>Model View<br>(Create Relationships between the Tables)<br></p>
 
 ## B. Model View :
 
@@ -515,33 +463,19 @@ In a Hybrid Schema, the **Fact Table** stores transactional or numerical data su
 
 
 
-## B. Table View
+## C. Report View :
 
+**Report View** is the main workspace in Power BI where we create **charts, graphs, tables, maps, and dashboards** to analyze and present data visually.
 
+#### Why Do We Use Report View?
 
+We use Report View to:
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+* Create charts and graphs.
+* Build interactive dashboards.
+* Add filters and slicers.
+* Compare data visually.
+* Share business insights with others.
 
 ### Common visuals used in Report View
 
@@ -549,10 +483,26 @@ In Report View, charts help you analyse data visually. They make it easier to co
 
 The most commonly used visuals are:
 
-1. **Table Visual** – To verify imported data.
+1. **Table Visual** – To verify imported data, display detailed records.
 2. **Matrix Visual** – To analyze relationships between dimensions and facts.
 3. **Bar/Column Chart** – To compare measures across categories.
 4. **Line Chart** – To analyze trends over time.
 5. **Scatter Chart** – To study correlations between variables.
 6. **Treemap** – To analyze hierarchical data.
 7. **Decomposition Tree** – To drill down into measures and dimensions.
+8. **Pie/Donut Chart** – Show percentages.
+9. **Map** – Show location-based data.
+10. **Gauge Chart** – Track targets and performance.
+11. **Card** – Show KPIs.
+12. **Slicer** – Filter reports.
+
+
+
+## Complete Flow of Power BI :
+
+
+
+<p align="center">Data Source<br>(Excel / CSV / SQL)<br>↓<br>Power Query Editor<br>(Clean &#x26; Transform Data)<br>↓<br>Close &#x26; Apply<br>↓<br>Table View (Data View)<br>(View Loaded Data)<br>↓<br>Model View<br>(Create Relationships)<br>↓<br>Report View<br>(Create Charts &#x26; Dashboard)</p>
+
+```
+```
