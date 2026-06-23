@@ -1,5 +1,7 @@
 # Group By ,Aggregate Functions & Having Clause
 
+{% embed url="https://youtu.be/mehbH5XTtUU?si=wJr3VpIBRHTv70Sd" %}
+
 > Our Reference Table -> **matches**
 
 ## 1. Ordinal Sorting

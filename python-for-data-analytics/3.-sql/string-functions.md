@@ -1,5 +1,7 @@
 # String Functions
 
+{% embed url="https://youtu.be/7HXjwLlercg?si=eKvYhJZ39M4W_QcV" %}
+
 > Our Reference Table : deliveries
 
 #### What are String Functions?

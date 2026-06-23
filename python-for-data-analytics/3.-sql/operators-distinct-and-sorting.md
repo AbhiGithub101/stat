@@ -1,5 +1,7 @@
 # Operators, Distinct & Sorting
 
+{% embed url="https://youtu.be/94DTD566UM0?si=vWKNtOH-cS2ur6Pe" %}
+
 > Our Reference Table -> **matches**
 
 ```sql

@@ -1,5 +1,7 @@
 # Date and Time Functions
 
+{% embed url="https://youtu.be/t5mKOpHecwQ?si=fESho3DGbeX3nQUF" %}
+
 #### What are Date & Time Functions?
 
 Date and Time functions are **built-in SQL functions** that help you work with dates and times  like getting today's date, extracting the month from a date, calculating how many days between two dates, and more.
