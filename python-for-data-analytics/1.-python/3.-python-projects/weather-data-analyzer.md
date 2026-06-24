@@ -10,7 +10,7 @@ hidden: true
 
 ***
 
-## &#x20;What Will You Build?
+## What Will You Build?
 
 A Python program that:
 
@@ -23,7 +23,7 @@ A Python program that:
 
 ***
 
-## &#x20;What is an API?
+## What is an API?
 
 **API = Application Programming Interface**
 
@@ -50,7 +50,7 @@ You give an order (request) → Waiter goes to the kitchen → Brings back food 
 
 ***
 
-## &#x20;Project Structure
+## Project Structure
 
 ```
 weather_project/
@@ -61,7 +61,7 @@ weather_project/
 
 ***
 
-## &#x20;No Extra Libraries Needed
+## No Extra Libraries Needed
 
 We use Python's built-in `urllib.request` and `json` - **No pip install required**.
 
@@ -72,7 +72,7 @@ import urllib.request
 
 ***
 
-## &#x20; Full Code - Step by Step
+## Full Code - Step by Step
 
 {% stepper %}
 {% step %}
@@ -112,25 +112,28 @@ def fetch_weather(city):
 
     print("\n📡 Fetching data from API...")
 
-    try:
-        with urllib.request.urlopen(current_url) as response:
-            current_data = json.loads(response.read().decode())
+    current_response = urllib.request.urlopen(current_url)
+    current_data = json.loads(current_response.read().decode())
+    current_response.close()
 
-        with urllib.request.urlopen(forecast_url) as response:
-            forecast_data = json.loads(response.read().decode())
+    forecast_response = urllib.request.urlopen(forecast_url)
+    forecast_data = json.loads(forecast_response.read().decode())
+    forecast_response.close()
 
-        print(" Data fetched successfully!\n")
-        return current_data, forecast_data
-
-    except Exception as e:
-        print(f"❌ Error: {e}")
+    if "error" in current_data or "error" in forecast_data:
+        print("❌ Invalid city name or API key.")
         return None, None
+
+    print("✅ Data fetched successfully!\n")
+    return current_data, forecast_data
 ```
 
 **Topic:** Functions, Strings (f-string), Dictionary (API returns JSON = dict)\
 **What is JSON?** JSON is just a **dictionary format** that APIs use to send data. Python reads it as a `dict`.
 
-> &#x20; **URL Breakdown:**
+> This version keeps the API call simple. It assumes the internet is working and the API key is correct.
+
+> **URL Breakdown:**
 >
 > * `http://api.weatherapi.com/v1/current.json` → API address
 > * `?key=YOUR_KEY` → Your identity
@@ -147,8 +150,9 @@ def save_raw_data(current_data, forecast_data):
         "current": current_data,
         "forecast": forecast_data
     }
-    with open("weather_data.json", "w") as f:
-        json.dump(combined, f, indent=4)
+    file = open("weather_data.json", "w")
+    json.dump(combined, file, indent=4)
+    file.close()
     print("💾 Raw data saved → weather_data.json")
 ```
 
@@ -294,19 +298,20 @@ def filter_by_condition(forecast_data):
 def save_report(city, current_data, avg, temp_range, conditions):
     cur = current_data["current"]
 
-    with open("report.txt", "w") as f:
-        f.write(f"Weather Report — {city.upper()}\n")
-        f.write("=" * 40 + "\n\n")
-        f.write("[Current Weather]\n")
-        f.write(f"Temperature  : {cur['temp_c']}°C\n")
-        f.write(f"Feels Like   : {cur['feelslike_c']}°C\n")
-        f.write(f"Humidity     : {cur['humidity']}%\n")
-        f.write(f"Wind Speed   : {cur['wind_kph']} kph\n")
-        f.write(f"Condition    : {cur['condition']['text']}\n\n")
-        f.write("[3-Day Forecast Stats]\n")
-        f.write(f"Avg Max Temp : {avg}°C\n")
-        f.write(f"Temp Range   : {temp_range[0]}°C – {temp_range[1]}°C\n")
-        f.write(f"Conditions   : {', '.join(conditions)}\n")
+    file = open("report.txt", "w")
+    file.write(f"Weather Report — {city.upper()}\n")
+    file.write("=" * 40 + "\n\n")
+    file.write("[Current Weather]\n")
+    file.write(f"Temperature  : {cur['temp_c']}°C\n")
+    file.write(f"Feels Like   : {cur['feelslike_c']}°C\n")
+    file.write(f"Humidity     : {cur['humidity']}%\n")
+    file.write(f"Wind Speed   : {cur['wind_kph']} kph\n")
+    file.write(f"Condition    : {cur['condition']['text']}\n\n")
+    file.write("[3-Day Forecast Stats]\n")
+    file.write(f"Avg Max Temp : {avg}°C\n")
+    file.write(f"Temp Range   : {temp_range[0]}°C – {temp_range[1]}°C\n")
+    file.write(f"Conditions   : {', '.join(conditions)}\n")
+    file.close()
 
     print("\n✅ Report saved → report.txt")
 ```
@@ -341,7 +346,7 @@ main()
 
 ***
 
-## &#x20;Complete Code&#x20;
+## Complete Code
 
 ```python
 import json
@@ -360,21 +365,23 @@ def fetch_weather(city):
     current_url = f"http://api.weatherapi.com/v1/current.json?key={API_KEY}&q={city}&aqi=no"
     forecast_url = f"http://api.weatherapi.com/v1/forecast.json?key={API_KEY}&q={city}&days=3&aqi=no"
     print("\n📡 Fetching data from API...")
-    try:
-        with urllib.request.urlopen(current_url) as response:
-            current_data = json.loads(response.read().decode())
-        with urllib.request.urlopen(forecast_url) as response:
-            forecast_data = json.loads(response.read().decode())
-        print("✅ Data fetched successfully!\n")
-        return current_data, forecast_data
-    except Exception as e:
-        print(f"❌ Error: {e}")
+    current_response = urllib.request.urlopen(current_url)
+    current_data = json.loads(current_response.read().decode())
+    current_response.close()
+    forecast_response = urllib.request.urlopen(forecast_url)
+    forecast_data = json.loads(forecast_response.read().decode())
+    forecast_response.close()
+    if "error" in current_data or "error" in forecast_data:
+        print("❌ Invalid city name or API key.")
         return None, None
+    print("✅ Data fetched successfully!\n")
+    return current_data, forecast_data
 
 def save_raw_data(current_data, forecast_data):
     combined = {"current": current_data, "forecast": forecast_data}
-    with open("weather_data.json", "w") as f:
-        json.dump(combined, f, indent=4)
+    file = open("weather_data.json", "w")
+    json.dump(combined, file, indent=4)
+    file.close()
     print("💾 Raw data saved → weather_data.json")
 
 def show_current_weather(data):
@@ -457,19 +464,20 @@ def filter_by_condition(forecast_data):
 
 def save_report(city, current_data, avg, temp_range, conditions):
     cur = current_data["current"]
-    with open("report.txt", "w") as f:
-        f.write(f"Weather Report — {city.upper()}\n")
-        f.write("=" * 40 + "\n\n")
-        f.write("[Current Weather]\n")
-        f.write(f"Temperature  : {cur['temp_c']}°C\n")
-        f.write(f"Feels Like   : {cur['feelslike_c']}°C\n")
-        f.write(f"Humidity     : {cur['humidity']}%\n")
-        f.write(f"Wind Speed   : {cur['wind_kph']} kph\n")
-        f.write(f"Condition    : {cur['condition']['text']}\n\n")
-        f.write("[3-Day Forecast Stats]\n")
-        f.write(f"Avg Max Temp : {avg}°C\n")
-        f.write(f"Temp Range   : {temp_range[0]}°C – {temp_range[1]}°C\n")
-        f.write(f"Conditions   : {', '.join(conditions)}\n")
+    file = open("report.txt", "w")
+    file.write(f"Weather Report — {city.upper()}\n")
+    file.write("=" * 40 + "\n\n")
+    file.write("[Current Weather]\n")
+    file.write(f"Temperature  : {cur['temp_c']}°C\n")
+    file.write(f"Feels Like   : {cur['feelslike_c']}°C\n")
+    file.write(f"Humidity     : {cur['humidity']}%\n")
+    file.write(f"Wind Speed   : {cur['wind_kph']} kph\n")
+    file.write(f"Condition    : {cur['condition']['text']}\n\n")
+    file.write("[3-Day Forecast Stats]\n")
+    file.write(f"Avg Max Temp : {avg}°C\n")
+    file.write(f"Temp Range   : {temp_range[0]}°C – {temp_range[1]}°C\n")
+    file.write(f"Conditions   : {', '.join(conditions)}\n")
+    file.close()
     print("\n✅ Report saved → report.txt")
 
 def main():
@@ -490,7 +498,7 @@ main()
 
 ***
 
-## &#x20;Topic Map - Where Each Topic is Used
+## Topic Map - Where Each Topic is Used
 
 | Topic         | Used In                                        |
 | ------------- | ---------------------------------------------- |
@@ -511,7 +519,7 @@ main()
 
 ***
 
-## &#x20;Sample Output
+## Sample Output
 
 ```
  Enter city name: Kanpur
@@ -553,18 +561,18 @@ main()
 
 ***
 
-## &#x20;Common Errors & Fixes
+## Common Errors & Fixes
 
-| Error               | Reason               | Fix                                           |
-| ------------------- | -------------------- | --------------------------------------------- |
-| `❌ Error: HTTP 403` | Wrong API Key        | Double check your key on WeatherAPI dashboard |
-| `❌ Error: HTTP 400` | Wrong city name      | Check spelling, try English name              |
-| `KeyError`          | Wrong dictionary key | Print the full response to see structure      |
-| `ConnectionError`   | No internet          | Check your connection                         |
+| Error                               | Reason                   | Fix                                           |
+| ----------------------------------- | ------------------------ | --------------------------------------------- |
+| Program stops with `HTTP Error 403` | Wrong API Key            | Double check your key on WeatherAPI dashboard |
+| Program stops with `HTTP Error 400` | Wrong city name          | Check spelling, try English name              |
+| `KeyError`                          | Wrong dictionary key     | Print the full response to see structure      |
+| Program stops on URL line           | No internet or API issue | Check your connection and try again           |
 
 ***
 
-## &#x20;Challenge Tasks (Try on Your Own)
+## Challenge Tasks (Try on Your Own)
 
 1. **Easy:** Also print the local time of the city from the API response
 2. **Medium:** Show which day in the forecast has the highest chance of rain
