@@ -62,6 +62,7 @@
       * [Distribution of Cards(List & Nested for)](python-for-data-analytics/1.-python/3.-python-projects/distribution-of-cards-list-and-nested-for.md)
       * [Guess the Number Game](python-for-data-analytics/1.-python/3.-python-projects/guess-the-number-game.md)
       * [Weather Data Analyzer](python-for-data-analytics/1.-python/3.-python-projects/weather-data-analyzer.md)
+      * [YouTube Comment Analysis Project](python-for-data-analytics/1.-python/3.-python-projects/youtube-comment-analysis-project.md)
     * [4.Python + SQL Projects](python-for-data-analytics/1.-python/4.python-+-sql-projects/README.md)
       * [Bookstore Management System](python-for-data-analytics/1.-python/4.python-+-sql-projects/bookstore-management-system.md)
   * [2. Data Analytics](python-for-data-analytics/2.-data-analytics/README.md)
