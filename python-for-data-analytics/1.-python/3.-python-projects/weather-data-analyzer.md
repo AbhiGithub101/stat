@@ -1,7 +1,7 @@
 # Weather Data Analyzer
 
 > **Level:** Beginner–Intermediate\
-> **Topics Used:** Data Types, Variables, Operators, Typecasting, Strings, Functions, Conditionals, Loops, List, Set, Tuple, Dictionary, User Input, File Handling\
+> **Topics Used:** Data Types, Variables, Operators, Typecasting, Strings, Functions, Conditionals, Loops, List, Set, Tuple, Dictionary, User Input\
 > **API Used:** [WeatherAPI.com](https://www.weatherapi.com/) _(Free Plan)_
 
 ***
