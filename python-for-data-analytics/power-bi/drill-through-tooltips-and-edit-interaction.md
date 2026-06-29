@@ -83,13 +83,30 @@ It provides additional details without taking extra space on the report page.
 
 
 
-
-
 ## 3. Edit Interaction
 
 **Edit Interaction** is a feature in **Power BI** that controls **how one visual affects another visual** on the same report page.
 
-Edit Interaction allows you to decide whether clicking one chart should filter, highlight, or have no effect on other charts in the report.
+**Edit Interaction** controls how one visual communicates with other visuals on the same report page. When a user clicks a data point, Power BI sends the selected value to other visuals. Based on the interaction setting (**Filter, Highlight, or None**), each visual responds differently.
+
+#### Benefits:
+
+* Controls interaction between visuals.
+* Creates interactive dashboards.
+* Prevents unwanted filtering.
+* Improves data analysis.
+* Enhances user experience.
+* Saves time during analysis.
+* Supports better decision-making.
+* Makes reports more professional.
+* Reduces report clutter.
+* Provides flexibility with Filter, Highlight, and None options.
+
+
+
+* In the visual below, first select the **Slicer visuals**, then go to the **Edit Intraction** in Visualization, and then drag the values in the **Tooltip Option**.&#x20;
+
+<figure><img src="../../.gitbook/assets/Ed_Q1.png" alt=""><figcaption></figcaption></figure>
 
 
 
@@ -99,13 +116,7 @@ Edit Interaction allows you to decide whether clicking one chart should filter, 
 
 
 
-
-
-
-
-
-
-
+<figure><img src="../../.gitbook/assets/Ed_Q2.png" alt=""><figcaption></figcaption></figure>
 
 
 
