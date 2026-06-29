@@ -503,6 +503,3 @@ The most commonly used visuals are:
 
 
 <p align="center">Data Source<br>(Excel / CSV / SQL)<br>↓<br>Power Query Editor<br>(Clean &#x26; Transform Data)<br>↓<br>Close &#x26; Apply<br>↓<br>Table View (Data View)<br>(View Loaded Data)<br>↓<br>Model View<br>(Create Relationships)<br>↓<br>Report View<br>(Create Charts &#x26; Dashboard)</p>
-
-```
-```
