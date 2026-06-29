@@ -71,11 +71,11 @@ It provides additional details without taking extra space on the report page.
 
 * Hover over the selected visuals, and the created Tooltip will appear.
 
-<figure><img src="../../.gitbook/assets/Tool_2.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Tool_3.png" alt=""><figcaption></figcaption></figure>
 
 ## How the Tooltip Works Internally
 
-<p align="center">Sales Dashboard<br>↓<br>Select Line Chart<br>(Revenue, Sum of Profit and Sum of Quantity by Fiscal Year)<br>↓<br>Go to Visualisation Option<br>↓<br>Search for Tooltip Option<br>↓<br>Drag the values from Data<br>()<br>↓<br>Hover on "Electronics"<br>↓<br>Power BI Detects<br>Electronics<br>↓<br>Reads Sales Data<br>↓<br>Applies Current Filters<br>↓<br>Shows Tooltip</p>
+<p align="center">Sales Dashboard<br>↓<br>Select Line Chart<br>(Revenue, Sum of Profit and Sum of Quantity by Fiscal Year)<br>↓<br>Go to Visualisation Option<br>↓<br>Search for Tooltip Option<br>↓<br>Drag the values from Data<br>(Profit and Quantity)<br>↓<br>Hover on "Line Chart"<br>↓<br>Power BI Detects<br>(Profit and Quantity)<br>↓<br>Reads Sales Data<br>↓<br>Applies Current Filters<br>↓<br>Shows Tooltip</p>
 
 
 
