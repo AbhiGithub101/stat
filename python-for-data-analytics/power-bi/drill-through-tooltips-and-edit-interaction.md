@@ -13,11 +13,32 @@ In simple words, it helps you **see detailed information about one selected reco
 * Helps analyze specific records.
 * To reduce the number of steps in page navigation.
 
+#### Example
+
+Suppose you have:
+
+* **Page 1:** Sales Dashboard
+* **Page 2:** Product Dashboard (Drill Through Page)
+
+<figure><img src="../../.gitbook/assets/Drill Through (1).png" alt=""><figcaption></figcaption></figure>
 
 
 
+* We can drag any data into the Drill Through field. It depends on which data we want to filter out on the 2nd Page, according to the 1st Page data visuals.
+
+<figure><img src="../../.gitbook/assets/Drill_1.png" alt=""><figcaption></figcaption></figure>
 
 
+
+* When you right-click on the **Line chart visual** for the year on Page 1, Power BI opens a tab of the **Drill Through** option, which redirects us to Page 2 and displays only the selected **Drill Through detailed data.**
+
+<figure><img src="../../.gitbook/assets/Drill_2.png" alt=""><figcaption></figcaption></figure>
+
+
+
+* Drill through automatically creates a **Back Button** over the page where the Drill through is created.
+
+<figure><img src="../../.gitbook/assets/Drill_3.png" alt=""><figcaption></figcaption></figure>
 
 
 
