@@ -6,14 +6,14 @@
 
 In simple words, it helps you **see detailed information about one selected record** without creating a new report.
 
-#### Benefits
+#### Benefits:
 
 * Shows detailed information.
 * Makes reports interactive.
 * Helps analyze specific records.
 * To reduce the number of steps in page navigation.
 
-#### Example
+#### Example:
 
 Suppose you have:
 
@@ -53,11 +53,31 @@ A **Tooltip** is a small information box that appears when you **move the mouse 
 
 It provides additional details without taking extra space on the report page.
 
-#### Benefits
+#### Benefits:
 
-* Displays extra information.
-* Keeps reports clean.
+* Shows extra information without opening another page.
+* Makes reports more interactive.
+* Saves report space.
 * Improves user experience.
+* Displays additional details instantly.
+
+
+
+* In the below visual, first select the visuals, then find the **Tooltip Option** in Visualization, then drag the values&#x20;
+
+<figure><img src="../../.gitbook/assets/Tooltip_1.png" alt=""><figcaption></figcaption></figure>
+
+
+
+*
+
+<figure><img src="../../.gitbook/assets/Tool_2.png" alt=""><figcaption></figcaption></figure>
+
+
+
+
+
+
 
 
 
