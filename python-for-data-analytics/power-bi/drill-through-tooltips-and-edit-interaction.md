@@ -63,19 +63,19 @@ It provides additional details without taking extra space on the report page.
 
 
 
-* In the below visual, first select the visuals, then find the **Tooltip Option** in Visualization, then drag the values&#x20;
+* In the visual below, first select the visuals, then find the **Tooltip Option** in Visualization, and then drag the values in the **Tooltip Option**.&#x20;
 
 <figure><img src="../../.gitbook/assets/Tooltip_1.png" alt=""><figcaption></figcaption></figure>
 
 
 
-*
+* Hover over the selected visuals, and the created Tooltip will appear.
 
 <figure><img src="../../.gitbook/assets/Tool_2.png" alt=""><figcaption></figcaption></figure>
 
+## How the Tooltip Works Internally
 
-
-
+<p align="center">Sales Dashboard<br>↓<br>Select Line Chart<br>(Revenue, Sum of Profit and Sum of Quantity by Fiscal Year)<br>↓<br>Go to Visualisation Option<br>↓<br>Search for Tooltip Option<br>↓<br>Drag the values from Data<br>()<br>↓<br>Hover on "Electronics"<br>↓<br>Power BI Detects<br>Electronics<br>↓<br>Reads Sales Data<br>↓<br>Applies Current Filters<br>↓<br>Shows Tooltip</p>
 
 
 

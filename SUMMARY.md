@@ -133,6 +133,7 @@
     * [Report View, Table View and Model View](python-for-data-analytics/power-bi/report-view-table-view-and-model-view.md)
     * [Report Modeling (Model View)](python-for-data-analytics/power-bi/report-modeling-model-view.md)
     * [Drill Through, Tooltips,  and Edit Interaction](python-for-data-analytics/power-bi/drill-through-tooltips-and-edit-interaction.md)
+    * [Customize Tooltip in Power BI](python-for-data-analytics/power-bi/customize-tooltip-in-power-bi.md)
     * [Introduction to DAX](python-for-data-analytics/power-bi/introduction-to-dax.md)
     * [Measures & Calculated Tables In Power BI Report](python-for-data-analytics/power-bi/measures-and-calculated-tables-in-power-bi-report.md)
     * [Hamburger Menu in Power BI Report](python-for-data-analytics/power-bi/hamburger-menu-in-power-bi-report.md)
