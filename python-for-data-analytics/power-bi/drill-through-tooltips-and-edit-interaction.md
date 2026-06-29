@@ -104,23 +104,19 @@ It provides additional details without taking extra space on the report page.
 
 
 
-* In the visual below, first select the **Slicer visuals**, then go to the **Edit Intraction** in Visualization, and then drag the values in the **Tooltip Option**.&#x20;
+* In the visual below, first select the **Slicer visuals**, then go to the **Format Option** in the title bar, and then go to **Edit Interaction**.&#x20;
 
 <figure><img src="../../.gitbook/assets/Ed_Q1.png" alt=""><figcaption></figcaption></figure>
 
 
 
-
-
-
-
-
+* It highlights **None** **and Filter** visuals over each visuals, to interact on which visual we have to show the changes and on which visual we have to hide the changes.
 
 <figure><img src="../../.gitbook/assets/Ed_Q2.png" alt=""><figcaption></figcaption></figure>
 
+## How the Edit Interaction Works Internally
 
-
-
+<p align="center">Sales Dashboard<br>↓<br>Select Slicer Visual<br>(Fiscal Year)<br>↓<br>Search in the title bar <br>↓<br>Format Option<br>↓<br>Click on "Edit Interaction"<br>↓<br>Sales Dashboard Detects<br>(Filter and None)<br>↓<br>Select Option to Show/Hide the visuals change<br>↓<br>Applies on Current Page<br></p>
 
 
 
