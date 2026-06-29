@@ -37,10 +37,15 @@ Suppose you have:
 
 
 * Drill through automatically creates a **Back Button** over the page where the Drill through is created.
+* And according to the 1st Page Drill Through selection, it filters out the **entire** **2nd Page data visuals**.
 
 <figure><img src="../../.gitbook/assets/Drill_3.png" alt=""><figcaption></figcaption></figure>
 
+## How Drill Through Works Internally
 
+<p align="center">User Clicks Data Point<br>↓<br>Right-click on Visual<br>↓<br>Choose Drill Through<br>↓<br>Power BI Reads Selected Value<br>(Fiscal Year = 2014)<br>↓<br>Passes Filter to Drill Through Page<br>↓<br>Detail Page Opens<br>↓<br>Only Matching Records Are Displayed</p>
+
+<p align="center"></p>
 
 ## 2. Tooltips
 
