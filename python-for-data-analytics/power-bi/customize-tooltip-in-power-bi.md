@@ -26,13 +26,13 @@
 
 
 
-* Click on **ON** option on **Allow use as tooltip**, a new tooltip page open on page.
+* Click the "**ON"** option in **Allow use as tooltip**; a new tooltip page opens on the page.
 
 <figure><img src="../../.gitbook/assets/Cus_Tool7.png" alt=""><figcaption></figcaption></figure>
 
 
 
-* On Visualization page, go to Build Visual and select **Table Chart**.
+* On Visualization page, go to **Build Visual** and select **Table Chart**.
 
 <figure><img src="../../.gitbook/assets/Cus_Tool8.png" alt=""><figcaption></figcaption></figure>
 
@@ -52,7 +52,7 @@
 
 * Then go to the **Sales Dashboard Pag**e, select any visuals to connect with the **Customioze Tooltip**.
 
-<p align="center">Go to Visualization -----> Format Visual -----> <strong>ON</strong> Tooltips -----> Go to <strong>Options Type</strong></p>
+<p align="center">Select Visual ---------> Go to Visualization  ---------> Format Visual --------> <strong>ON</strong> Tooltips ---------> Go to <strong>Options Type</strong></p>
 
 <figure><img src="../../.gitbook/assets/Cus_Tool1.png" alt=""><figcaption></figcaption></figure>
 
@@ -92,5 +92,5 @@ Create a duplicate page of Custamize Tooltip -----> Select different Chart Visua
 
 ## How the Customize Tooltip Works Internally
 
-<p align="center">Create New Page<br>↓<br>Select Line Chart<br>(Revenue, Sum of Profit and Sum of Quantity by Fiscal Year)<br>↓<br>Go to Visualisation Option<br>↓<br>Search for Tooltip Option<br>↓<br>Drag the values from Data<br>(Profit and Quantity)<br>↓<br>Hover on "Line Chart"<br>↓<br>Power BI Detects<br>(Profit and Quantity)<br>↓<br>Reads Sales Data<br>↓<br>Applies Current Filters<br>↓<br>Shows Tooltip</p>
+<p align="center">Create New Page<br>↓<br>Go to Format Page<br>↓<br>Page Information<br>↓<br>Click the "<strong>ON"</strong> option in Allow use as tooltip<br>↓<br>Go to Build Visual and select Table Chart<br>↓<br>Drag the values on Built Visual<br>↓<br>Go to Sales Dashboard<br>↓<br>Select Visual<br>↓<br>Go to Format Visual <br>↓<br>Click the "<strong>ON"</strong> option in Tooltip<br>↓<br>Go to Options Type<br>(Select Report Page)<br>↓<br>Go to Options Page<br> (Select Created Tooltip page)<br>↓<br>Hover on "Line Chart"<br>↓<br>Power BI Detects<br>(Revenue and Profit )<br>↓<br>Reads Customize Tooltip<br>↓<br>Applies to Current Filters<br>↓<br>Shows Customize Tooltip</p>
 
