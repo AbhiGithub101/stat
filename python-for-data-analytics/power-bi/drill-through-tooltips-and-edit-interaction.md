@@ -73,7 +73,7 @@ It provides additional details without taking extra space on the report page.
 
 <figure><img src="../../.gitbook/assets/Tool_3.png" alt=""><figcaption></figcaption></figure>
 
-## How the Tooltip Works Internally
+## How Tooltip Works Internally
 
 <p align="center">Sales Dashboard<br>↓<br>Select Line Chart<br>(Revenue, Sum of Profit and Sum of Quantity by Fiscal Year)<br>↓<br>Go to Visualisation Option<br>↓<br>Search for Tooltip Option<br>↓<br>Drag the values from Data<br>(Profit and Quantity)<br>↓<br>Hover on "Line Chart"<br>↓<br>Power BI Detects<br>(Profit and Quantity)<br>↓<br>Reads Sales Data<br>↓<br>Applies Current Filters<br>↓<br>Shows Tooltip</p>
 
@@ -114,7 +114,7 @@ It provides additional details without taking extra space on the report page.
 
 <figure><img src="../../.gitbook/assets/Ed_Q2.png" alt=""><figcaption></figcaption></figure>
 
-## How the Edit Interaction Works Internally
+## How  Edit Interaction Works Internally
 
 <p align="center">Sales Dashboard<br>↓<br>Select Slicer Visual<br>(Fiscal Year)<br>↓<br>Search in the title bar <br>↓<br>Format Option<br>↓<br>Click on "Edit Interaction"<br>↓<br>Sales Dashboard Detects<br>(Filter and None)<br>↓<br>Select Option to Show/Hide the visuals change<br>↓<br>Applies on Current Page<br></p>
 
