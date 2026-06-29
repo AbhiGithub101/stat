@@ -35,3 +35,53 @@ It provides additional details without taking extra space on the report page.
 
 
 
+
+
+
+
+## 3. Edit Interaction
+
+**Edit Interaction** is a feature in **Power BI** that controls **how one visual affects another visual** on the same report page.
+
+Edit Interaction allows you to decide whether clicking one chart should filter, highlight, or have no effect on other charts in the report.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
