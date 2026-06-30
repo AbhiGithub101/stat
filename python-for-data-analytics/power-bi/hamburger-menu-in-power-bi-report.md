@@ -1,10 +1,10 @@
 # Hamburger Menu in Power BI Report
 
-## What Is Hamburger Menu
+## What Is a Hamburger Menu
 
 A **Hamburger Menu** in Power BI is a collapsible navigation menu represented by **three horizontal lines (☰)**. When a user clicks the icon, a hidden menu opens and displays links or buttons to different report pages. Clicking the icon again or the close (✖) button hides the menu. It also allows users to move between report pages while saving screen space.
 
-It is called a **Hamburger Menu** because the three horizontal lines look like the top bun, patty, and bottom bun of a hamburger.It is commonly used in professional dashboards.
+It is called a **Hamburger Menu** because the three horizontal lines look like the top bun, patty, and bottom bun of a hamburger. It is commonly used in professional dashboards.
 
 
 
@@ -42,7 +42,7 @@ It is called a **Hamburger Menu** because the three horizontal lines look like t
 
 
 
-**Select close (✖) -----> Go to View option ------> Select Bookmarks and Section Option -----> In Selection Page select all Buttons, Image and Shape**&#x20;
+**Select close (✖) -----> Go to View option ------> Select Bookmarks and Section Option -----> In Selection Page select all Buttons, Images, and Shapes**&#x20;
 
 <figure><img src="../../.gitbook/assets/Ham3.png" alt=""><figcaption></figcaption></figure>
 
@@ -90,149 +90,52 @@ It is called a **Hamburger Menu** because the three horizontal lines look like t
 
 
 
-
-
-
+<p align="center"><strong>Go to View Menu -----> Un-tick Bookmarks and Selection ----->Go to Format Image</strong> </p>
 
 <figure><img src="../../.gitbook/assets/Ham11.png" alt=""><figcaption></figcaption></figure>
 
 
 
-
-
-
-
-
+<p align="center"><strong>In Format Image -----> in Action option -----> Click "ON" option in Action</strong></p>
 
 <figure><img src="../../.gitbook/assets/Ham12.png" alt=""><figcaption></figcaption></figure>
 
 
 
-
-
-
-
-
-
-
+<p align="center"><strong>In Action -----> Select Action Type -----> Select Bookmark Option</strong>  </p>
 
 <figure><img src="../../.gitbook/assets/Ham13.png" alt=""><figcaption></figcaption></figure>
 
 
 
-
-
-
-
-
+<p align="center"><strong>In Action -----> Go to Bookmark option -----> Select Show Menu</strong></p>
 
 <figure><img src="../../.gitbook/assets/Ham14.png" alt=""><figcaption></figcaption></figure>
 
 
 
-
-
-
+**Open Group1 Image -----> In Format Image -----> in Action option -----> Click "ON" option in Action** &#x20;
 
 <figure><img src="../../.gitbook/assets/Ham15.png" alt=""><figcaption></figcaption></figure>
 
 
 
-
-
-
+<p align="center"><strong>In Action -----> Select Action Type -----> Select Bookmark Option</strong>  </p>
 
 <figure><img src="../../.gitbook/assets/Ham16.png" alt=""><figcaption></figcaption></figure>
 
 
 
-
-
-
-
-
+<p align="center"><strong>In Action -----> Go to Bookmark option -----> Select HideMenu</strong></p>
 
 <figure><img src="../../.gitbook/assets/Ham17.png" alt=""><figcaption></figcaption></figure>
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+**Now, click on the Hamburger Menu by pressing Ctrl+left mouse click; you can access the Hamburger icon.**
 
 
 
 ## How the Hamburger Works Internally
 
-<p align="center">Dashboard Opens<br>↓<br>Menu Hidden<br>↓<br>User Clicks ☰<br>↓<br>Bookmark (Menu_Open)<br>↓<br>Selection Pane<br>↓<br>Menu Group Visible<br>↓<br>User Selects Page<br>↓<br>Navigate to Selected Page<br>↓<br>Dashboard Opens</p>
-
-
-
+<p align="center">Dashboard Opens<br>↓<br>Menu Hidden<br>↓<br>User Clicks ☰<br>(CTRL + Left mouse click)<br>↓<br>Bookmark Open<br>(Menu_Open)<br>↓<br>Menu Group Visible<br>↓<br>Navigate to Selected Page<br>(Click on Buttons)<br>↓<br>Dashboard Opens<br>↓<br>User Clicks Close (✖) <br>(CTRL + Left mouse click)<br><br></p>
