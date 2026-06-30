@@ -126,7 +126,7 @@ It is called a **Hamburger Menu** because the three horizontal lines look like t
 
 
 
-<p align="center"><strong>In Action -----> Go to Bookmark option -----> Select HideMenu</strong></p>
+<p align="center"><strong>In Action -----> Go to Bookmark option -----> Select Hide Menu</strong></p>
 
 <figure><img src="../../.gitbook/assets/Ham17.png" alt=""><figcaption></figcaption></figure>
 
