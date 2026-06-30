@@ -1,6 +1,6 @@
 # Hamburger Menu in Power BI Report
 
-## How to Create a Hamburger Menu
+## What Is Hamburger Menu
 
 A **Hamburger Menu** in Power BI is a collapsible navigation menu represented by **three horizontal lines (☰)**. When a user clicks the icon, a hidden menu opens and displays links or buttons to different report pages. Clicking the icon again or the close (✖) button hides the menu. It also allows users to move between report pages while saving screen space.
 
@@ -28,15 +28,193 @@ It is called a **Hamburger Menu** because the three horizontal lines look like t
 
 
 
+### How to Create a Hamburger Menu
+
+**Click on Box -----> Go to Insert option -----> Click on Image -----> Upload the horizontal lines (☰) image**
+
 <figure><img src="../../.gitbook/assets/Ham1.png" alt=""><figcaption></figcaption></figure>
 
 
 
-
-
-
+**Insert a rectangle from Shape -----> Drag the button over the rectangle -----> Insert the close (✖) image**
 
 <figure><img src="../../.gitbook/assets/Ham2.png" alt=""><figcaption></figcaption></figure>
+
+
+
+**Select close (✖) -----> Go to View option ------> Select Bookmarks and Section Option -----> In Selection Page select all Buttons, Image and Shape**&#x20;
+
+<figure><img src="../../.gitbook/assets/Ham3.png" alt=""><figcaption></figcaption></figure>
+
+
+
+<p align="center"><strong>Create a group of all selected items over the Selection Page</strong></p>
+
+<figure><img src="../../.gitbook/assets/Ham4.png" alt=""><figcaption></figcaption></figure>
+
+
+
+**Select Group1 and Image -----> Hide the Image in Selection Window -----> Show Group1 in Selection Window**&#x20;
+
+<figure><img src="../../.gitbook/assets/Ham5.png" alt=""><figcaption></figcaption></figure>
+
+
+
+**In Bookmark Window -----> Click on Add option -----> Rename the Bookmarks tab(Show Menu)**
+
+<figure><img src="../../.gitbook/assets/Ham6.png" alt=""><figcaption></figcaption></figure>
+
+
+
+**Click the 3 dots on Show Menu in Bookmarks -----> First tick the Selected Visuals -----> Second un-tick the Data  -----> And last click on Update**&#x20;
+
+<figure><img src="../../.gitbook/assets/Ham7.png" alt=""><figcaption></figcaption></figure>
+
+
+
+**Select Group1 and Image -----> Hide Group1 in Selection Window  -----> Show the Image in Selection Window**
+
+<figure><img src="../../.gitbook/assets/Ham8.png" alt=""><figcaption></figcaption></figure>
+
+
+
+**In Bookmark Window -----> Click on Add option -----> Rename the Bookmarks tab(Hide Menu)**
+
+<figure><img src="../../.gitbook/assets/Ham9.png" alt=""><figcaption></figcaption></figure>
+
+
+
+**Click the 3 dots on Hide Menu in Bookmarks -----> First tick the Selected Visuals -----> Second un-tick the Data  -----> And last click on Update**&#x20;
+
+<figure><img src="../../.gitbook/assets/Ham10.png" alt=""><figcaption></figcaption></figure>
+
+
+
+
+
+
+
+<figure><img src="../../.gitbook/assets/Ham11.png" alt=""><figcaption></figcaption></figure>
+
+
+
+
+
+
+
+
+
+<figure><img src="../../.gitbook/assets/Ham12.png" alt=""><figcaption></figcaption></figure>
+
+
+
+
+
+
+
+
+
+
+
+<figure><img src="../../.gitbook/assets/Ham13.png" alt=""><figcaption></figcaption></figure>
+
+
+
+
+
+
+
+
+
+<figure><img src="../../.gitbook/assets/Ham14.png" alt=""><figcaption></figcaption></figure>
+
+
+
+
+
+
+
+<figure><img src="../../.gitbook/assets/Ham15.png" alt=""><figcaption></figcaption></figure>
+
+
+
+
+
+
+
+<figure><img src="../../.gitbook/assets/Ham16.png" alt=""><figcaption></figcaption></figure>
+
+
+
+
+
+
+
+
+
+<figure><img src="../../.gitbook/assets/Ham17.png" alt=""><figcaption></figcaption></figure>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
