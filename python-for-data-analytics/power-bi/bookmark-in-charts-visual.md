@@ -32,17 +32,17 @@ These are some benefits given below :
 
 ### How to Create Bookmarks in Chart Visuals
 
-Below mentioned step to guide how to create Charts Bookmarks are as follows:
+Below mentioned step to guide how to create Chart Bookmarks as follows:
 
 
 
-First of all copy the line chart and then paste over the same visual with the help of **"CTRL+C"** and **"CTRL+V".**
+First of all, copy the line chart and then paste over the same visual with the help of **"CTRL+C"** and **"CTRL+V".**
 
 <figure><img src="../../.gitbook/assets/cv1.png" alt=""><figcaption></figcaption></figure>
 
 <p align="center"></p>
 
-<p align="center"><strong>-------------> Insert both the Images over the Line Chart &#x3C;-------------</strong></p>
+<p align="center"> <strong>Insert a Line chart image and a Doughnut chart image over the Line Chart</strong> </p>
 
 <div><figure><img src="../../.gitbook/assets/icons8-line-chart-94.png" alt=""><figcaption></figcaption></figure> <figure><img src="../../.gitbook/assets/icons8-donut-chart-94.png" alt=""><figcaption></figcaption></figure></div>
 
@@ -50,43 +50,43 @@ First of all copy the line chart and then paste over the same visual with the he
 
 
 
-<p align="center"><strong>Go on View Option in title bar ------> Select Filters, Bookmarks, and Selection</strong></p>
+<p align="center"><strong>Go to the View Option in the title bar ------> Select Filters, Bookmarks, and Selection</strong></p>
 
 <figure><img src="../../.gitbook/assets/cv3.png" alt=""><figcaption></figcaption></figure>
 
 
 
-<p align="center"><strong>Go on Selection option ----->Select Donut Chart Image, Line Chart Image, Line Chart Visual, and Donut Chart Visual -----> Hide Line Chart Image and Donut Chart Visual</strong></p>
+<p align="center"><strong>Go to the Selection option -----> Select Doughnut Chart Image, Line Chart Image, Line Chart Visual, and Doughnut Chart Visual -----> Hide Line Chart Image and Doughnut Chart Visual</strong></p>
 
 <figure><img src="../../.gitbook/assets/cv4.png" alt=""><figcaption></figcaption></figure>
 
 <p align="center"></p>
 
-<p align="center"><strong>Go on Bookmarks option -----> Click on Add Bookmark -----> Rename the tab(Line Chart)</strong></p>
+<p align="center"><strong>Go to the Bookmarks option -----> Click on Add Bookmark -----> Rename the tab(Line Chart)</strong></p>
 
 <figure><img src="../../.gitbook/assets/cv5.png" alt=""><figcaption></figcaption></figure>
 
 
 
-<p align="center"><strong>Go on Selection option ----->Select Donut Chart Image, Line Chart Image, Line Chart Visual, and Donut Chart Visual -----> Hide Donut Chart Image and LineChart Visual</strong></p>
+<p align="center"><strong>Go to the Selection option -----> Select Doughnut Chart Image, Line Chart Image, Line Chart Visual, and Doughnut Chart Visual -----> Hide Doughnut Chart Image and Line Chart Visual</strong></p>
 
 <figure><img src="../../.gitbook/assets/cv6.png" alt=""><figcaption></figcaption></figure>
 
 
 
-<p align="center"><strong>Go on Bookmarks option -----> Click on Add Bookmark -----> Rename the tab(Donut Chart)</strong></p>
+<p align="center"><strong>Go to Bookmarks option -----> Click on Add Bookmark -----> Rename the tab(Doughnut Chart)</strong></p>
 
 <figure><img src="../../.gitbook/assets/cv7.png" alt=""><figcaption></figcaption></figure>
 
 
 
-<p align="center"><strong>Un-Click on Bookmarks option and Selection Option in View Option -----> Select the inset Line Chart image on Visual -----> Go on Format Image</strong></p>
+<p align="center"><strong>Unclick on Bookmarks option and Selection Option in View Option -----> Select the inset Line Chart image on Visual -----> Go to Format Image</strong></p>
 
 <figure><img src="../../.gitbook/assets/cv8.png" alt=""><figcaption></figcaption></figure>
 
 
 
-<p align="center"><strong>Click "ON" at Action option -----> In Action -----> Select Action Type -----> Select Bookmark Option</strong>  </p>
+<p align="center"><strong>Click "ON" at the Action option -----> In Action -----> Select Action Type -----> Select Bookmark Option</strong>  </p>
 
 <figure><img src="../../.gitbook/assets/cv9.png" alt=""><figcaption></figcaption></figure>
 
@@ -98,129 +98,25 @@ First of all copy the line chart and then paste over the same visual with the he
 
 
 
-<p align="center"><strong>Select the inset Line Chart image on Visual -----> Go on Format Image</strong></p>
+<p align="center"><strong>Select the inset Doughnut Chart image on Visual -----> Go to Format Image</strong></p>
 
 <figure><img src="../../.gitbook/assets/cv11 (1).png" alt=""><figcaption></figcaption></figure>
 
 
 
-
-
-
-
-
-
-
-
-
+<p align="center"><strong>Click "ON" at the Action option -----> In Action -----> Select Action Type -----> Select Bookmark Option</strong>  </p>
 
 <figure><img src="../../.gitbook/assets/cv12 (1).png" alt=""><figcaption></figcaption></figure>
 
 
 
-
-
-
-
-
+<p align="center"><strong>In Action -----> Go to the Bookmark option -----> Select Doughnut Chart</strong></p>
 
 <figure><img src="../../.gitbook/assets/cv13 (1).png" alt=""><figcaption></figcaption></figure>
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+**Now, click on the Doughnut Chart image over the Line Chart Visual by pressing Ctrl+left mouse click; you can access the Bookmarks on the Chart Visual.**
 
 
 
