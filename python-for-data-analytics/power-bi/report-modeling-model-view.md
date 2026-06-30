@@ -4,9 +4,7 @@
 
 **Report Modeling in Power BI** is the process of organising and connecting data tables so that reports and dashboards can be created easily and accurately. It means **creating relationships between tables, arranging data properly, and preparing the data structure** before creating charts and reports.
 
-<figure><img src="../../.gitbook/assets/Screenshot 2026-06-12 163346.png" alt=""><figcaption></figcaption></figure>
-
-
+<figure><img src="../../.gitbook/assets/Img.png" alt=""><figcaption></figcaption></figure>
 
 
 
