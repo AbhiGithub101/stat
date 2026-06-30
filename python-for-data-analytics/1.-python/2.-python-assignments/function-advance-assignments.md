@@ -224,13 +224,14 @@ print(l)
 
 </details>
 
-13. A palindrome is a word or phrase which reads the same in both directions. Given below are some palindromic strings:\
+13. Write a program that defines a function **ispalindrome()** which checks whether a given string is a palindrome or not. Ignore spaces and case mismatch while checking for palindrome.\
+    \
+    palindromic strings:\
     **deed**\
     **level**\
     **Malayalam**\
     **Rats live on no evil star**\
     **Murder for a jar of red rum**
-14. Write a program that defines a function **ispalindrome()** which checks whether a given string is a palindrome or not. Ignore spaces and case mismatch while checking for palindrome.
 
 <details>
 
@@ -250,7 +251,7 @@ print(ispalindrome('consoleflare'))
 
 </details>
 
-15. Write a program that defines a function **convert()** that receives a string containing a sequence of whitespace separated words and returns a string after removing all duplicate words and sorting them alphnumerically.\
+14. Write a program that defines a function **convert()** that receives a string containing a sequence of whitespace separated words and returns a string after removing all duplicate words and sorting them alphnumerically.\
     For example if the string passed to **convert()** is\
     s = 'Sakhi was a singer because her mother was a singer, and Sakhi\\'s mother was a singer because her father was a singer'.\
     \
@@ -272,7 +273,7 @@ print(convert(s))
 
 </details>
 
-16. Write a program that defines a function **count\_alphabets\_digits()** that accepts a string and calculates the number of alphabets and digits in it. It should return these values as a dictionary. Call this function for some sample strings.
+15. Write a program that defines a function **count\_alphabets\_digits()** that accepts a string and calculates the number of alphabets and digits in it. It should return these values as a dictionary. Call this function for some sample strings.
 
 <details>
 
@@ -295,7 +296,7 @@ print(d)
 
 </details>
 
-17. Write a program that defines a function called **frequency()** which computes the frequency of words present in a string passed to it. The frequencies should be returned in sorted order by words in the string.
+16. Write a program that defines a function called **frequency()** which computes the frequency of words present in a string passed to it. The frequencies should be returned in sorted order by words in the string.
 
 <details>
 
@@ -317,7 +318,7 @@ for key in words:
 
 </details>
 
-18. Write a Python program to find the factorial of a number using **functions.**
+17. Write a Python program to find the factorial of a number using **functions.**
 
 <details>
 
@@ -337,7 +338,7 @@ factorial(4)
 
 </details>
 
-19. Write a python program to check whether the number is prime or not using functions.
+18. Write a python program to check whether the number is prime or not using functions.
 
 <details>
 
@@ -361,7 +362,7 @@ else:
 
 </details>
 
-20. Write a Python program to count the number of vowels in a string.
+19. Write a Python program to count the number of vowels in a string.
 
 <details>
 
@@ -382,7 +383,7 @@ print("Number of vowels in", st, "is", count_vowels(st))
 
 </details>
 
-21. Write a Python function to find the sum of the digits of a given number.
+20. Write a Python function to find the sum of the digits of a given number.
 
 <details>
 
@@ -406,7 +407,7 @@ print("The sum of digits of", number, "is", sum_of_digits(number))
 
 </details>
 
-22. Write a python program to take multiple number of variables but the number of arguments are not fixed they may vary and calculate the sum of those numbers. **It is provided that the values passed must be numbers.**
+21. Write a python program to take multiple number of variables but the number of arguments are not fixed they may vary and calculate the sum of those numbers. **It is provided that the values passed must be numbers.**
 
 <details>
 
@@ -429,7 +430,7 @@ print(sum_all(1, 3, 5, 7))    # Output: 16
 
 </details>
 
-23. Write a Python program that takes a list of numbers as input and outputs the range of the list (i.e. the difference between the largest and smallest values).
+22. Write a Python program that takes a list of numbers as input and outputs the range of the list (i.e. the difference between the largest and smallest values).
 
 <details>
 
@@ -456,7 +457,7 @@ print(find_range(numbers))  # Output: 0
 
 </details>
 
-24. Write a Python function that takes a list of numbers as input and returns a new list containing only the even numbers from the input list.
+23. Write a Python function that takes a list of numbers as input and returns a new list containing only the even numbers from the input list.
 
 <details>
 
@@ -485,7 +486,7 @@ print(even_numbers(numbers))  # Output: []
 
 </details>
 
-25. Write a Python function that takes a list of strings as input and returns a new list containing only the strings that start with the letter 'A'.
+24. Write a Python function that takes a list of strings as input and returns a new list containing only the strings that start with the letter 'A'.
 
 <details>
 
@@ -511,7 +512,7 @@ print(filter_strings(strings))  # Output: ['Ant', 'Ape', 'Alligator']
 
 </details>
 
-26. Write a Python function that takes a list of numbers as input and returns the average of all the numbers in the list.
+25. Write a Python function that takes a list of numbers as input and returns the average of all the numbers in the list.
 
 <details>
 
