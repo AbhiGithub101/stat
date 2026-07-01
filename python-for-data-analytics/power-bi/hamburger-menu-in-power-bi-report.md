@@ -138,4 +138,4 @@ It is called a **Hamburger Menu** because the three horizontal lines look like t
 
 ## How the Hamburger Works Internally
 
-<p align="center">Dashboard Opens<br>↓<br>Menu Hidden<br>↓<br>User Clicks ☰<br>(CTRL + Left mouse click)<br>↓<br>Bookmark Open<br>(Menu_Open)<br>↓<br>Menu Group Visible<br>↓<br>Navigate to Selected Page<br>(Click on Buttons)<br>↓<br>Dashboard Opens<br>↓<br>User Clicks Close (✖) <br>(CTRL + Left mouse click)<br><br></p>
+<p align="center">Dashboard Opens<br>↓<br>Menu Hidden<br>↓<br>User Clicks on "☰"<br>(CTRL + Left mouse click)<br>↓<br>Bookmark Open<br>(Menu_Open)<br>↓<br>Menu Group Visible<br>↓<br>Navigate to Selected Page<br>(Click on Buttons)<br>↓<br>Dashboard Opens<br>↓<br>User Clicks on Close (✖) <br>(CTRL + Left mouse click)<br><br></p>

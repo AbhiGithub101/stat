@@ -120,37 +120,6 @@ First of all, copy the line chart and then paste over the same visual with the h
 
 
 
+## How the Hamburger Works Internally
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<p align="center"><br>Create a duplicate of the Line Chart Visual<br>↓<br>Paste the duplicate chart over the Line Chart<br>(Change the chart visual of the duplicate Line Chart like, Doughnut chart)<br>↓<br>Insert a Line Chart image and a Doughnut Chart image over the Line Chart <br>↓<br>Open the View Tab<br>↓<br>Click "Add Bookmark" &#x26; "Add Selection"<br>↓<br>Open Selection Pane<br>↓<br>Selection Pane Displays All Report Visuals<br>↓<br>Select the Following Visuals<br>                                                         ├── Doughnut Chart Image (Show)<br>                                               ├── Line Chart Image (Show)<br>                                             ├── Line Chart Visual (Hide)<br>                                                      └── Doughnut Chart Visual (Hide)<br>↓<br>Required Visuals are Selected<br>↓<br>Create <strong>Bookmark 1</strong><br><strong>(Line Chart)</strong><br>↓<br>Change the visual to a <strong>Doughnut Chart</strong><br>↓<br>Selection Pane Displays All Report Visuals<br>↓<br>Select the Following Visuals<br>                                                         ├──  Doughnut Chart Image (Hide)<br>                                               ├── Line Chart Image (Hide)<br>                                                ├── Line Chart Visual (Show)<br>                                                         └── Doughnut Chart Visual (Show)<br>↓<br>Required Visuals are Selected<br>↓<br>Create <strong>Bookmark 2</strong><br><strong>(Doughnut Chart)</strong><br>↓<br>User Clicks on Line Chart Image<br>(CTRL + Left mouse click)<br>↓<br>Applies to the Current page<br>(Sales Dashboard)<br><br></p>
