@@ -1,3 +1,7 @@
+---
+hidden: true
+---
+
 # Report Modeling (Model View)
 
 ## What is Report Modeling?

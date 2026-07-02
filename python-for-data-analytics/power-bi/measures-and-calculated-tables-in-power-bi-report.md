@@ -1,3 +1,7 @@
+---
+hidden: true
+---
+
 # Measures & Calculated Tables In Power BI Report
 
 ## What is a Measure in Power BI?

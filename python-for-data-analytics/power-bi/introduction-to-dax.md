@@ -1,3 +1,7 @@
+---
+hidden: true
+---
+
 # Introduction to DAX
 
 ### What is DAX in Power BI?
