@@ -6,19 +6,29 @@ hidden: true
 
 ## What is a Measure in Power BI?
 
-A **Measure** is a DAX (Data Analysis Expressions) formula that performs calculations on your data. Unlike calculated columns, measures are calculated **only when they are used in a visual**.
+A **Measure** is a **calculation created using DAX (Data Analysis Expressions)** that calculates results **only when needed** based on the data shown in a report.
 
 **Example:**
 
-* Total Revenue
+* Total Sales
 * Total Profit
 * Average Sales
+* Number of Customers
+* Maximum Sales
+* Minimum Sales
+* Growth Percentage
 * Profit Margin
-* Total Quantity
+* Running Total
+* Year-to-Date Sales
+* Previous Year Sales
 
 
 
+## How to Create Measures&#x20;
 
+
+
+<p align="center">Open your report<br>↓<br>Go to the <strong>Modeling</strong> tab<br>↓<br>Click <strong>New Measure</strong><br>↓<br>A formula bar appears<br>↓<br>Write your DAX formula<br>Total Sales = SUM(Sales[Sales Amount])<br>↓<br>Press <strong>Enter</strong><br><strong>(</strong>Your measure appears under the selected table with a calculator icon)</p>
 
 
 
@@ -113,7 +123,11 @@ Use calculated tables when you need to:
 
 
 
+## How Measures Work
 
+
+
+<p align="center">Data Tables<br>↓<br>Create Measure (DAX Formula)<br>↓<br>Measure calculates values<br>↓<br>Filters/Slicers applied<br>↓<br>Result changes automatically<br>↓<br>Display in Charts, Cards and Tables</p>
 
 
 
