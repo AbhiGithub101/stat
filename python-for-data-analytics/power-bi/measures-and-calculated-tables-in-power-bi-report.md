@@ -98,16 +98,87 @@ Measures are commonly used in:
 
 A **Calculated Table** in Power BI is a new table created using **DAX (Data Analysis Expressions)** instead of importing data from an external source. It is stored in the Power BI data model and is **calculated when the data model is refreshed**.
 
-#### When to Use Calculated Tables?
+### Why Do We Use Calculated Tables?
 
 Use calculated tables when you need to:
 
-* Create a Date/Calendar table
-* Create summary or aggregated tables
-* Combine multiple tables
-* Filter existing data into a new table
-* Create lookup/reference tables
-* Build custom reporting tables
+* Create a new table from existing data.
+* Filter and store only required records.
+* Combine multiple tables into one.
+* Create lookup (dimension) tables.
+* Build calendar/date tables.
+* Create summary tables.
+* Remove duplicate records.
+* Support advanced data modeling.
+
+
+
+### How to Create a Calculated Table
+
+<p align="center">Open your report<br>↓<br>Go to the <strong>Modeling</strong> tab<br>↓<br>Click <strong>New Table</strong><br>↓<br>A formula bar appears<br>↓<br>Write your DAX formula<br>(Sales Copy =Sales)<br>↓<br>Press <strong>Enter</strong><br><strong>(</strong>Power BI creates a new table in the <strong>Fields</strong> pane<strong>)</strong></p>
+
+<p align="center"></p>
+
+### Benefits of Calculated Tables
+
+* Create new tables without modifying the original data source.
+* Simplify complex data models.
+* Build reusable lookup and dimension tables.
+* Prepare data for relationships and reporting.
+* Support advanced DAX calculations.
+* Improve report organization.
+
+<p align="center"></p>
+
+<p align="center"></p>
+
+## Structure of a Calculated Table
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -137,146 +208,6 @@ Use calculated tables when you need to:
 | Uses DAX               | ✅                | ✅                 | ✅                            |
 | Stored in the model    | ✅                | ✅                 | ❌ (calculated at query time) |
 | Updates on refresh     | ✅                | ✅                 | Dynamic with filter context  |
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
