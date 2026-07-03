@@ -130,55 +130,19 @@ Use calculated tables when you need to:
 
 <p align="center"></p>
 
-<p align="center"></p>
+### Structure of a Calculated Table
 
-## Structure of a Calculated Table
+Table Name =&#x20;DAX Function(...)
 
+Example:
 
+High Sales =&#x20;FILTER( Sales, Sales\[Sales Amount] > 5000 )
 
+Here:
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+* **Table Name** = High Sales
+* **DAX Function** = FILTER()
+* **Source Table** = Sales
 
 
 
@@ -192,9 +156,24 @@ Use calculated tables when you need to:
 | No DAX required                     | Requires DAX formulas                    |
 | Can be transformed in Power Query   | Created in the Modeling view             |
 
+### Where Calculated Tables Are Used
+
+Calculated tables are commonly used for:
+
+* Date (Calendar) tables
+* Product lookup tables
+* Customer lookup tables
+* Summary reports
+* KPI support tables
+* What-if parameter tables
+* Bridge tables in many-to-many relationships
+* Filtered subsets of large datasets
 
 
 
+### How a Calculated Table Works
+
+<p align="center">Import Data<br>↓<br>Existing Tables<br>↓<br>Write DAX Formula<br>↓<br>Power BI Creates New Table<br>↓<br>New Table Stored in Model<br>↓<br>Use in Reports, Relationships, and Visuals<br></p>
 
 
 
@@ -208,18 +187,6 @@ Use calculated tables when you need to:
 | Uses DAX               | ✅                | ✅                 | ✅                            |
 | Stored in the model    | ✅                | ✅                 | ❌ (calculated at query time) |
 | Updates on refresh     | ✅                | ✅                 | Dynamic with filter context  |
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
