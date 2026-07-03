@@ -22,19 +22,13 @@ A **Measure** is a **calculation created using DAX (Data Analysis Expressions)**
 * Year-to-Date Sales
 * Previous Year Sales
 
-
-
-## How to Create Measures&#x20;
+### How to Create Measures&#x20;
 
 
 
 <p align="center">Open your report<br>↓<br>Go to the <strong>Modeling</strong> tab<br>↓<br>Click <strong>New Measure</strong><br>↓<br>A formula bar appears<br>↓<br>Write your DAX formula<br>Total Sales = SUM(Sales[Sales Amount])<br>↓<br>Press <strong>Enter</strong><br><strong>(</strong>Your measure appears under the selected table with a calculator icon)</p>
 
-
-
-
-
-## Benefits of Measures
+### Benefits of Measures
 
 * Dynamic calculations based on filters and slicers.
 * Faster and more memory-efficient than calculated columns.
@@ -43,27 +37,43 @@ A **Measure** is a **calculation created using DAX (Data Analysis Expressions)**
 * Automatically updates when report filters change.
 * Supports advanced DAX functions like `CALCULATE`, `FILTER`, `ALL`, and `DIVIDE`.
 
+### Structure of a Measure
+
+Measure Name = DAX Function(Table\[Column])
+
+Example:&#x20;
+
+Average Sales = AVERAGE(Sales\[Sales Amount])
+
+Here
+
+* Measure Name = Average Sales
+* DAX Function = AVERAGE()
+* Table = Sales
+* Column = Sales Amount
+*
+
+### Difference Between Measure and Calculated Column
+
+<table><thead><tr><th>Feature</th><th>Measure</th><th width="290.800048828125">Calculated Column</th></tr></thead><tbody><tr><td>Calculation</td><td>Dynamic</td><td>Static</td></tr><tr><td>Storage</td><td>Not stored</td><td>Stored in model</td></tr><tr><td>Depends on Filters</td><td>Yes</td><td>No</td></tr><tr><td>Memory Usage</td><td>Low</td><td>High</td></tr><tr><td>Updates Automatically</td><td>Yes</td><td>No</td></tr><tr><td>Used In</td><td>Charts, Cards, KPIs</td><td>Rows, Relationships, Categories</td></tr></tbody></table>
 
 
 
+### Where Measures Are Used
 
+Measures are commonly used in:
 
-
-
-
-
-
-### Difference Between Column and Measure
-
-| Calculated Column               | Measure                                    |
-| ------------------------------- | ------------------------------------------ |
-| Calculated row by row           | Calculated on demand                       |
-| Stored in the model             | Not stored; computed when needed           |
-| Increases model size            | Does not increase model size significantly |
-| Used for filtering and grouping | Used for aggregations and KPIs             |
-| Static after refresh            | Dynamic based on filter context            |
-
-
+* Card Visuals
+* KPI Visuals
+* Tables
+* Matrix
+* Bar Charts
+* Column Charts
+* Pie Charts
+* Line Charts
+* Area Charts
+* Gauge Charts
+* Slicer-driven dashboards
 
 
 
@@ -75,8 +85,6 @@ A **Measure** is a **calculation created using DAX (Data Analysis Expressions)**
 
 A **Calculated Table** in Power BI is a new table created using **DAX (Data Analysis Expressions)** instead of importing data from an external source. It is stored in the Power BI data model and is **calculated when the data model is refreshed**.
 
-
-
 #### When to Use Calculated Tables?
 
 Use calculated tables when you need to:
@@ -87,8 +95,6 @@ Use calculated tables when you need to:
 * Filter existing data into a new table
 * Create lookup/reference tables
 * Build custom reporting tables
-
-
 
 
 
