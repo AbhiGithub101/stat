@@ -22,11 +22,15 @@ A **Measure** is a **calculation created using DAX (Data Analysis Expressions)**
 * Year-to-Date Sales
 * Previous Year Sales
 
+
+
 ### How to Create Measures&#x20;
 
 
 
 <p align="center">Open your report<br>↓<br>Go to the <strong>Modeling</strong> tab<br>↓<br>Click <strong>New Measure</strong><br>↓<br>A formula bar appears<br>↓<br>Write your DAX formula<br>Total Sales = SUM(Sales[Sales Amount])<br>↓<br>Press <strong>Enter</strong><br><strong>(</strong>Your measure appears under the selected table with a calculator icon)</p>
+
+<p align="center"></p>
 
 ### Benefits of Measures
 
@@ -36,6 +40,8 @@ A **Measure** is a **calculation created using DAX (Data Analysis Expressions)**
 * Ideal for KPIs, totals, averages, percentages, and ratios.
 * Automatically updates when report filters change.
 * Supports advanced DAX functions like `CALCULATE`, `FILTER`, `ALL`, and `DIVIDE`.
+
+
 
 ### Structure of a Measure
 
@@ -51,7 +57,8 @@ Here
 * DAX Function = AVERAGE()
 * Table = Sales
 * Column = Sales Amount
-*
+
+
 
 ### Difference Between Measure and Calculated Column
 
@@ -74,6 +81,12 @@ Measures are commonly used in:
 * Area Charts
 * Gauge Charts
 * Slicer-driven dashboards
+
+
+
+### How Measures Work
+
+<p align="center">Data Tables<br>↓<br>Create Measure (DAX Formula)<br>↓<br>Measure calculates values<br>↓<br>Filters/Slicers applied<br>↓<br>Result changes automatically<br>↓<br>Display in Charts, Cards and Tables</p>
 
 
 
@@ -128,12 +141,6 @@ Use calculated tables when you need to:
 
 
 
-
-## How Measures Work
-
-
-
-<p align="center">Data Tables<br>↓<br>Create Measure (DAX Formula)<br>↓<br>Measure calculates values<br>↓<br>Filters/Slicers applied<br>↓<br>Result changes automatically<br>↓<br>Display in Charts, Cards and Tables</p>
 
 
 
