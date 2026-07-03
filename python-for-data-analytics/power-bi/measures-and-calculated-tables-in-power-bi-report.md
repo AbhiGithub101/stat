@@ -30,7 +30,13 @@ A **Measure** is a **calculation created using DAX (Data Analysis Expressions)**
 
 <p align="center">Open your report<br>↓<br>Go to the <strong>Modeling</strong> tab<br>↓<br>Click <strong>New Measure</strong><br>↓<br>A formula bar appears<br>↓<br>Write your DAX formula<br>Total Sales = SUM(Sales[Sales Amount])<br>↓<br>Press <strong>Enter</strong><br><strong>(</strong>Your measure appears under the selected table with a calculator icon)</p>
 
-<p align="center"></p>
+<figure><img src="../../.gitbook/assets/cm1.png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src="../../.gitbook/assets/cm2.png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src="../../.gitbook/assets/cm3.png" alt=""><figcaption></figcaption></figure>
+
+
 
 ### Benefits of Measures
 
@@ -117,7 +123,9 @@ Use calculated tables when you need to:
 
 <p align="center">Open your report<br>↓<br>Go to the <strong>Modeling</strong> tab<br>↓<br>Click <strong>New Table</strong><br>↓<br>A formula bar appears<br>↓<br>Write your DAX formula<br>(Sales Copy =Sales)<br>↓<br>Press <strong>Enter</strong><br><strong>(</strong>Power BI creates a new table in the <strong>Fields</strong> pane<strong>)</strong></p>
 
-<p align="center"></p>
+<figure><img src="../../.gitbook/assets/ct2.png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src="../../.gitbook/assets/ct3.png" alt=""><figcaption></figcaption></figure>
 
 ### Benefits of Calculated Tables
 
