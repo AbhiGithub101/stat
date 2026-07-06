@@ -1,5 +1,7 @@
 # Truncate and Numeric Functions
 
+{% embed url="https://youtu.be/RpO1fqGO_S4?si=3Rp4cnecaW23_ZSZ" %}
+
 ## What is TRUNCATE?
 
 TRUNCATE is used to **delete all rows from a table instantly** in one shot. It removes all the data but **keeps the table structure** intact.

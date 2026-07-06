@@ -1,5 +1,7 @@
 # Joins
 
+{% embed url="https://youtu.be/A4s5FNiWH50?si=Fj7k8AtlFOysK3Fz" %}
+
 ## What are JOINs?
 
 In real life, data is never stored in just one table. It is spread across multiple tables and sometimes you need to **combine data from two or more tables** to get the answer you need.
