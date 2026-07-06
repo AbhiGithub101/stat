@@ -73,29 +73,6 @@ CREATE TABLE Departments (
 );
 ```
 
-#### 9. Create `Employee_Auto` with `IDENTITY(1,1)`
-
-```sql
-CREATE TABLE Employee_Auto (
-    ID INT IDENTITY(1,1) PRIMARY KEY,
-    FullName VARCHAR(100),
-    Department VARCHAR(50),
-    DateOfJoining DATE,
-    Gender CHAR(1),
-    EmailID VARCHAR(150)
-);
-```
-
-#### 10. Insert two rows into `Employee_Auto`
-
-```sql
-INSERT INTO Employee_Auto (FullName, Department, DateOfJoining, Gender, EmailID)
-VALUES ('Nikita Roy', 'IT', '2024-02-01', 'F', 'nikita.roy@company.com');
-
-INSERT INTO Employee_Auto (FullName, Department, DateOfJoining, Gender, EmailID)
-VALUES ('Arjun Nair', 'Sales', '2024-02-15', 'M', 'arjun.nair@company.com');
-```
-
 ### Scenario-based answers
 
 #### 1. New company setup
@@ -133,26 +110,7 @@ INSERT INTO Employee (ID, FullName, Department, DateOfJoining, Gender, EmailID)
 VALUES (113, 'Aman Verma', 'IT', '2024-01-10', 'M', 'aman@email.com');
 ```
 
-#### 3. Data entry without mistakes
-
-```sql
-CREATE TABLE Employee (
-    ID INT IDENTITY(1001,1) PRIMARY KEY,
-    FullName VARCHAR(100),
-    Department VARCHAR(50),
-    DateOfJoining DATE,
-    Gender CHAR(1),
-    EmailID VARCHAR(150)
-);
-```
-
-#### 4. Quick verification after insert
-
-```sql
-SELECT FullName, Department FROM Employee;
-```
-
-#### 5. Wrong insert order
+#### 3. Wrong insert order
 
 **1. What is wrong in this query?**
 
@@ -169,7 +127,7 @@ INSERT INTO Employee
 VALUES (101, 'Rahul Sharma', 'IT', '2022-06-01', 'M', 'rahul@email.com');
 ```
 
-#### 6. College admissions system
+#### 4. College admissions system
 
 ```sql
 CREATE TABLE Students (
@@ -209,18 +167,3 @@ VALUES
 ```sql
 SELECT BookName, Price FROM Books;
 ```
-
-#### 4. Create `Books` with `IDENTITY(500,5)`
-
-```sql
-CREATE TABLE Books_Auto (
-    BookID INT IDENTITY(500,5) PRIMARY KEY,
-    BookName VARCHAR(100),
-    AuthorName VARCHAR(100),
-    Price DECIMAL(10,2)
-);
-```
-
-{% hint style="success" %}
-If your answers match the logic and syntax here, you are ready for the next SQL lesson.
-{% endhint %}

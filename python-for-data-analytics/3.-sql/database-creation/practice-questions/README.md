@@ -8,7 +8,7 @@ description: >-
 
 ## Practice Questions
 
-Use these questions to practice database creation, table creation, `SELECT`, `INSERT`, primary keys, and `IDENTITY`.
+Use these questions to practice database creation, table creation, `SELECT`, `INSERT`, primary keys.
 
 {% hint style="info" %}
 Try to write the queries on your own first. Run them in SQL Server and check the result after each step.
@@ -30,8 +30,6 @@ Try to write the queries on your own first. Run them in SQL Server and check the
 8. Create a table named `Departments` with:
    * `DepartmentID` as `INT PRIMARY KEY`
    * `DepartmentName` as `VARCHAR(50)`
-9. Create a new `Employee_Auto` table where `ID` is generated automatically using `IDENTITY(1,1)`.
-10. Insert two rows into `Employee_Auto` without writing values for the `ID` column.
 
 ### Scenario-based practice
 
@@ -45,7 +43,7 @@ Write the queries to:
 * use that database
 * create an `Employee` table with `ID`, `FullName`, `Department`, `DateOfJoining`, `Gender`, and `EmailID`
 
-#### 2. Duplicate ID issue
+#### 2.  ID issue
 
 A user runs this query:
 
@@ -62,19 +60,7 @@ Answer these:
 2. Why does it happen?
 3. How would you fix the insert?
 
-#### 3. Data entry without mistakes
-
-An HR team keeps forgetting the last used employee ID.
-
-Write a table creation query that solves this problem by using auto-generated IDs starting from `1001`.
-
-#### 4. Quick verification after insert
-
-You inserted multiple employees into the `Employee` table. Now your manager only wants to verify names and departments.
-
-Write the query for that check.
-
-#### 5. Wrong insert order
+#### 3. insert order
 
 A student writes this query:
 
@@ -89,7 +75,7 @@ Answer these:
 2. Which rule of `INSERT` did they break?
 3. How should the query be corrected?
 
-#### 6. College admissions system
+#### 4. College admissions system
 
 A college wants to store student records with these rules:
 
@@ -105,8 +91,3 @@ Write the query to create this table.
 1. Create a table named `Books` with `BookID`, `BookName`, `AuthorName`, and `Price`.
 2. Insert four books in a single query.
 3. Show only `BookName` and `Price` from the table.
-4. Create another version of the `Books` table where `BookID` uses `IDENTITY(500,5)`.
-
-{% hint style="success" %}
-If you can solve these without looking back at the notes, you are ready for the next SQL topic.
-{% endhint %}
