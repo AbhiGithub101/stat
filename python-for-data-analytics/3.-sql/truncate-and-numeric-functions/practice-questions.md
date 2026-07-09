@@ -68,7 +68,7 @@ Assume these tables exist:
 * `TrainingLog(LogID, EmployeeName, ModuleName, Score, AttemptDate)`
 * `ProductMetrics(ProductID, ProductName, Price, DiscountPercent, StockQty, Rating, LengthCm, WidthCm, ProfitAmount, LaunchDateText)`
 
-#### 2. Write a query to remove all rows from `TrainingLog`.
+#### 1. Write a query to remove all rows from `TrainingLog`.
 
 <details>
 
@@ -80,35 +80,7 @@ TRUNCATE TABLE TrainingLog;
 
 </details>
 
-#### 3. Can `TRUNCATE TABLE` remove only selected rows?
-
-<details>
-
-<summary>Solution</summary>
-
-No.
-
-`TRUNCATE TABLE` removes all rows only.
-
-It does not support `WHERE`.
-
-</details>
-
-#### Moderate
-
-#### 4. After `TRUNCATE TABLE TrainingLog`, you insert one new row. What will the `LogID` be?
-
-<details>
-
-<summary>Solution</summary>
-
-The `LogID` starts again from `1`.
-
-That happens because `TRUNCATE` resets the `IDENTITY` value in this table.
-
-</details>
-
-#### 5. Write the query to insert one new row into `TrainingLog` after truncating it.
+#### 2. Write the query to insert one new row into `TrainingLog` after truncating it.
 
 <details>
 
@@ -121,11 +93,7 @@ VALUES ('Meera Joshi', 'TRUNCATE Practice', 85.00, '2026-06-10');
 
 </details>
 
-### 2. ABS, CEILING, FLOOR, and ROUND
-
-#### Easy
-
-#### 1. Write a query to show the absolute value of `ProfitAmount` for each product.
+#### 3. Write a query to show the absolute value of `ProfitAmount` for each product.
 
 <details>
 
@@ -140,7 +108,7 @@ FROM ProductMetrics;
 
 </details>
 
-#### 2. Write a query to round each `Price` up to the next whole number.
+#### 4. Write a query to round each `Price` up to the next whole number.
 
 <details>
 
@@ -155,7 +123,7 @@ FROM ProductMetrics;
 
 </details>
 
-#### 3. Write a query to round each `Price` down to the previous whole number.
+#### 5. Write a query to round each `Price` down to the previous whole number.
 
 <details>
 
@@ -170,25 +138,7 @@ FROM ProductMetrics;
 
 </details>
 
-#### 4. What is the difference between `CEILING()` and `FLOOR()`?
-
-<details>
-
-<summary>Solution</summary>
-
-* `CEILING()` rounds up.
-* `FLOOR()` rounds down.
-
-Example:
-
-* `CEILING(12.1)` returns `13`
-* `FLOOR(12.9)` returns `12`
-
-</details>
-
-#### Moderate
-
-#### 5. Write a query to round each `Rating` to 1 decimal place.
+#### 6. Write a query to round each `Rating` to 1 decimal place.
 
 <details>
 
@@ -203,26 +153,7 @@ FROM ProductMetrics;
 
 </details>
 
-#### 6. Write a query to round each `Price` to the nearest hundred.
-
-<details>
-
-<summary>Solution</summary>
-
-```sql
-SELECT ProductName,
-       Price,
-       ROUND(Price, -2) AS RoundedToHundred
-FROM ProductMetrics;
-```
-
-</details>
-
-### 3. POWER, SQRT, and SQUARE
-
-#### Easy
-
-#### 1. Write a query to show the square of `StockQty` for each product.
+#### 7. Write a query to show the square of `StockQty` for each product.
 
 <details>
 
@@ -237,7 +168,7 @@ FROM ProductMetrics;
 
 </details>
 
-#### 2. Write a query to show the square root of `StockQty` for each product.
+#### 8. Write a query to show the square root of `StockQty` for each product.
 
 <details>
 
@@ -252,7 +183,7 @@ FROM ProductMetrics;
 
 </details>
 
-#### 3. Write a query to find `2` raised to the power `5`.
+#### 9. Write a query to find `2` raised to the power `5`.
 
 <details>
 
@@ -264,9 +195,7 @@ SELECT POWER(2, 5) AS Result;
 
 </details>
 
-#### Moderate
-
-#### 4. Write a query to show the square of `LengthCm` for each product.
+#### 10. Write a query to show the square of `LengthCm` for each product.
 
 <details>
 
@@ -281,26 +210,7 @@ FROM ProductMetrics;
 
 </details>
 
-#### 5. What is the difference between `SQRT(25)` and `SQUARE(25)`?
-
-<details>
-
-<summary>Solution</summary>
-
-* `SQRT(25)` returns `5`
-* `SQUARE(25)` returns `625`
-
-One finds the root.
-
-The other multiplies the number by itself.
-
-</details>
-
-### 4. RAND, SIGN, and PI
-
-#### Easy
-
-#### 1. Write a query to generate a random decimal number.
+#### 11. Write a query to generate a random decimal number.
 
 <details>
 
@@ -312,7 +222,7 @@ SELECT RAND() AS RandomNumber;
 
 </details>
 
-#### 2. Write a query to show whether each `ProfitAmount` is positive, negative, or zero.
+#### 12. Write a query to show whether each `ProfitAmount` is positive, negative, or zero.
 
 <details>
 
@@ -333,7 +243,7 @@ FROM ProductMetrics;
 
 </details>
 
-#### 3. What does `PI()` return?
+#### 13. What does `PI()` return?
 
 <details>
 
@@ -345,9 +255,7 @@ Its value is about `3.14159265358979`.
 
 </details>
 
-#### Moderate
-
-#### 4. Write a query to generate a random whole number from `1` to `50`.
+#### 14. Write a query to generate a random whole number from `1` to `50`.
 
 <details>
 
@@ -359,7 +267,7 @@ SELECT FLOOR(RAND() * 50) + 1 AS RandomWholeNumber;
 
 </details>
 
-#### 5. Write a query to calculate the area of a circle with radius `6`.
+#### 15. Write a query to calculate the area of a circle with radius `6`.
 
 <details>
 
@@ -371,96 +279,7 @@ SELECT PI() * SQUARE(6) AS CircleArea;
 
 </details>
 
-### 5. LOG, LOG10, SIN, COS, and TAN
-
-#### Easy
-
-#### 1. Write a query to find the natural log of `100`.
-
-<details>
-
-<summary>Solution</summary>
-
-```sql
-SELECT LOG(100) AS NaturalLogValue;
-```
-
-</details>
-
-#### 2. Write a query to find the base-10 log of `1000`.
-
-<details>
-
-<summary>Solution</summary>
-
-```sql
-SELECT LOG10(1000) AS Log10Value;
-```
-
-</details>
-
-#### 3. Write a query to find the value of `SIN(PI()/2)`.
-
-<details>
-
-<summary>Solution</summary>
-
-```sql
-SELECT SIN(PI() / 2) AS SinValue;
-```
-
-</details>
-
-#### Moderate
-
-#### 4. Write one query to show `COS(0)` and `TAN(PI()/4)`.
-
-<details>
-
-<summary>Solution</summary>
-
-```sql
-SELECT COS(0) AS CosValue,
-       TAN(PI() / 4) AS TanValue;
-```
-
-</details>
-
-#### 5. Why do we multiply degrees by `PI()/180` in SQL Server trigonometric functions?
-
-<details>
-
-<summary>Solution</summary>
-
-SQL Server trigonometric functions use radians.
-
-So degrees must be converted to radians first.
-
-Formula:
-
-```sql
-Degrees * PI() / 180
-```
-
-</details>
-
-#### 6. Write a query to find the sine of `60` degrees.
-
-<details>
-
-<summary>Solution</summary>
-
-```sql
-SELECT SIN(60 * PI() / 180.0) AS Sin60Degrees;
-```
-
-</details>
-
-### 6. CAST and CONVERT
-
-#### Easy
-
-#### 1. Write a query to convert each `Price` into `INT` using `CAST()`.
+#### 16. Write a query to convert each `Price` into `INT` using `CAST()`.
 
 <details>
 
@@ -475,7 +294,7 @@ FROM ProductMetrics;
 
 </details>
 
-#### 2. Write a query to convert `LaunchDateText` into `DATE` using `CONVERT()`.
+#### 17. Write a query to convert `LaunchDateText` into `DATE` using `CONVERT()`.
 
 <details>
 
@@ -490,7 +309,7 @@ FROM ProductMetrics;
 
 </details>
 
-#### 3. Write a query to show only the current date from `GETDATE()`.
+#### 18. Write a query to show only the current date from `GETDATE()`.
 
 <details>
 
@@ -502,7 +321,7 @@ SELECT CAST(GETDATE() AS DATE) AS CurrentDate;
 
 </details>
 
-#### 4. Which functions can convert one data type into another in SQL Server?
+#### 19. Which functions can convert one data type into another in SQL Server?
 
 <details>
 
@@ -512,9 +331,7 @@ Both `CAST()` and `CONVERT()` can do that.
 
 </details>
 
-#### Moderate
-
-#### 5. Write a query to convert each `Price` into text.
+#### 20. Write a query to convert each `Price` into text.
 
 <details>
 
@@ -529,7 +346,7 @@ FROM ProductMetrics;
 
 </details>
 
-#### 6. Write a query to show `LaunchDateText` in `DD/MM/YYYY` format.
+#### 21. Write a query to show `LaunchDateText` in `DD/MM/YYYY` format.
 
 <details>
 
@@ -543,21 +360,7 @@ FROM ProductMetrics;
 
 </details>
 
-#### 7. What is one simple difference between `CAST()` and `CONVERT()`?
-
-<details>
-
-<summary>Solution</summary>
-
-`CAST()` is more standard and simple.
-
-`CONVERT()` is very useful in SQL Server when you want formatting styles, especially for dates.
-
-</details>
-
-### Quick challenge set
-
-#### 1. Write a query to show `ProductName`, rounded `Price`, and rounded `Rating` together.
+#### 22. Write a query to show `ProductName`, rounded `Price`, and rounded `Rating` together.
 
 <details>
 
@@ -572,7 +375,7 @@ FROM ProductMetrics;
 
 </details>
 
-#### 2. Write a query to show `ProductName` and absolute profit only for rows where profit is negative.
+#### 23. Write a query to show `ProductName` and absolute profit only for rows where profit is negative.
 
 <details>
 
@@ -587,7 +390,7 @@ WHERE ProfitAmount < 0;
 
 </details>
 
-#### 3. Write a query to show `ProductName`, `LaunchDateText`, and the converted launch date.
+#### 24. Write a query to show `ProductName`, `LaunchDateText`, and the converted launch date.
 
 <details>
 
@@ -602,7 +405,7 @@ FROM ProductMetrics;
 
 </details>
 
-#### 4. Write a query to show the area of a circle with radius `10`, rounded to 2 decimal places.
+#### 25. Write a query to show the area of a circle with radius `10`, rounded to 2 decimal places.
 
 <details>
 
