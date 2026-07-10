@@ -6,92 +6,111 @@ description: >-
 
 # Set up LangChain in PyCharm
 
-## Set up LangChain in PyCharm
+## Set Up LangChain in PyCharm
 
 ### Overview
 
-This guide helps you create a LangChain project in PyCharm.
+In this guide, you'll set up your first LangChain project in PyCharm.
 
-By the end, you will have:
+By the end of this guide, you'll have:
 
-* a new Python project
+* A new Python project
 * LangChain installed
-* one model provider installed
-* a GitHub repository connected
-* a working test script
+* A model provider installed
+* A working test script
 
-### What is LangChain
+The entire setup takes about 10 minutes.
 
-LangChain is a Python library for building apps with AI models.
+***
 
-It is not a model itself.
+## What is LangChain?
 
-It helps you organize prompts, model calls, tools, memory, and external data.
+LangChain is a Python framework for building AI applications.
 
-Use it when you want more than one simple API call.
+It is not an AI model.
 
-Common use cases:
+Instead, it helps you organize prompts, connect AI models, use tools, work with documents, and build larger AI workflows.
 
-* chatbots
-* PDF or document Q\&A
-* agents that use tools step by step
+As your projects grow, LangChain makes your code easier to manage.
 
-Why use it:
+Some common use cases include:
 
-* it keeps AI app code structured
-* it makes provider integration easier
-* it helps you build larger workflows later
+* AI chatbots
+* Document Q\&A
+* AI agents
+* Automation tools
+* RAG applications
 
-### Prerequisites
+***
 
-Install these tools before you start:
+## Prerequisites
 
+Before you begin, make sure you have the following installed:
+
+* Python 3.10 or later
 * PyCharm
-* Python `3.10+`
-* `uv`
-* an API key for your model provider
-* Git
-* a GitHub account — optional if you do not want to push yet
+* uv
+* An API key from your preferred model provider
 
-### Step 1: Create a new project
+You can verify your installation by running:
 
-Run these commands in a terminal:
+```bash
+python --version
+uv --version
+```
+
+***
+
+## Step 1: Create a New Project
+
+Open a terminal and run:
 
 ```bash
 mkdir langchain-project
 cd langchain-project
-git init
 ```
 
-This creates a new project folder.
+This creates a new project folder and moves into it.
 
-`git init` starts a Git repository.
+***
 
-If you do not want Git yet, skip `git init`.
-
-### Step 2: Open the project in PyCharm
+## Step 2: Open the Project in PyCharm
 
 Open PyCharm.
 
-Click **Open** and select the `langchain-project` folder.
+Click **Open** and select the **langchain-project** folder.
 
-You should now see the project in the left sidebar.
+Your project should now appear in the Project panel.
 
-### Step 3: Initialize the Python project
+***
 
-Run this command in the PyCharm terminal:
+## Step 3: Initialize the Project
+
+Open the PyCharm terminal and run:
 
 ```bash
 uv init
 ```
 
-This creates the project files.
+This creates the files needed for your Python project.
 
-You should now see a `pyproject.toml` file.
+Your project should now look similar to this:
 
-### Step 4: Install LangChain
+```
+langchain-project/
+│
+├── main.py
+├── pyproject.toml
+└── .python-version
+```
 
-Run this command:
+The `pyproject.toml` file stores your project's configuration and dependencies.
+
+***
+
+## Step 4: Install LangChain
+
+Run the following command:
 
 ```bash
 uv add langchain python-dotenv
@@ -99,198 +118,75 @@ uv add langchain python-dotenv
 
 This installs:
 
-* `langchain` for AI app development
-* `python-dotenv` for loading values from `.env`
+* `langchain` for building AI applications
+* `python-dotenv` for loading environment variables from a `.env` file
 
-{% hint style="info" %}
-`black` and `isort` are useful, but optional. Install them later if needed.
-{% endhint %}
+It also updates your project's dependency list automatically.
 
-If you want code formatting tools, run:
+***
 
-```bash
-uv add black isort
-```
+## Step 5: Install a Model Provider
 
-These tools help keep Python code clean:
-
-* `black` formats code automatically
-* `isort` sorts imports automatically
-
-### Step 5: Install one model provider
-
-LangChain uses separate packages for each provider.
+LangChain supports many AI providers.
 
 Choose one provider and install its package.
 
-{% tabs %}
-{% tab title="OpenAI" %}
-Run:
+### Option 1: OpenAI
+
+Install the package:
 
 ```bash
 uv add langchain-openai
 ```
 
-Add this to `.env`:
+Create a `.env` file in your project root and add:
 
-```bash
+```
 OPENAI_API_KEY=your_api_key_here
 ```
-{% endtab %}
 
-{% tab title="NVIDIA" %}
-Run:
+***
+
+### Option 2: NVIDIA
+
+Install the package:
 
 ```bash
 uv add langchain-nvidia-ai-endpoints
 ```
 
-Add this to `.env`:
+Add this to your `.env` file:
 
-```bash
+```
 NVIDIA_API_KEY=nvapi-your_api_key_here
 ```
 
-This is a good option if you want a free starter model.
-{% endtab %}
-{% endtabs %}
+NVIDIA provides several free models, making it a great choice for learning.
 
-### Step 6: Create a `.gitignore` file
+***
 
-Create a `.gitignore` file in the project root.
+## Why Use a `.env` File?
 
-Add this content:
+A `.env` file stores sensitive information like API keys.
 
-```gitignore
-.venv/
-.env
-__pycache__/
-```
+Instead of writing your API key directly in your code, your application loads it automatically when it starts.
 
-This prevents local and secret files from being committed.
+This keeps your code clean and helps protect your credentials.
 
-If you want broader Python defaults, copy the Python `.gitignore` template from GitHub into your local `.gitignore`.
+> **Important**
+>
+> Never share or upload your `.env` file because it contains your secret API keys.
 
-Use this when you want standard Python ignore rules from the start.
+***
 
-After pasting that template, make sure `.env` is still included.
+## Step 6: Create the Test Script
 
-### Optional: Connect the project to GitHub
+Create a file named `main.py`.
 
-Do this after `git init` and after your local `.gitignore` is ready.
+Use one of the following examples.
 
-Use this flow when you want to back up the project, collaborate, or push code to GitHub.
+### OpenAI Example
 
-#### 1. Create an empty repository on GitHub
-
-Create a new repository on GitHub.
-
-Keep it empty if possible.
-
-Do not add a README, `.gitignore`, or license yet.
-
-This keeps the first push simple.
-
-#### 2. Copy the repository HTTPS URL
-
-Open the new repository page on GitHub.
-
-Click **Code** and copy the HTTPS URL.
-
-It looks like this:
-
-```
-https://github.com/your-username/your-repo.git
-```
-
-Use this URL in the next step.
-
-#### 3. Connect the local project to GitHub
-
-Run this command in the project folder:
-
-```bash
-git remote add origin <repo-url>
-```
-
-Example:
-
-```bash
-git remote add origin https://github.com/your-username/your-repo.git
-```
-
-Use this once per local repository.
-
-It links your local Git project to the GitHub repository.
-
-#### 4. Add all project files to Git
-
-Run:
-
-```bash
-git add .
-```
-
-Use this when your initial files are ready to commit.
-
-It stages the current project files.
-
-#### 5. Create the first commit
-
-Run:
-
-```bash
-git commit -m "initial project setup"
-```
-
-Use this after staging files with `git add .`.
-
-It saves the current project state in Git history.
-
-#### 6. Set the branch name to `main`
-
-Run:
-
-```bash
-git branch -M main
-```
-
-Use this before the first push if you want the default branch to be `main`.
-
-This renames the current branch to `main`.
-
-#### 7. Push the project to GitHub
-
-If the GitHub repository is empty, run:
-
-```bash
-git push -u origin main
-```
-
-Use `-u` on the first push only.
-
-It sets `origin/main` as the default upstream branch.
-
-If the remote repository already has its own first commit, and you want your local project to replace it, run:
-
-```bash
-git push -u origin main --force
-```
-
-Use `--force` only when you intentionally want to overwrite remote history.
-
-{% hint style="warning" %}
-`git push --force` replaces the remote branch history. Avoid it on shared repositories unless you are sure.
-{% endhint %}
-
-### Step 7: Create `main.py`
-
-Create a file named `main.py` in the project root.
-
-Add one of these examples.
-
-{% tabs %}
-{% tab title="OpenAI" %}
 ```python
 from dotenv import load_dotenv
 from langchain_openai import ChatOpenAI
@@ -298,13 +194,16 @@ from langchain_openai import ChatOpenAI
 load_dotenv()
 
 llm = ChatOpenAI(model="gpt-4o-mini")
+
 response = llm.invoke("Hello")
 
 print(response.content)
 ```
-{% endtab %}
 
-{% tab title="NVIDIA" %}
+***
+
+### NVIDIA Example
+
 ```python
 from dotenv import load_dotenv
 from langchain_nvidia_ai_endpoints import ChatNVIDIA
@@ -314,55 +213,88 @@ load_dotenv()
 llm = ChatNVIDIA(
     model="nvidia/llama-3.3-nemotron-super-49b-v1"
 )
+
 response = llm.invoke("Hello")
 
 print(response.content)
 ```
-{% endtab %}
-{% endtabs %}
 
-This script loads your API key and sends a test prompt.
+This script:
 
-### Step 8: Run the test
+* Loads your API key
+* Connects to the AI model
+* Sends a prompt
+* Prints the model's response
 
-Run this command in the terminal:
+***
+
+## Step 7: Run the Project
+
+Run:
 
 ```bash
 uv run python main.py
 ```
 
-If everything is correct, the model returns a short response.
+If everything is set up correctly, you'll receive a short response from the model.
 
-### Step 9: Verify the setup
+***
 
-Check these points:
+## Verify Your Setup
 
-* The project opens in PyCharm
-* `pyproject.toml` exists
-* `.env` contains your API key
-* `main.py` runs without import errors
-* The model returns a response
+Your setup is complete if:
 
-### Troubleshooting
+* The project opens in PyCharm.
+* `pyproject.toml` exists.
+* Your `.env` file contains a valid API key.
+* `main.py` runs without import errors.
+* The model returns a response.
 
-#### `uv` command not found
+***
 
-Install `uv` First, then restart the terminal.The
+## Troubleshooting
 
-#### API key is not working
+### `uv` command not found
 
-Check the key name in `.env`.
+Make sure `uv` is installed.
 
-Make sure there are no extra spaces around `=`.
+Restart your terminal after installing it.
 
-#### Import error for provider package
+***
 
-Make sure you installed the same provider package that your code uses.
+### Invalid API Key
 
-For example, `ChatOpenAI` needs `langchain-openai`.
+Check the following:
 
-### Next step
+* The API key name matches your provider.
+* There are no extra spaces around `=`.
+* The API key is active.
 
-Your LangChain setup is now ready.
+***
 
-You can now build a chatbot, connect a document, or create your first agent.
+### Import Error
+
+Install the package that matches your code.
+
+Examples:
+
+| Class        | Package                         |
+| ------------ | ------------------------------- |
+| `ChatOpenAI` | `langchain-openai`              |
+| `ChatNVIDIA` | `langchain-nvidia-ai-endpoints` |
+
+***
+
+### Model Not Found
+
+Check that the model name is correct.
+
+Some providers require access to specific models.
+
+***
+
+## Next Step
+
+Congratulations! Your LangChain environment is ready.
+
+In the next lesson, you'll create your first AI conversation and learn how LangChain sends prompts to an AI model and returns responses.
