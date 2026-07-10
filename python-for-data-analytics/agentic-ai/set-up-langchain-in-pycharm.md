@@ -245,19 +245,9 @@ Your setup is complete if:
 
 * The project opens in PyCharm.
 * `pyproject.toml` exists.
-* Your `.env` file contains a valid API key.
+* Your `.env`  file contains a valid API key.
 * `main.py` runs without import errors.
 * The model returns a response.
-
-***
-
-## Troubleshooting
-
-### `uv` command not found
-
-Make sure `uv` is installed.
-
-Restart your terminal after installing it.
 
 ***
 
@@ -281,14 +271,6 @@ Examples:
 | ------------ | ------------------------------- |
 | `ChatOpenAI` | `langchain-openai`              |
 | `ChatNVIDIA` | `langchain-nvidia-ai-endpoints` |
-
-***
-
-### Model Not Found
-
-Check that the model name is correct.
-
-Some providers require access to specific models.
 
 ***
 
