@@ -139,7 +139,6 @@
     * [13. Dynamic Title](python-for-data-analytics/4.-power-bi/13.-dynamic-title.md)
     * [14. Power BI Service](python-for-data-analytics/4.-power-bi/14.-power-bi-service.md)
     * [15. Row Level Security](python-for-data-analytics/4.-power-bi/15.-row-level-security.md)
-    * [16. Bonus Topic](python-for-data-analytics/4.-power-bi/16.-bonus-topic.md)
   * [Agentic AI](python-for-data-analytics/agentic-ai/README.md)
     * [1. Introduction To Agentic AI](python-for-data-analytics/agentic-ai/1.-introduction-to-agentic-ai.md)
     * [Set up LangChain in PyCharm](python-for-data-analytics/agentic-ai/set-up-langchain-in-pycharm.md)
