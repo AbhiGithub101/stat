@@ -1,0 +1,276 @@
+---
+description: >-
+  Learn how Prompt Templates help AI agents create dynamic, reusable prompts,
+  making your LangChain applications cleaner, more consistent, and easier to
+  maintain.
+---
+
+# LangChain Fundamentals: Prompt Templates
+
+## Prompt Templates
+
+So far, our AI agent can send prompts to an AI model using a Chat Model.
+
+However, writing prompts directly inside your code is not a good practice.
+
+Imagine you're building an AI Coding Assistant.
+
+Different users might ask:
+
+* Write a Python function to reverse a string.
+* Write a Python function to sort a list.
+* Write a Python function to check whether a string is a palindrome.
+
+The instruction is almost the same.
+
+Only the task changes.
+
+Writing a new prompt for every request would create duplicate code and make your application difficult to maintain.
+
+This is where Prompt Templates help.
+
+***
+
+## What is a Prompt Template?
+
+A Prompt Template is a reusable prompt with placeholders.
+
+Instead of creating a new prompt every time, you write the prompt once and replace the placeholders with different values.
+
+This allows your AI agent to generate dynamic prompts while keeping your code clean and organized.
+
+***
+
+## Without a Prompt Template
+
+Without Prompt Templates, you might write something like this.
+
+```python
+prompt = "Write a Python function to reverse a string."
+
+prompt = "Write a Python function to sort a list."
+
+prompt = "Write a Python function to check whether a string is a palindrome."
+```
+
+Although these prompts are different, most of the instruction is repeated.
+
+As your application grows, this approach quickly becomes difficult to manage.
+
+***
+
+## With a Prompt Template
+
+Instead, create the prompt once.
+
+```
+Write a Python function to {task}.
+```
+
+Now your AI agent only needs to replace the value of `task`.
+
+For example:
+
+* reverse a string
+* sort a list
+* check whether a string is a palindrome
+
+The overall prompt remains the same.
+
+***
+
+## How Prompt Templates Work
+
+A Prompt Template follows a simple workflow.
+
+```
+User Input
+      │
+      ▼
+Placeholder Values
+      │
+      ▼
+Prompt Template
+      │
+      ▼
+Final Prompt
+      │
+      ▼
+Chat Model
+```
+
+The template creates the final prompt before it is sent to the AI model.
+
+***
+
+## Example
+
+```python
+from langchain_core.prompts import ChatPromptTemplate
+
+template = ChatPromptTemplate.from_template(
+    "Write a Python function to {task}."
+)
+
+prompt = template.invoke(
+    {
+        "task": "check whether a string is a palindrome"
+    }
+)
+
+print(prompt)
+```
+
+Here's what happens.
+
+* `from_template()` creates a reusable prompt.
+* `{task}` is a placeholder.
+* `invoke()` replaces the placeholder with the provided value.
+* The completed prompt is returned.
+
+***
+
+## Real-World Example
+
+Imagine you're building an AI Resume Review Agent.
+
+Every user uploads a different resume.
+
+The instruction remains the same.
+
+```
+Review the following resume and provide feedback.
+
+Resume:
+{resume}
+```
+
+Your AI agent only replaces the `resume` placeholder with the uploaded resume.
+
+Everything else stays exactly the same.
+
+This makes your prompts consistent and much easier to maintain.
+
+***
+
+## Why Use Prompt Templates?
+
+Prompt Templates provide several advantages.
+
+* Reusable prompts
+* Dynamic user input
+* Cleaner code
+* Easier maintenance
+* Consistent instructions
+* Better prompt organization
+
+Instead of managing dozens of similar prompts, you only maintain one template.
+
+***
+
+## Think Like an AI Agent
+
+An AI agent receives different user requests every day.
+
+The request changes.
+
+The instructions usually don't.
+
+Prompt Templates allow your AI agent to reuse the same instruction while adapting it to different inputs.
+
+This keeps your agent consistent and predictable.
+
+***
+
+## Output Parsers
+
+When an AI model generates a response, LangChain doesn't simply return plain text.
+
+Instead, it returns an object that contains additional information.
+
+For many applications, you only need the generated text.
+
+An Output Parser extracts or formats the response into the structure your application needs.
+
+***
+
+## Why Do We Need an Output Parser?
+
+Imagine your AI Coding Assistant generates code.
+
+You might want:
+
+* Only the generated code
+* A JSON response
+* A list of bullet points
+* Plain text
+
+Different applications require different output formats.
+
+Instead of manually processing every response, LangChain provides Output Parsers.
+
+***
+
+## StrOutputParser
+
+One of the simplest Output Parsers is `StrOutputParser`.
+
+It converts the AI model's response into a plain string.
+
+This is the parser you'll use most often while learning LangChain.
+
+***
+
+## Example
+
+```python
+from langchain_core.output_parsers import StrOutputParser
+
+parser = StrOutputParser()
+```
+
+Later, you'll connect this parser directly to a Chat Model using a Chain.
+
+***
+
+## How Output Parsers Fit into an AI Agent
+
+```
+Prompt
+    │
+    ▼
+Chat Model
+    │
+    ▼
+AI Response
+    │
+    ▼
+Output Parser
+    │
+    ▼
+Formatted Result
+```
+
+The Output Parser is usually the final step before your application receives the result.
+
+***
+
+## Key Takeaways
+
+* Prompt Templates create reusable and dynamic prompts.
+* Placeholders allow the same prompt to work with different inputs.
+* Prompt Templates help keep AI agents consistent.
+* Output Parsers format AI responses.
+* `StrOutputParser` converts an AI response into plain text.
+
+***
+
+## What's Next?
+
+Now your AI agent can:
+
+* Generate dynamic prompts
+* Communicate with an AI model
+* Format the response
+
+In the next section, you'll learn how to connect all these components together using **Chains (LCEL)**.

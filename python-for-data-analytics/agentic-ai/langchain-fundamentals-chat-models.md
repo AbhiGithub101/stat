@@ -1,0 +1,272 @@
+# LangChain Fundamentals: Chat Models
+
+### Overview
+
+Before you build AI agents, you need to understand the core building blocks of LangChain.
+
+Whether you're building a coding assistant, a research agent, a customer support bot, or a multi-agent system, they all rely on the same fundamental concepts.
+
+In this chapter, you'll learn:
+
+* What LangChain is
+* Why developers use LangChain
+* How LangChain fits into AI agent development
+* What Chat Models are
+* Why Chat Models are the foundation of every AI agent
+
+These concepts will be used throughout the rest of this course.
+
+***
+
+## What is LangChain?
+
+LangChain is an open-source framework for building applications powered by Large Language Models (LLMs).
+
+It is not an AI model like GPT, Claude, Gemini, or Llama.
+
+Instead, LangChain provides a collection of reusable components that help you build AI applications and AI agents faster.
+
+Think of LangChain as the framework that connects all the pieces your AI agent needs to perform a task.
+
+With LangChain, you can:
+
+* Connect to different AI models
+* Create reusable prompts
+* Build multi-step workflows
+* Connect external tools
+* Search documents and databases
+* Build AI agents that can complete complex tasks
+
+Instead of writing everything from scratch, you use LangChain's building blocks to create scalable and maintainable AI systems.
+
+***
+
+## Why Do We Need LangChain?
+
+Sending a single prompt to an AI model is easy.
+
+For example, you can directly call an API, send a prompt, and receive a response.
+
+That works well for simple experiments.
+
+However, real AI agents need to do much more.
+
+Imagine you're building an AI Research Agent.
+
+A user asks:
+
+> "Find the latest AI news and summarize the three most important updates."
+
+Your agent needs to:
+
+* Understand the user's request
+* Search the web
+* Read the search results
+* Summarize the information
+* Return a clear response
+
+This is much more than a single API call.
+
+Similarly, an AI Coding Agent might need to:
+
+* Understand a programming problem
+* Generate code
+* Debug the code
+* Explain the solution
+
+As AI agents become more capable, managing all these steps manually becomes difficult.
+
+LangChain provides reusable components that help organize these workflows, making your code easier to build, maintain, and scale.
+
+***
+
+## How LangChain Fits into an AI Agent
+
+Every AI agent follows a workflow.
+
+A user gives the agent a task.
+
+The agent prepares instructions, communicates with an AI model, processes the response, and returns the final result.
+
+A simplified workflow looks like this:
+
+```
+User Request
+      │
+      ▼
+Prompt
+      │
+      ▼
+Chat Model
+      │
+      ▼
+AI Model
+      │
+      ▼
+Response
+      │
+      ▼
+User
+```
+
+As your projects become more advanced, additional components such as tools, memory, retrieval, and output parsers are added to this workflow.
+
+LangChain helps connect all these components together.
+
+***
+
+## The Three Core Building Blocks
+
+In this chapter, we'll focus on three fundamental LangChain components.
+
+1. **Chat Models**
+2. **Prompt Templates**
+3. **Chains (LCEL)**
+
+These components are used in almost every LangChain project you'll build in this course.
+
+Once you understand them, learning more advanced topics like tools, memory, RAG, and AI agents becomes much easier.
+
+***
+
+## Chat Models
+
+Every AI agent needs a way to communicate with an AI model.
+
+In LangChain, this responsibility is handled by a Chat Model.
+
+A Chat Model sends your prompt to an AI provider and returns the generated response.
+
+One of the biggest advantages of LangChain is that it provides a common interface for many different AI providers.
+
+This means you don't have to learn a completely different API every time you switch models.
+
+For example, you can work with:
+
+* OpenAI
+* Anthropic
+* Google Gemini
+* NVIDIA
+* Ollama (Local Models)
+
+Although these providers have different APIs, LangChain makes them feel almost identical from a developer's perspective.
+
+This makes switching providers much easier.
+
+***
+
+## How a Chat Model Works
+
+The following diagram shows how a Chat Model fits into your AI agent.
+
+```
+Your AI Agent
+       │
+       ▼
+  Chat Model
+       │
+       ▼
+  AI Provider
+(OpenAI • Claude • Gemini • NVIDIA • Ollama)
+       │
+       ▼
+ AI Response
+       │
+       ▼
+ Your AI Agent
+```
+
+The Chat Model acts as a bridge between your AI agent and the AI provider.
+
+Your application doesn't need to know how each provider's API works.
+
+LangChain handles that for you.
+
+***
+
+## Example
+
+The following example uses Anthropic's Claude model.
+
+```python
+from langchain_anthropic import ChatAnthropic
+
+model = ChatAnthropic(
+    model="claude-sonnet-4-6"
+)
+
+response = model.invoke(
+    "Explain LangChain in one sentence."
+)
+
+print(response.content)
+```
+
+Let's understand what happens here.
+
+* `ChatAnthropic` creates a connection to Anthropic's Claude model.
+* `invoke()` sends your prompt to the AI model.
+* The model generates a response.
+* `response.content` Returns the generated text.
+
+The same workflow is used for most other providers.
+
+Only the provider-specific class changes.
+
+***
+
+## Real-World Example
+
+Imagine you're building an AI Coding Assistant.
+
+A user asks:
+
+> "Write a Python function to check whether a string is a palindrome."
+
+Here's what happens behind the scenes.
+
+1. Your application receives the request.
+2. The Chat Model sends the prompt to the selected AI model.
+3. The AI model generates the answer.
+4. Your application displays the response to the user.
+
+Whether you're using Claude, GPT, Gemini, or a local model, the overall workflow remains almost the same.
+
+This is one of the biggest advantages of using LangChain.
+
+***
+
+## Why Use Chat Models?
+
+Using Chat Models offers several benefits.
+
+* A common interface for multiple AI providers
+* Easy model switching
+* Cleaner and more maintainable code
+* Less vendor lock-in
+* Better support for building scalable AI agents
+
+For example, if you decide to switch from Anthropic to OpenAI, you'll usually only change the model configuration. Most of your application code remains the same.
+
+> 💡 **Tip**
+>
+> Before creating a Chat Model, make sure your API key is stored in your `.env` file and loaded into your application.
+
+***
+
+## Key Takeaways
+
+* LangChain is a framework for building AI applications and AI agents.
+* It is not an AI model.
+* LangChain provides reusable building blocks for AI development.
+* Every AI agent communicates with an AI model through a Chat Model.
+* Chat Models provide a common interface for multiple AI providers.
+* Learning Chat Models is the first step toward building more capable AI agents.
+
+***
+
+## What's Next?
+
+Now that your AI agent can communicate with an AI model, the next step is learning how to generate better prompts.
+
+In the next section, you'll learn about **Prompt Templates**, one of the most useful LangChain components for creating dynamic and reusable prompts.

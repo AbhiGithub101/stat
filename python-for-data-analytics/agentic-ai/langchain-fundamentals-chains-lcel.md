@@ -1,0 +1,279 @@
+---
+description: >-
+  Learn how LangChain Chains (LCEL) connect Prompt Templates, Chat Models, and
+  Output Parsers into reusable workflows for building AI agents.
+---
+
+# LangChain Fundamentals: Chains (LCEL)
+
+## Chains (LCEL)
+
+So far, our AI agent can:
+
+* Create dynamic prompts using Prompt Templates.
+* Send prompts to an AI model using a Chat Model.
+* Format the response using an Output Parser.
+
+However, we're still using each component separately.
+
+As AI agents become more advanced, connecting each component manually can make your code repetitive and difficult to maintain.
+
+This is where **Chains** help.
+
+***
+
+## What is a Chain?
+
+A Chain connects multiple LangChain components into a single workflow.
+
+Instead of calling each component one after another, you connect them together and execute the entire workflow with a single command.
+
+Each component passes its output to the next component automatically.
+
+This makes your code cleaner, easier to read, and easier to extend.
+
+***
+
+## How a Chain Works
+
+A simple LangChain workflow looks like this.
+
+```
+User Input
+      │
+      ▼
+Prompt Template
+      │
+      ▼
+Chat Model
+      │
+      ▼
+Output Parser
+      │
+      ▼
+Final Response
+```
+
+Each component performs one specific task.
+
+Together, they create a complete AI workflow.
+
+***
+
+## What is LCEL?
+
+LCEL stands for **LangChain Expression Language**.
+
+It is the modern and recommended way to build LangChain workflows.
+
+Instead of manually calling every component, LCEL allows you to connect them using the pipe (`|`) operator.
+
+Think of it like a pipeline.
+
+The output of one component automatically becomes the input of the next component.
+
+***
+
+## Building a Chain
+
+Let's combine everything we've learned so far.
+
+```python
+from langchain_core.prompts import ChatPromptTemplate
+from langchain_anthropic import ChatAnthropic
+from langchain_core.output_parsers import StrOutputParser
+
+template = ChatPromptTemplate.from_template(
+    "Write a Python function to {task}."
+)
+
+model = ChatAnthropic(
+    model="claude-sonnet-4-6"
+)
+
+parser = StrOutputParser()
+
+chain = template | model | parser
+```
+
+In this example:
+
+* The Prompt Template creates the prompt.
+* The Chat Model sends the prompt to Claude.
+* The Output Parser converts the response into plain text.
+
+The complete workflow is stored inside the `chain` object.
+
+***
+
+## Running the Chain
+
+Once the chain is created, executing it is simple.
+
+```python
+result = chain.invoke(
+    {
+        "task": "check whether a string is a palindrome"
+    }
+)
+
+print(result)
+```
+
+When you call `invoke()`:
+
+1. The Prompt Template generates the final prompt.
+2. The Chat Model sends it to the AI model.
+3. The AI model generates a response.
+4. The Output Parser formats the response.
+5. The final result is returned to your application.
+
+You don't need to call each component individually.
+
+LCEL handles the entire workflow automatically.
+
+***
+
+## Why Use Chains?
+
+Chains provide several advantages.
+
+* Cleaner code
+* Less repetitive logic
+* Easy to understand workflows
+* Reusable pipelines
+* Easier debugging
+* Better scalability
+
+As your AI agents become more powerful, you'll simply add more components to the chain instead of rewriting your existing code.
+
+***
+
+## &#x20;Think Like an AI Agent
+
+An AI agent rarely completes a task in a single step.
+
+For example, an AI Research Agent might need to:
+
+1. Generate a search query.
+2. Search the web.
+3. Read the search results.
+4. Summarize the information.
+5. Return the final answer.
+
+Each of these steps can become part of a larger LangChain workflow.
+
+Chains make it easy to connect these steps together.
+
+This is one of the key ideas behind building AI agents with LangChain.
+
+***
+
+## Complete Workflow
+
+The following diagram shows how the components you've learned work together.
+
+```
+                User Request
+                     │
+                     ▼
+            Prompt Template
+                     │
+                     ▼
+              Chat Model
+                     │
+                     ▼
+                AI Model
+                     │
+                     ▼
+            Output Parser
+                     │
+                     ▼
+              Final Response
+```
+
+Every AI agent you'll build later in this course follows a workflow similar to this.
+
+As you progress, you'll add more components such as:
+
+* Tools
+* Memory
+* Retrieval (RAG)
+* Agents
+* Multi-Agent Systems
+
+The core workflow remains the same.
+
+***
+
+## Complete Example
+
+```python
+from langchain_core.prompts import ChatPromptTemplate
+from langchain_anthropic import ChatAnthropic
+from langchain_core.output_parsers import StrOutputParser
+
+template = ChatPromptTemplate.from_template(
+    "Write a Python function to {task}."
+)
+
+model = ChatAnthropic(
+    model="claude-sonnet-4-6"
+)
+
+chain = (
+    template
+    | model
+    | StrOutputParser()
+)
+
+result = chain.invoke(
+    {
+        "task": "check whether a string is a palindrome"
+    }
+)
+
+print(result)
+```
+
+This example demonstrates the complete LangChain workflow using LCEL.
+
+***
+
+## Why LCEL is Recommended
+
+Older versions of LangChain used classes such as `LLMChain`.
+
+Today, LCEL is the recommended approach because it is:
+
+* Simpler
+* More flexible
+* Easier to read
+* Easier to extend
+* Compatible with modern LangChain features
+
+If you're starting a new LangChain project, use LCEL instead of older chain classes.
+
+***
+
+## Key Takeaways
+
+* A Chain connects multiple LangChain components into one workflow.
+* LCEL is the modern way to build LangChain pipelines.
+* The `|` operator passes data from one component to the next.
+* `invoke()` executes the entire workflow.
+* Chains make AI agents easier to build, understand, and maintain.
+
+***
+
+## What's Next?
+
+You now understand the three fundamental building blocks of LangChain:
+
+* Chat Models
+* Prompt Templates
+* Chains (LCEL)
+
+These concepts form the foundation of every LangChain application you'll build in this course.
+
+In the next chapter, you'll build your first real LangChain project and see how these components work together in a practical AI application.
