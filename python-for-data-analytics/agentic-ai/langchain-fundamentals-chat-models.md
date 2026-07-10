@@ -1,3 +1,10 @@
+---
+description: >-
+  Discover how Chat Models send prompts to AI models and return responses,
+  making it easy to switch between different LLM providers with minimal code
+  changes.
+---
+
 # LangChain Fundamentals: Chat Models
 
 ### Overview

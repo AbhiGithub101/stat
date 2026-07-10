@@ -141,7 +141,7 @@
     * [15. Row Level Security](python-for-data-analytics/4.-power-bi/15.-row-level-security.md)
   * [Agentic AI](python-for-data-analytics/agentic-ai/README.md)
     * [1. Introduction To Agentic AI](python-for-data-analytics/agentic-ai/1.-introduction-to-agentic-ai.md)
-    * [Set up LangChain in PyCharm](python-for-data-analytics/agentic-ai/set-up-langchain-in-pycharm.md)
+    * [Set Up LangChain in PyCharm](python-for-data-analytics/agentic-ai/set-up-langchain-in-pycharm.md)
     * [LangChain Fundamentals: Chat Models](python-for-data-analytics/agentic-ai/langchain-fundamentals-chat-models.md)
     * [LangChain Fundamentals: Prompt Templates](python-for-data-analytics/agentic-ai/langchain-fundamentals-prompt-templates.md)
     * [LangChain Fundamentals: Chains (LCEL)](python-for-data-analytics/agentic-ai/langchain-fundamentals-chains-lcel.md)

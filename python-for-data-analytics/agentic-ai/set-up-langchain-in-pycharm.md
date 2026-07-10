@@ -1,12 +1,11 @@
 ---
 description: >-
-  Set up a LangChain project in PyCharm, configure .env and .gitignore, and
-  connect the project to GitHub.
+  Learn how to set up a LangChain development environment in PyCharm by creating
+  a project, installing dependencies, configuring API keys, and running your
+  first AI model.
 ---
 
-# Set up LangChain in PyCharm
-
-## Set Up LangChain in PyCharm
+# Set Up LangChain in PyCharm
 
 ### Overview
 
