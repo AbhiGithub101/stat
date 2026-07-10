@@ -172,9 +172,9 @@ Instead of writing your API key directly in your code, your application loads it
 
 This keeps your code clean and helps protect your credentials.
 
-> **Important**
+> <mark style="color:$danger;">**Important**</mark>
 >
-> Never share or upload your `.env` file because it contains your secret API keys.
+> <mark style="color:red;">Never share or upload your</mark> <mark style="color:red;"></mark><mark style="color:red;">`.env`</mark> <mark style="color:red;"></mark><mark style="color:red;">file because it contains your secret API keys.</mark>
 
 ***
 
