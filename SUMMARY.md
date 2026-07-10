@@ -128,7 +128,7 @@
     * [2. Loading the Data](python-for-data-analytics/4.-power-bi/2.-loading-the-data.md)
     * [3. Power Query Editor](python-for-data-analytics/4.-power-bi/3.-power-query-editor.md)
     * [4. Report View, Table View and Model View](python-for-data-analytics/4.-power-bi/4.-report-view-table-view-and-model-view.md)
-    * [5. Report Modeling (Model View)](python-for-data-analytics/4.-power-bi/5.-report-modeling-model-view.md)
+    * [5. Report Modeling (Report View)](python-for-data-analytics/4.-power-bi/5.-report-modeling-report-view.md)
     * [6. Drill Through, Tooltips,  and Edit Interaction](python-for-data-analytics/4.-power-bi/6.-drill-through-tooltips-and-edit-interaction.md)
     * [7. Customize Tooltip in Power BI](python-for-data-analytics/4.-power-bi/7.-customize-tooltip-in-power-bi.md)
     * [8. Introduction to DAX](python-for-data-analytics/4.-power-bi/8.-introduction-to-dax.md)
