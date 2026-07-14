@@ -4,7 +4,7 @@ hidden: true
 
 # New Matplotlib
 
-### MATPLOTLIB CHARTS&#x20;
+### MATPLOTLIB CHARTS
 
 Matplotlib is a library that we use for data visualization. Charts covered in this document:
 
@@ -18,7 +18,7 @@ Matplotlib is a library that we use for data visualization. Charts covered in th
 
 Install Matplotlib: pip install matplotlib
 
-### How to install pandas? <a href="#how-to-install-pandas" id="how-to-install-pandas"></a>
+### How to install matplotlib ? <a href="#how-to-install-pandas" id="how-to-install-pandas"></a>
 
 Run this command in your terminal:
 
@@ -26,9 +26,7 @@ Run this command in your terminal:
 pip install matplotlib
 ```
 
-
-
-## 1.SCATTER PLOT&#x20;
+## 1.SCATTER PLOT
 
 ***
 
@@ -40,7 +38,7 @@ A scatter plot is a chart that shows specific data points on a graph in the form
 
 **Real-life example:**
 
-Impact of temperature on sales of tea or cold drink. Impact of sleep duration on stress or healthy     lifestyle.
+Impact of temperature on sales of tea or cold drink. Impact of sleep duration on stress or healthy lifestyle.
 
 ***
 
@@ -95,12 +93,6 @@ Tea shows a negative relationship with temperature (sales drop as it gets hotter
 
 ***
 
-### Parameters Explanation
-
-plt.scatter(x, y) -> plots x values against y values as dots color='red' -> sets the color of the points label='...' -> name used for that series in the legend (needed when plotting more than one scatter on the same chart)
-
-***
-
 ### Example with Dataset (Adidas US Sales Dataset)
 
 Question: Does Units Sold have a relationship with total Sales?
@@ -132,33 +124,108 @@ The scatter plot shows a strong positive relationship between Units Sold and Sal
 
 ### Parameters Explanation
 
-plt.scatter(x, y) -> plots x values against y values as dots color='red' -> sets the color of the points label='...' -> name used for that series in the legend (needed when plotting more than one scatter on the same chart)
+#### `plt.scatter(x, y)`
+
+Plots x and y values as points.
+
+* `s=20` sets the point size.
+* `color='red'` or `c='red'` sets the point color.
+* `marker='o'` sets the point shape.
+* `alpha=0.7` sets the point transparency.
+* `label='...'` names the series for `plt.legend()`.
 
 ## COMMON FUNCTIONS USED IN ALMOST ALL PLOTS
 
-Before moving to the next charts, here are the functions you will see repeated in every chart type from here on. Once you understand these, you only need to learn the "chart function" itself (plt.plot, plt.bar, plt.pie, etc.) for each new chart.
+These functions appear across most chart types. Learn these first. Then focus on each chart function, such as `plt.plot()`, `plt.bar()`, or `plt.pie()`.
 
-**plt.title('text'):**&#x53;ets the heading/title of the chart.
+### Chart title
 
-**plt.xlabel('text'):** Sets the label for the x-axis (horizontal axis).
+#### `plt.title('text')`
 
-**plt.ylabel('text'):** Sets the label for the y-axis (vertical axis).
+Sets the chart title.
 
-**plt.grid():** Adds gridlines to the chart, making it easier to read values.It has axis parameter that has default value 'both', also we can pass axis='x'  for getting grids only on x-axis and axis='y' for getting   grids on y-axis.
+* `fontsize=14` controls the title text size.
+* `color='blue'` controls the title color.
+* `loc='left'` aligns the title. The default is `'center'`.
 
-**plt.legend():** Displays a legend box showing which color/line belongs to which label. Only works if you passed label='...' inside the chart function (e.g. plt.plot(..., label='Iphone')). You can control its position, e.g. plt.legend(loc='upper left').
+### Axis labels
 
-**plt.show():** Renders and displays the chart. Always the last line.
+#### `plt.xlabel('text')` and `plt.ylabel('text')`
 
-**plt.figure(figsize=(width, height)):** Creates a new figure and controls the size of the chart (in inches). Useful when a chart has many categories/labels and needs more space (e.g. bar chart with 50 states).
+Set the x-axis and y-axis labels.
 
-**plt.xticks(...):** Controls the tick marks/labels shown on the x-axis. Can be used to rename ticks (e.g. show month names instead of numbers 1-12) or rotate long labels: plt.xticks(rotation=90).
+* `fontsize=12` controls the label text size.
+* `color='gray'` controls the label color.
 
-color / colors Sets the color(s) used in the chart. Can be a single color ('red', 'green', 'skyblue') or a list of colors for multiple categories.
+### Gridlines
 
-**label='...':** Sets the name that will appear for that series/slice in the legend.
+#### `plt.grid()`
 
-Note: You don't have to use all of these in every chart - use the ones that make sense for what you're trying to show.
+Adds gridlines to make values easier to read. Gridlines are off by default.
+
+* `visible=True` or `visible=False` turns gridlines on or off.
+* `axis='both'` draws both gridlines. Use `'x'` or `'y'` for one axis.
+* `color='gray'` sets the gridline color.
+* `linestyle='--'` sets the line style. Use `'-'`, `':'`, or `'-.'` too.
+* `linewidth=0.5` controls the line thickness.
+* `alpha=0.7` controls transparency. Lower values look fainter.
+
+### Legend
+
+#### `plt.legend()`
+
+Displays labels for chart series. Add `label='...'` to each series first.
+
+* `loc='upper left'` sets the legend position. Use `'best'` for automatic placement.
+* `fontsize=10` controls the legend text size.
+* `ncol=2` arranges entries into columns.
+
+### Displaying a chart
+
+#### `plt.show()`
+
+Renders and displays the chart. Use it as the final line. It needs no parameters.
+
+### Figure size
+
+#### `plt.figure(figsize=(width, height))`
+
+Creates a figure and controls its size in inches. Use it for crowded labels.
+
+* `figsize=(10,4)` sets the width and height.
+* `dpi=150` sets the resolution. Higher values look sharper.
+
+### X-axis ticks
+
+#### `plt.xticks(...)`
+
+Controls the tick positions and labels on the x-axis.
+
+* `ticks=[1,2,3]` selects positions that receive a tick.
+* `labels=['a','b','c']` sets custom tick labels.
+* `rotation=90` rotates labels to prevent overlap.
+* `fontsize=9` controls the tick label text size.
+
+### Colors
+
+#### `color` and `colors`
+
+Set one or more chart colors.
+
+* `color='red'` sets a named color for one series.
+* `color='#ff5733'` uses a hex color.
+* `color='#ff573380'` uses hex with transparency. `00` is transparent. `ff` is opaque.
+* `colors=['red','blue','green']` sets colors for multiple categories or slices.
+
+### Series labels
+
+#### `label='...'`
+
+Sets the name shown for a series or slice in the legend. Use `plt.legend()` to display it.
+
+{% hint style="info" %}
+Use only the functions and parameters that support your chart.
+{% endhint %}
 
 ## 2. LINE CHART
 
@@ -166,17 +233,19 @@ Note: You don't have to use all of these in every chart - use the ones that make
 
 ### What is a Line Chart?
 
-Definition (simple English): A line chart connects data points with straight lines, in the order they occur, to show how a value changes over time or over a sequence.
+A line chart connects data points with straight lines, in the order they occur, to show how a value changes over time or over a sequence.
 
 **When to use it:** Use a line chart when you want to see a trend - how something increases, decreases, or fluctuates over time (days, months, years) or over an ordered sequence.
 
-**Real-life example:**&#x20;
+**Real-life example:**
 
 A business tracking its monthly revenue over the year to spot seasonal patterns, or a fitness app showing your weight trend over the past 6 months.
 
 ***
 
 ### Example (using list values)
+
+#### Example - 1. Monthly Sales
 
 ```python
 month = ['jan','feb','mar','apr']
@@ -187,14 +256,20 @@ plt.title('Monthly Sales')
 plt.xlabel('Month')
 plt.ylabel('Sales')
 plt.grid()
+
+for x, y in zip(month, isale): 
+    plt.text(x, y+15, f'({x},{y})', ha='center') # for showing datapoints on chart
+
 plt.show()
 ```
 
-<figure><img src="../../.gitbook/assets/03_line_simple_v3.png" alt=""><figcaption></figcaption></figure>
-
 ***
 
+<figure><img src="../../.gitbook/assets/03b_line_simple_datapoints.png" alt=""><figcaption></figcaption></figure>
+
 ### Example with Dataset (Adidas US Sales Dataset)
+
+#### Example - 2. Monthly Revenue Trend
 
 Question: What is the monthly revenue trend for Adidas sales?
 
@@ -231,7 +306,15 @@ Monthly revenue shows clear seasonal ups and downs. Revenue drops in the first q
 
 ### Parameters Explanation
 
-plt.plot(x, y) -> draws a line connecting x,y points in order marker='o' -> puts a circular marker/dot on each data point groupby('col').agg() -> groups rows by a column and calculates a summary (like sum) for each group np.arange(start, stop) -> generates an array of numbers, used here to control custom tick positions
+#### `plt.plot(x, y)`
+
+Draws a line connecting points in order.
+
+* `color='blue'` sets the line color.
+* `linestyle='--'` sets the line style.
+* `marker='o'` adds a marker at each data point.
+* `linewidth=2` sets the line thickness.
+* `label='...'` names the series for `plt.legend()`.
 
 ## 3. BAR CHART
 
@@ -243,13 +326,15 @@ A bar chart uses rectangular bars to represent and compare values across differe
 
 **When to use it:** Use a bar chart when you want to compare a number across different categories (not over time necessarily, just category vs category).
 
-**Real-life example:**&#x20;
+**Real-life example:**
 
 Comparing sales across different stores, comparing population across different cities, or comparing marks scored by different students.
 
 ***
 
 ### Example (using list values)
+
+#### Example - 1. City Sales
 
 ```python
 city = ['delhi','pune','agra','bangalore']
@@ -268,6 +353,8 @@ plt.show()
 ***
 
 ### Example with Dataset (Adidas US Sales Dataset)
+
+#### Example - 2. State-wise Revenue
 
 Question: Give state-wise sales for Adidas.
 
@@ -290,9 +377,9 @@ plt.show()
 
 <figure><img src="../../.gitbook/assets/06_bar_dataset_v3.png" alt=""><figcaption></figcaption></figure>
 
-Note: If you have many categories and long names, plt.barh() (horizontal bar chart) is often easier to read than plt.bar():&#x20;
+**Note:** If you have many categories and long names, plt.barh() (horizontal bar chart) is often easier to read than plt.bar():
 
-**Try  this:** plt.barh(sdf\['State'], sdf\['revenue'], color='green', height=0.5)
+**Try this:** plt.barh(sdf\['State'], sdf\['revenue'], color='green', height=0.5)
 
 ***
 
@@ -304,7 +391,21 @@ New York (\~8.67M), California (\~8.58M) and Florida (\~7.82M) are the top reven
 
 ### Parameters Explanation
 
-plt.bar(x, y) -> draws vertical bars plt.barh(x, y) -> draws horizontal bars (good for long category names / many categories) width=0.4 -> controls how thick each bar is height=0.5 -> controls thickness of bars in barh() xticks(rotation=90) -> rotates x-axis labels so long names (like state names) don't overlap sort\_values(ascending=False) -> sorts data so bars appear from highest to lowest (or vice versa)
+#### `plt.bar(x, height)`
+
+Draws vertical bars.
+
+* `width=0.4` sets each bar width.
+* `color='green'` sets the bar color.
+* `label='...'` names the bars for `plt.legend()`.
+
+#### `plt.barh(y, width)`
+
+Draws horizontal bars.
+
+* `height=0.5` sets each bar height.
+* `color='green'` sets the bar color.
+* `label='...'` names the bars for `plt.legend()`.
 
 ## 4. HISTOGRAM
 
@@ -312,7 +413,7 @@ plt.bar(x, y) -> draws vertical bars plt.barh(x, y) -> draws horizontal bars (go
 
 ### What is a Histogram?
 
-Definition (simple English): A histogram shows the distribution of a single numerical column by splitting the data into ranges called "bins" and counting how many values fall into each bin. Unlike a bar chart, a histogram is always about one numeric variable's spread, not categories.
+A histogram shows the distribution of a single numerical column by splitting the data into ranges called "bins" and counting how many values fall into each bin. Unlike a bar chart, a histogram is always about one numeric variable's spread, not categories.
 
 **When to use it:** Use a histogram when you want to understand how data is spread out
 
@@ -324,7 +425,9 @@ Types of distribution: Normal Distribution -> mean = median = mode Right-Skewed 
 
 ***
 
-### Simple Example (using list values)
+### Example (using list values)
+
+#### Example - 1. Student Scores Distribution
 
 ```python
 scores = [55,60,62,65,66,68,70,70,71,72,72,73,74,75,75,75,
@@ -343,6 +446,8 @@ plt.show()
 ***
 
 ### Example with Dataset (Sleep Health and Lifestyle Dataset)
+
+#### Example - 2. Age Distribution
 
 Question: What does the Age distribution of people in this dataset look like?
 
@@ -371,7 +476,15 @@ Mean Age = 42.18, Median Age = 43.0, Mode = 43. Since mean, median and mode are 
 
 ### Parameters Explanation
 
-plt.hist(data) -> plots the distribution of one numeric column bins=15 -> number of ranges the data is split into (a common rule of thumb: bins = sqrt(number of values)) edgecolor='black' -> adds a border around each bar so bars are clearly separated from each other .mean() / .median() / .mode() -> pandas functions to calculate average, middle value, and most frequent value of a column
+#### `plt.hist(x)`
+
+Plots the distribution of one numeric column.
+
+* `bins=15` sets the number of value ranges.
+* `range=(0, 100)` limits the included value range.
+* `color='orange'` sets the bar color.
+* `edgecolor='black'` adds a border around each bar.
+* `density=True` shows probability density instead of counts.
 
 ## 5. PIE CHART
 
@@ -379,17 +492,19 @@ plt.hist(data) -> plots the distribution of one numeric column bins=15 -> number
 
 ### What is a Pie Chart?
 
-Definition (simple English): A pie chart is a circular chart divided into slices, where each slice represents a category's proportion (percentage) of the whole.
+A pie chart is a circular chart divided into slices, where each slice represents a category's proportion (percentage) of the whole.
 
-When to use it: Use a pie chart when you want to show how a total is split into parts - i.e. percentage/proportion of a whole. Best for a small number of categories (2-6). Common uses: market share, budget distribution, population split, sales contribution of each product.
+**When to use it:** Use a pie chart when you want to show how a total is split into parts - i.e. percentage/proportion of a whole. Best for a small number of categories (2-6). Common uses: market share, budget distribution, population split, sales contribution of each product.
 
-Real-life example: Showing what percentage of a company's total sales came from Online vs In-store vs Outlet sales channels, or how a household budget is split across rent, food, and savings.
+**Real-life example:** Showing what percentage of a company's total sales came from Online vs In-store vs Outlet sales channels, or how a household budget is split across rent, food, and savings.
 
 ***
 
-### Simple Example (using list values)
+### Example (using list values)
 
-```
+#### Example - 1. Nutrient Breakdown
+
+```py
 quantity = [13.3, 2.2, 8.7, 5.6]
 ing = ['sugar','protein','total fat','saturated fat']
 
@@ -399,13 +514,15 @@ plt.title('Nutrient Breakdown')
 plt.show()
 ```
 
-\[IMAGE: 09\_pie\_simple.png]
+<figure><img src="../../.gitbook/assets/09_pie_simple.png" alt=""><figcaption></figcaption></figure>
 
-You can also make one slice pop out and add a shadow: plt.pie(quantity, labels=ing, autopct='%1.1f%%', colors=\['red','blue','green','yellow'], explode=\[0.1,0,0,0], shadow=True)
+**Note:** You can also make one slice pop out and add a shadow: plt.pie(quantity, labels=ing, autopct='%1.1f%%', colors=\['red','blue','green','yellow'], explode=\[0.1,0,0,0], shadow=True)
 
 ***
 
 ### Example with Dataset (Adidas US Sales Dataset)
+
+#### Example - 2. Sales Method Share
 
 Question: What is the percentage contribution of each Sales Method in Adidas sales?
 
@@ -419,7 +536,7 @@ plt.title('Sales Method Share')
 plt.show()
 ```
 
-\[IMAGE: 10\_pie\_dataset.png]
+<figure><img src="../../.gitbook/assets/10_pie_dataset.png" alt=""><figcaption></figcaption></figure>
 
 ***
 
@@ -431,7 +548,16 @@ Online sales make up the largest share at 50.7%, followed by Outlet at 31.3%, an
 
 ### Parameters Explanation
 
-plt.pie(values) -> draws slices sized according to each value's proportion of the total labels=\[...] -> names shown next to each slice autopct='%1.1f%%' -> displays the percentage on each slice, formatted to 1 decimal place explode=\[...] -> pulls a slice out from the center; the number controls how far it's pulled out (0 means it stays in place) shadow=True -> adds a drop shadow for a 3D-ish look value\_counts() -> pandas function that counts how many times each unique value appears in a column
+#### `plt.pie(x)`
+
+Draws slices proportional to each value.
+
+* `labels=[...]` sets the label for each slice.
+* `autopct='%1.1f%%'` displays each slice percentage.
+* `colors=[...]` sets one color for each slice.
+* `explode=[0.1, 0, 0]` offsets selected slices from the center.
+* `shadow=True` adds a shadow below the pie.
+* `startangle=90` rotates the pie's starting position.
 
 ## 6. STACK PLOT
 
@@ -439,17 +565,19 @@ plt.pie(values) -> draws slices sized according to each value's proportion of th
 
 ### What is a Stack Plot?
 
-Definition (simple English): A stack plot shows how multiple categories/datasets contribute to a running total over time or a sequence. Each dataset is "stacked" on top of the previous one, so the total height of the stack at any point is the sum of all categories at that point.
+A stack plot shows how multiple categories/datasets contribute to a running total over time or a sequence. Each dataset is "stacked" on top of the previous one, so the total height of the stack at any point is the sum of all categories at that point.
 
-When to use it: Use a stack plot when you want to show both the individual contribution of each category AND the overall combined total, over time or a sequence, at the same time.
+**When to use it:** Use a stack plot when you want to show both the individual contribution of each category AND the overall combined total, over time or a sequence, at the same time.
 
-Real-life example: Showing how total company revenue is made up of revenue from Product A, B, and C each month, so you can see both the total trend and which product is driving it.
+**Real-life example:** Showing how total company revenue is made up of revenue from Product A, B, and C each month, so you can see both the total trend and which product is driving it.
 
 ***
 
-### Simple Example (using list values)
+### Example (using list values)
 
-```
+#### Example - 1. Monthly Sales Stack Plot
+
+```python
 months = ['Jan','Feb','Mar','Apr','May']
 product_a = [100,120,150,170,200]
 product_b = [80,90,100,120,130]
@@ -466,15 +594,17 @@ plt.legend(loc='upper left')
 plt.show()
 ```
 
-\[IMAGE: 11\_stack\_simple.png]
+<figure><img src="../../.gitbook/assets/11_stack_simple.png" alt=""><figcaption></figcaption></figure>
 
 ***
 
 ### Example with Dataset (Adidas US Sales Dataset)
 
+#### Example - 2. Monthly Units Sold by Product
+
 Question: How do Men's Apparel, Women's Apparel, and Men's Athletic Footwear contribute to monthly average units sold?
 
-```
+```python
 df['Month'] = df['Invoice Date'].dt.month
 mdf = df.pivot_table(index='Month', columns='Product',
                       values='Units Sold').reset_index()
@@ -493,7 +623,7 @@ plt.legend(loc='upper left')
 plt.show()
 ```
 
-\[IMAGE: 12\_stack\_dataset.png]
+<figure><img src="../../.gitbook/assets/12_stack_dataset.png" alt=""><figcaption></figcaption></figure>
 
 ***
 
@@ -505,7 +635,14 @@ Men's Athletic Footwear consistently contributes the largest share of the stack 
 
 ### Parameters Explanation
 
-plt.stackplot(x, y1, y2, y3, ...) -> plots multiple y-series stacked on top of each other for each x value labels=\[...] -> names for each stacked layer (used in legend) colors=\[...] -> one color per layer, in the same order as the y-series legend(loc='upper left') -> positions the legend box in a specific corner of the chart pivot\_table(index=, columns=, values=) -> pandas function that reshapes data - each unique column value becomes its own column, useful to prepare data for a stack plot
+#### `plt.stackplot(x, y1, y2, ...)`
+
+Plots y-series stacked on top of each other.
+
+* `labels=[...]` sets the label for each stacked layer.
+* `colors=[...]` sets one color for each layer.
+* `alpha=0.7` sets the layer transparency.
+* `baseline='zero'` sets the stacking baseline. This is the default.
 
 ## 7. BOX PLOT
 
@@ -513,17 +650,19 @@ plt.stackplot(x, y1, y2, y3, ...) -> plots multiple y-series stacked on top of e
 
 ### What is a Box Plot?
 
-Definition (simple English): A box plot (box-and-whisker plot) summarizes a numeric column using 5 key values: minimum, first quartile (Q1/25%), median (50%), third quartile (Q3/75%), and maximum. The "box" covers the middle 50% of the data, the line inside is the median, the "whiskers" extend to the normal range, and any points outside the whiskers are shown separately as outliers.
+A box plot (box-and-whisker plot) summarizes a numeric column using 5 key values: minimum, first quartile (Q1/25%), median (50%), third quartile (Q3/75%), and maximum. The "box" covers the middle 50% of the data, the line inside is the median, the "whiskers" extend to the normal range, and any points outside the whiskers are shown separately as outliers.
 
-When to use it: Use a box plot when you want to quickly see the spread of a numeric column, compare it to other columns/groups, and spot outliers - without needing a full histogram.
+**When to use it:** Use a box plot when you want to quickly see the spread of a numeric column, compare it to other columns/groups, and spot outliers - without needing a full histogram.
 
-Real-life example: Checking if there are unusually large orders in a sales dataset (outliers), or comparing salary spread across different departments in a company.
+**Real-life example:** Checking if there are unusually large orders in a sales dataset (outliers), or comparing salary spread across different departments in a company.
 
 ***
 
-### Simple Example (using list values)
+### Example (using list values)
 
-```
+#### Example - 1. Student Scores Boxplot
+
+```python
 scores = [55,60,62,65,66,68,70,70,71,72,72,73,74,75,75,75,
           76,77,78,80,82,85,88,90,95,150]
 
@@ -534,17 +673,19 @@ plt.grid()
 plt.show()
 ```
 
-\[IMAGE: 13\_box\_simple.png]
+<figure><img src="../../.gitbook/assets/13_box_simple.png" alt=""><figcaption></figcaption></figure>
 
-Note: the value 150 was added on purpose - it sits far away from the rest of the scores, so the box plot shows it as an outlier dot.
+**Note:** The value 150 was added on purpose - it sits far away from the rest of the scores, so the box plot shows it as an outlier dot.
 
 ***
 
 ### Example with Dataset (Adidas US Sales Dataset)
 
+#### Example - 2. Units Sold Spread
+
 Question: How is Units Sold spread out, and are there outlier transactions?
 
-```
+```python
 plt.boxplot(df['Units Sold'], vert=False, showmeans=True, meanline=True)
 plt.title('Units Sold Boxplot')
 plt.xlabel('Units Sold')
@@ -552,7 +693,7 @@ plt.grid()
 plt.show()
 ```
 
-\[IMAGE: 14\_box\_dataset.png]
+<figure><img src="../../.gitbook/assets/14_box_dataset.png" alt=""><figcaption></figcaption></figure>
 
 ***
 
@@ -564,4 +705,12 @@ Q1 = 106, Median = 176, Q3 = 350, Mean = \~256.9. The box (middle 50% of transac
 
 ### Parameters Explanation
 
-plt.boxplot(data) -> draws the box-and-whisker summary of one numeric column vert=False -> draws the box horizontally instead of the default vertical orientation showmeans=True -> displays the mean as a marker on the plot (in addition to the median line) meanline=True -> draws the mean as a line instead of a dot marker
+#### `plt.boxplot(x)`
+
+Draws a box-and-whisker summary of a numeric column.
+
+* `vert=False` draws a horizontal box plot.
+* `showmeans=True` displays the mean.
+* `meanline=True` shows the mean as a line.
+* `showfliers=True` displays outlier points. This is the default.
+* `patch_artist=True` fills the box with color.
