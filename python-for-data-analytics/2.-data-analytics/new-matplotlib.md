@@ -129,10 +129,12 @@ The scatter plot shows a strong positive relationship between Units Sold and Sal
 Plots x and y values as points.
 
 * `s=20` sets the point size.
-* `color='red'` or `c='red'` sets the point color.
+* `color='red'` or `c='red'` sets the color of the plotted points. You can specify a color name (e.g., `'red'`, `'blue'`, `'green'`) or use a hexadecimal (hex) color code (e.g., `'#FF5733'`, `'#3498DB'`, `'#2ECC71'`) for custom colors.
+
+**Note:** Refer to this link for hexadecimal (hex) color codes: [https://htmlcolorcodes.com/](https://htmlcolorcodes.com/)
+
 * `marker='o'` sets the point shape.
 * `alpha=0.7` sets the point transparency.
-* `label='...'` names the series for `plt.legend()`.
 
 ## COMMON FUNCTIONS USED IN ALMOST ALL PLOTS
 
@@ -145,7 +147,6 @@ These functions appear across most chart types. Learn these first. Then focus on
 Sets the chart title.
 
 * `fontsize=14` controls the title text size.
-* `color='blue'` controls the title color.
 * `loc='left'` aligns the title. The default is `'center'`.
 
 ### Axis labels
@@ -155,7 +156,6 @@ Sets the chart title.
 Set the x-axis and y-axis labels.
 
 * `fontsize=12` controls the label text size.
-* `color='gray'` controls the label color.
 
 ### Gridlines
 
@@ -165,7 +165,6 @@ Adds gridlines to make values easier to read. Gridlines are off by default.
 
 * `visible=True` or `visible=False` turns gridlines on or off.
 * `axis='both'` draws both gridlines. Use `'x'` or `'y'` for one axis.
-* `color='gray'` sets the gridline color.
 * `linestyle='--'` sets the line style. Use `'-'`, `':'`, or `'-.'` too.
 * `linewidth=0.5` controls the line thickness.
 * `alpha=0.7` controls transparency. Lower values look fainter.
@@ -205,23 +204,6 @@ Controls the tick positions and labels on the x-axis.
 * `labels=['a','b','c']` sets custom tick labels.
 * `rotation=90` rotates labels to prevent overlap.
 * `fontsize=9` controls the tick label text size.
-
-### Colors
-
-#### `color` and `colors`
-
-Set one or more chart colors.
-
-* `color='red'` sets a named color for one series.
-* `color='#ff5733'` uses a hex color.
-* `color='#ff573380'` uses hex with transparency. `00` is transparent. `ff` is opaque.
-* `colors=['red','blue','green']` sets colors for multiple categories or slices.
-
-### Series labels
-
-#### `label='...'`
-
-Sets the name shown for a series or slice in the legend. Use `plt.legend()` to display it.
 
 {% hint style="info" %}
 Use only the functions and parameters that support your chart.
@@ -310,11 +292,9 @@ Monthly revenue shows clear seasonal ups and downs. Revenue drops in the first q
 
 Draws a line connecting points in order.
 
-* `color='blue'` sets the line color.
 * `linestyle='--'` sets the line style.
 * `marker='o'` adds a marker at each data point.
 * `linewidth=2` sets the line thickness.
-* `label='...'` names the series for `plt.legend()`.
 
 ## 3. BAR CHART
 
@@ -396,16 +376,16 @@ New York (\~8.67M), California (\~8.58M) and Florida (\~7.82M) are the top reven
 Draws vertical bars.
 
 * `width=0.4` sets each bar width.
-* `color='green'` sets the bar color.
-* `label='...'` names the bars for `plt.legend()`.
+
+**Note:** In `plt.bar()`, **`height`** stores the data values, while **`width`** controls the bar thickness.
 
 #### `plt.barh(y, width)`
 
 Draws horizontal bars.
 
 * `height=0.5` sets each bar height.
-* `color='green'` sets the bar color.
-* `label='...'` names the bars for `plt.legend()`.
+
+**Note:** In `plt.barh()`, **`width`** stores the data values, while **`height`** controls the bar thickness.
 
 ## 4. HISTOGRAM
 
@@ -445,6 +425,31 @@ plt.show()
 
 ***
 
+#### Example - 2. Multiple Histograms
+
+```python
+male_ages = [22,23,24,24,25,26,27,28,28,29,30,31,32,33,34,35]
+female_ages = [20,21,22,23,23,24,25,26,27,27,28,29,30,31,32,33]
+
+plt.hist(male_ages, bins=8, alpha=0.6, label='Male', color='blue', edgecolor='black')
+plt.hist(female_ages, bins=8, alpha=0.6, label='Female', color='pink', edgecolor='black')
+
+plt.title('Age Distribution by Gender')
+plt.xlabel('Age')
+plt.ylabel('Frequency')
+plt.grid()
+plt.legend()
+plt.show()
+```
+
+<figure><img src="../../.gitbook/assets/07b_hist_simple_multiple.png" alt=""><figcaption></figcaption></figure>
+
+#### **What makes this work with multiple histograms:**
+
+1. `alpha=0.6` -> makes each histogram semi-transparent, so overlapping bars are still visible instead of one hiding the other
+2. `label='Male'` / `label='Female'` -> lets `plt.legend()` tell the two apart
+3. Calling `plt.hist()` twice before `plt.show()` -> both histograms render on the same axes
+
 ### Example with Dataset (Sleep Health and Lifestyle Dataset)
 
 #### Example - 2. Age Distribution
@@ -452,21 +457,39 @@ plt.show()
 Question: What does the Age distribution of people in this dataset look like?
 
 ```python
+import pandas as pd
+import matplotlib.pyplot as plt
+
 df = pd.read_csv('Sleep_health_and_lifestyle_dataset.csv')
 
-plt.hist(df['Age'], color='orange', bins=15, edgecolor='black')
+# plt.hist() returns 3 things when you capture its output:
+# counts  -> how many values fall in each bin (the bar heights)
+# bins    -> the edge values that define each bin's range
+# patches -> the actual bar objects drawn on the chart
+counts, bins, patches = plt.hist(df['Age'], color='orange', bins=15, edgecolor='black')
+
 plt.title('Age Distribution')
 plt.xlabel('Age')
 plt.ylabel('Frequency')
 plt.grid()
+
+# loop through each bar and its count together
+for count, patch in zip(counts, patches):
+    if count > 0:  # skip empty bins so we don't clutter the chart with 0s
+        x = patch.get_x() + patch.get_width()/2   # x = horizontal center of this bar
+        plt.text(x, count + 0.5, int(count), ha='center')  
+        # count + 0.5 -> lifts the label slightly above the bar's top
+        # int(count)  -> the actual frequency value to display
+        # ha='center' -> aligns the text to sit centered over the bar
+
 plt.show()
 
 df['Age'].mean(), df['Age'].median(), df['Age'].mode()
 ```
 
-\[IMAGE: 08\_hist\_dataset.png]
-
 ***
+
+<figure><img src="../../.gitbook/assets/08b_hist_dataset_datapoints.png" alt=""><figcaption></figcaption></figure>
 
 ### Conclusion
 
@@ -481,8 +504,31 @@ Mean Age = 42.18, Median Age = 43.0, Mode = 43. Since mean, median and mode are 
 Plots the distribution of one numeric column.
 
 * `bins=15` sets the number of value ranges.
+
+```
+How to decide the value of bins?
+
+There is no fixed value for bins. Choose it based on how detailed you want the histogram to be.
+
+• Fewer bins (e.g., 5–10):
+  - Wider intervals
+  - Simpler histogram
+  - Less detail
+
+• More bins (e.g., 20–30):
+  - Narrower intervals
+  - More detailed histogram
+  - May look noisy if there are too many bins
+
+A good starting point is 10–20 bins, then adjust based on the data.
+   
+Example: If the data ranges from 0 to 100:
+• bins=5 : 0–20, 20–40, 40–60, 60–80, 80–100
+• bins=10 : 0–10, 10–20, 20–30, ..., 90–100
+
+```
+
 * `range=(0, 100)` limits the included value range.
-* `color='orange'` sets the bar color.
 * `edgecolor='black'` adds a border around each bar.
 * `density=True` shows probability density instead of counts.
 
@@ -554,7 +600,6 @@ Draws slices proportional to each value.
 
 * `labels=[...]` sets the label for each slice.
 * `autopct='%1.1f%%'` displays each slice percentage.
-* `colors=[...]` sets one color for each slice.
 * `explode=[0.1, 0, 0]` offsets selected slices from the center.
 * `shadow=True` adds a shadow below the pie.
 * `startangle=90` rotates the pie's starting position.
@@ -640,7 +685,6 @@ Men's Athletic Footwear consistently contributes the largest share of the stack 
 Plots y-series stacked on top of each other.
 
 * `labels=[...]` sets the label for each stacked layer.
-* `colors=[...]` sets one color for each layer.
 * `alpha=0.7` sets the layer transparency.
 * `baseline='zero'` sets the stacking baseline. This is the default.
 
@@ -673,7 +717,7 @@ plt.grid()
 plt.show()
 ```
 
-<figure><img src="../../.gitbook/assets/13_box_simple.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/14b_box_simple_labeled.png" alt=""><figcaption></figcaption></figure>
 
 **Note:** The value 150 was added on purpose - it sits far away from the rest of the scores, so the box plot shows it as an outlier dot.
 
@@ -713,4 +757,3 @@ Draws a box-and-whisker summary of a numeric column.
 * `showmeans=True` displays the mean.
 * `meanline=True` shows the mean as a line.
 * `showfliers=True` displays outlier points. This is the default.
-* `patch_artist=True` fills the box with color.
