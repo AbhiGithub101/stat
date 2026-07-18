@@ -93,7 +93,7 @@
     * [21. Extras](python-for-data-analytics/2.-data-analytics/21.-extras.md)
     * [seab](python-for-data-analytics/2.-data-analytics/seab.md)
     * [Introduction to English](python-for-data-analytics/2.-data-analytics/introduction-to-english.md)
-    * [New Matplotlib](python-for-data-analytics/2.-data-analytics/new-matplotlib.md)
+    * [Matplotlib For Data Visualization](python-for-data-analytics/2.-data-analytics/matplotlib-for-data-visualization.md)
   * [3. SQL](python-for-data-analytics/3.-sql/README.md)
     * [DBMS and SQL](python-for-data-analytics/3.-sql/dbms-and-sql.md)
     * [Datatypes](python-for-data-analytics/3.-sql/datatypes.md)
