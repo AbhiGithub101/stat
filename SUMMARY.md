@@ -85,7 +85,7 @@
     * [14. Data Cleaning in Pandas](python-for-data-analytics/2.-data-analytics/14.-data-cleaning-in-pandas.md)
     * [15. Outlier in pandas](python-for-data-analytics/2.-data-analytics/15.-outlier-in-pandas.md)
     * [16. Joining in Pandas](python-for-data-analytics/2.-data-analytics/16.-joining-in-pandas.md)
-    * [17. Matplotlib For Data Visualization](python-for-data-analytics/2.-data-analytics/17.-matplotlib-for-data-visualization.md)
+    * [17. Matplotlib For Data Visualization...](python-for-data-analytics/2.-data-analytics/17.-matplotlib-for-data-visualization....md)
     * [18. Seaborn](python-for-data-analytics/2.-data-analytics/18.-seaborn.md)
     * [19. Retail Sales Analysis](python-for-data-analytics/2.-data-analytics/19.-retail-sales-analysis/README.md)
       * [Retail Sales Step By Step](python-for-data-analytics/2.-data-analytics/19.-retail-sales-analysis/retail-sales-step-by-step.md)

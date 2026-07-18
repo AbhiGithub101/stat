@@ -1,7 +1,3 @@
----
-hidden: true
----
-
 # Matplotlib For Data Visualization
 
 {% embed url="https://youtu.be/nvtRSwX0Ehg?si=dilNFuAARGgdh-DH" %}
