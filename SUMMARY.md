@@ -145,7 +145,7 @@
     * [11. Bookmark In Charts Visual](python-for-data-analytics/4.-power-bi/11.-bookmark-in-charts-visual.md)
     * [12. Hamburger Menu in Power BI Report](python-for-data-analytics/4.-power-bi/12.-hamburger-menu-in-power-bi-report.md)
     * [13. Dynamic Title](python-for-data-analytics/4.-power-bi/13.-dynamic-title.md)
-    * [14. Power BI Service](python-for-data-analytics/4.-power-bi/14.-power-bi-service.md)
+    * [13. Power BI Service](python-for-data-analytics/4.-power-bi/13.-power-bi-service.md)
     * [15. Row Level Security](python-for-data-analytics/4.-power-bi/15.-row-level-security.md)
   * [Agentic AI](python-for-data-analytics/agentic-ai/README.md)
     * [1.  Introduction To Agentic AI](python-for-data-analytics/agentic-ai/1.-introduction-to-agentic-ai.md)
