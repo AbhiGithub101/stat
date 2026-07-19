@@ -1,7 +1,3 @@
----
-hidden: true
----
-
 # Transactions and Exception Handling Assignment
 
 ### Practice dataset

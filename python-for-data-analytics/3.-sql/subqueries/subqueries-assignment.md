@@ -1,6 +1,5 @@
 ---
 description: Practice SQL Server subqueries
-hidden: true
 ---
 
 # SubQueries Assignment

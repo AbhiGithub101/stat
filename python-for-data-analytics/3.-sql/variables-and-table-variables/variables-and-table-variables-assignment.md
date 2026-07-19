@@ -1,6 +1,5 @@
 ---
 description: Practice SQL Server variables and table variables.
-hidden: true
 ---
 
 # Variables & Table Variables Assignment

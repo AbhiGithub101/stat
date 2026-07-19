@@ -2,10 +2,9 @@
 description: >-
   practice questions on TRUNCATE, numeric functions, and data conversion in SQL
   Server
-hidden: true
 ---
 
-# Practice Questions
+# Truncate and Numeric Functions Assignment
 
 ### Sample data
 

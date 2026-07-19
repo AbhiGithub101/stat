@@ -1,6 +1,5 @@
 ---
 description: Practice SQL Server constraints
-hidden: true
 ---
 
 # Constraints Assignment

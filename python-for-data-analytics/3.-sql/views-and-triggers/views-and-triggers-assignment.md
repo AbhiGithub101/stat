@@ -1,6 +1,5 @@
 ---
 description: Practice SQL Server views and triggers
-hidden: true
 ---
 
 # Views and Triggers Assignment

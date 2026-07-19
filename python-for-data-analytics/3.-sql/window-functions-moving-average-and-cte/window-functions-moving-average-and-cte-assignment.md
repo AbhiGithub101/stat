@@ -1,6 +1,5 @@
 ---
 description: Practice SQL Server window functions, moving calculations, and CTEs.
-hidden: true
 ---
 
 # Window Functions, Moving Average & CTE Assignment

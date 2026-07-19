@@ -1,6 +1,5 @@
 ---
 description: Practice UNION, UNION ALL, INTERSECT, and EXCEPT in SQL Server.
-hidden: true
 ---
 
 # Set Operations Assignment

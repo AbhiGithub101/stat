@@ -1,7 +1,3 @@
----
-hidden: true
----
-
 # Scalar & Table Valued Functions Assignment
 
 ### Practice dataset

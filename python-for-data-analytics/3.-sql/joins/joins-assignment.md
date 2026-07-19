@@ -2,10 +2,9 @@
 description: >-
   Beginner-friendly section-wise JOIN practice questions in SQL Server with
   sample data and solutions
-hidden: true
 ---
 
-# Practice Questions
+# Joins Assignment
 
 ### Sample data setup
 
