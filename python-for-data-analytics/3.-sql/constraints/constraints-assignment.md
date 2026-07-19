@@ -1,5 +1,5 @@
 ---
-description: Practice SQL Server constraints with one shared student enrollment dataset.
+description: Practice SQL Server constraints
 hidden: true
 ---
 

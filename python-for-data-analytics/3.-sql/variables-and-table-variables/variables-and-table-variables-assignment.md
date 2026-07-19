@@ -1,5 +1,5 @@
 ---
-description: Practice SQL Server variables and table variables with hidden solutions.
+description: Practice SQL Server variables and table variables.
 hidden: true
 ---
 

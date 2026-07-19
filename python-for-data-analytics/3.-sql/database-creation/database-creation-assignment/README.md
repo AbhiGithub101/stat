@@ -4,15 +4,11 @@ description: >-
   keys, and IDENTITY
 ---
 
-# Practice Questions
+# Database Creation Assignment
 
 ## Practice Questions
 
 Use these questions to practice database creation, table creation, `SELECT`, `INSERT`, primary keys.
-
-{% hint style="info" %}
-Try to write the queries on your own first. Run them in SQL Server and check the result after each step.
-{% endhint %}
 
 ### Syntax practice
 

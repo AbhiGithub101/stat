@@ -1,5 +1,5 @@
 ---
-description: Practice SQL Server views and AFTER triggers with one shared employee dataset.
+description: Practice SQL Server views and triggers
 hidden: true
 ---
 

@@ -1,6 +1,6 @@
-# Practice Questions
+# DDL & DML Commands
 
-### Reference tables for practice
+### Practice Dataset
 
 Use these sample tables where needed:
 

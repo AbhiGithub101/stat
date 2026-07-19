@@ -1,5 +1,5 @@
 ---
-description: Practice SQL Server subqueries with one shared employee dataset
+description: Practice SQL Server subqueries
 hidden: true
 ---
 

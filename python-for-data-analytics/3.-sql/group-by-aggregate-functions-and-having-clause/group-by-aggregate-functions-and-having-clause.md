@@ -1,4 +1,4 @@
-# Practice Questions
+# Group By, Aggregate Functions & Having Clause
 
 ### Sample data
 
@@ -52,8 +52,6 @@ Use this structure in all questions:
 
 ### Aggregate functions questions
 
-#### **Easy:**
-
 #### 1. What does `COUNT(*)` do in SQL Server?
 
 <details>
@@ -104,8 +102,6 @@ FROM SalesOrders;
 ```
 
 </details>
-
-#### Moderate:
 
 #### 5. Write a query to find the highest order amount.
 
@@ -162,8 +158,6 @@ WHERE OrderStatus = 'Completed';
 
 ### GROUP BY questions
 
-#### Easy:
-
 #### 1. Write a query to show each city and the number of orders from that city.
 
 <details>
@@ -219,8 +213,6 @@ GROUP BY OrderStatus;
 ```
 
 </details>
-
-#### Moderate
 
 #### 5. Write a query to show each product category and the average order amount.
 
@@ -281,8 +273,6 @@ GROUP BY Salesperson, OrderStatus;
 
 ### HAVING clause questions
 
-#### Easy
-
 #### 1. Write a query to show salespersons who handled more than 3 orders.
 
 <details>
@@ -327,8 +317,6 @@ HAVING AVG(OrderAmount) > 3000;
 ```
 
 </details>
-
-#### Moderate
 
 #### 4. Write a query to show order statuses that have at least 2 orders.
 

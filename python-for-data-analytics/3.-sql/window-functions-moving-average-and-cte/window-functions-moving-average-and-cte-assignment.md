@@ -1,13 +1,11 @@
 ---
-description: >-
-  Practice SQL Server window functions, moving calculations, and CTEs with
-  shared sample data.
+description: Practice SQL Server window functions, moving calculations, and CTEs.
 hidden: true
 ---
 
 # Window Functions, Moving Average & CTE Assignment
 
-### Shared dataset
+### Practice dataset
 
 ```sql
 CREATE TABLE Employee (
