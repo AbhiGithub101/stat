@@ -4,7 +4,7 @@
 
 Follow along with the complete implementation on YouTube, then use these notes as a quick reference while building the project.
 
-[https://youtu.be/JYTPzwguBPw?si=Ope8XO3OxiMjhwK9](https://youtu.be/JYTPzwguBPw?si=Ope8XO3OxiMjhwK9)
+{% embed url="https://www.youtube.com/watch?v=JYTPzwguBPw" %}
 
 ***
 
