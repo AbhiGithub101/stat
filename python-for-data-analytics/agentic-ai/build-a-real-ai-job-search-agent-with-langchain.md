@@ -1,280 +1,271 @@
 # Build a Real AI Job Search Agent with LangChain
 
-***
-
 ### Watch the Video
 
-If you prefer learning by watching the complete implementation first, you can watch the full tutorial here.
-
-**YouTube:**<br>
+Follow along with the complete implementation on YouTube, then use these notes as a quick reference while building the project.
 
 ***
 
 ## Overview
 
-In the previous episodes, we understood what AI Agents are and how they differ from traditional chatbots.
+In this project, we'll build a real AI Job Search Agent using LangChain, an NVIDIA LLM, and the JSearch API.
 
-Now it's time to build one.
+Instead of relying only on the LLM's knowledge, the agent fetches live job listings using a custom tool and presents them in a readable format.
 
-In this project, we'll create a real AI Job Search Agent using **LangChain**, **NVIDIA LLM**, and the **JSearch API**. Instead of answering only from its own knowledge, our agent will fetch live job listings from the internet and present them in a readable format.
-
-This project introduces one of the most important concepts in Agentic AI—**Tool Calling**. You'll also learn how an LLM decides when to use a tool and how external APIs make AI applications much more useful.
+By the end of this project, you'll understand how AI Agents use Tool Calling to interact with external APIs.
 
 ***
 
 ## What You'll Build
 
-By the end of this project, you'll have a working AI Agent that can:
-
-* Search live job openings
+* Search live jobs
 * Understand natural language queries
-* Call an external API whenever required
-* Return a clean response to the user
-
-Although the application runs in the terminal for now, we'll convert it into a proper web application in the upcoming episodes.
+* Call an external API automatically
+* Generate a clean response
 
 ***
 
-## Technologies Used
+## Tech Stack
 
-| Technology    | Why We're Using It                |
-| ------------- | --------------------------------- |
-| Python        | Main programming language         |
-| LangChain     | To build the AI Agent             |
-| NVIDIA API    | Provides the Large Language Model |
-| JSearch API   | Retrieves live job listings       |
-| Requests      | Sends HTTP requests to the API    |
-| python-dotenv | Keeps API keys secure             |
+| Technology    | Purpose               |
+| ------------- | --------------------- |
+| Python        | Programming Language  |
+| LangChain     | AI Agent Framework    |
+| NVIDIA API    | Large Language Model  |
+| JSearch API   | Live Job Search       |
+| Requests      | API Calls             |
+| python-dotenv | Environment Variables |
 
 ***
 
-## How the Project Works
+### Required APIs
 
-Our AI Agent follows a simple workflow.
+#### NVIDIA API
 
+https://build.nvidia.com/
+
+#### JSearch API
+
+https://openwebninja.com/api/jsearch
+
+***
+
+## Install Dependencies
+
+```bash
+pip install langchain
+pip install langchain-nvidia-ai-endpoints
+pip install requests
+pip install python-dotenv
 ```
-User
-
-↓
-
-AI Agent
-
-↓
-
-LLM understands the request
-
-↓
-
-Decides whether a Tool is required
-
-↓
-
-Calls search_jobs()
-
-↓
-
-JSearch API
-
-↓
-
-Returns live job data
-
-↓
-
-LLM prepares the final answer
-
-↓
-
-User
-```
-
-The important thing to notice here is that the LLM never talks directly to the internet.
-
-Whenever it needs live information, it asks a **Tool** to do the job.
 
 ***
 
 ## Project Structure
 
 ```
-AI_Job_Search_Agent/
+AI-Job-Search-Agent/
 │
-├── main.py
 ├── .env
-├── requirements.txt
-└── README.md
-```
-
-Keeping the project structure simple makes it easier to understand each component before we start building larger AI applications.
-
-***
-
-## Installing the Required Libraries
-
-Install all required packages before running the project.
-
-```bash
-pip install langchain
-pip install langchain-nvidia-ai-endpoints
-pip install python-dotenv
-pip install requests
+├── main.py
+└── requirements.txt
 ```
 
 ***
 
-## Setting Up the API Key
+## Configure Environment Variables
 
-Create a `.env` file in the project folder.
+Create a `.env` file.
 
 ```env
-JSEARCH_API_KEY=YOUR_API_KEY
+NVIDIA_API_KEY=your_nvidia_api_key
+JSEARCH_API_KEY=your_jsearch_api_key
 ```
 
-Instead of writing secrets directly inside the code, we store them in environment variables.
-
-This is considered a standard practice in software development because it keeps sensitive information secure and prevents accidental exposure on GitHub.
+<mark style="color:$danger;">Never commit this file to GitHub.</mark>
 
 ***
 
-## Loading Environment Variables
+## How It Works
+
+```
+User
+   │
+   ▼
+AI Agent
+   │
+   ▼
+Needs Live Data?
+   │
+   ├── No → Answer Directly
+   │
+   └── Yes
+         │
+         ▼
+   search_jobs()
+         │
+         ▼
+    JSearch API
+         │
+         ▼
+   Job Listings
+         │
+         ▼
+Final Response
+```
+
+***
+
+## Step 1. Import Libraries
+
+```python
+import os
+import requests
+
+from dotenv import load_dotenv
+
+from langchain.agents import create_agent
+from langchain.tools import tool
+from langchain_core.messages import HumanMessage
+from langchain_nvidia_ai_endpoints import ChatNVIDIA
+```
+
+These libraries help load environment variables, make API calls, create tools, interact with the LLM, and build the AI Agent.
+
+***
+
+## Step 2. Load Environment Variables
 
 ```python
 load_dotenv()
 ```
 
-This line reads the `.env` file and loads all environment variables into the current Python session.
-
-Once loaded, we can access them using the `os` module.
+This loads all variables from the `.env` file into the current Python session.
 
 ***
 
-## Reading the API Key
+## Step 3. Read the API Key
 
 ```python
 JSEARCH_API_KEY = os.getenv("JSEARCH_API_KEY")
 ```
 
-Rather than hardcoding the API key, we retrieve it from the environment.
-
-If the key changes in the future, we only need to update the `.env` file instead of modifying the source code.
+Reading the API key from the environment is safer than hardcoding it.
 
 ***
 
-## Creating a Tool
+## Step 4. Create a Tool
 
 ```python
 @tool
 def search_jobs(query: str):
+    """
+    Search for job postings based on the user's query.
+    """
 ```
 
-The `@tool` decorator tells LangChain that this function is available for the AI Agent.
+The `@tool` decorator tells LangChain that the AI Agent can call this function when it needs live job information.
 
-Whenever the model realizes it needs live job information, it can call this function automatically.
-
-Think of a Tool as a special ability that extends what an LLM can do.
-
-Without tools, an LLM can only answer from its existing knowledge.
-
-With tools, it can interact with external systems such as APIs, databases, search engines, or files.
+⚠️ **Important:** You must write a **docstring inside the function** (like `"""Search for job postings..."""` above). LangChain uses this docstring as the tool description and tells the LLM what the tool does. The `@tool` decorator returns an error if the docstring is missing.
 
 ***
 
-## Calling the JSearch API
-
-Inside our tool, we send an HTTP GET request.
-
-The request contains three important parts:
-
-* API URL
-* Headers
-* Query Parameters
-
-Example:
+## Step 5. Call the JSearch API
 
 ```python
-params = {
-    "query": query,
-    "country": "in",
-    "date_posted": "today"
-}
-```
-
-These parameters tell the API exactly what we want.
-
-For example:
-
-* `query` → Job title or keyword.
-* `country` → Search jobs only in India.
-* `date_posted` → Return only recently posted jobs.
-
-The `requests` library automatically converts these parameters into URL query parameters before sending the request.
-
-***
-
-## Understanding the API Response
-
-The JSearch API returns data in JSON format.
-
-We convert that response into a Python dictionary.
-
-```python
-response.json()
-```
-
-Once converted, we can easily access individual fields such as:
-
-* Job Title
-* Company Name
-* Location
-* Employment Type
-* Apply Link
-
-This structured data is then returned to the AI Agent.
-
-***
-
-## Creating the LLM
-
-```python
-llm = ChatNVIDIA(
-model= "meta/llama-3.1-8b-instruct"
+response = requests.get(
+    "https://api.openwebninja.com/jsearch/search-v2",
+    headers={"X-API-Key": JSEARCH_API_KEY},
+    params={
+        "query": query,
+        "country": "in",
+        "date_posted": "today"
+    }
 )
 ```
 
-The LLM is the brain of our AI Agent.
+Here, we send a GET request to the JSearch API.
 
-Its job is not to search for jobs.
-
-Instead, it focuses on understanding the user's request, deciding whether a tool is needed, and generating the final response.
-
-The actual job search is handled by the tool.
+| Parameter    | Purpose              |
+| ------------ | -------------------- |
+| query        | Job title or keyword |
+| country      | Search only in India |
+| date\_posted | Return today's jobs  |
 
 ***
 
-## Creating the AI Agent
+## Step 6. Validate & Return the Response
+
+```python
+response.raise_for_status()
+
+return response.json()
+```
+
+`raise_for_status()` — stops execution if the API request fails.
+
+`response.json()` — converts the API response into a Python dictionary.
+
+***
+
+## Testing the Tool Individually
+
+Before creating the agent, it is best practice to test the tool independently:
+
+```python
+print(search_jobs.invoke({"query": "Python Developer"}))
+```
+
+This confirms the API key is correct and the tool works independently. It makes debugging easier before the agent is fully configured.
+
+***
+
+## Step 7. Create the LLM
+
+```python
+llm = ChatNVIDIA(
+    model="meta/llama-3.1-8b-instruct"
+)
+```
+
+The LLM understands the user's request, decides when to use the tool, and generates the final response.
+
+***
+
+## Step 8. Register the Tool
+
+```python
+tools = [search_jobs]
+```
+
+This makes the `search_jobs()` function available to the AI Agent.
+
+***
+
+## Step 9. Create the AI Agent
 
 ```python
 agent = create_agent(
     model=llm,
-    tools=[search_jobs]
+    tools=tools
 )
 ```
 
-At this point, we connect the LLM with our custom tool.
-
-Now the model knows that whenever it needs live job information, it has permission to use the `search_jobs()` function.
-
-This is the step where our LLM becomes an AI Agent.
+This connects the LLM with the available tools, creating an AI Agent.
 
 ***
 
-## Running the Agent
+## Step 10. Send the User Query
 
 ```python
 result = agent.invoke(
     {
         "messages": [
-            HumanMessage(content=""" Find Data Analyst jobs in India. For each job provide:
+            HumanMessage(
+                content="""
+Find Data Analyst jobs in India.
+
+For each job provide:
 
 - Job Title
 - Company Name
@@ -287,22 +278,19 @@ result = agent.invoke(
         ]
     }
 )
+```
 
+The agent understands the request, calls the tool when needed, and retrieves live job listings.
 
+***
 
+## Step 11. Print the Response
+
+```python
 print(result["messages"][-1].content)
 ```
 
-When the user sends a prompt, the agent performs several tasks automatically.
-
-1. Reads the user's request.
-2. Understands what the user is asking.
-3. Decides whether a tool is required.
-4. Calls the tool if necessary.
-5. Receives live data from the API.
-6. Generates a final response for the user.
-
-Although this entire process looks like a single function call, multiple reasoning steps happen behind the scenes.
+This prints the AI Agent's final generated answer.
 
 ***
 
@@ -310,95 +298,94 @@ Although this entire process looks like a single function call, multiple reasoni
 
 ```
 User Prompt
-
-↓
-
-AI Agent
-
-↓
-
+      │
+      ▼
+LangChain Agent
+      │
+      ▼
 Reasoning
-
-↓
-
-Tool Selection
-
-↓
-
-JSearch API
-
-↓
-
-JSON Response
-
-↓
-
-LLM
-
-↓
-
-Final Answer
+      │
+      ▼
+Need Live Data?
+      │
+      ├── No
+      │      ▼
+      │ Final Response
+      │
+      └── Yes
+             ▼
+      search_jobs()
+             ▼
+        JSearch API
+             ▼
+        JSON Response
+             ▼
+      LangChain Agent
+             ▼
+      Final Response
 ```
-
-This is the complete lifecycle of our AI Agent.
-
-Understanding this flow is much more important than memorizing the code.
 
 ***
 
-## Key Takeaways
+## Expected Output
 
-After completing this project, you should be comfortable with the following concepts:
+```
+Job Title: Data Analyst
 
-* What an AI Agent actually is.
-* How Tool Calling works.
-* Why LLMs need external tools.
-* How to connect an AI Agent with a REST API.
-* Why environment variables are important.
-* How LangChain simplifies Agent development.
+Company: ABC Technologies
 
-These concepts form the foundation for almost every modern Agentic AI application.
+Location: Bangalore
+
+Job Type: Full-Time
+
+Posted: Today
+
+Apply Link:
+https://example.com/job
+```
 
 ***
 
 ## Best Practices
 
-* Keep API keys inside a `.env` file.
-* Never upload secrets to GitHub.
-* Keep each tool focused on a single task.
-* Handle API errors before processing responses.
-* Write clear prompts so the agent can reason effectively.
+* Store secrets in a `.env` file.
+* Never upload API keys to GitHub.
+* Keep each tool focused on one task.
+* Validate API responses before processing.
+* Write clear prompts for better results.
+* Write a docstring in every tool — LangChain uses it as the description.
 
 ***
 
-## Common Mistakes
+## Common Errors
 
-Many beginners run into the same issues while building their first AI Agent.
+| Error                 | Solution                              |
+| --------------------- | ------------------------------------- |
+| 401 Unauthorized      | Check your API key                    |
+| 429 Too Many Requests | Wait and retry                        |
+| Empty Results         | Verify query and country              |
+| API Key is None       | Ensure `.env` is loaded               |
+| Tool not working      | Missing docstring in `@tool` function |
 
-* Forgetting to load environment variables.
-* Using an invalid API key.
-* Hardcoding secrets inside the code.
-* Passing incorrect query parameters.
-* Assuming every API request succeeds.
+***
 
-If you encounter any of these problems, check the API response before debugging the rest of the code.
+## Key Takeaways
+
+* AI Agents extend LLMs with tools.
+* Tools allow agents to access live data.
+* LangChain automatically decides when to call a tool.
+* Environment variables keep API keys secure.
+* External APIs make AI applications far more useful.
+* A docstring is mandatory with the `@tool` decorator.
 
 ***
 
 ## What's Next?
 
-At the moment, our AI Agent returns a plain-text response.
+Our agent currently returns plain text.
 
-That works fine for learning, but real applications usually require structured data that can be displayed inside a UI or stored in a database.
-
-In the next project, we'll improve this agent by generating **structured JSON outputs using Pydantic Models**. We'll then use those structured responses to build a clean **Streamlit web application**, allowing users to interact with the AI Agent through a browser instead of the terminal.
+In the next project, we'll use Pydantic to generate structured JSON responses and build a Streamlit interface so users can interact with the AI Agent through a web application.
 
 ***
 
-### Final Thoughts
-
-**Congratulations!**&#x20;
-
-You've built your real AI Agent that can interact with an external API and retrieve live information.
-
-More importantly, you've learned the core workflow that powers most modern AI Agents. As we move forward, we'll continue enhancing this project step by step until it evolves into a production-ready AI application.
+**The full code will be shared on the next page - you can copy, paste, and run it directly.**
