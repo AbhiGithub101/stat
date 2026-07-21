@@ -155,6 +155,7 @@
     * [6. Build Your First AI Document Summarizer with LangChain](python-for-data-analytics/agentic-ai/6.-build-your-first-ai-document-summarizer-with-langchain.md)
     * [7. Running the Document Summarization Chain](python-for-data-analytics/agentic-ai/7.-running-the-document-summarization-chain.md)
     * [Build a Real AI Job Search Agent with LangChain](python-for-data-analytics/agentic-ai/build-a-real-ai-job-search-agent-with-langchain.md)
+    * [Build a Real AI Job Search Agent with LangChain - Full Code](python-for-data-analytics/agentic-ai/build-a-real-ai-job-search-agent-with-langchain-full-code.md)
   * [Required Files](python-for-data-analytics/required-files.md)
   * [Statistics](python-for-data-analytics/statistics.md)
   * [Pyspark Notes](python-for-data-analytics/pyspark-notes.md)
